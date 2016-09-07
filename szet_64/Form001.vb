@@ -46,8 +46,17 @@
         End With
 
         'Munkaora osszeszamolasa
-        Dim iOra As Long = 0        Dim t As String
-        With grdMUNKALAP            For i As Long = 1 To (.RowCount - 1)                t = .Rows(i).Cells(14).Value                If t <> "" Then iOra = iOra + CLng(t)            Next i        End With        txtMUNOSZ.Text = iOra
+        Dim iOra As Long = 0
+        Dim t As String
+
+        With grdMUNKALAP
+            For i As Long = 1 To (.RowCount - 1)
+                t = .Rows(i).Cells(14).Value
+                If t <> "" Then iOra += CLng(t)
+            Next i
+        End With
+        txtMUNOSZ.Text = iOra
+
         'Talalatok szama
         txtTALALAT.Text = grdMUNKALAP.RowCount - 1
 
@@ -58,10 +67,25 @@
     Private Sub Form001_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cursor.Current = Cursors.WaitCursor
 
+        Me.Sp_Q296TableAdapter.Fill(Me.SZETAVDataSet.sp_Q296)
+        Me.Sp_Q335TableAdapter.Fill(Me.SZETAVDataSet.sp_Q335)
+        Me.Sp_Q337TableAdapter.Fill(Me.SZETAVDataSet.sp_Q337)
+        Me.Sp_Q310ATableAdapter.Fill(Me.SZETAVDataSet.sp_Q310A)
+        Me.Sp_Q293TableAdapter.Fill(Me.SZETAVDataSet.sp_Q293)
+        Me.Sp_Q291TableAdapter.Fill(Me.SZETAVDataSet.sp_Q291)
+
         datDATUMIG.Value = Now()
         datDATUMTOL.Value = DateAdd("m", -1, Now())
         datMUNDATTOL.Value = Now()
         datMUNDATIG.Value = Now()
+
+        cmbSZOLGJELL.SelectedIndex = -1
+        cmbTIPUSH.SelectedIndex = -1
+        cmbFSZAM.SelectedIndex = -1
+        cmbMLAPTIP.SelectedValue = 1    'TODO: check if integer works or string is needed
+        cmbALLAPOT.SelectedValue = 5
+        cmbOBJTIP.SelectedIndex = -1
+        cmbDOLGID.SelectedIndex = -1
 
         Cursor.Current = Cursors.Default
     End Sub

@@ -22,6 +22,7 @@ Partial Class Form001
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.cmdEXIT = New System.Windows.Forms.Button()
         Me.cmbSZOLGJELL = New System.Windows.Forms.ComboBox()
         Me.grdMUNKALAP = New System.Windows.Forms.DataGridView()
@@ -68,8 +69,28 @@ Partial Class Form001
         Me.lblMUNOSZ = New System.Windows.Forms.Label()
         Me.txtTALALAT = New System.Windows.Forms.TextBox()
         Me.lblTALALAT = New System.Windows.Forms.Label()
+        Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
+        Me.SpQ291BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Sp_Q291TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q291TableAdapter()
+        Me.SpQ293BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Sp_Q293TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q293TableAdapter()
+        Me.SpQ310ABindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Sp_Q310ATableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q310ATableAdapter()
+        Me.SpQ337BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Sp_Q337TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q337TableAdapter()
+        Me.SpQ335BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Sp_Q335TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q335TableAdapter()
+        Me.SpQ296BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Sp_Q296TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter()
         CType(Me.grdMUNKALAP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.boxPRINT.SuspendLayout()
+        CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ291BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ293BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ310ABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ337BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ335BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdEXIT
@@ -83,11 +104,15 @@ Partial Class Form001
         '
         'cmbSZOLGJELL
         '
+        Me.cmbSZOLGJELL.DataSource = Me.SpQ291BindingSource
+        Me.cmbSZOLGJELL.DisplayMember = "KODENEV"
         Me.cmbSZOLGJELL.FormattingEnabled = True
         Me.cmbSZOLGJELL.Location = New System.Drawing.Point(198, 58)
         Me.cmbSZOLGJELL.Name = "cmbSZOLGJELL"
         Me.cmbSZOLGJELL.Size = New System.Drawing.Size(223, 22)
         Me.cmbSZOLGJELL.TabIndex = 9
+        Me.cmbSZOLGJELL.Tag = "291"
+        Me.cmbSZOLGJELL.ValueMember = "KODERT"
         '
         'grdMUNKALAP
         '
@@ -118,11 +143,15 @@ Partial Class Form001
         '
         'cmbTIPUSH
         '
+        Me.cmbTIPUSH.DataSource = Me.SpQ293BindingSource
+        Me.cmbTIPUSH.DisplayMember = "KODENEV"
         Me.cmbTIPUSH.FormattingEnabled = True
         Me.cmbTIPUSH.Location = New System.Drawing.Point(198, 86)
         Me.cmbTIPUSH.Name = "cmbTIPUSH"
         Me.cmbTIPUSH.Size = New System.Drawing.Size(223, 22)
         Me.cmbTIPUSH.TabIndex = 10
+        Me.cmbTIPUSH.Tag = "293"
+        Me.cmbTIPUSH.ValueMember = "KODERT"
         '
         'lblTIPUSH
         '
@@ -135,11 +164,15 @@ Partial Class Form001
         '
         'cmbFSZAM
         '
+        Me.cmbFSZAM.DataSource = Me.SpQ310ABindingSource
+        Me.cmbFSZAM.DisplayMember = "FSZNEV"
         Me.cmbFSZAM.FormattingEnabled = True
         Me.cmbFSZAM.Location = New System.Drawing.Point(198, 114)
         Me.cmbFSZAM.Name = "cmbFSZAM"
         Me.cmbFSZAM.Size = New System.Drawing.Size(223, 22)
         Me.cmbFSZAM.TabIndex = 11
+        Me.cmbFSZAM.Tag = "310a"
+        Me.cmbFSZAM.ValueMember = "FSZAM"
         '
         'lblFSZAM
         '
@@ -152,11 +185,15 @@ Partial Class Form001
         '
         'cmbMLAPTIP
         '
+        Me.cmbMLAPTIP.DataSource = Me.SpQ337BindingSource
+        Me.cmbMLAPTIP.DisplayMember = "KODENEV"
         Me.cmbMLAPTIP.FormattingEnabled = True
         Me.cmbMLAPTIP.Location = New System.Drawing.Point(198, 142)
         Me.cmbMLAPTIP.Name = "cmbMLAPTIP"
         Me.cmbMLAPTIP.Size = New System.Drawing.Size(223, 22)
         Me.cmbMLAPTIP.TabIndex = 12
+        Me.cmbMLAPTIP.Tag = "337"
+        Me.cmbMLAPTIP.ValueMember = "KODERT"
         '
         'lblMLAPTIP
         '
@@ -246,11 +283,15 @@ Partial Class Form001
         '
         'cmbALLAPOT
         '
+        Me.cmbALLAPOT.DataSource = Me.SpQ335BindingSource
+        Me.cmbALLAPOT.DisplayMember = "KODENEV"
         Me.cmbALLAPOT.FormattingEnabled = True
         Me.cmbALLAPOT.Location = New System.Drawing.Point(547, 58)
         Me.cmbALLAPOT.Name = "cmbALLAPOT"
         Me.cmbALLAPOT.Size = New System.Drawing.Size(223, 22)
         Me.cmbALLAPOT.TabIndex = 13
+        Me.cmbALLAPOT.Tag = "335"
+        Me.cmbALLAPOT.ValueMember = "KODERT"
         '
         'lblALLAPOT
         '
@@ -263,11 +304,15 @@ Partial Class Form001
         '
         'cmbOBJTIP
         '
+        Me.cmbOBJTIP.DataSource = Me.SpQ296BindingSource
+        Me.cmbOBJTIP.DisplayMember = "KODENEV"
         Me.cmbOBJTIP.FormattingEnabled = True
         Me.cmbOBJTIP.Location = New System.Drawing.Point(547, 86)
         Me.cmbOBJTIP.Name = "cmbOBJTIP"
         Me.cmbOBJTIP.Size = New System.Drawing.Size(223, 22)
         Me.cmbOBJTIP.TabIndex = 14
+        Me.cmbOBJTIP.Tag = "296"
+        Me.cmbOBJTIP.ValueMember = "KODERT"
         '
         'lblOBJTIP
         '
@@ -285,6 +330,7 @@ Partial Class Form001
         Me.cmbOBJID.Name = "cmbOBJID"
         Me.cmbOBJID.Size = New System.Drawing.Size(223, 22)
         Me.cmbOBJID.TabIndex = 15
+        Me.cmbOBJID.Tag = "MEGNEV"
         '
         'lblOBJID
         '
@@ -360,6 +406,7 @@ Partial Class Form001
         Me.cmbTELEPHSZ.Name = "cmbTELEPHSZ"
         Me.cmbTELEPHSZ.Size = New System.Drawing.Size(223, 22)
         Me.cmbTELEPHSZ.TabIndex = 23
+        Me.cmbTELEPHSZ.Tag = "TELEPHSZ"
         '
         'lblTELEPHSZ
         '
@@ -494,6 +541,65 @@ Partial Class Form001
         Me.lblTALALAT.Text = "Találatok"
         Me.lblTALALAT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'SZETAVDataSet
+        '
+        Me.SZETAVDataSet.DataSetName = "SZETAVDataSet"
+        Me.SZETAVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SpQ291BindingSource
+        '
+        Me.SpQ291BindingSource.DataMember = "sp_Q291"
+        Me.SpQ291BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'Sp_Q291TableAdapter
+        '
+        Me.Sp_Q291TableAdapter.ClearBeforeFill = True
+        '
+        'SpQ293BindingSource
+        '
+        Me.SpQ293BindingSource.DataMember = "sp_Q293"
+        Me.SpQ293BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'Sp_Q293TableAdapter
+        '
+        Me.Sp_Q293TableAdapter.ClearBeforeFill = True
+        '
+        'SpQ310ABindingSource
+        '
+        Me.SpQ310ABindingSource.DataMember = "sp_Q310A"
+        Me.SpQ310ABindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'Sp_Q310ATableAdapter
+        '
+        Me.Sp_Q310ATableAdapter.ClearBeforeFill = True
+        '
+        'SpQ337BindingSource
+        '
+        Me.SpQ337BindingSource.DataMember = "sp_Q337"
+        Me.SpQ337BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'Sp_Q337TableAdapter
+        '
+        Me.Sp_Q337TableAdapter.ClearBeforeFill = True
+        '
+        'SpQ335BindingSource
+        '
+        Me.SpQ335BindingSource.DataMember = "sp_Q335"
+        Me.SpQ335BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'Sp_Q335TableAdapter
+        '
+        Me.Sp_Q335TableAdapter.ClearBeforeFill = True
+        '
+        'SpQ296BindingSource
+        '
+        Me.SpQ296BindingSource.DataMember = "sp_Q296"
+        Me.SpQ296BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'Sp_Q296TableAdapter
+        '
+        Me.Sp_Q296TableAdapter.ClearBeforeFill = True
+        '
         'Form001
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
@@ -550,6 +656,13 @@ Partial Class Form001
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.grdMUNKALAP, System.ComponentModel.ISupportInitialize).EndInit()
         Me.boxPRINT.ResumeLayout(False)
+        CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ291BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ293BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ310ABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ337BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ335BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -600,4 +713,17 @@ Partial Class Form001
     Friend WithEvents lblMUNOSZ As System.Windows.Forms.Label
     Friend WithEvents txtTALALAT As System.Windows.Forms.TextBox
     Friend WithEvents lblTALALAT As System.Windows.Forms.Label
+    Friend WithEvents SZETAVDataSet As szet_64.SZETAVDataSet
+    Friend WithEvents SpQ291BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q291TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q291TableAdapter
+    Friend WithEvents SpQ293BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q293TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q293TableAdapter
+    Friend WithEvents SpQ310ABindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q310ATableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q310ATableAdapter
+    Friend WithEvents SpQ337BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q337TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q337TableAdapter
+    Friend WithEvents SpQ335BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q335TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q335TableAdapter
+    Friend WithEvents SpQ296BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q296TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter
 End Class
