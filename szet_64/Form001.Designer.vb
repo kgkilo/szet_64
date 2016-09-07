@@ -64,6 +64,10 @@ Partial Class Form001
         Me.cmdLIST = New System.Windows.Forms.Button()
         Me.cmdCSOPLIST = New System.Windows.Forms.Button()
         Me.cmdMASOL = New System.Windows.Forms.Button()
+        Me.txtMUNOSZ = New System.Windows.Forms.TextBox()
+        Me.lblMUNOSZ = New System.Windows.Forms.Label()
+        Me.txtTALALAT = New System.Windows.Forms.TextBox()
+        Me.lblTALALAT = New System.Windows.Forms.Label()
         CType(Me.grdMUNKALAP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.boxPRINT.SuspendLayout()
         Me.SuspendLayout()
@@ -448,11 +452,55 @@ Partial Class Form001
         Me.cmdMASOL.Text = "Másolat"
         Me.cmdMASOL.UseVisualStyleBackColor = True
         '
+        'txtMUNOSZ
+        '
+        Me.txtMUNOSZ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtMUNOSZ.Enabled = False
+        Me.txtMUNOSZ.Location = New System.Drawing.Point(12, 142)
+        Me.txtMUNOSZ.Name = "txtMUNOSZ"
+        Me.txtMUNOSZ.ReadOnly = True
+        Me.txtMUNOSZ.Size = New System.Drawing.Size(75, 20)
+        Me.txtMUNOSZ.TabIndex = 31
+        Me.txtMUNOSZ.TabStop = False
+        Me.txtMUNOSZ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'lblMUNOSZ
+        '
+        Me.lblMUNOSZ.Location = New System.Drawing.Point(12, 117)
+        Me.lblMUNOSZ.Name = "lblMUNOSZ"
+        Me.lblMUNOSZ.Size = New System.Drawing.Size(75, 13)
+        Me.lblMUNOSZ.TabIndex = 26
+        Me.lblMUNOSZ.Text = "Munkaóra"
+        Me.lblMUNOSZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txtTALALAT
+        '
+        Me.txtTALALAT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTALALAT.Enabled = False
+        Me.txtTALALAT.Location = New System.Drawing.Point(12, 86)
+        Me.txtTALALAT.Name = "txtTALALAT"
+        Me.txtTALALAT.ReadOnly = True
+        Me.txtTALALAT.Size = New System.Drawing.Size(75, 20)
+        Me.txtTALALAT.TabIndex = 31
+        Me.txtTALALAT.TabStop = False
+        Me.txtTALALAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'lblTALALAT
+        '
+        Me.lblTALALAT.Location = New System.Drawing.Point(12, 61)
+        Me.lblTALALAT.Name = "lblTALALAT"
+        Me.lblTALALAT.Size = New System.Drawing.Size(75, 13)
+        Me.lblTALALAT.TabIndex = 26
+        Me.lblTALALAT.Text = "Találatok"
+        Me.lblTALALAT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Form001
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1129, 593)
+        Me.Controls.Add(Me.txtTALALAT)
+        Me.Controls.Add(Me.txtMUNOSZ)
         Me.Controls.Add(Me.boxPRINT)
         Me.Controls.Add(Me.txtMUNKALAPID)
         Me.Controls.Add(Me.lblMUNDAT2)
@@ -470,6 +518,8 @@ Partial Class Form001
         Me.Controls.Add(Me.lblFSZAM)
         Me.Controls.Add(Me.lblTIPUSH)
         Me.Controls.Add(Me.lblTELEPHSZ)
+        Me.Controls.Add(Me.lblTALALAT)
+        Me.Controls.Add(Me.lblMUNOSZ)
         Me.Controls.Add(Me.lblDOLGID)
         Me.Controls.Add(Me.lblOBJID)
         Me.Controls.Add(Me.lblOBJTIP)
@@ -546,4 +596,8 @@ Partial Class Form001
     Friend WithEvents cmdLIST As System.Windows.Forms.Button
     Friend WithEvents cmdCSOPLIST As System.Windows.Forms.Button
     Friend WithEvents cmdMASOL As System.Windows.Forms.Button
+    Friend WithEvents txtMUNOSZ As System.Windows.Forms.TextBox
+    Friend WithEvents lblMUNOSZ As System.Windows.Forms.Label
+    Friend WithEvents txtTALALAT As System.Windows.Forms.TextBox
+    Friend WithEvents lblTALALAT As System.Windows.Forms.Label
 End Class

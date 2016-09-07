@@ -46,6 +46,10 @@
         End With
 
         'Munkaora osszeszamolasa
+        Dim iOra As Long = 0        Dim t As String
+        With grdMUNKALAP            For i As Long = 1 To (.RowCount - 1)                t = .Rows(i).Cells(14).Value                If t <> "" Then iOra = iOra + CLng(t)            Next i        End With        txtMUNOSZ.Text = iOra
+        'Talalatok szama
+        txtTALALAT.Text = grdMUNKALAP.RowCount - 1
 
         'Villogas vege
         Cursor.Current = Cursors.Default
