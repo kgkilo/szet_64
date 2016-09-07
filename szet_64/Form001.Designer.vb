@@ -24,7 +24,7 @@ Partial Class Form001
     Private Sub InitializeComponent()
         Me.cmdEXIT = New System.Windows.Forms.Button()
         Me.cmbSZOLGJELL = New System.Windows.Forms.ComboBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.grdMUNKALAP = New System.Windows.Forms.DataGridView()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblSZOLGJELL = New System.Windows.Forms.Label()
         Me.cmbTIPUSH = New System.Windows.Forms.ComboBox()
@@ -64,7 +64,7 @@ Partial Class Form001
         Me.cmdLIST = New System.Windows.Forms.Button()
         Me.cmdCSOPLIST = New System.Windows.Forms.Button()
         Me.cmdMASOL = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grdMUNKALAP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.boxPRINT.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -85,13 +85,13 @@ Partial Class Form001
         Me.cmbSZOLGJELL.Size = New System.Drawing.Size(223, 22)
         Me.cmbSZOLGJELL.TabIndex = 9
         '
-        'DataGridView1
+        'grdMUNKALAP
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(93, 170)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1026, 411)
-        Me.DataGridView1.TabIndex = 24
+        Me.grdMUNKALAP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grdMUNKALAP.Location = New System.Drawing.Point(93, 170)
+        Me.grdMUNKALAP.Name = "grdMUNKALAP"
+        Me.grdMUNKALAP.Size = New System.Drawing.Size(1026, 411)
+        Me.grdMUNKALAP.TabIndex = 24
         '
         'lblTitle
         '
@@ -476,7 +476,7 @@ Partial Class Form001
         Me.Controls.Add(Me.lblALLAPOT)
         Me.Controls.Add(Me.lblSZOLGJELL)
         Me.Controls.Add(Me.lblTitle)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.grdMUNKALAP)
         Me.Controls.Add(Me.cmbMLAPTIP)
         Me.Controls.Add(Me.cmbFSZAM)
         Me.Controls.Add(Me.cmbTIPUSH)
@@ -498,7 +498,7 @@ Partial Class Form001
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form001"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grdMUNKALAP, System.ComponentModel.ISupportInitialize).EndInit()
         Me.boxPRINT.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -506,7 +506,7 @@ Partial Class Form001
     End Sub
     Friend WithEvents cmdEXIT As System.Windows.Forms.Button
     Friend WithEvents cmbSZOLGJELL As System.Windows.Forms.ComboBox
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents grdMUNKALAP As System.Windows.Forms.DataGridView
     Friend WithEvents lblTitle As System.Windows.Forms.Label
     Friend WithEvents lblSZOLGJELL As System.Windows.Forms.Label
     Friend WithEvents cmbTIPUSH As System.Windows.Forms.ComboBox
