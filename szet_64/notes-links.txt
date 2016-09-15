@@ -1,0 +1,27 @@
+Trying to Populate a Combobox using the results of a SQL Stored Procedure
+https://social.msdn.microsoft.com/Forums/vstudio/en-US/5ba00cfe-4bd1-4d16-b031-ba212f054f06/trying-to-populate-a-combobox-using-the-results-of-a-sql-stored-procedure?forum=vbgeneral
+
+HowTo: Edit DataTables
+https://msdn.microsoft.com/en-us/library/ms171902(VS.80).aspx
+
+Update DataSet structure in Visual Studio to match new SQL Database Structure
+http://stackoverflow.com/questions/9497689/update-dataset-structure-in-visual-studio-to-match-new-sql-database-structure
+
+Using SQL Stored Procedures with VB.Net
+http://www.codeguru.com/columns/vb/using-sql-stored-procedures-with-vb.net.htm
+
+How To Call a Parameterized Stored Procedure by Using ADO.NET and Visual Basic .NET 
+https://support.microsoft.com/en-us/kb/308049
+
+DataGridView Class
+https://msdn.microsoft.com/en-us/library/system.windows.forms.datagridview(v=vs.110).aspx
+
+SqlDataAdapter.SelectCommand Property
+https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqldataadapter.selectcommand(v=vs.110).aspx
+
+Connection strings
+https://www.connectionstrings.com/sql-server/
+
+Git branch strategy for small dev team
+http://stackoverflow.com/questions/2428722/git-branch-strategy-for-small-dev-team
+
