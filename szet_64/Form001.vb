@@ -2,6 +2,9 @@
 
 Public Class Form001
 
+    'Public sConnStr As String = "Server=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=C:\Users\kilo\Documents\SZETAV.mdf;"
+    Public sConnStr As String ' = "DRIVER={SQL Server};Server=NTSERVER;uid=sa;pwd=;database=SZETAV"
+
     Private Sub cmdEXIT_Click(sender As Object, e As EventArgs) Handles cmdEXIT.Click, cmdVISSZAIR.Click, cmdUJ.Click, cmdMODOSIT.Click, cmdMASOL.Click, cmdLIST.Click, cmdCSOPLIST.Click
         Me.Close()
     End Sub
@@ -10,14 +13,48 @@ Public Class Form001
         Cursor.Current = Cursors.WaitCursor
 
         'Grid feltoltese tarolt eljarasbol
-        Dim dbadp As New SqlDataAdapter("sp_LekerdMlap", "Server=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=C:\Users\kilo\Documents\SZETAV.mdf;")
+        Dim dbadp As New SqlDataAdapter("sp_LekerdMlap", sConnStr)
         With dbadp.SelectCommand
             .CommandType = CommandType.StoredProcedure
-            Dim aaa As SqlParameter = .Parameters.Add("@MLAPTIP", SqlDbType.VarChar, 1)
-            If cmbMLAPTIP.SelectedValue <> -1 Then
-                aaa.Value = cmbMLAPTIP.SelectedValue
-            Else
-                aaa.Value = ""
+            'Tartolt eljaras parametereinek feltoltese
+            If cmbMLAPTIP.SelectedIndex <> -1 Then
+                .Parameters.Add("@MLAPTIP", SqlDbType.VarChar, 1).Value = cmbMLAPTIP.SelectedValue
+            End If
+
+            If cmbSZOLGJELL.SelectedIndex <> -1 Then
+                .Parameters.Add("@SZOLGJELL", SqlDbType.VarChar, 2).Value = cmbSZOLGJELL.SelectedValue
+            End If
+
+            If cmbTIPUSH.SelectedIndex <> -1 Then
+                .Parameters.Add("@TIPUSH", SqlDbType.VarChar, 3).Value = cmbTIPUSH.SelectedValue
+            End If
+
+            If cmbFSZAM.SelectedIndex <> -1 Then
+                .Parameters.Add("@FSZAM", SqlDbType.VarChar, 12).Value = cmbFSZAM.SelectedValue
+            End If
+
+            If cmbOBJTIP.SelectedIndex <> -1 Then
+                .Parameters.Add("@OBJTIP", SqlDbType.VarChar, 2).Value = cmbOBJTIP.SelectedValue
+            End If
+
+            If cmbOBJID.SelectedIndex <> -1 Then
+                .Parameters.Add("@OBJID", SqlDbType.Int).Value = cmbOBJID.SelectedValue
+            End If
+
+            If cmbDOLGID.SelectedIndex <> -1 Then
+                .Parameters.Add("@DOLGID", SqlDbType.Int).Value = cmbDOLGID.SelectedValue
+            End If
+
+            If cmbALLAPOT.SelectedIndex <> -1 Then
+                .Parameters.Add("@ALLAPOT", SqlDbType.Int).Value = cmbALLAPOT.SelectedValue
+            End If
+
+            If txtMUNKALAPID.Text <> "" Then
+                .Parameters.Add("@MUNKALAPID", SqlDbType.Int).Value = CInt(txtMUNKALAPID.Text)
+            End If
+
+            If cmbTELEPHSZ.SelectedIndex <> -1 Then
+                .Parameters.Add("@TELEPHSZ", SqlDbType.VarChar, 20).Value = cmbTELEPHSZ.SelectedValue
             End If
         End With
 
@@ -31,7 +68,7 @@ Public Class Form001
             .SelectionMode = DataGridViewSelectionMode.FullRowSelect
             .ReadOnly = True
 
-            With grdMUNKALAP.ColumnHeadersDefaultCellStyle
+            With .ColumnHeadersDefaultCellStyle
                 .BackColor = Color.DarkGray
                 .ForeColor = Color.Gray
                 .Font = New Font(grdMUNKALAP.Font, FontStyle.Bold)
@@ -109,7 +146,7 @@ Public Class Form001
             Cursor.Current = Cursors.WaitCursor
 
             'Objektum tipus alapjan objektum combobox feltoltese
-            Dim dbadpObjid As New SqlDataAdapter("sp_FillObjMegnev", "Server=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=C:\Users\kilo\Documents\SZETAV.mdf;")
+            Dim dbadpObjid As New SqlDataAdapter("sp_FillObjMegnev", sConnStr)
             With dbadpObjid
                 With .SelectCommand
                     .CommandType = CommandType.StoredProcedure
@@ -124,7 +161,7 @@ Public Class Form001
             End With
 
             'Objektum tipus alapjan telepitesi helyszam combobox feltoltese
-            Dim dbadpTelephsz As New SqlDataAdapter("sp_FillObjTelephsz", "Server=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=C:\Users\kilo\Documents\SZETAV.mdf;")
+            Dim dbadpTelephsz As New SqlDataAdapter("sp_FillObjTelephsz", sConnStr)
             With dbadpTelephsz
                 With .SelectCommand
                     .CommandType = CommandType.StoredProcedure
