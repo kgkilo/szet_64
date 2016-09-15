@@ -25,7 +25,7 @@ Partial Class FormStart
         Me.cmdExit = New System.Windows.Forms.Button()
         Me.cmdMunkalap = New System.Windows.Forms.Button()
         Me.cmdJegyz = New System.Windows.Forms.Button()
-        Me.cmdRAKTAR = New System.Windows.Forms.Button()
+        Me.cmdDOLGOZO = New System.Windows.Forms.Button()
         Me.lblFormel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -56,15 +56,14 @@ Partial Class FormStart
         Me.cmdJegyz.Text = "Jegyzőkönyvek"
         Me.cmdJegyz.UseVisualStyleBackColor = True
         '
-        'cmdRAKTAR
+        'cmdDOLGOZO
         '
-        Me.cmdRAKTAR.Location = New System.Drawing.Point(81, 240)
-        Me.cmdRAKTAR.Name = "cmdRAKTAR"
-        Me.cmdRAKTAR.Size = New System.Drawing.Size(150, 46)
-        Me.cmdRAKTAR.TabIndex = 2
-        Me.cmdRAKTAR.Text = "Raktár"
-        Me.cmdRAKTAR.UseVisualStyleBackColor = True
-        Me.cmdRAKTAR.Visible = False
+        Me.cmdDOLGOZO.Location = New System.Drawing.Point(81, 240)
+        Me.cmdDOLGOZO.Name = "cmdDOLGOZO"
+        Me.cmdDOLGOZO.Size = New System.Drawing.Size(150, 46)
+        Me.cmdDOLGOZO.TabIndex = 2
+        Me.cmdDOLGOZO.Text = "Dolgozó"
+        Me.cmdDOLGOZO.UseVisualStyleBackColor = True
         '
         'lblFormel
         '
@@ -80,8 +79,8 @@ Partial Class FormStart
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(624, 441)
+        Me.Controls.Add(Me.cmdDOLGOZO)
         Me.Controls.Add(Me.lblFormel)
-        Me.Controls.Add(Me.cmdRAKTAR)
         Me.Controls.Add(Me.cmdJegyz)
         Me.Controls.Add(Me.cmdMunkalap)
         Me.Controls.Add(Me.cmdExit)
@@ -95,7 +94,7 @@ Partial Class FormStart
     Friend WithEvents cmdExit As System.Windows.Forms.Button
     Friend WithEvents cmdMunkalap As System.Windows.Forms.Button
     Friend WithEvents cmdJegyz As System.Windows.Forms.Button
-    Friend WithEvents cmdRAKTAR As System.Windows.Forms.Button
+    Friend WithEvents cmdDOLGOZO As System.Windows.Forms.Button
     Friend WithEvents lblFormel As System.Windows.Forms.Label
 
 End Class

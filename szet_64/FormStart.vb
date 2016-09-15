@@ -12,8 +12,9 @@ Public Class FormStart
         'Form003.Show(Me)
     End Sub
 
-    Private Sub cmdRAKTAR_Click(sender As Object, e As EventArgs) Handles cmdRAKTAR.Click
-        'Form004.Show(Me)
+    Private Sub cmdDOLGOZO_Click(sender As Object, e As EventArgs) Handles cmdDOLGOZO.Click
+        Form005.sConnStr = Me.sConnStr
+        Form005.Show(Me)
     End Sub
 
     Private Sub cmdExit_Click(sender As Object, e As EventArgs) Handles cmdExit.Click

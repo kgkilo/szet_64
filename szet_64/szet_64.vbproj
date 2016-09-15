@@ -76,6 +76,12 @@
     <Compile Include="Form001.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form005.Designer.vb">
+      <DependentUpon>Form005.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form005.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormStart.designer.vb">
       <DependentUpon>FormStart.vb</DependentUpon>
     </Compile>
@@ -106,6 +112,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Form001.resx">
       <DependentUpon>Form001.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form005.resx">
+      <DependentUpon>Form005.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStart.resx">
       <DependentUpon>FormStart.vb</DependentUpon>
@@ -141,7 +150,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ConnectionString.txt" />
     <Content Include="notes-links.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
