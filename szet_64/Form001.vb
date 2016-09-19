@@ -5,8 +5,14 @@ Public Class Form001
     'Public sConnStr As String = "Server=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=C:\Users\kilo\Documents\SZETAV.mdf;"
     Public sConnStr As String ' = "DRIVER={SQL Server};Server=NTSERVER;uid=sa;pwd=;database=SZETAV"
 
-    Private Sub cmdEXIT_Click(sender As Object, e As EventArgs) Handles cmdEXIT.Click, cmdVISSZAIR.Click, cmdUJ.Click, cmdMODOSIT.Click, cmdMASOL.Click, cmdLIST.Click, cmdCSOPLIST.Click
+    Private Sub cmdEXIT_Click(sender As Object, e As EventArgs) Handles cmdEXIT.Click, cmdVISSZAIR.Click, cmdMASOL.Click, cmdLIST.Click, cmdCSOPLIST.Click
         Me.Close()
+    End Sub
+
+    Private Sub cmdUJ_Click(sender As Object, e As EventArgs) Handles cmdUJ.Click
+        Form001a.sConnStr = Me.sConnStr
+        Form001a.Tag = -1   'Insert
+        Form001a.Show(Me)
     End Sub
 
     Private Sub cmdFRISSIT_Click(sender As Object, e As EventArgs) Handles cmdFRISSIT.Click
