@@ -89,7 +89,7 @@ Partial Class Form001a
         Me.cmbSZEREGYS.Name = "cmbSZEREGYS"
         Me.cmbSZEREGYS.Size = New System.Drawing.Size(138, 21)
         Me.cmbSZEREGYS.TabIndex = 4
-        Me.cmbSZEREGYS.Tag = "291"
+        Me.cmbSZEREGYS.Tag = "271"
         Me.cmbSZEREGYS.ValueMember = "KODERT"
         '
         'txtNAPSZAM
@@ -157,6 +157,7 @@ Partial Class Form001a
         Me.cmbMFDOLG.Name = "cmbMFDOLG"
         Me.cmbMFDOLG.Size = New System.Drawing.Size(138, 21)
         Me.cmbMFDOLG.TabIndex = 5
+        Me.cmbMFDOLG.Tag = "334"
         '
         'lblMFDOLG
         '
@@ -175,6 +176,7 @@ Partial Class Form001a
         Me.cmbSZOLGJELL.Name = "cmbSZOLGJELL"
         Me.cmbSZOLGJELL.Size = New System.Drawing.Size(138, 21)
         Me.cmbSZOLGJELL.TabIndex = 6
+        Me.cmbSZOLGJELL.Tag = "291"
         '
         'lblSZOLGJELL
         '
@@ -210,6 +212,7 @@ Partial Class Form001a
         Me.cmbFSZAM.Name = "cmbFSZAM"
         Me.cmbFSZAM.Size = New System.Drawing.Size(138, 21)
         Me.cmbFSZAM.TabIndex = 8
+        Me.cmbFSZAM.Tag = "310a"
         '
         'lblFSZAM
         '
@@ -228,6 +231,7 @@ Partial Class Form001a
         Me.cmbTIPUSH.Name = "cmbTIPUSH"
         Me.cmbTIPUSH.Size = New System.Drawing.Size(138, 21)
         Me.cmbTIPUSH.TabIndex = 9
+        Me.cmbTIPUSH.Tag = "293"
         '
         'lblTIPUSH
         '
@@ -287,6 +291,7 @@ Partial Class Form001a
         Me.cmbMKAP.Name = "cmbMKAP"
         Me.cmbMKAP.Size = New System.Drawing.Size(138, 21)
         Me.cmbMKAP.TabIndex = 13
+        Me.cmbMKAP.Tag = "334"
         '
         'lblMKAP
         '
@@ -338,6 +343,7 @@ Partial Class Form001a
         Me.cmbMUVEL.Name = "cmbMUVEL"
         Me.cmbMUVEL.Size = New System.Drawing.Size(138, 21)
         Me.cmbMUVEL.TabIndex = 18
+        Me.cmbMUVEL.Tag = "298"
         '
         'lblMUVEL
         '
@@ -356,6 +362,7 @@ Partial Class Form001a
         Me.cmbMUNVEGZ.Name = "cmbMUNVEGZ"
         Me.cmbMUNVEGZ.Size = New System.Drawing.Size(138, 21)
         Me.cmbMUNVEGZ.TabIndex = 19
+        Me.cmbMUNVEGZ.Tag = "306"
         '
         'lblMUNVEGZ
         '
@@ -374,6 +381,7 @@ Partial Class Form001a
         Me.cmbSZOLTIP.Name = "cmbSZOLTIP"
         Me.cmbSZOLTIP.Size = New System.Drawing.Size(138, 21)
         Me.cmbSZOLTIP.TabIndex = 20
+        Me.cmbSZOLTIP.Tag = "309"
         '
         'lblSZOLTIP
         '
@@ -392,6 +400,7 @@ Partial Class Form001a
         Me.cmbMUNSZ.Name = "cmbMUNSZ"
         Me.cmbMUNSZ.Size = New System.Drawing.Size(138, 21)
         Me.cmbMUNSZ.TabIndex = 21
+        Me.cmbMUNSZ.Tag = "271"
         '
         'lblMUNSZ
         '
@@ -410,6 +419,7 @@ Partial Class Form001a
         Me.cmbKARBTIP.Name = "cmbKARBTIP"
         Me.cmbKARBTIP.Size = New System.Drawing.Size(138, 21)
         Me.cmbKARBTIP.TabIndex = 22
+        Me.cmbKARBTIP.Tag = "300"
         '
         'lblKARBTIP
         '
@@ -474,6 +484,7 @@ Partial Class Form001a
         Me.optALLAPOT.Name = "optALLAPOT"
         Me.optALLAPOT.Size = New System.Drawing.Size(76, 17)
         Me.optALLAPOT.TabIndex = 26
+        Me.optALLAPOT.TabStop = True
         Me.optALLAPOT.Text = "Előjegyzett"
         Me.optALLAPOT.UseVisualStyleBackColor = True
         '
