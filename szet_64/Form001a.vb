@@ -144,14 +144,31 @@ Public Class Form001a
 
     Private Sub Form001a_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cursor.Current = Cursors.WaitCursor
-        If Me.Tag = -1 Then
-            Me.Text = "Form001a - Új munkalap"
-        Else
-            Me.Text = "Form001a - " + Me.Tag.ToString + " munkalap módosítása"
-        End If
 
         'Comboboxok feltoltese
         Me.FillCombobox()
+
+        'Kezdeti ertekek beallitasa
+        If Me.Tag = -1 Then
+            Me.Text = "Form001a - Új munkalap"
+            txtBEJDAT.Text = DateValue(Now())
+            txtKIALLDAT.Text = DateValue(Now())
+            txtMUNELV.Text = DateValue(Now())
+            cmbSZEREGYS.SelectedValue = "01"
+            cmbMUNSZ.SelectedIndex = -1
+            cmbMFDOLG.SelectedIndex = -1
+            cmbSZOLGJELL.SelectedIndex = -1
+            cmbFSZAM.SelectedIndex = -1
+            cmbTIPUSH.SelectedIndex = -1
+            cmbMKAP.SelectedIndex = -1
+            cmbMUVEL.SelectedIndex = -1
+            cmbMUNVEGZ.SelectedIndex = -1
+            cmbSZOLTIP.SelectedIndex = -1
+            cmbMUNSZ.SelectedIndex = -1
+            cmbKARBTIP.SelectedIndex = -1
+        Else
+            Me.Text = "Form001a - " + Me.Tag.ToString + " munkalap módosítása"
+        End If
 
         Cursor.Current = Cursors.Default
     End Sub
