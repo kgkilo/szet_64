@@ -25,3 +25,5 @@ https://www.connectionstrings.com/sql-server/
 Git branch strategy for small dev team
 http://stackoverflow.com/questions/2428722/git-branch-strategy-for-small-dev-team
 
+How To Change The Connection String saved in My.Settings in VB 2010
+http://stackoverflow.com/questions/9069691/how-to-change-the-connection-string-saved-in-my-settings-in-vb-2010
