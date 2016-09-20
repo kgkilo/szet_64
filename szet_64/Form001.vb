@@ -102,7 +102,7 @@ Public Class Form001
 
         With grdMUNKALAP
             For i As Long = 1 To (.RowCount - 1)
-                t = .Rows(i).Cells(14).Value
+                t = .Rows(i).Cells(13).Value
                 If t <> "" Then iOra += CLng(t)
             Next i
         End With
