@@ -53,6 +53,7 @@ Partial Class Form001a
         Me.txtIDOIG = New System.Windows.Forms.TextBox()
         Me.lblIDO = New System.Windows.Forms.Label()
         Me.cmbMKAP = New System.Windows.Forms.ComboBox()
+        Me.SpQ334BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblMKAP = New System.Windows.Forms.Label()
         Me.txtUJ = New System.Windows.Forms.TextBox()
         Me.txtFELUJITOTT = New System.Windows.Forms.TextBox()
@@ -68,6 +69,7 @@ Partial Class Form001a
         Me.SpQ309BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblSZOLTIP = New System.Windows.Forms.Label()
         Me.cmbMUNSZ = New System.Windows.Forms.ComboBox()
+        Me.SpQ271BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblMUNSZ = New System.Windows.Forms.Label()
         Me.cmbKARBTIP = New System.Windows.Forms.ComboBox()
         Me.SpQ300BindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -77,10 +79,10 @@ Partial Class Form001a
         Me.txt3 = New System.Windows.Forms.TextBox()
         Me.txtLAKAS = New System.Windows.Forms.TextBox()
         Me.cmdHELY = New System.Windows.Forms.Button()
-        Me.optALLAPOT = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.optALLAPOT1 = New System.Windows.Forms.RadioButton()
+        Me.optALLAPOT2 = New System.Windows.Forms.RadioButton()
+        Me.optALLAPOT3 = New System.Windows.Forms.RadioButton()
+        Me.optALLAPOT4 = New System.Windows.Forms.RadioButton()
         Me.spcALLAPOT = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtHIBLEIR = New System.Windows.Forms.TextBox()
@@ -100,22 +102,25 @@ Partial Class Form001a
         Me.Sp_Q306TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q306TableAdapter()
         Me.Sp_Q309TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q309TableAdapter()
         Me.Sp_Q300TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q300TableAdapter()
-        Me.SpQ334BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SpQ271BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.txtMTIP = New System.Windows.Forms.TextBox()
+        Me.txtOBJID = New System.Windows.Forms.TextBox()
+        Me.txtALLAPOT = New System.Windows.Forms.TextBox()
+        Me.txtREF = New System.Windows.Forms.TextBox()
+        Me.spcOBJTIP = New System.Windows.Forms.TextBox()
         CType(Me.SpQ271BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ334BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ291BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ310ABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ293BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ334BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ298BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ306BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ309BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ271BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ300BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.spcALLAPOT.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.SpQ334BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpQ271BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmbSZEREGYS
@@ -376,6 +381,11 @@ Partial Class Form001a
         Me.cmbMKAP.Tag = "334"
         Me.cmbMKAP.ValueMember = "ID"
         '
+        'SpQ334BindingSource1
+        '
+        Me.SpQ334BindingSource1.DataMember = "sp_Q334"
+        Me.SpQ334BindingSource1.DataSource = Me.SZETAVDataSet
+        '
         'lblMKAP
         '
         Me.lblMKAP.AutoSize = True
@@ -515,6 +525,11 @@ Partial Class Form001a
         Me.cmbMUNSZ.Tag = "271"
         Me.cmbMUNSZ.ValueMember = "KODERT"
         '
+        'SpQ271BindingSource1
+        '
+        Me.SpQ271BindingSource1.DataMember = "sp_Q271"
+        Me.SpQ271BindingSource1.DataSource = Me.SZETAVDataSet
+        '
         'lblMUNSZ
         '
         Me.lblMUNSZ.AutoSize = True
@@ -597,54 +612,54 @@ Partial Class Form001a
         Me.cmdHELY.Text = "Hely módosítása"
         Me.cmdHELY.UseVisualStyleBackColor = True
         '
-        'optALLAPOT
+        'optALLAPOT1
         '
-        Me.optALLAPOT.AutoSize = True
-        Me.optALLAPOT.Checked = True
-        Me.optALLAPOT.Location = New System.Drawing.Point(6, 19)
-        Me.optALLAPOT.Name = "optALLAPOT"
-        Me.optALLAPOT.Size = New System.Drawing.Size(76, 17)
-        Me.optALLAPOT.TabIndex = 26
-        Me.optALLAPOT.TabStop = True
-        Me.optALLAPOT.Text = "Előjegyzett"
-        Me.optALLAPOT.UseVisualStyleBackColor = True
+        Me.optALLAPOT1.AutoSize = True
+        Me.optALLAPOT1.Checked = True
+        Me.optALLAPOT1.Location = New System.Drawing.Point(6, 20)
+        Me.optALLAPOT1.Name = "optALLAPOT1"
+        Me.optALLAPOT1.Size = New System.Drawing.Size(76, 17)
+        Me.optALLAPOT1.TabIndex = 26
+        Me.optALLAPOT1.TabStop = True
+        Me.optALLAPOT1.Text = "Előjegyzett"
+        Me.optALLAPOT1.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'optALLAPOT2
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 42)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(76, 17)
-        Me.RadioButton1.TabIndex = 27
-        Me.RadioButton1.Text = "Nyomtatott"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.optALLAPOT2.AutoSize = True
+        Me.optALLAPOT2.Location = New System.Drawing.Point(6, 43)
+        Me.optALLAPOT2.Name = "optALLAPOT2"
+        Me.optALLAPOT2.Size = New System.Drawing.Size(76, 17)
+        Me.optALLAPOT2.TabIndex = 27
+        Me.optALLAPOT2.Text = "Nyomtatott"
+        Me.optALLAPOT2.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'optALLAPOT3
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(6, 65)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(61, 17)
-        Me.RadioButton2.TabIndex = 28
-        Me.RadioButton2.Text = "Sztornó"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.optALLAPOT3.AutoSize = True
+        Me.optALLAPOT3.Location = New System.Drawing.Point(6, 66)
+        Me.optALLAPOT3.Name = "optALLAPOT3"
+        Me.optALLAPOT3.Size = New System.Drawing.Size(61, 17)
+        Me.optALLAPOT3.TabIndex = 28
+        Me.optALLAPOT3.Text = "Sztornó"
+        Me.optALLAPOT3.UseVisualStyleBackColor = True
         '
-        'RadioButton3
+        'optALLAPOT4
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(6, 88)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(93, 17)
-        Me.RadioButton3.TabIndex = 29
-        Me.RadioButton3.Text = "Visszaérkezett"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.optALLAPOT4.AutoSize = True
+        Me.optALLAPOT4.Location = New System.Drawing.Point(6, 87)
+        Me.optALLAPOT4.Name = "optALLAPOT4"
+        Me.optALLAPOT4.Size = New System.Drawing.Size(93, 17)
+        Me.optALLAPOT4.TabIndex = 29
+        Me.optALLAPOT4.Text = "Visszaérkezett"
+        Me.optALLAPOT4.UseVisualStyleBackColor = True
         '
         'spcALLAPOT
         '
-        Me.spcALLAPOT.Controls.Add(Me.RadioButton3)
-        Me.spcALLAPOT.Controls.Add(Me.optALLAPOT)
-        Me.spcALLAPOT.Controls.Add(Me.RadioButton2)
-        Me.spcALLAPOT.Controls.Add(Me.RadioButton1)
+        Me.spcALLAPOT.Controls.Add(Me.optALLAPOT4)
+        Me.spcALLAPOT.Controls.Add(Me.optALLAPOT3)
+        Me.spcALLAPOT.Controls.Add(Me.optALLAPOT2)
+        Me.spcALLAPOT.Controls.Add(Me.optALLAPOT1)
         Me.spcALLAPOT.Location = New System.Drawing.Point(340, 193)
         Me.spcALLAPOT.Name = "spcALLAPOT"
         Me.spcALLAPOT.Size = New System.Drawing.Size(145, 116)
@@ -778,21 +793,62 @@ Partial Class Form001a
         '
         Me.Sp_Q300TableAdapter.ClearBeforeFill = True
         '
-        'SpQ334BindingSource1
+        'txtMTIP
         '
-        Me.SpQ334BindingSource1.DataMember = "sp_Q334"
-        Me.SpQ334BindingSource1.DataSource = Me.SZETAVDataSet
+        Me.txtMTIP.Location = New System.Drawing.Point(301, 318)
+        Me.txtMTIP.Name = "txtMTIP"
+        Me.txtMTIP.Size = New System.Drawing.Size(27, 20)
+        Me.txtMTIP.TabIndex = 34
+        Me.txtMTIP.TabStop = False
+        Me.txtMTIP.Text = "1"
+        Me.txtMTIP.Visible = False
         '
-        'SpQ271BindingSource1
+        'txtOBJID
         '
-        Me.SpQ271BindingSource1.DataMember = "sp_Q271"
-        Me.SpQ271BindingSource1.DataSource = Me.SZETAVDataSet
+        Me.txtOBJID.Location = New System.Drawing.Point(334, 318)
+        Me.txtOBJID.Name = "txtOBJID"
+        Me.txtOBJID.Size = New System.Drawing.Size(27, 20)
+        Me.txtOBJID.TabIndex = 35
+        Me.txtOBJID.TabStop = False
+        Me.txtOBJID.Visible = False
+        '
+        'txtALLAPOT
+        '
+        Me.txtALLAPOT.Location = New System.Drawing.Point(367, 318)
+        Me.txtALLAPOT.Name = "txtALLAPOT"
+        Me.txtALLAPOT.Size = New System.Drawing.Size(27, 20)
+        Me.txtALLAPOT.TabIndex = 35
+        Me.txtALLAPOT.TabStop = False
+        Me.txtALLAPOT.Visible = False
+        '
+        'txtREF
+        '
+        Me.txtREF.Location = New System.Drawing.Point(400, 318)
+        Me.txtREF.Name = "txtREF"
+        Me.txtREF.Size = New System.Drawing.Size(27, 20)
+        Me.txtREF.TabIndex = 35
+        Me.txtREF.TabStop = False
+        Me.txtREF.Visible = False
+        '
+        'spcOBJTIP
+        '
+        Me.spcOBJTIP.Location = New System.Drawing.Point(433, 318)
+        Me.spcOBJTIP.Name = "spcOBJTIP"
+        Me.spcOBJTIP.Size = New System.Drawing.Size(27, 20)
+        Me.spcOBJTIP.TabIndex = 35
+        Me.spcOBJTIP.TabStop = False
+        Me.spcOBJTIP.Visible = False
         '
         'Form001a
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(775, 345)
+        Me.Controls.Add(Me.spcOBJTIP)
+        Me.Controls.Add(Me.txtREF)
+        Me.Controls.Add(Me.txtALLAPOT)
+        Me.Controls.Add(Me.txtOBJID)
+        Me.Controls.Add(Me.txtMTIP)
         Me.Controls.Add(Me.cmdOSSZESITO)
         Me.Controls.Add(Me.cmdCANCEL)
         Me.Controls.Add(Me.cmdOK)
@@ -852,16 +908,16 @@ Partial Class Form001a
         CType(Me.SpQ291BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ310ABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ293BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ334BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ298BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ306BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ309BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ271BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ300BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.spcALLAPOT.ResumeLayout(False)
         Me.spcALLAPOT.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.SpQ334BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpQ271BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -910,10 +966,10 @@ Partial Class Form001a
     Friend WithEvents txtLAKAS As System.Windows.Forms.TextBox
     Friend WithEvents txt2 As System.Windows.Forms.TextBox
     Friend WithEvents txt1 As System.Windows.Forms.TextBox
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Friend WithEvents optALLAPOT As System.Windows.Forms.RadioButton
+    Friend WithEvents optALLAPOT4 As System.Windows.Forms.RadioButton
+    Friend WithEvents optALLAPOT3 As System.Windows.Forms.RadioButton
+    Friend WithEvents optALLAPOT2 As System.Windows.Forms.RadioButton
+    Friend WithEvents optALLAPOT1 As System.Windows.Forms.RadioButton
     Friend WithEvents spcALLAPOT As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents txtHIBLEIR As System.Windows.Forms.TextBox
@@ -945,4 +1001,9 @@ Partial Class Form001a
     Friend WithEvents Sp_Q300TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q300TableAdapter
     Friend WithEvents SpQ334BindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents SpQ271BindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents txtMTIP As System.Windows.Forms.TextBox
+    Friend WithEvents txtOBJID As System.Windows.Forms.TextBox
+    Friend WithEvents txtALLAPOT As System.Windows.Forms.TextBox
+    Friend WithEvents txtREF As System.Windows.Forms.TextBox
+    Friend WithEvents spcOBJTIP As System.Windows.Forms.TextBox
 End Class
