@@ -96,20 +96,24 @@ Public Class Form001a
     ' a hozza tartozo fokonyvi megnevezest
     Private Sub cmbFSZAM_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFSZAM.SelectedIndexChanged
 
-        If cmbFSZAM.SelectedValue <> "" Then
-            Dim dbadpFszam As New SqlDataAdapter("SELECT FSZNEV FROM KONTIR WHERE FSZAM = @pFSZAM", sConnStr)
-            With dbadpFszam
-                With .SelectCommand
-                    '.CommandType = CommandType.StoredProcedure
-                    Dim sParam As SqlParameter = .Parameters.Add("@pFSZAM", SqlDbType.VarChar, 12)
-                    sParam.Value = cmbFSZAM.SelectedValue.ToString()
-                End With
+        If cmbFSZAM.SelectedIndex <> -1 Then
+            Try
+                sqlConn = New SqlConnection(sConnStr)
+                Dim sqlComm As SqlCommand = New SqlCommand("SELECT FSZAM + ' ' + FSZNEV AS FNEV FROM KONTIR WHERE FSZAM = @pFSZAM", sqlConn)
+                sqlComm.Parameters.Add("@pFSZAM", SqlDbType.VarChar, 12).Value = cmbFSZAM.SelectedValue.ToString()
+                sqlConn.Open()
 
-                Dim dtFszam As New DataTable
-                .Fill(dtFszam)
-                .Dispose()
-                txtFNEV.Text = dtFszam.Rows(0).Item(0).ToString
-            End With
+                Dim sqlReader As SqlDataReader = sqlComm.ExecuteReader()
+                If sqlReader.HasRows Then
+                    While (sqlReader.Read())
+                        txtFNEV.Text = sqlReader.Item("FsNEV").ToString
+                    End While
+                End If
+                sqlReader.Close()
+            Catch ex As Exception
+                MsgBox(ex.ToString(), MsgBoxStyle.Critical, ex.Message)
+                Me.Close()
+            End Try
         End If
     End Sub
 
