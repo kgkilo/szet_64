@@ -117,6 +117,8 @@ Public Class Form001a
         End If
     End Sub
 
+    'Ha a szolgaltatas jellege valtozik, az meghataroz egy csomo mindent a formon.
+    'Ezeket automatikusan be kell allitani.
     Private Sub cmbSZOLGJELL_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSZOLGJELL.SelectedIndexChanged
         If Me.Tag = -1 Then 'Csak uj munkalapnal
             Select Case cmbSZOLGJELL.SelectedValue
@@ -131,10 +133,10 @@ Public Class Form001a
                 Case "HK"
                     cmbMUVEL.SelectedValue = "BHJ"
                     'If iWorkMode = DISZPECSER Then
-                    '    If spcOBJTIP = "03" Then
-                    '        SetComboVal(cmbFSZAM, "62317")
-                    '    ElseIf spcOBJTIP = "17" Then
-                    '        SetComboVal(cmbFSZAM, "62325")
+                    '    If spcOBJTIP.Text = "03" Then
+                    '        cmbFSZAM.SelectedValue = "62317"
+                    '    ElseIf spcOBJTIP.Text = "17" Then
+                    '        cmbFSZAM.SelectedValue = "62325"
                     '    End If
                     'End If
 
