@@ -185,4 +185,9 @@ Public Class Form001
         End If
     End Sub
 
+    Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click
+        Form001a.sConnStr = Me.sConnStr
+        Form001a.Tag = grdMUNKALAP.SelectedRows(0).Cells(0).Value()   'Update
+        Form001a.Show(Me)
+    End Sub
 End Class

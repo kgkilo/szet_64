@@ -2,6 +2,7 @@
 
 Public Class Form001a
     Public sConnStr As String
+    Private sqlConn As SqlConnection
 
     Private Sub Form001a_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cursor.Current = Cursors.WaitCursor
@@ -17,6 +18,7 @@ Public Class Form001a
 
         'Kezdeti ertekek beallitasa
         If Me.Tag = -1 Then
+            'Uj munkalap
             Me.Text = "Form001a - Új munkalap"
             txtBEJDAT.Text = DateValue(Now())
             txtKIALLDAT.Text = DateValue(Now())
@@ -34,7 +36,57 @@ Public Class Form001a
             cmbMUNSZ.SelectedIndex = -1
             cmbKARBTIP.SelectedIndex = -1
         Else
-            Me.Text = "Form001a - " + Me.Tag.ToString + " munkalap módosítása"
+            'Meglevo munkalap betoltese
+            Me.Text = "Form001a - " + Me.Tag.ToString + " sz. munkalap módosítása"
+
+            sqlConn = New SqlConnection(sConnStr)
+            Using (sqlConn)
+                Dim sqlComm As SqlCommand = New SqlCommand("sp_LoadMunkalap", sqlConn)
+                sqlComm.CommandType = CommandType.StoredProcedure
+                sqlComm.Parameters.Add("@pID", SqlDbType.Int).Value = Me.Tag
+
+                sqlConn.Open()
+                Dim sqlReader As SqlDataReader = sqlComm.ExecuteReader()
+                If sqlReader.HasRows Then
+                    While (sqlReader.Read())
+                        txtNAPSZAM.Text = sqlReader.Item("NAPSZAM").ToString
+                        txtBEJDAT.Text = sqlReader.Item("BEJDAT").ToString
+                        txtKIALLDAT.Text = sqlReader.Item("KIALLDAT").ToString
+                        cmbSZEREGYS.SelectedValue = sqlReader.Item("SZEREGYS")
+                        cmbMFDOLG.SelectedValue = sqlReader.Item("MFDOLG")
+                        cmbSZOLGJELL.SelectedValue = sqlReader.Item("SZOLGJELL")
+                        txtBEJNEV.Text = sqlReader.Item("BEJNEV").ToString
+                        cmbFSZAM.SelectedValue = sqlReader.Item("FSZAM")
+                        cmbTIPUSH.SelectedValue = sqlReader.Item("TIPUSH")
+                        txtMUNELV.Text = sqlReader.Item("MUNELV").ToString
+                        txtIDOTOL.Text = sqlReader.Item("IDOTOL").ToString
+                        txtIDOIG.Text = sqlReader.Item("IDOIG").ToString
+                        cmbMKAP.SelectedValue = sqlReader.Item("MKAP")
+                        cmbPLOMBAZAS.SelectedValue = sqlReader.Item("PLOMBAZAS")
+                        txtUJ.Text = sqlReader.Item("UJ").ToString
+                        txtFELUJITOTT.Text = sqlReader.Item("FELUJITOTT").ToString
+                        cmbMUVEL.SelectedValue = sqlReader.Item("MUVEL")
+                        cmbMUNVEGZ.SelectedValue = sqlReader.Item("MUNVEGZ")
+                        cmbSZOLTIP.SelectedValue = sqlReader.Item("SZOLTIP")
+                        cmbMUNSZ.SelectedValue = sqlReader.Item("MUNSZ")
+                        cmbKARBTIP.SelectedValue = sqlReader.Item("KARBTIP")
+                        txtHIBLEIR.Text = sqlReader.Item("HIBLEIR").ToString
+                        txtOBJID.Text = sqlReader.Item("OBJID").ToString
+                        txtALLAPOT.Text = sqlReader.Item("ALLAPOT").ToString
+                        Select Case txtALLAPOT.Text
+                            Case "1"
+                                optALLAPOT1.Checked = True
+                            Case "2"
+                                optALLAPOT2.Checked = True
+                            Case "3"
+                                optALLAPOT3.Checked = True
+                            Case "4"
+                                optALLAPOT4.Checked = True
+                        End Select
+                    End While
+                End If
+                sqlReader.Close()
+            End Using
         End If
 
         Cursor.Current = Cursors.Default
