@@ -72,6 +72,7 @@ Public Class Form001a
                         cmbKARBTIP.SelectedValue = sqlReader.Item("KARBTIP")
                         txtHIBLEIR.Text = sqlReader.Item("HIBLEIR").ToString
                         txtOBJID.Text = sqlReader.Item("OBJID").ToString
+                        txtREF.Text = sqlReader.Item("REF").ToString
                         txtALLAPOT.Text = sqlReader.Item("ALLAPOT").ToString
                         Select Case txtALLAPOT.Text
                             Case "1"
@@ -83,6 +84,56 @@ Public Class Form001a
                             Case "4"
                                 optALLAPOT4.Checked = True
                         End Select
+                        'Sztorno munkalapot nem lehet masmilyen allapotura allitani,
+                        'orokre sztorno marad.
+                        If txtALLAPOT.Text = "3" Then
+                            spcALLAPOT.Enabled = False
+                        End If
+
+                        txtKIALLDAT.Enabled = False   'Kiallitas datuma nem javithato utolag (altalaban)
+
+                        If txtREF.Text <> "" Then   'Ha van mar errol a munkalaprol masolat, azaz a referencia mezo nem ures
+                            txtNAPSZAM.Enabled = False    'egy csomo minden nem javithato utolag.
+                            txtBEJDAT.ReadOnly = True
+                            cmbSZEREGYS.Enabled = False
+                            cmbMFDOLG.Enabled = False
+                            cmbSZOLGJELL.Enabled = False
+                            'txtBEJNEV.readonly = True
+                            cmbFSZAM.Enabled = False
+                            cmbMKAP.Enabled = False
+                            cmbMUVEL.Enabled = False
+                            cmbMUNVEGZ.Enabled = False
+                            cmbSZOLTIP.Enabled = False
+                            cmbMUNSZ.Enabled = False
+                            cmbKARBTIP.Enabled = False
+                            'Me.txtIDOTOL.ReadOnly = True
+                            'Me.txtIDOIG.ReadOnly = True
+
+                            txtMUNELV.ReadOnly = False
+                            cmbTIPUSH.Enabled = True
+                            txtHIBLEIR.ReadOnly = False
+
+                            'Osszesito keszitese csak plombazashoz engedelyezett!
+                            'Plombazas csak bizonyos tipushiba eseten lehetseges,
+                            'ezert lekerdezzuk, hogy mi is a tipushiba.
+                            Dim tipusHiba As String
+                            tipusHiba = If(cmbTIPUSH.SelectedIndex <> -1, cmbTIPUSH.SelectedValue.ToString, 0)
+
+                            'If tipusHiba = 272 Then
+                            ' Me.cmbPLOMBAZAS.Visible = True
+                            'Me.lblPLOMBAZAS.Visible = True
+                            'Else
+                            ' Me.cmbPLOMBAZAS.Visible = False
+                            ' Me.lblPLOMBAZAS.Visible = False
+                            'End If
+
+                            Select Case tipusHiba   'Ezek a plombazassal kapcsolatos tipushibak
+                                Case "272", "028", "029", "015", "016"
+                                    cmdOSSZESITO.Enabled = True
+                            End Select
+                        Else
+                            cmdOSSZESITO.Enabled = False
+                        End If  'txtREF
                     End While
                 End If
                 sqlReader.Close()
@@ -106,7 +157,7 @@ Public Class Form001a
                 Dim sqlReader As SqlDataReader = sqlComm.ExecuteReader()
                 If sqlReader.HasRows Then
                     While (sqlReader.Read())
-                        txtFNEV.Text = sqlReader.Item("FsNEV").ToString
+                        txtFNEV.Text = sqlReader.Item("FNEV").ToString
                     End While
                 End If
                 sqlReader.Close()
@@ -146,6 +197,9 @@ Public Class Form001a
         End If
     End Sub
 
+    'Ha a tipushiba valtozik, az meghataroz egy csomo mindent a formon, pl kitolti automatikusan
+    ' a hibaleiras mezot.
+    'A plombazashoz kapcsolodo mezok lathatosaga is ez alapjan valtozik.
     Private Sub cmbTIPUSH_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTIPUSH.SelectedIndexChanged
         Dim tipusHiba As String = cmbTIPUSH.SelectedValue
 
@@ -175,6 +229,7 @@ Public Class Form001a
             End Select
         End If
 
+        'Plombazashoz kapcsolodo mezok lathatosaga
         Select Case tipusHiba
             Case "272"
                 lblPLOMBAZAS.Visible = True
@@ -194,14 +249,15 @@ Public Class Form001a
                 txtFELUJITOTT.Visible = False
                 txtUJ.Visible = False
         End Select
-
     End Sub
 
     Private Sub cmdCANCEL_Click(sender As Object, e As EventArgs) Handles cmdCANCEL.Click
         Me.Close()
     End Sub
 
+    'Rekord mentese
     Private Sub cmdOK_Click(sender As Object, e As EventArgs) Handles cmdOK.Click
+        'Allapot radiobutton lekerdezese
         If optALLAPOT1.Checked Then         'Elojegyzett
             txtALLAPOT.Text = "1"
         ElseIf optALLAPOT2.Checked Then     'Nyomtatott
@@ -214,93 +270,156 @@ Public Class Form001a
 
         Try
             sqlConn = New SqlConnection(sConnStr)
+            Dim sqlComm As New SqlCommand()
 
-            Using (sqlConn)
-                Dim sqlComm As New SqlCommand()
+            If Me.Tag = -1 Then 'Uj rekordot kell rogziteni
+                With sqlComm
+                    .Connection = sqlConn
+                    .CommandText = "sp_InsMunkalap"
+                    .CommandType = CommandType.StoredProcedure
 
-                If Me.Tag = -1 Then 'Uj rekordot kell rogziteni
-                    With sqlComm
-                        .Connection = sqlConn
-                        .CommandText = "sp_InsMunkalap"
-                        .CommandType = CommandType.StoredProcedure
+                    'Dim sParam As SqlParameter = .Parameters.Add("@pObjTip", SqlDbType.VarChar, 2)
+                    'sParam.Value = cmbOBJTIP.SelectedValue
 
-                        'Dim sParam As SqlParameter = .Parameters.Add("@pObjTip", SqlDbType.VarChar, 2)
-                        'sParam.Value = cmbOBJTIP.SelectedValue
+                    '.Parameters.Add("MTIP", SqlDbType.VarChar, 2).Value = txtMTIP.Text
+                    .Parameters.AddWithValue("MTIP", txtMTIP.Text)
+                    .Parameters.AddWithValue("BEJDAT", Date.Parse(txtBEJDAT.Text))
+                    .Parameters.AddWithValue("BEJNEV", txtBEJNEV.Text) 'Integer.Parse(txtAge.Text))
+                    .Parameters.AddWithValue("TIPUSH", cmbTIPUSH.SelectedValue)
+                    .Parameters.AddWithValue("HIBLEIR", txtHIBLEIR.Text)
+                    .Parameters.AddWithValue("SZEREGYS", cmbSZEREGYS.SelectedValue)
+                    .Parameters.AddWithValue("MFDOLG", cmbMFDOLG.SelectedValue)
+                    .Parameters.AddWithValue("MUNELV", Date.Parse(txtMUNELV.Text))
+                    .Parameters.AddWithValue("IDOTOL", txtIDOTOL.Text)
+                    .Parameters.AddWithValue("IDOIG", txtIDOIG.Text)
+                    .Parameters.AddWithValue("SZOLGTIP", cmbSZOLTIP.SelectedValue)
+                    .Parameters.AddWithValue("MUNVEGZ", cmbMUNVEGZ.SelectedValue)
+                    .Parameters.AddWithValue("SZOLGJELL", cmbSZOLGJELL.SelectedValue)
+                    .Parameters.AddWithValue("OBJID", txtOBJID.Text)
+                    .Parameters.AddWithValue("KARBTIP", cmbKARBTIP.SelectedValue)
+                    .Parameters.AddWithValue("MUVEL", cmbMUVEL.SelectedValue)
+                    .Parameters.AddWithValue("NAPSZAM", txtNAPSZAM.Text)
+                    .Parameters.AddWithValue("KIALLDAT", Date.Parse(txtKIALLDAT.Text))
+                    .Parameters.AddWithValue("FSZAM", cmbFSZAM.SelectedValue)
+                    .Parameters.AddWithValue("SZOLTIP", cmbSZOLTIP.SelectedValue)
+                    .Parameters.AddWithValue("MUNSZ", cmbMUNSZ.SelectedValue)
+                    .Parameters.AddWithValue("MKAP", cmbMKAP.SelectedValue)
+                    .Parameters.AddWithValue("ALLAPOT", txtALLAPOT.Text)
+                    .Parameters.AddWithValue("LAKAS", txtLAKAS.Text)
+                    .Parameters.AddWithValue("PLOMBAZAS", cmbPLOMBAZAS.SelectedValue)
+                    .Parameters.AddWithValue("UJ", txtUJ.Text)
+                    .Parameters.AddWithValue("FELUJITOTT", txtFELUJITOTT.Text)
+                End With
 
-                        '.Parameters.Add("MTIP", SqlDbType.VarChar, 2).Value = txtMTIP.Text
-                        .Parameters.AddWithValue("MTIP", txtMTIP.Text)
-                        .Parameters.AddWithValue("BEJDAT", Date.Parse(txtBEJDAT.Text))
-                        .Parameters.AddWithValue("BEJNEV", txtBEJNEV.Text) 'Integer.Parse(txtAge.Text))
-                        .Parameters.AddWithValue("TIPUSH", cmbTIPUSH.SelectedValue)
-                        .Parameters.AddWithValue("HIBLEIR", txtHIBLEIR.Text)
-                        .Parameters.AddWithValue("SZEREGYS", cmbSZEREGYS.SelectedValue)
-                        .Parameters.AddWithValue("MFDOLG", cmbMFDOLG.SelectedValue)
-                        .Parameters.AddWithValue("MUNELV", Date.Parse(txtMUNELV.Text))
-                        .Parameters.AddWithValue("IDOTOL", txtIDOTOL.Text)
-                        .Parameters.AddWithValue("IDOIG", txtIDOIG.Text)
-                        .Parameters.AddWithValue("SZOLGTIP", cmbSZOLTIP.SelectedValue)
-                        .Parameters.AddWithValue("MUNVEGZ", cmbMUNVEGZ.SelectedValue)
-                        .Parameters.AddWithValue("SZOLGJELL", cmbSZOLGJELL.SelectedValue)
-                        .Parameters.AddWithValue("OBJID", txtOBJID.Text)
-                        .Parameters.AddWithValue("KARBTIP", cmbKARBTIP.SelectedValue)
-                        .Parameters.AddWithValue("MUVEL", cmbMUVEL.SelectedValue)
-                        .Parameters.AddWithValue("NAPSZAM", txtNAPSZAM.Text)
-                        .Parameters.AddWithValue("KIALLDAT", Date.Parse(txtKIALLDAT.Text))
-                        .Parameters.AddWithValue("FSZAM", cmbFSZAM.SelectedValue)
-                        .Parameters.AddWithValue("SZOLTIP", cmbSZOLTIP.SelectedValue)
-                        .Parameters.AddWithValue("MUNSZ", cmbMUNSZ.SelectedValue)
-                        .Parameters.AddWithValue("MKAP", cmbMKAP.SelectedValue)
-                        .Parameters.AddWithValue("ALLAPOT", txtALLAPOT.Text)
-                        .Parameters.AddWithValue("LAKAS", txtLAKAS.Text)
-                        .Parameters.AddWithValue("PLOMBAZAS", cmbPLOMBAZAS.SelectedValue)
-                        .Parameters.AddWithValue("UJ", txtUJ.Text)
-                        .Parameters.AddWithValue("FELUJITOTT", txtFELUJITOTT.Text)
-                    End With
+                sqlConn.Open()
+                sqlComm.ExecuteNonQuery()
 
-                    sqlConn.Open()
-                    sqlComm.ExecuteNonQuery()
-                Else    'Meglevo rekord update
-                    With sqlComm
-                        .Connection = sqlConn
-                        .CommandText = "sp_UpdMunkalap"
-                        .CommandType = CommandType.StoredProcedure
+                'If MsgBox("Kívánja nyomtatni a munkalapot?", vbQuestion + vbYesNo, "Nyomtatás") = vbYes Then
+                '    util.MunkalapAllapot(i, 2)
+                '    util.PrintMunkalap("1", i)
+                '    Nyomtat("munuf.rpt", 1)
+                'End If
 
-                        .Parameters.AddWithValue("pID", Integer.Parse(Me.Tag))
-                        .Parameters.AddWithValue("BEJDAT", Date.Parse(txtBEJDAT.Text))
-                        .Parameters.AddWithValue("BEJNEV", txtBEJNEV.Text) 'Integer.Parse(txtAge.Text))
-                        .Parameters.AddWithValue("TIPUSH", cmbTIPUSH.SelectedValue)
-                        .Parameters.AddWithValue("HIBLEIR", txtHIBLEIR.Text)
-                        .Parameters.AddWithValue("SZEREGYS", cmbSZEREGYS.SelectedValue)
-                        .Parameters.AddWithValue("MFDOLG", cmbMFDOLG.SelectedValue)
-                        .Parameters.AddWithValue("MUNELV", Date.Parse(txtMUNELV.Text))
-                        .Parameters.AddWithValue("IDOTOL", txtIDOTOL.Text)
-                        .Parameters.AddWithValue("IDOIG", txtIDOIG.Text)
-                        .Parameters.AddWithValue("SZOLGTIP", cmbSZOLTIP.SelectedValue)
-                        .Parameters.AddWithValue("MUNVEGZ", cmbMUNVEGZ.SelectedValue)
-                        .Parameters.AddWithValue("SZOLGJELL", cmbSZOLGJELL.SelectedValue)
-                        .Parameters.AddWithValue("KARBTIP", cmbKARBTIP.SelectedValue)
-                        .Parameters.AddWithValue("MUVEL", cmbMUVEL.SelectedValue)
-                        .Parameters.AddWithValue("NAPSZAM", txtNAPSZAM.Text)
-                        .Parameters.AddWithValue("KIALLDAT", Date.Parse(txtKIALLDAT.Text))
-                        .Parameters.AddWithValue("FSZAM", cmbFSZAM.SelectedValue)
-                        .Parameters.AddWithValue("SZOLTIP", cmbSZOLTIP.SelectedValue)
-                        .Parameters.AddWithValue("MUNSZ", cmbMUNSZ.SelectedValue)
-                        .Parameters.AddWithValue("MKAP", cmbMKAP.SelectedValue)
-                        .Parameters.AddWithValue("ALLAPOT", txtALLAPOT.Text)
-                        .Parameters.AddWithValue("LAKAS", txtLAKAS.Text)
-                        .Parameters.AddWithValue("OBJID", Integer.Parse(txtOBJID.Text))
-                        .Parameters.AddWithValue("PLOMBAZAS", cmbPLOMBAZAS.SelectedValue)
-                        .Parameters.AddWithValue("UJ", txtUJ.Text)
-                        .Parameters.AddWithValue("FELUJITOTT", txtFELUJITOTT.Text)
-                    End With
+            Else    'Meglevo rekord update
+                With sqlComm
+                    .Connection = sqlConn
+                    .CommandText = "sp_UpdMunkalap"
+                    .CommandType = CommandType.StoredProcedure
 
-                    sqlConn.Open()
-                    sqlComm.ExecuteNonQuery()
-                End If
-            End Using
+                    .Parameters.AddWithValue("pID", Integer.Parse(Me.Tag))
+                    .Parameters.AddWithValue("BEJDAT", Date.Parse(txtBEJDAT.Text))
+                    .Parameters.AddWithValue("BEJNEV", txtBEJNEV.Text) 'Integer.Parse(txtAge.Text))
+                    .Parameters.AddWithValue("TIPUSH", cmbTIPUSH.SelectedValue)
+                    .Parameters.AddWithValue("HIBLEIR", txtHIBLEIR.Text)
+                    .Parameters.AddWithValue("SZEREGYS", cmbSZEREGYS.SelectedValue)
+                    .Parameters.AddWithValue("MFDOLG", cmbMFDOLG.SelectedValue)
+                    .Parameters.AddWithValue("MUNELV", Date.Parse(txtMUNELV.Text))
+                    .Parameters.AddWithValue("IDOTOL", txtIDOTOL.Text)
+                    .Parameters.AddWithValue("IDOIG", txtIDOIG.Text)
+                    .Parameters.AddWithValue("SZOLGTIP", cmbSZOLTIP.SelectedValue)
+                    .Parameters.AddWithValue("MUNVEGZ", cmbMUNVEGZ.SelectedValue)
+                    .Parameters.AddWithValue("SZOLGJELL", cmbSZOLGJELL.SelectedValue)
+                    .Parameters.AddWithValue("KARBTIP", cmbKARBTIP.SelectedValue)
+                    .Parameters.AddWithValue("MUVEL", cmbMUVEL.SelectedValue)
+                    .Parameters.AddWithValue("NAPSZAM", txtNAPSZAM.Text)
+                    .Parameters.AddWithValue("KIALLDAT", Date.Parse(txtKIALLDAT.Text))
+                    .Parameters.AddWithValue("FSZAM", cmbFSZAM.SelectedValue)
+                    .Parameters.AddWithValue("SZOLTIP", cmbSZOLTIP.SelectedValue)
+                    .Parameters.AddWithValue("MUNSZ", cmbMUNSZ.SelectedValue)
+                    .Parameters.AddWithValue("MKAP", cmbMKAP.SelectedValue)
+                    .Parameters.AddWithValue("ALLAPOT", txtALLAPOT.Text)
+                    .Parameters.AddWithValue("LAKAS", txtLAKAS.Text)
+                    .Parameters.AddWithValue("OBJID", Integer.Parse(txtOBJID.Text))
+                    .Parameters.AddWithValue("PLOMBAZAS", cmbPLOMBAZAS.SelectedValue)
+                    .Parameters.AddWithValue("UJ", txtUJ.Text)
+                    .Parameters.AddWithValue("FELUJITOTT", txtFELUJITOTT.Text)
+                End With
+
+                sqlConn.Open()
+                sqlComm.ExecuteNonQuery()
+            End If
         Catch ex As Exception
-            MsgBox(ex.Message, , ex.ToString)
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, ex.Message)
         End Try
         Me.Close()
     End Sub
+
+    Private Sub cmdHELY_Click(sender As Object, e As EventArgs) Handles cmdHELY.Click
+        'Form001b.Tag = -1
+        'Form001b.Show(Me)
+        'If iWorkMode = DISZPECSER Then cmbSZOLGJELL_SelectedIndexChanged(sender, e)
+    End Sub
+
+    Private Sub cmdOSSZESITO_Click(sender As Object, e As EventArgs) Handles cmdOSSZESITO.Click
+        'Dim tipusHiba As String = cmbTIPUSH.SelectedValue
+
+        'If MsgBox("Biztosan nyomtatni szeretné az összesítõt?", vbYesNo + vbExclamation, "Tisztelt felhasználó!") = vbYes Then
+        '    If tipusHiba = 272 Then 'Vizora plombazas
+        '        util.PrintMunkalapSok(txtREF, 1)
+        '        Nyomtat("plombossz.rpt", 0)
+        '    Else
+        '        util.PrintMunkalapSok(txtREF, 2)
+        '        Nyomtat("vizoraossz.rpt", 0)
+        '    End If
+        'End If
+    End Sub
+
+    Private Sub Form001a_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        If txtOBJID.Text <> "" Then Me.MunkalapObjKiir(CInt(txtOBJID.Text))
+
+        If txtREF.Text <> "" Then
+            MsgBox(txtREF.Text & ". munkalapról készített másolat! Bizonyos adatai nem módosíthatóak!", vbExclamation, "Tisztelt felhasználó!")
+        End If
+    End Sub
+
+    'A munkalaphoz kapcsolodo objektum adatait kiirja a bal also sarokban levo info mezokre
+    Private Function MunkalapObjKiir(ByVal objid As Integer) As Boolean
+        Dim ret As Boolean = False
+
+        If objid > 0 Then
+            Try
+                sqlConn = New SqlConnection(sConnStr)
+                Dim sqlComm As SqlCommand = New SqlCommand("sp_GetMunkalapObj", sqlConn)
+                sqlComm.CommandType = CommandType.StoredProcedure
+                sqlComm.Parameters.Add("@OBJID", SqlDbType.Int).Value = objid
+                sqlConn.Open()
+
+                Dim sqlReader As SqlDataReader = sqlComm.ExecuteReader()
+                If sqlReader.HasRows Then
+                    While (sqlReader.Read())
+                        txt1.Text = sqlReader.Item("OBJTIP").ToString
+                        txt2.Text = sqlReader.Item("MEGNEV").ToString
+                        txt3.Text = sqlReader.Item("INFO").ToString
+                    End While
+                End If
+                sqlReader.Close()
+                ret = True
+            Catch ex As Exception
+                MsgBox(ex.ToString(), MsgBoxStyle.Critical, ex.Message)
+                ret = False
+            End Try
+        End If
+
+        Return ret
+    End Function
 End Class

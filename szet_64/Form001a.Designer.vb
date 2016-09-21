@@ -718,6 +718,7 @@ Partial Class Form001a
         '
         'cmdOSSZESITO
         '
+        Me.cmdOSSZESITO.Enabled = False
         Me.cmdOSSZESITO.Location = New System.Drawing.Point(139, 315)
         Me.cmdOSSZESITO.Name = "cmdOSSZESITO"
         Me.cmdOSSZESITO.Size = New System.Drawing.Size(75, 23)
