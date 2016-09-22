@@ -39,8 +39,7 @@ Public Class Form001a
             'Meglevo munkalap betoltese
             Me.Text = "Form001a - " + Me.Tag.ToString + " sz. munkalap módosítása"
 
-            sqlConn = New SqlConnection(sConnStr)
-            Using (sqlConn)
+            Using sqlConn As New SqlConnection(sConnStr)
                 Dim sqlComm As SqlCommand = New SqlCommand("sp_LoadMunkalap", sqlConn)
                 sqlComm.CommandType = CommandType.StoredProcedure
                 sqlComm.Parameters.Add("@pID", SqlDbType.Int).Value = Me.Tag
@@ -119,13 +118,13 @@ Public Class Form001a
                             Dim tipusHiba As String
                             tipusHiba = If(cmbTIPUSH.SelectedIndex <> -1, cmbTIPUSH.SelectedValue.ToString, 0)
 
-                            'If tipusHiba = 272 Then
-                            ' Me.cmbPLOMBAZAS.Visible = True
-                            'Me.lblPLOMBAZAS.Visible = True
-                            'Else
-                            ' Me.cmbPLOMBAZAS.Visible = False
-                            ' Me.lblPLOMBAZAS.Visible = False
-                            'End If
+                            If tipusHiba = "272" Then
+                                cmbPLOMBAZAS.Visible = True
+                                lblPLOMBAZAS.Visible = True
+                            Else
+                                cmbPLOMBAZAS.Visible = False
+                                lblPLOMBAZAS.Visible = False
+                            End If
 
                             Select Case tipusHiba   'Ezek a plombazassal kapcsolatos tipushibak
                                 Case "272", "028", "029", "015", "016"
@@ -309,16 +308,23 @@ Public Class Form001a
                     .Parameters.AddWithValue("PLOMBAZAS", cmbPLOMBAZAS.SelectedValue)
                     .Parameters.AddWithValue("UJ", txtUJ.Text)
                     .Parameters.AddWithValue("FELUJITOTT", txtFELUJITOTT.Text)
+
+                    Dim retval As SqlParameter = .Parameters.Add("@RET", SqlDbType.Int)
+                    retval.Direction = ParameterDirection.ReturnValue
                 End With
 
                 sqlConn.Open()
-                sqlComm.ExecuteNonQuery()
+                'sqlComm.ExecuteNonQuery()
+                'Alapvetoen az ExecuteNonQuery is jo lenne, de szuksegunk van a visszateresi ertekre...
+                ' (ami az uj munkalap ID-je)
+                Dim sqlReader As SqlDataReader = sqlComm.ExecuteReader()
+                sqlReader.Close()   'Az SqlDataReader a Close utan adja csak vissza a return value-t!
+                Dim iMunkalap_ID As Integer = sqlComm.Parameters.Item("@RET").Value
 
-                'If MsgBox("Kívánja nyomtatni a munkalapot?", vbQuestion + vbYesNo, "Nyomtatás") = vbYes Then
-                '    util.MunkalapAllapot(i, 2)
-                '    util.PrintMunkalap("1", i)
-                '    Nyomtat("munuf.rpt", 1)
-                'End If
+                If MsgBox("Kívánja nyomtatni a munkalapot?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Nyomtatás") = vbYes Then
+                    Me.PrintMunkalap("1", iMunkalap_ID)
+                    '    Nyomtat("munuf.rpt", 1)
+                End If
 
             Else    'Meglevo rekord update
                 With sqlComm
@@ -422,4 +428,82 @@ Public Class Form001a
 
         Return ret
     End Function
+
+    'A munkalap allapotat atallitja a parameterben megadottra
+    Private Function MunkalapAllapot(ByVal objid As Integer, ByVal allapot As Integer) As Boolean
+        Dim ret As Boolean = False
+
+        If objid > 0 Then
+            Try
+                Using sqlConn As New SqlConnection(sConnStr)
+                    Dim sqlComm As SqlCommand = New SqlCommand("sp_SetMunkalapAllapot", sqlConn)
+                    With sqlComm
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.Add("@pID", SqlDbType.Int).Value = objid
+                        .Parameters.Add("@pALLAPOT", SqlDbType.Int).Value = allapot
+                        sqlConn.Open()
+                        .ExecuteNonQuery()
+                    End With
+                End Using
+                ret = True
+            Catch ex As Exception
+                MsgBox(ex.ToString(), MsgBoxStyle.Critical, ex.Message)
+                ret = False
+            End Try
+        End If
+
+        Return ret
+    End Function
+
+    'Kinyomtatja a megadott munkalapot
+    Private Function PrintMunkalap(ByVal sMunkalapTipus As String, ByVal iMunkalap_ID As Integer) As Boolean
+        Dim ret As Boolean = False
+
+        If iMunkalap_ID > 0 Then
+            Try
+                'A munkalap allapotat 'Nyomtatott'-ra allitjuk
+                Using sqlConn As New SqlConnection(sConnStr)
+                    Dim sqlComm As SqlCommand = New SqlCommand("sp_SetMunkalapAllapot", sqlConn)
+                    With sqlComm
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.Add("@pID", SqlDbType.Int).Value = iMunkalap_ID
+                        .Parameters.Add("@pALLAPOT", SqlDbType.Int).Value = 2    '2 = Nyomtatott
+                        sqlConn.Open()
+                        .ExecuteNonQuery()
+                    End With    'sqlComm
+                End Using   'sqlConn
+
+                'A munkalaprol megcsinaljuk a nyomtatasra varo rekordot a MLAPTAB tablaban
+                Using sqlConn As New SqlConnection(sConnStr)
+                    Dim sqlComm As SqlCommand = New SqlCommand("sp_WriteMlapTab", sqlConn)
+                    With sqlComm
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.Add("@pMTIP", SqlDbType.VarChar, 1).Value = "1" '1 = Uzemfenntartas
+                        .Parameters.Add("@pID", SqlDbType.Int).Value = iMunkalap_ID
+                        sqlConn.Open()
+                        .ExecuteNonQuery()
+                    End With    'sqlComm
+                End Using   'sqlConn
+
+                ret = True
+            Catch ex As Exception
+                MsgBox(ex.ToString(), MsgBoxStyle.Critical, ex.Message)
+                ret = False
+            End Try
+        End If
+
+        'Sub Nyomtat(reportname As String, iDestination As Integer)
+        '    With Form001.rep
+        '        .Destination = iDestination ' 0 - privju ablak, 1 - kozvetlenul nyomtat
+        '        .WindowBorderStyle = 3
+        '        .WindowState = 2
+        '        .Connect = sConnectString
+        '        .ReportFileName = sReportDir & reportname
+        '        .Action = 1
+        '    End With
+        'End Sub
+
+        Return ret
+    End Function
+
 End Class
