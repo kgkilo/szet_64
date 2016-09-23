@@ -1,14 +1,13 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Form005a
-    Public sConnStr As String
     Private sqlConn As SqlConnection
 
     Private Sub Form005a_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Sp_Q304TableAdapter.Fill(Me.SZETAVDataSet.sp_Q304)
         Me.Sp_Q271TableAdapter.Fill(Me.SZETAVDataSet.sp_Q271)
 
-        sqlConn = New SqlConnection(sConnStr)
+        sqlConn = New SqlConnection(GlobalVars.sConnStr)
 
         If Me.Tag <> -1 Then    'Tag fel volt toltve ertelmes indexszel, be kell tolteni azt a rekordot
             Using (sqlConn)
@@ -43,7 +42,7 @@ Public Class Form005a
     End Sub
 
     Private Sub cmdOK_Click(sender As Object, e As EventArgs) Handles cmdOK.Click
-        sqlConn = New SqlConnection(sConnStr)
+        sqlConn = New SqlConnection(GlobalVars.sConnStr)
         Dim sqlComm As New SqlCommand()
 
         Using (sqlConn)

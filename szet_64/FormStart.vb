@@ -1,10 +1,14 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class FormStart
-    Private sConnStr As String
+Module GlobalVars
+    Public iWorkMode As Integer = 0
 
+    Public Const NORMAL = 0    Public Const DISZPECSER = 1    Public Const LABOR = 2    Public Const MLAP = 3    Public Const VISSZAIR = 4
+    Public sConnStr As String
+End Module
+
+Public Class FormStart
     Private Sub cmdMunkalap_Click(sender As Object, e As EventArgs) Handles cmdMunkalap.Click
-        Form001.sConnStr = Me.sConnStr
         Form001.Show(Me)
     End Sub
 
@@ -13,7 +17,6 @@ Public Class FormStart
     End Sub
 
     Private Sub cmdDOLGOZO_Click(sender As Object, e As EventArgs) Handles cmdDOLGOZO.Click
-        Form005.sConnStr = Me.sConnStr
         Form005.Show(Me)
     End Sub
 
@@ -23,7 +26,7 @@ Public Class FormStart
 
     Private Sub FormStart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Read connection string from the registry
-        sConnStr = "Server=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=C:\Users\kilo\Documents\SZETAV.mdf;"
+        GlobalVars.sConnStr = "DRIVER={SQL Server};Server=NTSERVER;uid=sa;pwd=;database=SZETAV"
         Try
             Dim keyValue As Object
             'Ez valamiert nem mukodik, pedig a connection az gep szintu beallitas kellene legyen, nem user-szintu.
@@ -35,12 +38,12 @@ Public Class FormStart
                                                      "ConnectionString", _
                                                      "Server=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=C:\Users\kilo\Documents\SZETAV.mdf;")
 
-            sConnStr = If(keyValue.ToString, "")
+            GlobalVars.sConnStr = If(keyValue.ToString, "")
         Catch ex As Exception
             MsgBox(ex.Message, , ex.ToString)
         End Try
 
-        My.Settings.Item("SZETAVConnectionString") = sConnStr   'Ez allitja be az ossze bound DataSet eleresi utjat!!!
+        My.Settings.Item("SZETAVConnectionString") = GlobalVars.sConnStr   'Ez allitja be az ossze bound DataSet eleresi utjat!!!
 
     End Sub
 End Class

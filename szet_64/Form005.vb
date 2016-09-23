@@ -1,11 +1,9 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Form005
-    Public sConnStr As String ' = "DRIVER={SQL Server};Server=NTSERVER;uid=sa;pwd=;database=SZETAV"
-
     Private Sub LoadGrid()
         'Grid feltoltese tarolt eljarasbol
-        Dim dbadp As New SqlDataAdapter("sp_LekerdDolgozo", sConnStr)
+        Dim dbadp As New SqlDataAdapter("sp_LekerdDolgozo", GlobalVars.sConnStr)
         With dbadp.SelectCommand
             .CommandType = CommandType.StoredProcedure
 
@@ -47,7 +45,7 @@ Public Class Form005
 
     Private Sub cmdTOROL_Click(sender As Object, e As EventArgs) Handles cmdTOROL.Click
         If MsgBox("Biztos törölni szeretné a kijelölt dolgozót?", MsgBoxStyle.YesNo, "Dolgozó törlése") = MsgBoxResult.Yes Then
-            Dim sqlConn As SqlConnection = New SqlConnection(sConnStr)
+            Dim sqlConn As SqlConnection = New SqlConnection(GlobalVars.sConnStr)
             Using (sqlConn)
                 Dim sqlComm As SqlCommand = New SqlCommand("sp_DelDolgozo", sqlConn)
                 sqlComm.CommandType = CommandType.StoredProcedure
@@ -63,14 +61,12 @@ Public Class Form005
 
     Private Sub cmdUJ_Click(sender As Object, e As EventArgs) Handles cmdUJ.Click
         Form005a.Tag = -1   'Insert
-        Form005a.sConnStr = Me.sConnStr
         Form005a.ShowDialog(Me)
         LoadGrid()
     End Sub
 
     Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click
         Form005a.Tag = grd005.SelectedRows(0).Cells(0).Value
-        Form005a.sConnStr = Me.sConnStr
         Form005a.ShowDialog(Me)
         LoadGrid()
     End Sub

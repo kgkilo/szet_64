@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Form001a
-    Public sConnStr As String
     Private sqlConn As SqlConnection
 
     Private Sub Form001a_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -39,7 +38,7 @@ Public Class Form001a
             'Meglevo munkalap betoltese
             Me.Text = "Form001a - " + Me.Tag.ToString + " sz. munkalap módosítása"
 
-            Using sqlConn As New SqlConnection(sConnStr)
+            Using sqlConn As New SqlConnection(GlobalVars.sConnStr)
                 Dim sqlComm As SqlCommand = New SqlCommand("sp_LoadMunkalap", sqlConn)
                 sqlComm.CommandType = CommandType.StoredProcedure
                 sqlComm.Parameters.Add("@pID", SqlDbType.Int).Value = Me.Tag
@@ -148,7 +147,7 @@ Public Class Form001a
 
         If cmbFSZAM.SelectedIndex <> -1 Then
             Try
-                sqlConn = New SqlConnection(sConnStr)
+                sqlConn = New SqlConnection(GlobalVars.sConnStr)
                 Dim sqlComm As SqlCommand = New SqlCommand("SELECT FSZAM + ' ' + FSZNEV AS FNEV FROM KONTIR WHERE FSZAM = @pFSZAM", sqlConn)
                 sqlComm.Parameters.Add("@pFSZAM", SqlDbType.VarChar, 12).Value = cmbFSZAM.SelectedValue.ToString()
                 sqlConn.Open()
@@ -268,7 +267,7 @@ Public Class Form001a
         End If
 
         Try
-            sqlConn = New SqlConnection(sConnStr)
+            sqlConn = New SqlConnection(GlobalVars.sConnStr)
             Dim sqlComm As New SqlCommand()
 
             If Me.Tag = -1 Then 'Uj rekordot kell rogziteni
@@ -404,7 +403,7 @@ Public Class Form001a
 
         If objid > 0 Then
             Try
-                sqlConn = New SqlConnection(sConnStr)
+                sqlConn = New SqlConnection(GlobalVars.sConnStr)
                 Dim sqlComm As SqlCommand = New SqlCommand("sp_GetMunkalapObj", sqlConn)
                 sqlComm.CommandType = CommandType.StoredProcedure
                 sqlComm.Parameters.Add("@OBJID", SqlDbType.Int).Value = objid
@@ -435,7 +434,7 @@ Public Class Form001a
 
         If objid > 0 Then
             Try
-                Using sqlConn As New SqlConnection(sConnStr)
+                Using sqlConn As New SqlConnection(GlobalVars.sConnStr)
                     Dim sqlComm As SqlCommand = New SqlCommand("sp_SetMunkalapAllapot", sqlConn)
                     With sqlComm
                         .CommandType = CommandType.StoredProcedure
@@ -462,7 +461,7 @@ Public Class Form001a
         If iMunkalap_ID > 0 Then
             Try
                 'A munkalap allapotat 'Nyomtatott'-ra allitjuk
-                Using sqlConn As New SqlConnection(sConnStr)
+                Using sqlConn As New SqlConnection(GlobalVars.sConnStr)
                     Dim sqlComm As SqlCommand = New SqlCommand("sp_SetMunkalapAllapot", sqlConn)
                     With sqlComm
                         .CommandType = CommandType.StoredProcedure
@@ -474,7 +473,7 @@ Public Class Form001a
                 End Using   'sqlConn
 
                 'A munkalaprol megcsinaljuk a nyomtatasra varo rekordot a MLAPTAB tablaban
-                Using sqlConn As New SqlConnection(sConnStr)
+                Using sqlConn As New SqlConnection(GlobalVars.sConnStr)
                     Dim sqlComm As SqlCommand = New SqlCommand("sp_WriteMlapTab", sqlConn)
                     With sqlComm
                         .CommandType = CommandType.StoredProcedure
