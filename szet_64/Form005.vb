@@ -60,7 +60,7 @@ Public Class Form005
                 sqlComm.Parameters.Add("@pID", SqlDbType.Int).Value = grd005.SelectedRows(0).Cells(0).Value
                 sqlConn.Open()
                 sqlComm.ExecuteNonQuery()
-                
+
                 'Ujra kell tolteni a gridet, mert valtozott az adattartalom
                 LoadGrid()
             Catch ex As Exception
