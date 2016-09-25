@@ -72,18 +72,23 @@ Public Class Form011
     End Sub
 
     Private Sub cmdTOROL_Click(sender As Object, e As EventArgs) Handles cmdTOROL.Click
-        If MsgBox("Biztos törölni szeretné a kijelölt objektumot?", MsgBoxStyle.YesNo, "Objektum törlése") = MsgBoxResult.Yes Then
-            Dim sqlConn As SqlConnection = New SqlConnection(GlobalVars.sConnStr)
-            Using (sqlConn)
-                Dim sqlComm As SqlCommand = New SqlCommand("sp_DelObj", sqlConn)
-                sqlComm.CommandType = CommandType.StoredProcedure
-                sqlComm.Parameters.Add("@pID", SqlDbType.Int).Value = grd011.SelectedRows(0).Cells(0).Value
-                sqlConn.Open()
-                sqlComm.ExecuteNonQuery()
-            End Using
+        If MsgBox("Biztos törölni szeretné a kijelölt berendezést?", MsgBoxStyle.YesNo, "Berendezés törlése") = MsgBoxResult.Yes Then
+            Try
+                Dim sqlConn As New SqlConnection(GlobalVars.sConnStr)
+                Dim sqlComm As New SqlCommand("sp_DelObj", sqlConn)
+                With sqlComm
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.Add("@pID", SqlDbType.Int).Value = grd011.SelectedRows(0).Cells(0).Value
+                    sqlConn.Open()
+                    .ExecuteNonQuery()
+                End With
 
-            'Ujra kell tolteni a gridet, mert valtozott az adattartalom
-            LoadGrid()
+                'Ujra kell tolteni a gridet, mert valtozott az adattartalom
+                LoadGrid()
+            Catch ex As Exception
+                MsgBox(ex.ToString(), MsgBoxStyle.Critical, ex.Message)
+                Me.Close()
+            End Try
         End If
     End Sub
 
