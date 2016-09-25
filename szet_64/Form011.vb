@@ -2,38 +2,65 @@
 
 Public Class Form011
     Private Sub LoadGrid()
-        'Grid feltoltese tarolt eljarasbol
-        Dim dbadp As New SqlDataAdapter("sp_LekerdAlt", GlobalVars.sConnStr)
-        With dbadp.SelectCommand
-            .CommandType = CommandType.StoredProcedure
-            .Parameters.Add("@pOBJTIP", SqlDbType.VarChar, 2).Value = "03"
+        Cursor.Current = Cursors.WaitCursor
 
-            Dim dt As New DataTable
-            dbadp.Fill(dt)
-            dbadp.Dispose()
-            grd011.DataSource = dt
-        End With
+        If cmbOBJTIP.SelectedIndex <> -1 Then
+            'Grid feltoltese tarolt eljarasbol
+            Dim dbadp As New SqlDataAdapter("sp_LekerdAlt", GlobalVars.sConnStr)
+            With dbadp.SelectCommand
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.Add("@pOBJTIP", SqlDbType.VarChar, 2).Value = cmbOBJTIP.SelectedValue
 
-        'Grid formazasa
-        With grd011
-            .SelectionMode = DataGridViewSelectionMode.FullRowSelect
-            .ReadOnly = True
-
-            With .ColumnHeadersDefaultCellStyle
-                .BackColor = Color.DarkGray
-                .ForeColor = Color.Gray
-                .Font = New Font(grd011.Font, FontStyle.Bold)
+                Dim dt As New DataTable
+                dbadp.Fill(dt)
+                dbadp.Dispose()
+                grd011.DataSource = dt
             End With
 
-            .Columns(0).Visible = False
-            .Columns(1).Width = 400
-            .Columns(2).Width = 400
-            .Columns(3).Width = 400
-        End With
+            'Grid formazasa
+            Try
+                With grd011
+                    .AllowUserToAddRows = False
+                    .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                    .ReadOnly = True
+
+                    With .ColumnHeadersDefaultCellStyle
+                        .BackColor = Color.DarkGray
+                        .ForeColor = Color.Gray
+                        .Font = New Font(grd011.Font, FontStyle.Bold)
+                    End With
+
+                    .Columns(0).Visible = False
+                    .Columns(1).HeaderText = "Megnevezés"
+                    .Columns(2).HeaderText = "Típus"
+                    .Columns(3).HeaderText = "Telep. helyszám"
+                    .Columns(4).HeaderText = "Gyári szám"
+                    .Columns(5).HeaderText = "Üzemidő"
+                    .Columns(6).Visible = False
+                    .Columns(7).Visible = False
+                    .Columns(8).Visible = False
+                    .Columns(9).Visible = False
+                    .Columns(10).Visible = False
+                    .Columns(11).Visible = False
+                    .Columns(12).Visible = False
+                    .Columns(13).Visible = False
+                    .Columns(14).Visible = False
+                End With
+            Catch ex As Exception
+
+            End Try
+
+            'Talalatok szama
+            txtTALALAT.Text = grd011.RowCount
+
+        End If
+        Cursor.Current = Cursors.Default
     End Sub
 
     Private Sub Form011_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadGrid()
+        Me.Sp_Q296TableAdapter.Fill(Me.SZETAVDataSet.sp_Q296)
+
+        cmbOBJTIP.SelectedIndex = -1
     End Sub
 
     Private Sub Form011_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
@@ -71,4 +98,9 @@ Public Class Form011
         'Form011a.ShowDialog(Me)
         'LoadGrid()
     End Sub
+
+    Private Sub cmbOBJTIP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbOBJTIP.SelectedIndexChanged
+        Me.LoadGrid()
+    End Sub
+
 End Class
