@@ -93,9 +93,9 @@ Public Class Form011
     End Sub
 
     Private Sub cmdUJ_Click(sender As Object, e As EventArgs) Handles cmdUJ.Click
-        'Form011a.Tag = -1   'Insert
-        'Form011a.ShowDialog(Me)
-        'LoadGrid()
+        Form011a.Tag = CInt(cmbOBJTIP.SelectedValue) * -1   'Insert
+        Form011a.ShowDialog(Me)
+        LoadGrid()
     End Sub
 
     Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click
