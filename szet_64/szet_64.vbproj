@@ -94,6 +94,12 @@
     <Compile Include="Form005a.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form011.Designer.vb">
+      <DependentUpon>Form011.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form011.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormStart.designer.vb">
       <DependentUpon>FormStart.vb</DependentUpon>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form005a.resx">
       <DependentUpon>Form005a.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form011.resx">
+      <DependentUpon>Form011.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStart.resx">
       <DependentUpon>FormStart.vb</DependentUpon>

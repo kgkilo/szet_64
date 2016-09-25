@@ -3,7 +3,12 @@
 Module GlobalVars
     Public iWorkMode As Integer = 0
 
-    Public Const NORMAL = 0    Public Const DISZPECSER = 1    Public Const LABOR = 2    Public Const MLAP = 3    Public Const VISSZAIR = 4
+    Public Const NORMAL = 0
+    Public Const DISZPECSER = 1
+    Public Const LABOR = 2
+    Public Const MLAP = 3
+    Public Const VISSZAIR = 4
+
     Public sConnStr As String
 End Module
 
@@ -45,5 +50,9 @@ Public Class FormStart
 
         My.Settings.Item("SZETAVConnectionString") = GlobalVars.sConnStr   'Ez allitja be az ossze bound DataSet eleresi utjat!!!
 
+    End Sub
+
+    Private Sub cmdBERENDEZES_Click(sender As Object, e As EventArgs) Handles cmdBERENDEZES.Click
+        Form011.Show(Me)
     End Sub
 End Class
