@@ -94,6 +94,8 @@ Partial Class Form011a
         Me.Sp_Q310TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q310TableAdapter()
         Me.dtUZEMIDO = New System.Windows.Forms.DateTimePicker()
         Me.dtHITIDO = New System.Windows.Forms.DateTimePicker()
+        Me.SpQ315BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Sp_Q315TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q315TableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.SpQ289BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,6 +109,7 @@ Partial Class Form011a
         CType(Me.SpQ312BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ271BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ304BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ315BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -455,12 +458,15 @@ Partial Class Form011a
         '
         'cmbALAIR
         '
+        Me.cmbALAIR.DataSource = Me.SpQ315BindingSource
+        Me.cmbALAIR.DisplayMember = "KODENEV"
         Me.cmbALAIR.FormattingEnabled = True
         Me.cmbALAIR.Location = New System.Drawing.Point(437, 139)
         Me.cmbALAIR.Name = "cmbALAIR"
         Me.cmbALAIR.Size = New System.Drawing.Size(138, 21)
         Me.cmbALAIR.TabIndex = 13
         Me.cmbALAIR.Tag = "315"
+        Me.cmbALAIR.ValueMember = "KODERT"
         '
         'cmbFKOD
         '
@@ -708,6 +714,15 @@ Partial Class Form011a
         Me.dtHITIDO.TabIndex = 5
         Me.dtHITIDO.Value = New Date(2016, 1, 1, 0, 0, 0, 0)
         '
+        'SpQ315BindingSource
+        '
+        Me.SpQ315BindingSource.DataMember = "sp_Q315"
+        Me.SpQ315BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'Sp_Q315TableAdapter
+        '
+        Me.Sp_Q315TableAdapter.ClearBeforeFill = True
+        '
         'Form011a
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -736,6 +751,7 @@ Partial Class Form011a
         CType(Me.SpQ312BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ271BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ304BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ315BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -811,4 +827,6 @@ Partial Class Form011a
     Friend WithEvents Sp_Q310TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q310TableAdapter
     Friend WithEvents dtUZEMIDO As System.Windows.Forms.DateTimePicker
     Friend WithEvents dtHITIDO As System.Windows.Forms.DateTimePicker
+    Friend WithEvents SpQ315BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q315TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q315TableAdapter
 End Class

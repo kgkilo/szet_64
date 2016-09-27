@@ -4,6 +4,7 @@ Public Class Form011a
     Private sqlConn As SqlConnection
 
     Private Sub Form011a_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Sp_Q315TableAdapter.Fill(Me.SZETAVDataSet.sp_Q315)
         Me.Sp_Q310TableAdapter.Fill(Me.SZETAVDataSet.sp_Q310)
         Me.Sp_Q279TableAdapter.Fill(Me.SZETAVDataSet.sp_Q279)
         Me.Sp_Q314TableAdapter.Fill(Me.SZETAVDataSet.sp_Q314)
