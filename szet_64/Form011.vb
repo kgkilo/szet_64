@@ -47,7 +47,7 @@ Public Class Form011
                     .Columns(14).Visible = False
                 End With
             Catch ex As Exception
-
+                MsgBox(ex.Message, , ex.ToString)
             End Try
 
             'Talalatok szama
@@ -93,15 +93,17 @@ Public Class Form011
     End Sub
 
     Private Sub cmdUJ_Click(sender As Object, e As EventArgs) Handles cmdUJ.Click
-        Form011a.Tag = CInt(cmbOBJTIP.SelectedValue) * -1   'Insert
-        Form011a.ShowDialog(Me)
-        LoadGrid()
+        If cmbOBJTIP.SelectedIndex <> -1 Then
+            Form011a.Tag = CInt(cmbOBJTIP.SelectedValue) * -1   'Insert
+            Form011a.ShowDialog(Me)
+            LoadGrid()
+        End If
     End Sub
 
     Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click
-        'Form011a.Tag = grd011.SelectedRows(0).Cells(0).Value
-        'Form011a.ShowDialog(Me)
-        'LoadGrid()
+        Form011a.Tag = grd011.SelectedRows(0).Cells(0).Value
+        Form011a.ShowDialog(Me)
+        LoadGrid()
     End Sub
 
     Private Sub cmbOBJTIP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbOBJTIP.SelectedIndexChanged

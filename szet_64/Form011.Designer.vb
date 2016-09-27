@@ -193,24 +193,28 @@ Partial Class Form011
         '
         'MEGNEV
         '
+        Me.MEGNEV.DataPropertyName = "MEGNEV"
         Me.MEGNEV.HeaderText = "Megnevezés"
         Me.MEGNEV.Name = "MEGNEV"
         Me.MEGNEV.ReadOnly = True
         '
         'TIPUS
         '
+        Me.TIPUS.DataPropertyName = "TIPUS"
         Me.TIPUS.HeaderText = "Típus"
         Me.TIPUS.Name = "TIPUS"
         Me.TIPUS.ReadOnly = True
         '
         'TELEPHSZ
         '
+        Me.TELEPHSZ.DataPropertyName = "TELEPHSZ"
         Me.TELEPHSZ.HeaderText = "Telepítési helyszám"
         Me.TELEPHSZ.Name = "TELEPHSZ"
         Me.TELEPHSZ.ReadOnly = True
         '
         'GYSZAM
         '
+        Me.GYSZAM.DataPropertyName = "GYSZAM"
         Me.GYSZAM.HeaderText = "Gyári szám"
         Me.GYSZAM.Name = "GYSZAM"
         Me.GYSZAM.ReadOnly = True
