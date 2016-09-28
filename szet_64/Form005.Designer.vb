@@ -36,6 +36,8 @@ Partial Class Form005
         Me.cmdTOROL = New System.Windows.Forms.Button()
         Me.cmdEXIT = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
+        Me.lblTALALAT = New System.Windows.Forms.Label()
+        Me.txtTALALAT = New System.Windows.Forms.TextBox()
         CType(Me.grd005, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpLekerdDolgozoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,14 +45,17 @@ Partial Class Form005
         '
         'grd005
         '
+        Me.grd005.AllowUserToAddRows = False
         Me.grd005.AutoGenerateColumns = False
-        Me.grd005.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grd005.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.grd005.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.grd005.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.NEVDataGridViewTextBoxColumn, Me.SZEREGYSDataGridViewTextBoxColumn, Me.BEOSZTDataGridViewTextBoxColumn})
         Me.grd005.DataSource = Me.SpLekerdDolgozoBindingSource
-        Me.grd005.Location = New System.Drawing.Point(93, 56)
+        Me.grd005.Location = New System.Drawing.Point(93, 86)
         Me.grd005.Name = "grd005"
         Me.grd005.ReadOnly = True
-        Me.grd005.Size = New System.Drawing.Size(1026, 525)
+        Me.grd005.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.grd005.Size = New System.Drawing.Size(1026, 495)
         Me.grd005.TabIndex = 0
         '
         'IDDataGridViewTextBoxColumn
@@ -98,7 +103,7 @@ Partial Class Form005
         '
         'cmdUJ
         '
-        Me.cmdUJ.Location = New System.Drawing.Point(12, 56)
+        Me.cmdUJ.Location = New System.Drawing.Point(12, 116)
         Me.cmdUJ.Name = "cmdUJ"
         Me.cmdUJ.Size = New System.Drawing.Size(75, 23)
         Me.cmdUJ.TabIndex = 1
@@ -107,7 +112,7 @@ Partial Class Form005
         '
         'cmdMODOSIT
         '
-        Me.cmdMODOSIT.Location = New System.Drawing.Point(12, 86)
+        Me.cmdMODOSIT.Location = New System.Drawing.Point(12, 146)
         Me.cmdMODOSIT.Name = "cmdMODOSIT"
         Me.cmdMODOSIT.Size = New System.Drawing.Size(75, 23)
         Me.cmdMODOSIT.TabIndex = 2
@@ -116,7 +121,7 @@ Partial Class Form005
         '
         'cmdTOROL
         '
-        Me.cmdTOROL.Location = New System.Drawing.Point(12, 116)
+        Me.cmdTOROL.Location = New System.Drawing.Point(12, 176)
         Me.cmdTOROL.Name = "cmdTOROL"
         Me.cmdTOROL.Size = New System.Drawing.Size(75, 23)
         Me.cmdTOROL.TabIndex = 3
@@ -142,11 +147,35 @@ Partial Class Form005
         Me.lblTitle.TabIndex = 10
         Me.lblTitle.Text = "Dolgozók listája"
         '
+        'lblTALALAT
+        '
+        Me.lblTALALAT.Location = New System.Drawing.Point(12, 39)
+        Me.lblTALALAT.Name = "lblTALALAT"
+        Me.lblTALALAT.Size = New System.Drawing.Size(75, 13)
+        Me.lblTALALAT.TabIndex = 11
+        Me.lblTALALAT.Text = "Találatok"
+        Me.lblTALALAT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txtTALALAT
+        '
+        Me.txtTALALAT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTALALAT.Enabled = False
+        Me.txtTALALAT.Font = New System.Drawing.Font("Arial", 8.25!)
+        Me.txtTALALAT.Location = New System.Drawing.Point(12, 58)
+        Me.txtTALALAT.Name = "txtTALALAT"
+        Me.txtTALALAT.ReadOnly = True
+        Me.txtTALALAT.Size = New System.Drawing.Size(75, 20)
+        Me.txtTALALAT.TabIndex = 12
+        Me.txtTALALAT.TabStop = False
+        Me.txtTALALAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Form005
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1129, 586)
+        Me.Controls.Add(Me.txtTALALAT)
+        Me.Controls.Add(Me.lblTALALAT)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.cmdEXIT)
         Me.Controls.Add(Me.cmdTOROL)
@@ -177,4 +206,6 @@ Partial Class Form005
     Friend WithEvents cmdTOROL As System.Windows.Forms.Button
     Friend WithEvents cmdEXIT As System.Windows.Forms.Button
     Friend WithEvents lblTitle As System.Windows.Forms.Label
+    Friend WithEvents lblTALALAT As System.Windows.Forms.Label
+    Friend WithEvents txtTALALAT As System.Windows.Forms.TextBox
 End Class

@@ -29,6 +29,10 @@ Public Class Form005
             .Columns(2).Width = 400
             .Columns(3).Width = 400
         End With
+
+        'Talalatok szama
+        txtTALALAT.Text = grd005.RowCount
+
     End Sub
 
     Private Sub Form005_Load(sender As Object, e As EventArgs) Handles MyBase.Load
