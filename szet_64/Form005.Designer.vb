@@ -103,7 +103,7 @@ Partial Class Form005
         '
         'cmdUJ
         '
-        Me.cmdUJ.Location = New System.Drawing.Point(12, 116)
+        Me.cmdUJ.Location = New System.Drawing.Point(12, 117)
         Me.cmdUJ.Name = "cmdUJ"
         Me.cmdUJ.Size = New System.Drawing.Size(75, 23)
         Me.cmdUJ.TabIndex = 1

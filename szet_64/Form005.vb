@@ -41,6 +41,9 @@ Public Class Form005
 
     Private Sub Form005_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
         lblTitle.Left = (Me.Width - lblTitle.Size.Width) / 2
+        grd005.Width = Me.Width - 119
+        grd005.Height = Me.Height - 130
+        cmdEXIT.Top = Me.Height - 69
     End Sub
 
     Private Sub cmdEXIT_Click(sender As Object, e As EventArgs) Handles cmdEXIT.Click
