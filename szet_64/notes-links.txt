@@ -27,3 +27,7 @@ http://stackoverflow.com/questions/2428722/git-branch-strategy-for-small-dev-tea
 
 How To Change The Connection String saved in My.Settings in VB 2010
 http://stackoverflow.com/questions/9069691/how-to-change-the-connection-string-saved-in-my-settings-in-vb-2010
+
+
+Connection string used in install:
+"Database=10.1.1.1;Database=HOSZOLG;User Id=sa;Password=;"

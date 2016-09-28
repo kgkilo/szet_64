@@ -31,7 +31,7 @@ Public Class FormStart
 
     Private Sub FormStart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Read connection string from the registry
-        GlobalVars.sConnStr = "DRIVER={SQL Server};Server=NTSERVER;uid=sa;pwd=;database=SZETAV"
+        GlobalVars.sConnStr = "Server=10.1.1.1;Database=HOSZOLG;User Id=sa;Password=;"
         Try
             Dim keyValue As Object
             'Ez valamiert nem mukodik, pedig a connection az gep szintu beallitas kellene legyen, nem user-szintu.
