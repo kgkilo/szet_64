@@ -46,14 +46,14 @@ Partial Class Form005a
         '
         'txtNEV
         '
-        Me.txtNEV.Location = New System.Drawing.Point(135, 56)
+        Me.txtNEV.Location = New System.Drawing.Point(105, 56)
         Me.txtNEV.Name = "txtNEV"
         Me.txtNEV.Size = New System.Drawing.Size(137, 20)
         Me.txtNEV.TabIndex = 0
         '
         'txtLOGIN
         '
-        Me.txtLOGIN.Location = New System.Drawing.Point(135, 83)
+        Me.txtLOGIN.Location = New System.Drawing.Point(105, 83)
         Me.txtLOGIN.Name = "txtLOGIN"
         Me.txtLOGIN.Size = New System.Drawing.Size(137, 20)
         Me.txtLOGIN.TabIndex = 1
@@ -63,7 +63,7 @@ Partial Class Form005a
         Me.cmbSZEREGYS.DataSource = Me.SpQ271BindingSource
         Me.cmbSZEREGYS.DisplayMember = "KODENEV"
         Me.cmbSZEREGYS.FormattingEnabled = True
-        Me.cmbSZEREGYS.Location = New System.Drawing.Point(135, 110)
+        Me.cmbSZEREGYS.Location = New System.Drawing.Point(361, 56)
         Me.cmbSZEREGYS.Name = "cmbSZEREGYS"
         Me.cmbSZEREGYS.Size = New System.Drawing.Size(137, 21)
         Me.cmbSZEREGYS.TabIndex = 2
@@ -84,7 +84,7 @@ Partial Class Form005a
         Me.cmbBEOSZT.DataSource = Me.SpQ304BindingSource
         Me.cmbBEOSZT.DisplayMember = "KODENEV"
         Me.cmbBEOSZT.FormattingEnabled = True
-        Me.cmbBEOSZT.Location = New System.Drawing.Point(135, 138)
+        Me.cmbBEOSZT.Location = New System.Drawing.Point(361, 83)
         Me.cmbBEOSZT.Name = "cmbBEOSZT"
         Me.cmbBEOSZT.Size = New System.Drawing.Size(137, 21)
         Me.cmbBEOSZT.TabIndex = 3
@@ -107,7 +107,7 @@ Partial Class Form005a
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(64, 9)
+        Me.lblTitle.Location = New System.Drawing.Point(188, 9)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(156, 25)
         Me.lblTitle.TabIndex = 4
@@ -116,7 +116,7 @@ Partial Class Form005a
         'lblNEV
         '
         Me.lblNEV.AutoSize = True
-        Me.lblNEV.Location = New System.Drawing.Point(99, 59)
+        Me.lblNEV.Location = New System.Drawing.Point(69, 59)
         Me.lblNEV.Name = "lblNEV"
         Me.lblNEV.Size = New System.Drawing.Size(30, 13)
         Me.lblNEV.TabIndex = 5
@@ -126,7 +126,7 @@ Partial Class Form005a
         'lblLOGIN
         '
         Me.lblLOGIN.AutoSize = True
-        Me.lblLOGIN.Location = New System.Drawing.Point(40, 86)
+        Me.lblLOGIN.Location = New System.Drawing.Point(10, 86)
         Me.lblLOGIN.Name = "lblLOGIN"
         Me.lblLOGIN.Size = New System.Drawing.Size(89, 13)
         Me.lblLOGIN.TabIndex = 6
@@ -136,7 +136,7 @@ Partial Class Form005a
         'lblSZEREGYS
         '
         Me.lblSZEREGYS.AutoSize = True
-        Me.lblSZEREGYS.Location = New System.Drawing.Point(33, 113)
+        Me.lblSZEREGYS.Location = New System.Drawing.Point(259, 59)
         Me.lblSZEREGYS.Name = "lblSZEREGYS"
         Me.lblSZEREGYS.Size = New System.Drawing.Size(96, 13)
         Me.lblSZEREGYS.TabIndex = 7
@@ -146,7 +146,7 @@ Partial Class Form005a
         'lblBEOSZT
         '
         Me.lblBEOSZT.AutoSize = True
-        Me.lblBEOSZT.Location = New System.Drawing.Point(76, 141)
+        Me.lblBEOSZT.Location = New System.Drawing.Point(302, 86)
         Me.lblBEOSZT.Name = "lblBEOSZT"
         Me.lblBEOSZT.Size = New System.Drawing.Size(53, 13)
         Me.lblBEOSZT.TabIndex = 8
@@ -155,7 +155,7 @@ Partial Class Form005a
         '
         'cmdOK
         '
-        Me.cmdOK.Location = New System.Drawing.Point(197, 193)
+        Me.cmdOK.Location = New System.Drawing.Point(423, 126)
         Me.cmdOK.Name = "cmdOK"
         Me.cmdOK.Size = New System.Drawing.Size(75, 23)
         Me.cmdOK.TabIndex = 9
@@ -164,7 +164,8 @@ Partial Class Form005a
         '
         'cmdCANCEL
         '
-        Me.cmdCANCEL.Location = New System.Drawing.Point(13, 193)
+        Me.cmdCANCEL.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.cmdCANCEL.Location = New System.Drawing.Point(12, 126)
         Me.cmdCANCEL.Name = "cmdCANCEL"
         Me.cmdCANCEL.Size = New System.Drawing.Size(75, 23)
         Me.cmdCANCEL.TabIndex = 10
@@ -173,9 +174,11 @@ Partial Class Form005a
         '
         'Form005a
         '
+        Me.AcceptButton = Me.cmdOK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 231)
+        Me.CancelButton = Me.cmdCANCEL
+        Me.ClientSize = New System.Drawing.Size(510, 161)
         Me.Controls.Add(Me.cmdCANCEL)
         Me.Controls.Add(Me.cmdOK)
         Me.Controls.Add(Me.lblBEOSZT)
@@ -187,10 +190,11 @@ Partial Class Form005a
         Me.Controls.Add(Me.cmbSZEREGYS)
         Me.Controls.Add(Me.txtLOGIN)
         Me.Controls.Add(Me.txtNEV)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form005a"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Tag = "-1"
-        Me.Text = "Dolgozó adatai - Form005a"
+        Me.Text = "Form005a - Dolgozó adatai"
         CType(Me.SpQ271BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ304BindingSource, System.ComponentModel.ISupportInitialize).EndInit()

@@ -7,34 +7,38 @@ Public Class Form005a
         Me.Sp_Q304TableAdapter.Fill(Me.SZETAVDataSet.sp_Q304)
         Me.Sp_Q271TableAdapter.Fill(Me.SZETAVDataSet.sp_Q271)
 
-        sqlConn = New SqlConnection(GlobalVars.sConnStr)
+        Try
+            sqlConn = New SqlConnection(GlobalVars.sConnStr)
 
-        If Me.Tag <> -1 Then    'Tag fel volt toltve ertelmes indexszel, be kell tolteni azt a rekordot
-            Using (sqlConn)
+            If Me.Tag <> -1 Then    'Tag fel volt toltve ertelmes indexszel, be kell tolteni azt a rekordot
                 Dim sqlComm As SqlCommand = New SqlCommand("sp_LoadDolgozo", sqlConn)
                 sqlComm.CommandType = CommandType.StoredProcedure
                 sqlComm.Parameters.Add("@pID", SqlDbType.Int).Value = Me.Tag
 
                 sqlConn.Open()
                 Dim sqlReader As SqlDataReader = sqlComm.ExecuteReader()
-                If sqlReader.HasRows Then
-                    While (sqlReader.Read())
-                        txtNEV.Text = sqlReader.GetString(1)
-                        Try
-                            txtLOGIN.Text = sqlReader.GetString(2)  'Ez lehet NULL is es ettol lehalna a form
-                        Catch ex As Exception
-                            txtLOGIN.Text = ""
-                        End Try
-                        cmbSZEREGYS.SelectedValue = sqlReader.GetString(3)
-                        cmbBEOSZT.SelectedValue = sqlReader.GetString(4)
-                    End While
-                End If
-                sqlReader.Close()
-            End Using
-        Else
-            'Uj rekord insert
-            'Itt es most nem kell csinalni semmit...
-        End If
+                With sqlReader
+                    If .HasRows Then
+                        While (.Read())
+                            txtNEV.Text = .GetString(1)
+                            Try
+                                txtLOGIN.Text = .GetString(2)  'Ez lehet NULL is es ettol lehalna a form
+                            Catch ex As Exception
+                                txtLOGIN.Text = ""
+                            End Try
+                            cmbSZEREGYS.SelectedValue = .GetString(3)
+                            cmbBEOSZT.SelectedValue = .GetString(4)
+                        End While
+                    End If  'HasRows
+                    .Close()
+                End With    'sqlReader
+            Else    'Me.Tag
+                'Uj rekord insert
+                'Itt es most nem kell csinalni semmit...
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, ex.ToString)
+        End Try
     End Sub
 
     Private Sub cmdCANCEL_Click(sender As Object, e As EventArgs) Handles cmdCANCEL.Click
@@ -42,14 +46,13 @@ Public Class Form005a
     End Sub
 
     Private Sub cmdOK_Click(sender As Object, e As EventArgs) Handles cmdOK.Click
-        sqlConn = New SqlConnection(GlobalVars.sConnStr)
-        Dim sqlComm As New SqlCommand()
+        Try
+            sqlConn = New SqlConnection(GlobalVars.sConnStr)
+            Dim sqlComm As SqlCommand
 
-        Using (sqlConn)
             If Me.Tag = -1 Then 'Uj rekordot kell rogziteni
+                sqlComm = New SqlCommand("sp_InsDolgozo", sqlConn)
                 With sqlComm
-                    .Connection = sqlConn
-                    .CommandText = "sp_InsDolgozo"
                     .CommandType = CommandType.StoredProcedure
 
                     .Parameters.AddWithValue("NEV", txtNEV.Text)
@@ -60,14 +63,13 @@ Public Class Form005a
                     .Parameters.AddWithValue("UFW", "n")
                     .Parameters.AddWithValue("UER", "n")
                     .Parameters.AddWithValue("UEW", "n")
-                End With
+                End With    'sqlComm
 
                 sqlConn.Open()
                 sqlComm.ExecuteNonQuery()
             Else    'Meglevo rekord update
+                sqlComm = New SqlCommand("sp_UpdDolgozo", sqlConn)
                 With sqlComm
-                    .Connection = sqlConn
-                    .CommandText = "sp_UpdDolgozo"
                     .CommandType = CommandType.StoredProcedure
 
                     .Parameters.AddWithValue("pID", Me.Tag)
@@ -79,12 +81,15 @@ Public Class Form005a
                     .Parameters.AddWithValue("UFW", "n")
                     .Parameters.AddWithValue("UER", "n")
                     .Parameters.AddWithValue("UEW", "n")
-                End With
+                End With    'sqlComm
 
                 sqlConn.Open()
                 sqlComm.ExecuteNonQuery()
-            End If
-        End Using
-        Me.Close()
+            End If  'Me.Tag
+            Me.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, ex.ToString)
+        End Try
     End Sub
+
 End Class
