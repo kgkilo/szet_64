@@ -63,7 +63,7 @@ Partial Class FormStart
         Me.cmdDOLGOZO.Name = "cmdDOLGOZO"
         Me.cmdDOLGOZO.Size = New System.Drawing.Size(150, 46)
         Me.cmdDOLGOZO.TabIndex = 2
-        Me.cmdDOLGOZO.Text = "Dolgozó"
+        Me.cmdDOLGOZO.Text = "Dolgozók"
         Me.cmdDOLGOZO.UseVisualStyleBackColor = True
         '
         'lblFormel
