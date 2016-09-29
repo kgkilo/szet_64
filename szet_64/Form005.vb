@@ -15,6 +15,7 @@ Public Class Form005
 
         'Grid formazasa
         With grd005
+            .AllowUserToAddRows = False 'Nem kell a grid aljan ures sor
             .SelectionMode = DataGridViewSelectionMode.FullRowSelect
             .ReadOnly = True
 
@@ -25,9 +26,7 @@ Public Class Form005
             End With
 
             .Columns(0).Visible = False
-            .Columns(1).Width = 400
-            .Columns(2).Width = 400
-            .Columns(3).Width = 400
+            .AutoSize = True
         End With
 
         'Talalatok szama
@@ -40,8 +39,10 @@ Public Class Form005
     End Sub
 
     Private Sub Form005_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
+        'A cimet kozepre helyezi, a gridet atmeretezi, a legalso gombot is elhelyezi
+        ' a form meretenek megfeleloen
         lblTitle.Left = (Me.Width - lblTitle.Size.Width) / 2
-        grd005.Width = Me.Width - 119
+        grd005.Width = Me.Width - 180
         grd005.Height = Me.Height - 130
         cmdEXIT.Top = Me.Height - 69
     End Sub
@@ -52,17 +53,19 @@ Public Class Form005
 
     Private Sub cmdTOROL_Click(sender As Object, e As EventArgs) Handles cmdTOROL.Click
         If MsgBox("Biztos törölni szeretné a kijelölt dolgozót?", MsgBoxStyle.YesNo, "Dolgozó törlése") = MsgBoxResult.Yes Then
-            Dim sqlConn As SqlConnection = New SqlConnection(GlobalVars.sConnStr)
-            Using (sqlConn)
+            Try
+                Dim sqlConn As SqlConnection = New SqlConnection(GlobalVars.sConnStr)
                 Dim sqlComm As SqlCommand = New SqlCommand("sp_DelDolgozo", sqlConn)
                 sqlComm.CommandType = CommandType.StoredProcedure
                 sqlComm.Parameters.Add("@pID", SqlDbType.Int).Value = grd005.SelectedRows(0).Cells(0).Value
                 sqlConn.Open()
                 sqlComm.ExecuteNonQuery()
-            End Using
-
-            'Ujra kell tolteni a gridet, mert valtozott az adattartalom
-            LoadGrid()
+                
+                'Ujra kell tolteni a gridet, mert valtozott az adattartalom
+                LoadGrid()
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, ex.ToString)
+            End Try
         End If
     End Sub
 
@@ -73,7 +76,7 @@ Public Class Form005
     End Sub
 
     Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click
-        Form005a.Tag = grd005.SelectedRows(0).Cells(0).Value
+        Form005a.Tag = grd005.SelectedRows(0).Cells(0).Value    'A 0. oszlop az ID
         Form005a.ShowDialog(Me)
         LoadGrid()
     End Sub

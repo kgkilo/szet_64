@@ -184,8 +184,7 @@ Partial Class Form005
         Me.Controls.Add(Me.grd005)
         Me.Name = "Form005"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Dolgozók (Form005)"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Text = "Form005 - Dolgozók"
         CType(Me.grd005, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpLekerdDolgozoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).EndInit()
