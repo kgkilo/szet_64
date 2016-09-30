@@ -24,20 +24,6 @@ Partial Class Form011
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.grd011 = New System.Windows.Forms.DataGridView()
-        Me.SpLekerdDolgozoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
-        Me.Sp_LekerdDolgozoTableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_LekerdDolgozoTableAdapter()
-        Me.cmdUJ = New System.Windows.Forms.Button()
-        Me.cmdMODOSIT = New System.Windows.Forms.Button()
-        Me.cmdTOROL = New System.Windows.Forms.Button()
-        Me.cmdEXIT = New System.Windows.Forms.Button()
-        Me.lblTitle = New System.Windows.Forms.Label()
-        Me.cmbOBJTIP = New System.Windows.Forms.ComboBox()
-        Me.SpQ296BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.lblOBJTIP = New System.Windows.Forms.Label()
-        Me.Sp_Q296TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter()
-        Me.txtTALALAT = New System.Windows.Forms.TextBox()
-        Me.lblTALALAT = New System.Windows.Forms.Label()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MEGNEV = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TIPUS = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,6 +39,20 @@ Partial Class Form011
         Me.C13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SpLekerdDolgozoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
+        Me.Sp_LekerdDolgozoTableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_LekerdDolgozoTableAdapter()
+        Me.cmdUJ = New System.Windows.Forms.Button()
+        Me.cmdMODOSIT = New System.Windows.Forms.Button()
+        Me.cmdTOROL = New System.Windows.Forms.Button()
+        Me.cmdEXIT = New System.Windows.Forms.Button()
+        Me.lblTitle = New System.Windows.Forms.Label()
+        Me.cmbOBJTIP = New System.Windows.Forms.ComboBox()
+        Me.SpQ296BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.lblOBJTIP = New System.Windows.Forms.Label()
+        Me.Sp_Q296TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter()
+        Me.txtTALALAT = New System.Windows.Forms.TextBox()
+        Me.lblTALALAT = New System.Windows.Forms.Label()
         CType(Me.grd011, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpLekerdDolgozoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,6 +63,7 @@ Partial Class Form011
         '
         Me.grd011.AllowUserToAddRows = False
         Me.grd011.AutoGenerateColumns = False
+        Me.grd011.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grd011.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grd011.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.MEGNEV, Me.TIPUS, Me.TELEPHSZ, Me.GYSZAM, Me.C6, Me.C7, Me.C8, Me.C9, Me.C10, Me.C11, Me.C12, Me.C13, Me.C14, Me.C15})
         Me.grd011.DataSource = Me.SpLekerdDolgozoBindingSource
@@ -71,6 +72,102 @@ Partial Class Form011
         Me.grd011.ReadOnly = True
         Me.grd011.Size = New System.Drawing.Size(1026, 495)
         Me.grd011.TabIndex = 0
+        '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IDDataGridViewTextBoxColumn.Visible = False
+        '
+        'MEGNEV
+        '
+        Me.MEGNEV.DataPropertyName = "MEGNEV"
+        Me.MEGNEV.HeaderText = "Megnevezés"
+        Me.MEGNEV.Name = "MEGNEV"
+        Me.MEGNEV.ReadOnly = True
+        '
+        'TIPUS
+        '
+        Me.TIPUS.DataPropertyName = "TIPUS"
+        Me.TIPUS.HeaderText = "Típus"
+        Me.TIPUS.Name = "TIPUS"
+        Me.TIPUS.ReadOnly = True
+        '
+        'TELEPHSZ
+        '
+        Me.TELEPHSZ.DataPropertyName = "TELEPHSZ"
+        Me.TELEPHSZ.HeaderText = "Telepítési helyszám"
+        Me.TELEPHSZ.Name = "TELEPHSZ"
+        Me.TELEPHSZ.ReadOnly = True
+        '
+        'GYSZAM
+        '
+        Me.GYSZAM.DataPropertyName = "GYSZAM"
+        Me.GYSZAM.HeaderText = "Gyári szám"
+        Me.GYSZAM.Name = "GYSZAM"
+        Me.GYSZAM.ReadOnly = True
+        '
+        'C6
+        '
+        Me.C6.HeaderText = "C6"
+        Me.C6.Name = "C6"
+        Me.C6.ReadOnly = True
+        '
+        'C7
+        '
+        Me.C7.HeaderText = "C7"
+        Me.C7.Name = "C7"
+        Me.C7.ReadOnly = True
+        '
+        'C8
+        '
+        Me.C8.HeaderText = "C8"
+        Me.C8.Name = "C8"
+        Me.C8.ReadOnly = True
+        '
+        'C9
+        '
+        Me.C9.HeaderText = "C9"
+        Me.C9.Name = "C9"
+        Me.C9.ReadOnly = True
+        '
+        'C10
+        '
+        Me.C10.HeaderText = "C10"
+        Me.C10.Name = "C10"
+        Me.C10.ReadOnly = True
+        '
+        'C11
+        '
+        Me.C11.HeaderText = "C11"
+        Me.C11.Name = "C11"
+        Me.C11.ReadOnly = True
+        '
+        'C12
+        '
+        Me.C12.HeaderText = "C12"
+        Me.C12.Name = "C12"
+        Me.C12.ReadOnly = True
+        '
+        'C13
+        '
+        Me.C13.HeaderText = "C13"
+        Me.C13.Name = "C13"
+        Me.C13.ReadOnly = True
+        '
+        'C14
+        '
+        Me.C14.HeaderText = "C14"
+        Me.C14.Name = "C14"
+        Me.C14.ReadOnly = True
+        '
+        'C15
+        '
+        Me.C15.HeaderText = "C15"
+        Me.C15.Name = "C15"
+        Me.C15.ReadOnly = True
         '
         'SpLekerdDolgozoBindingSource
         '
@@ -183,102 +280,6 @@ Partial Class Form011
         Me.lblTALALAT.Text = "Találatok"
         Me.lblTALALAT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IDDataGridViewTextBoxColumn.Visible = False
-        '
-        'MEGNEV
-        '
-        Me.MEGNEV.DataPropertyName = "MEGNEV"
-        Me.MEGNEV.HeaderText = "Megnevezés"
-        Me.MEGNEV.Name = "MEGNEV"
-        Me.MEGNEV.ReadOnly = True
-        '
-        'TIPUS
-        '
-        Me.TIPUS.DataPropertyName = "TIPUS"
-        Me.TIPUS.HeaderText = "Típus"
-        Me.TIPUS.Name = "TIPUS"
-        Me.TIPUS.ReadOnly = True
-        '
-        'TELEPHSZ
-        '
-        Me.TELEPHSZ.DataPropertyName = "TELEPHSZ"
-        Me.TELEPHSZ.HeaderText = "Telepítési helyszám"
-        Me.TELEPHSZ.Name = "TELEPHSZ"
-        Me.TELEPHSZ.ReadOnly = True
-        '
-        'GYSZAM
-        '
-        Me.GYSZAM.DataPropertyName = "GYSZAM"
-        Me.GYSZAM.HeaderText = "Gyári szám"
-        Me.GYSZAM.Name = "GYSZAM"
-        Me.GYSZAM.ReadOnly = True
-        '
-        'C6
-        '
-        Me.C6.HeaderText = "C6"
-        Me.C6.Name = "C6"
-        Me.C6.ReadOnly = True
-        '
-        'C7
-        '
-        Me.C7.HeaderText = "C7"
-        Me.C7.Name = "C7"
-        Me.C7.ReadOnly = True
-        '
-        'C8
-        '
-        Me.C8.HeaderText = "C8"
-        Me.C8.Name = "C8"
-        Me.C8.ReadOnly = True
-        '
-        'C9
-        '
-        Me.C9.HeaderText = "C9"
-        Me.C9.Name = "C9"
-        Me.C9.ReadOnly = True
-        '
-        'C10
-        '
-        Me.C10.HeaderText = "C10"
-        Me.C10.Name = "C10"
-        Me.C10.ReadOnly = True
-        '
-        'C11
-        '
-        Me.C11.HeaderText = "C11"
-        Me.C11.Name = "C11"
-        Me.C11.ReadOnly = True
-        '
-        'C12
-        '
-        Me.C12.HeaderText = "C12"
-        Me.C12.Name = "C12"
-        Me.C12.ReadOnly = True
-        '
-        'C13
-        '
-        Me.C13.HeaderText = "C13"
-        Me.C13.Name = "C13"
-        Me.C13.ReadOnly = True
-        '
-        'C14
-        '
-        Me.C14.HeaderText = "C14"
-        Me.C14.Name = "C14"
-        Me.C14.ReadOnly = True
-        '
-        'C15
-        '
-        Me.C15.HeaderText = "C15"
-        Me.C15.Name = "C15"
-        Me.C15.ReadOnly = True
-        '
         'Form011
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -296,7 +297,7 @@ Partial Class Form011
         Me.Controls.Add(Me.grd011)
         Me.Name = "Form011"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Objektumok (Form011)"
+        Me.Text = "Form011 - Berendezések"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.grd011, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpLekerdDolgozoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
