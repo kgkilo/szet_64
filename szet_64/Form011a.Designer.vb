@@ -28,6 +28,8 @@ Partial Class Form011a
         Me.cmdCANCEL = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.dtHITIDO = New System.Windows.Forms.DateTimePicker()
+        Me.dtUZEMIDO = New System.Windows.Forms.DateTimePicker()
         Me.lblMEGJ = New System.Windows.Forms.Label()
         Me.lblHSZ = New System.Windows.Forms.Label()
         Me.lblUTCA = New System.Windows.Forms.Label()
@@ -58,6 +60,7 @@ Partial Class Form011a
         Me.cmbFSZAM = New System.Windows.Forms.ComboBox()
         Me.SpQ310BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.cmbALAIR = New System.Windows.Forms.ComboBox()
+        Me.SpQ315BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.cmbFKOD = New System.Windows.Forms.ComboBox()
         Me.SpQ314BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.cmbUZALL = New System.Windows.Forms.ComboBox()
@@ -92,9 +95,6 @@ Partial Class Form011a
         Me.Sp_Q314TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q314TableAdapter()
         Me.Sp_Q279TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q279TableAdapter()
         Me.Sp_Q310TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q310TableAdapter()
-        Me.dtUZEMIDO = New System.Windows.Forms.DateTimePicker()
-        Me.dtHITIDO = New System.Windows.Forms.DateTimePicker()
-        Me.SpQ315BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Sp_Q315TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q315TableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -103,20 +103,20 @@ Partial Class Form011a
         CType(Me.SpQ317BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ279BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ310BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ315BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ314BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ297BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ313BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ312BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ271BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ304BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpQ315BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(64, 9)
+        Me.lblTitle.Location = New System.Drawing.Point(280, 9)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(192, 25)
         Me.lblTitle.TabIndex = 4
@@ -133,6 +133,7 @@ Partial Class Form011a
         '
         'cmdCANCEL
         '
+        Me.cmdCANCEL.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cmdCANCEL.Location = New System.Drawing.Point(13, 372)
         Me.cmdCANCEL.Name = "cmdCANCEL"
         Me.cmdCANCEL.Size = New System.Drawing.Size(75, 23)
@@ -202,6 +203,26 @@ Partial Class Form011a
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Általános"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'dtHITIDO
+        '
+        Me.dtHITIDO.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtHITIDO.Location = New System.Drawing.Point(123, 139)
+        Me.dtHITIDO.MinDate = New Date(1950, 1, 1, 0, 0, 0, 0)
+        Me.dtHITIDO.Name = "dtHITIDO"
+        Me.dtHITIDO.Size = New System.Drawing.Size(138, 20)
+        Me.dtHITIDO.TabIndex = 5
+        Me.dtHITIDO.Value = New Date(2016, 1, 1, 0, 0, 0, 0)
+        '
+        'dtUZEMIDO
+        '
+        Me.dtUZEMIDO.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtUZEMIDO.Location = New System.Drawing.Point(123, 113)
+        Me.dtUZEMIDO.MinDate = New Date(1950, 1, 1, 0, 0, 0, 0)
+        Me.dtUZEMIDO.Name = "dtUZEMIDO"
+        Me.dtUZEMIDO.Size = New System.Drawing.Size(138, 20)
+        Me.dtUZEMIDO.TabIndex = 4
+        Me.dtUZEMIDO.Value = New Date(2016, 1, 1, 0, 0, 0, 0)
         '
         'lblMEGJ
         '
@@ -468,6 +489,11 @@ Partial Class Form011a
         Me.cmbALAIR.Tag = "315"
         Me.cmbALAIR.ValueMember = "KODERT"
         '
+        'SpQ315BindingSource
+        '
+        Me.SpQ315BindingSource.DataMember = "sp_Q315"
+        Me.SpQ315BindingSource.DataSource = Me.SZETAVDataSet
+        '
         'cmbFKOD
         '
         Me.cmbFKOD.DataSource = Me.SpQ314BindingSource
@@ -694,49 +720,27 @@ Partial Class Form011a
         '
         Me.Sp_Q310TableAdapter.ClearBeforeFill = True
         '
-        'dtUZEMIDO
-        '
-        Me.dtUZEMIDO.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtUZEMIDO.Location = New System.Drawing.Point(123, 113)
-        Me.dtUZEMIDO.MinDate = New Date(1950, 1, 1, 0, 0, 0, 0)
-        Me.dtUZEMIDO.Name = "dtUZEMIDO"
-        Me.dtUZEMIDO.Size = New System.Drawing.Size(138, 20)
-        Me.dtUZEMIDO.TabIndex = 4
-        Me.dtUZEMIDO.Value = New Date(2016, 1, 1, 0, 0, 0, 0)
-        '
-        'dtHITIDO
-        '
-        Me.dtHITIDO.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtHITIDO.Location = New System.Drawing.Point(123, 139)
-        Me.dtHITIDO.MinDate = New Date(1950, 1, 1, 0, 0, 0, 0)
-        Me.dtHITIDO.Name = "dtHITIDO"
-        Me.dtHITIDO.Size = New System.Drawing.Size(138, 20)
-        Me.dtHITIDO.TabIndex = 5
-        Me.dtHITIDO.Value = New Date(2016, 1, 1, 0, 0, 0, 0)
-        '
-        'SpQ315BindingSource
-        '
-        Me.SpQ315BindingSource.DataMember = "sp_Q315"
-        Me.SpQ315BindingSource.DataSource = Me.SZETAVDataSet
-        '
         'Sp_Q315TableAdapter
         '
         Me.Sp_Q315TableAdapter.ClearBeforeFill = True
         '
         'Form011a
         '
+        Me.AcceptButton = Me.cmdOK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.cmdCANCEL
         Me.ClientSize = New System.Drawing.Size(753, 407)
         Me.Controls.Add(Me.txtOBJTIP)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.cmdCANCEL)
         Me.Controls.Add(Me.cmdOK)
         Me.Controls.Add(Me.lblTitle)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form011a"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Tag = "-1"
-        Me.Text = "Berendezés adatai - Form011a"
+        Me.Text = "Form011a - Berendezés adatai"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -745,13 +749,13 @@ Partial Class Form011a
         CType(Me.SpQ317BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ279BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ310BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ315BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ314BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ297BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ313BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ312BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ271BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ304BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpQ315BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
