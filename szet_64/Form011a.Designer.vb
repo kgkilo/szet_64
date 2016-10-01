@@ -80,8 +80,129 @@ Partial Class Form011a
         Me.txtGYARTM = New System.Windows.Forms.TextBox()
         Me.txtMEGNEV = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.chkFAGYVED = New System.Windows.Forms.CheckBox()
+        Me.chkFELUGY = New System.Windows.Forms.CheckBox()
+        Me.lblFORDSZ_X = New System.Windows.Forms.Label()
+        Me.lbl_SZAL_MENNY_X = New System.Windows.Forms.Label()
+        Me.lblOSZLSZAM = New System.Windows.Forms.Label()
+        Me.lblMKHOM = New System.Windows.Forms.Label()
+        Me.lblHOSSZ = New System.Windows.Forms.Label()
+        Me.lblTERFOGAT = New System.Windows.Forms.Label()
+        Me.lblFU_KOZ = New System.Windows.Forms.Label()
+        Me.lblHOHOR_KO = New System.Windows.Forms.Label()
+        Me.lblFUTOFEL = New System.Windows.Forms.Label()
+        Me.lblATMERO = New System.Windows.Forms.Label()
+        Me.lblMERET = New System.Windows.Forms.Label()
+        Me.lblSZAL_MENNY = New System.Windows.Forms.Label()
+        Me.lblFAGYVED = New System.Windows.Forms.Label()
+        Me.lblFELUGY = New System.Windows.Forms.Label()
+        Me.lblBECSOV = New System.Windows.Forms.Label()
+        Me.lblEMEL_MAG = New System.Windows.Forms.Label()
+        Me.lblTERFARAM = New System.Windows.Forms.Label()
+        Me.lblHOLEP = New System.Windows.Forms.Label()
+        Me.lblSZABMOD = New System.Windows.Forms.Label()
+        Me.lblUZEMINYOM = New System.Windows.Forms.Label()
+        Me.lblBEALL_ERTEK = New System.Windows.Forms.Label()
+        Me.lblFORDSZ = New System.Windows.Forms.Label()
+        Me.lblFELEP = New System.Windows.Forms.Label()
+        Me.lblSZAL_KOZ = New System.Windows.Forms.Label()
+        Me.txtOSZL_SZAM = New System.Windows.Forms.TextBox()
+        Me.txtMKHOM = New System.Windows.Forms.TextBox()
+        Me.txtHOSSZ = New System.Windows.Forms.TextBox()
+        Me.txtTERFOGAT = New System.Windows.Forms.TextBox()
+        Me.txtFUTOFEL = New System.Windows.Forms.TextBox()
+        Me.txtATMERO = New System.Windows.Forms.TextBox()
+        Me.txtMERET = New System.Windows.Forms.TextBox()
+        Me.txtBEALL_ERTEK = New System.Windows.Forms.TextBox()
+        Me.txtBECSOV = New System.Windows.Forms.TextBox()
+        Me.txtEMEL_MAG = New System.Windows.Forms.TextBox()
+        Me.txtTERFARAM = New System.Windows.Forms.TextBox()
+        Me.txtUZEMINYOM = New System.Windows.Forms.TextBox()
+        Me.txtFORDSZ = New System.Windows.Forms.TextBox()
+        Me.txtSZAL_MENNY = New System.Windows.Forms.TextBox()
+        Me.cmbMERETME = New System.Windows.Forms.ComboBox()
+        Me.SpQ279BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cmbFU_KOZ = New System.Windows.Forms.ComboBox()
+        Me.SpQ285BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cmbHOHOR_KO = New System.Windows.Forms.ComboBox()
+        Me.SpQ285BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cmbHOLEP = New System.Windows.Forms.ComboBox()
+        Me.SpQ272BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cmbSZABMOD = New System.Windows.Forms.ComboBox()
+        Me.SpQ318BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cmbFELEP = New System.Windows.Forms.ComboBox()
+        Me.SpQ326BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cmbSZAL_KOZ = New System.Windows.Forms.ComboBox()
+        Me.SpQ285BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.lblZARNYOM_X = New System.Windows.Forms.Label()
+        Me.lblNYITNYOM_X = New System.Windows.Forms.Label()
+        Me.lblLEGSZAL_X = New System.Windows.Forms.Label()
+        Me.lblTERHEL_X = New System.Windows.Forms.Label()
+        Me.lblVIZSZ_X = New System.Windows.Forms.Label()
+        Me.lblIMPULZUS_X = New System.Windows.Forms.Label()
+        Me.lblBEVTELJ_X = New System.Windows.Forms.Label()
+        Me.lblLEMSZAM_X = New System.Windows.Forms.Label()
+        Me.lblELLENALL_X = New System.Windows.Forms.Label()
+        Me.lblVIZNYOM_X = New System.Windows.Forms.Label()
+        Me.lblLEVNYOM_X = New System.Windows.Forms.Label()
+        Me.lblVEGNYOM_X = New System.Windows.Forms.Label()
+        Me.lblHOSSZ_NAGY_X = New System.Windows.Forms.Label()
+        Me.lblHOSSZ_KICS_X = New System.Windows.Forms.Label()
+        Me.lblPRIM_ARAM_X = New System.Windows.Forms.Label()
+        Me.lblGAZCSUCS_X = New System.Windows.Forms.Label()
+        Me.lblHOTELJ_X = New System.Windows.Forms.Label()
+        Me.lblZARNYOM = New System.Windows.Forms.Label()
+        Me.lblNYITNYOM = New System.Windows.Forms.Label()
+        Me.lblLEGSZAL = New System.Windows.Forms.Label()
+        Me.lblSZIV_FOK = New System.Windows.Forms.Label()
+        Me.lblTERHEL = New System.Windows.Forms.Label()
+        Me.lblVEGNYOM = New System.Windows.Forms.Label()
+        Me.lblHOSSZ_NAGY = New System.Windows.Forms.Label()
+        Me.lblHOSSZ_KICS = New System.Windows.Forms.Label()
+        Me.lblPRIM_ARAM = New System.Windows.Forms.Label()
+        Me.lblGAZCSUCS = New System.Windows.Forms.Label()
+        Me.lblVIZSZ = New System.Windows.Forms.Label()
+        Me.lblIMPULZUS = New System.Windows.Forms.Label()
+        Me.lblDB = New System.Windows.Forms.Label()
+        Me.lblBEVTELJ = New System.Windows.Forms.Label()
+        Me.lblLEMSZAM = New System.Windows.Forms.Label()
+        Me.lblELLENALL = New System.Windows.Forms.Label()
+        Me.lblSZURTIP = New System.Windows.Forms.Label()
+        Me.lblVIZNYOM = New System.Windows.Forms.Label()
+        Me.lblLEVNYOM = New System.Windows.Forms.Label()
+        Me.lblSZELTIP = New System.Windows.Forms.Label()
+        Me.lblBOYTIP = New System.Windows.Forms.Label()
+        Me.lblHOTELJ = New System.Windows.Forms.Label()
+        Me.cmbSZURTIP = New System.Windows.Forms.ComboBox()
+        Me.SpQ322BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cmbSZELTIP = New System.Windows.Forms.ComboBox()
+        Me.SpQ325BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cmbBOYTIP = New System.Windows.Forms.ComboBox()
+        Me.SpQ320BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.cmbSZIV_FOK = New System.Windows.Forms.ComboBox()
+        Me.SpQ319BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.txtZARNYOM = New System.Windows.Forms.TextBox()
+        Me.txtNYITNYOM = New System.Windows.Forms.TextBox()
+        Me.txtLEGSZAL = New System.Windows.Forms.TextBox()
+        Me.txtTERHEL = New System.Windows.Forms.TextBox()
+        Me.txtVEGNYOM = New System.Windows.Forms.TextBox()
+        Me.txtHOSSZ_NAGY = New System.Windows.Forms.TextBox()
+        Me.txtHOSSZ_KICS = New System.Windows.Forms.TextBox()
+        Me.txtVIZSZ = New System.Windows.Forms.TextBox()
+        Me.txtIMPULZUS = New System.Windows.Forms.TextBox()
+        Me.txtDB = New System.Windows.Forms.TextBox()
+        Me.txtBEVTELJ = New System.Windows.Forms.TextBox()
+        Me.txtLEMSZAM = New System.Windows.Forms.TextBox()
+        Me.txtELLENALL = New System.Windows.Forms.TextBox()
+        Me.txtVIZNYOM = New System.Windows.Forms.TextBox()
+        Me.txtLEVNYOM = New System.Windows.Forms.TextBox()
+        Me.txtPRIM_ARAM = New System.Windows.Forms.TextBox()
+        Me.txtGAZCSUCS = New System.Windows.Forms.TextBox()
+        Me.txtHOTELJ = New System.Windows.Forms.TextBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.txtOBJTIP = New System.Windows.Forms.TextBox()
         Me.SpQ271BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SpQ304BindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -96,6 +217,14 @@ Partial Class Form011a
         Me.Sp_Q279TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q279TableAdapter()
         Me.Sp_Q310TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q310TableAdapter()
         Me.Sp_Q315TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q315TableAdapter()
+        Me.Sp_Q285TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q285TableAdapter()
+        Me.Sp_Q326TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q326TableAdapter()
+        Me.Sp_Q318TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q318TableAdapter()
+        Me.Sp_Q272TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q272TableAdapter()
+        Me.Sp_Q319TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q319TableAdapter()
+        Me.Sp_Q320TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q320TableAdapter()
+        Me.Sp_Q325TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q325TableAdapter()
+        Me.Sp_Q322TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q322TableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.SpQ289BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,6 +237,19 @@ Partial Class Form011a
         CType(Me.SpQ297BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ313BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ312BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.SpQ279BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ285BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ285BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ272BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ318BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ326BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ285BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
+        CType(Me.SpQ322BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ325BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ320BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ319BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ271BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ304BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -124,7 +266,7 @@ Partial Class Form011a
         '
         'cmdOK
         '
-        Me.cmdOK.Location = New System.Drawing.Point(662, 372)
+        Me.cmdOK.Location = New System.Drawing.Point(662, 402)
         Me.cmdOK.Name = "cmdOK"
         Me.cmdOK.Size = New System.Drawing.Size(75, 23)
         Me.cmdOK.TabIndex = 22
@@ -134,7 +276,7 @@ Partial Class Form011a
         'cmdCANCEL
         '
         Me.cmdCANCEL.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.cmdCANCEL.Location = New System.Drawing.Point(13, 372)
+        Me.cmdCANCEL.Location = New System.Drawing.Point(13, 402)
         Me.cmdCANCEL.Name = "cmdCANCEL"
         Me.cmdCANCEL.Size = New System.Drawing.Size(75, 23)
         Me.cmdCANCEL.TabIndex = 21
@@ -147,10 +289,12 @@ Partial Class Form011a
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Controls.Add(Me.TabPage5)
+        Me.TabControl1.Controls.Add(Me.TabPage6)
         Me.TabControl1.Location = New System.Drawing.Point(12, 48)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(729, 318)
+        Me.TabControl1.Size = New System.Drawing.Size(729, 348)
         Me.TabControl1.TabIndex = 11
         '
         'TabPage1
@@ -199,7 +343,7 @@ Partial Class Form011a
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(721, 292)
+        Me.TabPage1.Size = New System.Drawing.Size(721, 322)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Általános"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -635,35 +779,1159 @@ Partial Class Form011a
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.chkFAGYVED)
+        Me.TabPage2.Controls.Add(Me.chkFELUGY)
+        Me.TabPage2.Controls.Add(Me.lblFORDSZ_X)
+        Me.TabPage2.Controls.Add(Me.lbl_SZAL_MENNY_X)
+        Me.TabPage2.Controls.Add(Me.lblOSZLSZAM)
+        Me.TabPage2.Controls.Add(Me.lblMKHOM)
+        Me.TabPage2.Controls.Add(Me.lblHOSSZ)
+        Me.TabPage2.Controls.Add(Me.lblTERFOGAT)
+        Me.TabPage2.Controls.Add(Me.lblFU_KOZ)
+        Me.TabPage2.Controls.Add(Me.lblHOHOR_KO)
+        Me.TabPage2.Controls.Add(Me.lblFUTOFEL)
+        Me.TabPage2.Controls.Add(Me.lblATMERO)
+        Me.TabPage2.Controls.Add(Me.lblMERET)
+        Me.TabPage2.Controls.Add(Me.lblSZAL_MENNY)
+        Me.TabPage2.Controls.Add(Me.lblFAGYVED)
+        Me.TabPage2.Controls.Add(Me.lblFELUGY)
+        Me.TabPage2.Controls.Add(Me.lblBECSOV)
+        Me.TabPage2.Controls.Add(Me.lblEMEL_MAG)
+        Me.TabPage2.Controls.Add(Me.lblTERFARAM)
+        Me.TabPage2.Controls.Add(Me.lblHOLEP)
+        Me.TabPage2.Controls.Add(Me.lblSZABMOD)
+        Me.TabPage2.Controls.Add(Me.lblUZEMINYOM)
+        Me.TabPage2.Controls.Add(Me.lblBEALL_ERTEK)
+        Me.TabPage2.Controls.Add(Me.lblFORDSZ)
+        Me.TabPage2.Controls.Add(Me.lblFELEP)
+        Me.TabPage2.Controls.Add(Me.lblSZAL_KOZ)
+        Me.TabPage2.Controls.Add(Me.txtOSZL_SZAM)
+        Me.TabPage2.Controls.Add(Me.txtMKHOM)
+        Me.TabPage2.Controls.Add(Me.txtHOSSZ)
+        Me.TabPage2.Controls.Add(Me.txtTERFOGAT)
+        Me.TabPage2.Controls.Add(Me.txtFUTOFEL)
+        Me.TabPage2.Controls.Add(Me.txtATMERO)
+        Me.TabPage2.Controls.Add(Me.txtMERET)
+        Me.TabPage2.Controls.Add(Me.txtBEALL_ERTEK)
+        Me.TabPage2.Controls.Add(Me.txtBECSOV)
+        Me.TabPage2.Controls.Add(Me.txtEMEL_MAG)
+        Me.TabPage2.Controls.Add(Me.txtTERFARAM)
+        Me.TabPage2.Controls.Add(Me.txtUZEMINYOM)
+        Me.TabPage2.Controls.Add(Me.txtFORDSZ)
+        Me.TabPage2.Controls.Add(Me.txtSZAL_MENNY)
+        Me.TabPage2.Controls.Add(Me.cmbMERETME)
+        Me.TabPage2.Controls.Add(Me.cmbFU_KOZ)
+        Me.TabPage2.Controls.Add(Me.cmbHOHOR_KO)
+        Me.TabPage2.Controls.Add(Me.cmbHOLEP)
+        Me.TabPage2.Controls.Add(Me.cmbSZABMOD)
+        Me.TabPage2.Controls.Add(Me.cmbFELEP)
+        Me.TabPage2.Controls.Add(Me.cmbSZAL_KOZ)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(721, 292)
+        Me.TabPage2.Size = New System.Drawing.Size(721, 322)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Gépészeti"
+        Me.TabPage2.Text = "Gépészeti - általános"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'chkFAGYVED
+        '
+        Me.chkFAGYVED.AutoSize = True
+        Me.chkFAGYVED.Location = New System.Drawing.Point(437, 273)
+        Me.chkFAGYVED.Name = "chkFAGYVED"
+        Me.chkFAGYVED.Size = New System.Drawing.Size(15, 14)
+        Me.chkFAGYVED.TabIndex = 3
+        Me.chkFAGYVED.UseVisualStyleBackColor = True
+        '
+        'chkFELUGY
+        '
+        Me.chkFELUGY.AutoSize = True
+        Me.chkFELUGY.Location = New System.Drawing.Point(437, 248)
+        Me.chkFELUGY.Name = "chkFELUGY"
+        Me.chkFELUGY.Size = New System.Drawing.Size(15, 14)
+        Me.chkFELUGY.TabIndex = 3
+        Me.chkFELUGY.UseVisualStyleBackColor = True
+        '
+        'lblFORDSZ_X
+        '
+        Me.lblFORDSZ_X.Location = New System.Drawing.Point(512, 38)
+        Me.lblFORDSZ_X.Name = "lblFORDSZ_X"
+        Me.lblFORDSZ_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblFORDSZ_X.TabIndex = 2
+        Me.lblFORDSZ_X.Text = "1/min"
+        Me.lblFORDSZ_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lbl_SZAL_MENNY_X
+        '
+        Me.lbl_SZAL_MENNY_X.Location = New System.Drawing.Point(218, 38)
+        Me.lbl_SZAL_MENNY_X.Name = "lbl_SZAL_MENNY_X"
+        Me.lbl_SZAL_MENNY_X.Size = New System.Drawing.Size(63, 13)
+        Me.lbl_SZAL_MENNY_X.TabIndex = 2
+        Me.lbl_SZAL_MENNY_X.Text = "m3/h"
+        Me.lbl_SZAL_MENNY_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblOSZLSZAM
+        '
+        Me.lblOSZLSZAM.Location = New System.Drawing.Point(12, 274)
+        Me.lblOSZLSZAM.Name = "lblOSZLSZAM"
+        Me.lblOSZLSZAM.Size = New System.Drawing.Size(125, 13)
+        Me.lblOSZLSZAM.TabIndex = 2
+        Me.lblOSZLSZAM.Text = "Oszlopok száma"
+        Me.lblOSZLSZAM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblMKHOM
+        '
+        Me.lblMKHOM.Location = New System.Drawing.Point(12, 248)
+        Me.lblMKHOM.Name = "lblMKHOM"
+        Me.lblMKHOM.Size = New System.Drawing.Size(125, 13)
+        Me.lblMKHOM.TabIndex = 2
+        Me.lblMKHOM.Text = "Méretezési külső hőm."
+        Me.lblMKHOM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHOSSZ
+        '
+        Me.lblHOSSZ.Location = New System.Drawing.Point(12, 222)
+        Me.lblHOSSZ.Name = "lblHOSSZ"
+        Me.lblHOSSZ.Size = New System.Drawing.Size(125, 13)
+        Me.lblHOSSZ.TabIndex = 2
+        Me.lblHOSSZ.Text = "Hossz"
+        Me.lblHOSSZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblTERFOGAT
+        '
+        Me.lblTERFOGAT.Location = New System.Drawing.Point(12, 196)
+        Me.lblTERFOGAT.Name = "lblTERFOGAT"
+        Me.lblTERFOGAT.Size = New System.Drawing.Size(125, 13)
+        Me.lblTERFOGAT.TabIndex = 2
+        Me.lblTERFOGAT.Text = "Térfogat"
+        Me.lblTERFOGAT.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblFU_KOZ
+        '
+        Me.lblFU_KOZ.Location = New System.Drawing.Point(12, 169)
+        Me.lblFU_KOZ.Name = "lblFU_KOZ"
+        Me.lblFU_KOZ.Size = New System.Drawing.Size(125, 13)
+        Me.lblFU_KOZ.TabIndex = 2
+        Me.lblFU_KOZ.Text = "Fűtő közeg"
+        Me.lblFU_KOZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHOHOR_KO
+        '
+        Me.lblHOHOR_KO.Location = New System.Drawing.Point(12, 142)
+        Me.lblHOHOR_KO.Name = "lblHOHOR_KO"
+        Me.lblHOHOR_KO.Size = New System.Drawing.Size(125, 13)
+        Me.lblHOHOR_KO.TabIndex = 2
+        Me.lblHOHOR_KO.Text = "Hőhordozó közeg"
+        Me.lblHOHOR_KO.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblFUTOFEL
+        '
+        Me.lblFUTOFEL.Location = New System.Drawing.Point(12, 116)
+        Me.lblFUTOFEL.Name = "lblFUTOFEL"
+        Me.lblFUTOFEL.Size = New System.Drawing.Size(125, 13)
+        Me.lblFUTOFEL.TabIndex = 2
+        Me.lblFUTOFEL.Text = "Fűtőfelület"
+        Me.lblFUTOFEL.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblATMERO
+        '
+        Me.lblATMERO.Location = New System.Drawing.Point(12, 90)
+        Me.lblATMERO.Name = "lblATMERO"
+        Me.lblATMERO.Size = New System.Drawing.Size(125, 13)
+        Me.lblATMERO.TabIndex = 2
+        Me.lblATMERO.Text = "Átmérő"
+        Me.lblATMERO.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblMERET
+        '
+        Me.lblMERET.Location = New System.Drawing.Point(12, 64)
+        Me.lblMERET.Name = "lblMERET"
+        Me.lblMERET.Size = New System.Drawing.Size(125, 13)
+        Me.lblMERET.TabIndex = 2
+        Me.lblMERET.Text = "Méret"
+        Me.lblMERET.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblSZAL_MENNY
+        '
+        Me.lblSZAL_MENNY.Location = New System.Drawing.Point(12, 38)
+        Me.lblSZAL_MENNY.Name = "lblSZAL_MENNY"
+        Me.lblSZAL_MENNY.Size = New System.Drawing.Size(125, 13)
+        Me.lblSZAL_MENNY.TabIndex = 2
+        Me.lblSZAL_MENNY.Text = "Szállított közeg menny."
+        Me.lblSZAL_MENNY.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblFAGYVED
+        '
+        Me.lblFAGYVED.Location = New System.Drawing.Point(306, 274)
+        Me.lblFAGYVED.Name = "lblFAGYVED"
+        Me.lblFAGYVED.Size = New System.Drawing.Size(125, 13)
+        Me.lblFAGYVED.TabIndex = 2
+        Me.lblFAGYVED.Text = "Fagyvédelem?"
+        Me.lblFAGYVED.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblFELUGY
+        '
+        Me.lblFELUGY.Location = New System.Drawing.Point(306, 248)
+        Me.lblFELUGY.Name = "lblFELUGY"
+        Me.lblFELUGY.Size = New System.Drawing.Size(125, 13)
+        Me.lblFELUGY.TabIndex = 2
+        Me.lblFELUGY.Text = "Felügyelet alá tartozó?"
+        Me.lblFELUGY.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblBECSOV
+        '
+        Me.lblBECSOV.Location = New System.Drawing.Point(306, 222)
+        Me.lblBECSOV.Name = "lblBECSOV"
+        Me.lblBECSOV.Size = New System.Drawing.Size(125, 13)
+        Me.lblBECSOV.TabIndex = 2
+        Me.lblBECSOV.Text = "Beépített csövek száma"
+        Me.lblBECSOV.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblEMEL_MAG
+        '
+        Me.lblEMEL_MAG.Location = New System.Drawing.Point(306, 196)
+        Me.lblEMEL_MAG.Name = "lblEMEL_MAG"
+        Me.lblEMEL_MAG.Size = New System.Drawing.Size(125, 13)
+        Me.lblEMEL_MAG.TabIndex = 2
+        Me.lblEMEL_MAG.Text = "Emelőmagasság"
+        Me.lblEMEL_MAG.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblTERFARAM
+        '
+        Me.lblTERFARAM.Location = New System.Drawing.Point(306, 169)
+        Me.lblTERFARAM.Name = "lblTERFARAM"
+        Me.lblTERFARAM.Size = New System.Drawing.Size(125, 13)
+        Me.lblTERFARAM.TabIndex = 2
+        Me.lblTERFARAM.Text = "Térfogat áram"
+        Me.lblTERFARAM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHOLEP
+        '
+        Me.lblHOLEP.Location = New System.Drawing.Point(306, 142)
+        Me.lblHOLEP.Name = "lblHOLEP"
+        Me.lblHOLEP.Size = New System.Drawing.Size(125, 13)
+        Me.lblHOLEP.TabIndex = 2
+        Me.lblHOLEP.Text = "Hőlépcső"
+        Me.lblHOLEP.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblSZABMOD
+        '
+        Me.lblSZABMOD.Location = New System.Drawing.Point(306, 116)
+        Me.lblSZABMOD.Name = "lblSZABMOD"
+        Me.lblSZABMOD.Size = New System.Drawing.Size(125, 13)
+        Me.lblSZABMOD.TabIndex = 2
+        Me.lblSZABMOD.Text = "Szabályozás módja"
+        Me.lblSZABMOD.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblUZEMINYOM
+        '
+        Me.lblUZEMINYOM.Location = New System.Drawing.Point(306, 90)
+        Me.lblUZEMINYOM.Name = "lblUZEMINYOM"
+        Me.lblUZEMINYOM.Size = New System.Drawing.Size(125, 13)
+        Me.lblUZEMINYOM.TabIndex = 2
+        Me.lblUZEMINYOM.Text = "Üzemi nyomás"
+        Me.lblUZEMINYOM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblBEALL_ERTEK
+        '
+        Me.lblBEALL_ERTEK.Location = New System.Drawing.Point(306, 64)
+        Me.lblBEALL_ERTEK.Name = "lblBEALL_ERTEK"
+        Me.lblBEALL_ERTEK.Size = New System.Drawing.Size(125, 13)
+        Me.lblBEALL_ERTEK.TabIndex = 2
+        Me.lblBEALL_ERTEK.Text = "Beállítási érték"
+        Me.lblBEALL_ERTEK.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblFORDSZ
+        '
+        Me.lblFORDSZ.Location = New System.Drawing.Point(306, 38)
+        Me.lblFORDSZ.Name = "lblFORDSZ"
+        Me.lblFORDSZ.Size = New System.Drawing.Size(125, 13)
+        Me.lblFORDSZ.TabIndex = 2
+        Me.lblFORDSZ.Text = "Fordulatszám"
+        Me.lblFORDSZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblFELEP
+        '
+        Me.lblFELEP.Location = New System.Drawing.Point(306, 10)
+        Me.lblFELEP.Name = "lblFELEP"
+        Me.lblFELEP.Size = New System.Drawing.Size(125, 13)
+        Me.lblFELEP.TabIndex = 2
+        Me.lblFELEP.Text = "Felépítés"
+        Me.lblFELEP.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblSZAL_KOZ
+        '
+        Me.lblSZAL_KOZ.Location = New System.Drawing.Point(12, 10)
+        Me.lblSZAL_KOZ.Name = "lblSZAL_KOZ"
+        Me.lblSZAL_KOZ.Size = New System.Drawing.Size(125, 13)
+        Me.lblSZAL_KOZ.TabIndex = 2
+        Me.lblSZAL_KOZ.Text = "Szállított közeg"
+        Me.lblSZAL_KOZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtOSZL_SZAM
+        '
+        Me.txtOSZL_SZAM.Location = New System.Drawing.Point(143, 271)
+        Me.txtOSZL_SZAM.Name = "txtOSZL_SZAM"
+        Me.txtOSZL_SZAM.Size = New System.Drawing.Size(69, 20)
+        Me.txtOSZL_SZAM.TabIndex = 1
+        '
+        'txtMKHOM
+        '
+        Me.txtMKHOM.Location = New System.Drawing.Point(143, 245)
+        Me.txtMKHOM.Name = "txtMKHOM"
+        Me.txtMKHOM.Size = New System.Drawing.Size(69, 20)
+        Me.txtMKHOM.TabIndex = 1
+        '
+        'txtHOSSZ
+        '
+        Me.txtHOSSZ.Location = New System.Drawing.Point(143, 219)
+        Me.txtHOSSZ.Name = "txtHOSSZ"
+        Me.txtHOSSZ.Size = New System.Drawing.Size(69, 20)
+        Me.txtHOSSZ.TabIndex = 1
+        '
+        'txtTERFOGAT
+        '
+        Me.txtTERFOGAT.Location = New System.Drawing.Point(143, 193)
+        Me.txtTERFOGAT.Name = "txtTERFOGAT"
+        Me.txtTERFOGAT.Size = New System.Drawing.Size(69, 20)
+        Me.txtTERFOGAT.TabIndex = 1
+        '
+        'txtFUTOFEL
+        '
+        Me.txtFUTOFEL.Location = New System.Drawing.Point(143, 113)
+        Me.txtFUTOFEL.Name = "txtFUTOFEL"
+        Me.txtFUTOFEL.Size = New System.Drawing.Size(69, 20)
+        Me.txtFUTOFEL.TabIndex = 1
+        '
+        'txtATMERO
+        '
+        Me.txtATMERO.Location = New System.Drawing.Point(143, 87)
+        Me.txtATMERO.Name = "txtATMERO"
+        Me.txtATMERO.Size = New System.Drawing.Size(69, 20)
+        Me.txtATMERO.TabIndex = 1
+        '
+        'txtMERET
+        '
+        Me.txtMERET.Location = New System.Drawing.Point(143, 61)
+        Me.txtMERET.Name = "txtMERET"
+        Me.txtMERET.Size = New System.Drawing.Size(69, 20)
+        Me.txtMERET.TabIndex = 1
+        '
+        'txtBEALL_ERTEK
+        '
+        Me.txtBEALL_ERTEK.Location = New System.Drawing.Point(437, 61)
+        Me.txtBEALL_ERTEK.Name = "txtBEALL_ERTEK"
+        Me.txtBEALL_ERTEK.Size = New System.Drawing.Size(138, 20)
+        Me.txtBEALL_ERTEK.TabIndex = 1
+        '
+        'txtBECSOV
+        '
+        Me.txtBECSOV.Location = New System.Drawing.Point(437, 219)
+        Me.txtBECSOV.Name = "txtBECSOV"
+        Me.txtBECSOV.Size = New System.Drawing.Size(69, 20)
+        Me.txtBECSOV.TabIndex = 1
+        '
+        'txtEMEL_MAG
+        '
+        Me.txtEMEL_MAG.Location = New System.Drawing.Point(437, 193)
+        Me.txtEMEL_MAG.Name = "txtEMEL_MAG"
+        Me.txtEMEL_MAG.Size = New System.Drawing.Size(69, 20)
+        Me.txtEMEL_MAG.TabIndex = 1
+        '
+        'txtTERFARAM
+        '
+        Me.txtTERFARAM.Location = New System.Drawing.Point(437, 166)
+        Me.txtTERFARAM.Name = "txtTERFARAM"
+        Me.txtTERFARAM.Size = New System.Drawing.Size(69, 20)
+        Me.txtTERFARAM.TabIndex = 1
+        '
+        'txtUZEMINYOM
+        '
+        Me.txtUZEMINYOM.Location = New System.Drawing.Point(437, 87)
+        Me.txtUZEMINYOM.Name = "txtUZEMINYOM"
+        Me.txtUZEMINYOM.Size = New System.Drawing.Size(69, 20)
+        Me.txtUZEMINYOM.TabIndex = 1
+        '
+        'txtFORDSZ
+        '
+        Me.txtFORDSZ.Location = New System.Drawing.Point(437, 35)
+        Me.txtFORDSZ.Name = "txtFORDSZ"
+        Me.txtFORDSZ.Size = New System.Drawing.Size(69, 20)
+        Me.txtFORDSZ.TabIndex = 1
+        '
+        'txtSZAL_MENNY
+        '
+        Me.txtSZAL_MENNY.Location = New System.Drawing.Point(143, 35)
+        Me.txtSZAL_MENNY.Name = "txtSZAL_MENNY"
+        Me.txtSZAL_MENNY.Size = New System.Drawing.Size(69, 20)
+        Me.txtSZAL_MENNY.TabIndex = 1
+        '
+        'cmbMERETME
+        '
+        Me.cmbMERETME.DataSource = Me.SpQ279BindingSource1
+        Me.cmbMERETME.DisplayMember = "KODENEV"
+        Me.cmbMERETME.FormattingEnabled = True
+        Me.cmbMERETME.Location = New System.Drawing.Point(218, 61)
+        Me.cmbMERETME.Name = "cmbMERETME"
+        Me.cmbMERETME.Size = New System.Drawing.Size(63, 21)
+        Me.cmbMERETME.TabIndex = 0
+        Me.cmbMERETME.Tag = "279"
+        Me.cmbMERETME.ValueMember = "KODERT"
+        '
+        'SpQ279BindingSource1
+        '
+        Me.SpQ279BindingSource1.DataMember = "sp_Q279"
+        Me.SpQ279BindingSource1.DataSource = Me.SZETAVDataSet
+        '
+        'cmbFU_KOZ
+        '
+        Me.cmbFU_KOZ.DataSource = Me.SpQ285BindingSource2
+        Me.cmbFU_KOZ.DisplayMember = "KODENEV"
+        Me.cmbFU_KOZ.FormattingEnabled = True
+        Me.cmbFU_KOZ.Location = New System.Drawing.Point(143, 166)
+        Me.cmbFU_KOZ.Name = "cmbFU_KOZ"
+        Me.cmbFU_KOZ.Size = New System.Drawing.Size(138, 21)
+        Me.cmbFU_KOZ.TabIndex = 0
+        Me.cmbFU_KOZ.Tag = "285"
+        Me.cmbFU_KOZ.ValueMember = "KODERT"
+        '
+        'SpQ285BindingSource2
+        '
+        Me.SpQ285BindingSource2.DataMember = "sp_Q285"
+        Me.SpQ285BindingSource2.DataSource = Me.SZETAVDataSet
+        '
+        'cmbHOHOR_KO
+        '
+        Me.cmbHOHOR_KO.DataSource = Me.SpQ285BindingSource1
+        Me.cmbHOHOR_KO.DisplayMember = "KODENEV"
+        Me.cmbHOHOR_KO.FormattingEnabled = True
+        Me.cmbHOHOR_KO.Location = New System.Drawing.Point(143, 139)
+        Me.cmbHOHOR_KO.Name = "cmbHOHOR_KO"
+        Me.cmbHOHOR_KO.Size = New System.Drawing.Size(138, 21)
+        Me.cmbHOHOR_KO.TabIndex = 0
+        Me.cmbHOHOR_KO.Tag = "285"
+        Me.cmbHOHOR_KO.ValueMember = "KODERT"
+        '
+        'SpQ285BindingSource1
+        '
+        Me.SpQ285BindingSource1.DataMember = "sp_Q285"
+        Me.SpQ285BindingSource1.DataSource = Me.SZETAVDataSet
+        '
+        'cmbHOLEP
+        '
+        Me.cmbHOLEP.DataSource = Me.SpQ272BindingSource
+        Me.cmbHOLEP.DisplayMember = "KODENEV"
+        Me.cmbHOLEP.FormattingEnabled = True
+        Me.cmbHOLEP.Location = New System.Drawing.Point(437, 139)
+        Me.cmbHOLEP.Name = "cmbHOLEP"
+        Me.cmbHOLEP.Size = New System.Drawing.Size(138, 21)
+        Me.cmbHOLEP.TabIndex = 0
+        Me.cmbHOLEP.Tag = "272"
+        Me.cmbHOLEP.ValueMember = "KODERT"
+        '
+        'SpQ272BindingSource
+        '
+        Me.SpQ272BindingSource.DataMember = "sp_Q272"
+        Me.SpQ272BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'cmbSZABMOD
+        '
+        Me.cmbSZABMOD.DataSource = Me.SpQ318BindingSource
+        Me.cmbSZABMOD.DisplayMember = "KODENEV"
+        Me.cmbSZABMOD.FormattingEnabled = True
+        Me.cmbSZABMOD.Location = New System.Drawing.Point(437, 113)
+        Me.cmbSZABMOD.Name = "cmbSZABMOD"
+        Me.cmbSZABMOD.Size = New System.Drawing.Size(138, 21)
+        Me.cmbSZABMOD.TabIndex = 0
+        Me.cmbSZABMOD.Tag = "318"
+        Me.cmbSZABMOD.ValueMember = "KODERT"
+        '
+        'SpQ318BindingSource
+        '
+        Me.SpQ318BindingSource.DataMember = "sp_Q318"
+        Me.SpQ318BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'cmbFELEP
+        '
+        Me.cmbFELEP.DataSource = Me.SpQ326BindingSource
+        Me.cmbFELEP.DisplayMember = "KODENEV"
+        Me.cmbFELEP.FormattingEnabled = True
+        Me.cmbFELEP.Location = New System.Drawing.Point(437, 7)
+        Me.cmbFELEP.Name = "cmbFELEP"
+        Me.cmbFELEP.Size = New System.Drawing.Size(138, 21)
+        Me.cmbFELEP.TabIndex = 0
+        Me.cmbFELEP.Tag = "326"
+        Me.cmbFELEP.ValueMember = "KODERT"
+        '
+        'SpQ326BindingSource
+        '
+        Me.SpQ326BindingSource.DataMember = "sp_Q326"
+        Me.SpQ326BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'cmbSZAL_KOZ
+        '
+        Me.cmbSZAL_KOZ.DataSource = Me.SpQ285BindingSource
+        Me.cmbSZAL_KOZ.DisplayMember = "KODENEV"
+        Me.cmbSZAL_KOZ.FormattingEnabled = True
+        Me.cmbSZAL_KOZ.Location = New System.Drawing.Point(143, 7)
+        Me.cmbSZAL_KOZ.Name = "cmbSZAL_KOZ"
+        Me.cmbSZAL_KOZ.Size = New System.Drawing.Size(138, 21)
+        Me.cmbSZAL_KOZ.TabIndex = 0
+        Me.cmbSZAL_KOZ.Tag = "285"
+        Me.cmbSZAL_KOZ.ValueMember = "KODERT"
+        '
+        'SpQ285BindingSource
+        '
+        Me.SpQ285BindingSource.DataMember = "sp_Q285"
+        Me.SpQ285BindingSource.DataSource = Me.SZETAVDataSet
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.lblZARNYOM_X)
+        Me.TabPage3.Controls.Add(Me.lblNYITNYOM_X)
+        Me.TabPage3.Controls.Add(Me.lblLEGSZAL_X)
+        Me.TabPage3.Controls.Add(Me.lblTERHEL_X)
+        Me.TabPage3.Controls.Add(Me.lblVIZSZ_X)
+        Me.TabPage3.Controls.Add(Me.lblIMPULZUS_X)
+        Me.TabPage3.Controls.Add(Me.lblBEVTELJ_X)
+        Me.TabPage3.Controls.Add(Me.lblLEMSZAM_X)
+        Me.TabPage3.Controls.Add(Me.lblELLENALL_X)
+        Me.TabPage3.Controls.Add(Me.lblVIZNYOM_X)
+        Me.TabPage3.Controls.Add(Me.lblLEVNYOM_X)
+        Me.TabPage3.Controls.Add(Me.lblVEGNYOM_X)
+        Me.TabPage3.Controls.Add(Me.lblHOSSZ_NAGY_X)
+        Me.TabPage3.Controls.Add(Me.lblHOSSZ_KICS_X)
+        Me.TabPage3.Controls.Add(Me.lblPRIM_ARAM_X)
+        Me.TabPage3.Controls.Add(Me.lblGAZCSUCS_X)
+        Me.TabPage3.Controls.Add(Me.lblHOTELJ_X)
+        Me.TabPage3.Controls.Add(Me.lblZARNYOM)
+        Me.TabPage3.Controls.Add(Me.lblNYITNYOM)
+        Me.TabPage3.Controls.Add(Me.lblLEGSZAL)
+        Me.TabPage3.Controls.Add(Me.lblSZIV_FOK)
+        Me.TabPage3.Controls.Add(Me.lblTERHEL)
+        Me.TabPage3.Controls.Add(Me.lblVEGNYOM)
+        Me.TabPage3.Controls.Add(Me.lblHOSSZ_NAGY)
+        Me.TabPage3.Controls.Add(Me.lblHOSSZ_KICS)
+        Me.TabPage3.Controls.Add(Me.lblPRIM_ARAM)
+        Me.TabPage3.Controls.Add(Me.lblGAZCSUCS)
+        Me.TabPage3.Controls.Add(Me.lblVIZSZ)
+        Me.TabPage3.Controls.Add(Me.lblIMPULZUS)
+        Me.TabPage3.Controls.Add(Me.lblDB)
+        Me.TabPage3.Controls.Add(Me.lblBEVTELJ)
+        Me.TabPage3.Controls.Add(Me.lblLEMSZAM)
+        Me.TabPage3.Controls.Add(Me.lblELLENALL)
+        Me.TabPage3.Controls.Add(Me.lblSZURTIP)
+        Me.TabPage3.Controls.Add(Me.lblVIZNYOM)
+        Me.TabPage3.Controls.Add(Me.lblLEVNYOM)
+        Me.TabPage3.Controls.Add(Me.lblSZELTIP)
+        Me.TabPage3.Controls.Add(Me.lblBOYTIP)
+        Me.TabPage3.Controls.Add(Me.lblHOTELJ)
+        Me.TabPage3.Controls.Add(Me.cmbSZURTIP)
+        Me.TabPage3.Controls.Add(Me.cmbSZELTIP)
+        Me.TabPage3.Controls.Add(Me.cmbBOYTIP)
+        Me.TabPage3.Controls.Add(Me.cmbSZIV_FOK)
+        Me.TabPage3.Controls.Add(Me.txtZARNYOM)
+        Me.TabPage3.Controls.Add(Me.txtNYITNYOM)
+        Me.TabPage3.Controls.Add(Me.txtLEGSZAL)
+        Me.TabPage3.Controls.Add(Me.txtTERHEL)
+        Me.TabPage3.Controls.Add(Me.txtVEGNYOM)
+        Me.TabPage3.Controls.Add(Me.txtHOSSZ_NAGY)
+        Me.TabPage3.Controls.Add(Me.txtHOSSZ_KICS)
+        Me.TabPage3.Controls.Add(Me.txtVIZSZ)
+        Me.TabPage3.Controls.Add(Me.txtIMPULZUS)
+        Me.TabPage3.Controls.Add(Me.txtDB)
+        Me.TabPage3.Controls.Add(Me.txtBEVTELJ)
+        Me.TabPage3.Controls.Add(Me.txtLEMSZAM)
+        Me.TabPage3.Controls.Add(Me.txtELLENALL)
+        Me.TabPage3.Controls.Add(Me.txtVIZNYOM)
+        Me.TabPage3.Controls.Add(Me.txtLEVNYOM)
+        Me.TabPage3.Controls.Add(Me.txtPRIM_ARAM)
+        Me.TabPage3.Controls.Add(Me.txtGAZCSUCS)
+        Me.TabPage3.Controls.Add(Me.txtHOTELJ)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(721, 292)
+        Me.TabPage3.Size = New System.Drawing.Size(721, 322)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Villamos"
+        Me.TabPage3.Text = "Gépészeti - egyedi"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'lblZARNYOM_X
+        '
+        Me.lblZARNYOM_X.Location = New System.Drawing.Point(218, 271)
+        Me.lblZARNYOM_X.Name = "lblZARNYOM_X"
+        Me.lblZARNYOM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblZARNYOM_X.TabIndex = 3
+        Me.lblZARNYOM_X.Text = "bar"
+        Me.lblZARNYOM_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblNYITNYOM_X
+        '
+        Me.lblNYITNYOM_X.Location = New System.Drawing.Point(218, 245)
+        Me.lblNYITNYOM_X.Name = "lblNYITNYOM_X"
+        Me.lblNYITNYOM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblNYITNYOM_X.TabIndex = 3
+        Me.lblNYITNYOM_X.Text = "bar"
+        Me.lblNYITNYOM_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblLEGSZAL_X
+        '
+        Me.lblLEGSZAL_X.Location = New System.Drawing.Point(218, 218)
+        Me.lblLEGSZAL_X.Name = "lblLEGSZAL_X"
+        Me.lblLEGSZAL_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblLEGSZAL_X.TabIndex = 3
+        Me.lblLEGSZAL_X.Text = "m"
+        Me.lblLEGSZAL_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblTERHEL_X
+        '
+        Me.lblTERHEL_X.Location = New System.Drawing.Point(218, 166)
+        Me.lblTERHEL_X.Name = "lblTERHEL_X"
+        Me.lblTERHEL_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblTERHEL_X.TabIndex = 3
+        Me.lblTERHEL_X.Text = "t"
+        Me.lblTERHEL_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblVIZSZ_X
+        '
+        Me.lblVIZSZ_X.Location = New System.Drawing.Point(512, 270)
+        Me.lblVIZSZ_X.Name = "lblVIZSZ_X"
+        Me.lblVIZSZ_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblVIZSZ_X.TabIndex = 3
+        Me.lblVIZSZ_X.Text = "m"
+        Me.lblVIZSZ_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblIMPULZUS_X
+        '
+        Me.lblIMPULZUS_X.Location = New System.Drawing.Point(512, 244)
+        Me.lblIMPULZUS_X.Name = "lblIMPULZUS_X"
+        Me.lblIMPULZUS_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblIMPULZUS_X.TabIndex = 3
+        Me.lblIMPULZUS_X.Text = "liter/imp"
+        Me.lblIMPULZUS_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblBEVTELJ_X
+        '
+        Me.lblBEVTELJ_X.Location = New System.Drawing.Point(512, 192)
+        Me.lblBEVTELJ_X.Name = "lblBEVTELJ_X"
+        Me.lblBEVTELJ_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblBEVTELJ_X.TabIndex = 3
+        Me.lblBEVTELJ_X.Text = "kW"
+        Me.lblBEVTELJ_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblLEMSZAM_X
+        '
+        Me.lblLEMSZAM_X.Location = New System.Drawing.Point(512, 166)
+        Me.lblLEMSZAM_X.Name = "lblLEMSZAM_X"
+        Me.lblLEMSZAM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblLEMSZAM_X.TabIndex = 3
+        Me.lblLEMSZAM_X.Text = "db"
+        Me.lblLEMSZAM_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblELLENALL_X
+        '
+        Me.lblELLENALL_X.Location = New System.Drawing.Point(512, 140)
+        Me.lblELLENALL_X.Name = "lblELLENALL_X"
+        Me.lblELLENALL_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblELLENALL_X.TabIndex = 3
+        Me.lblELLENALL_X.Text = "bar"
+        Me.lblELLENALL_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblVIZNYOM_X
+        '
+        Me.lblVIZNYOM_X.Location = New System.Drawing.Point(512, 88)
+        Me.lblVIZNYOM_X.Name = "lblVIZNYOM_X"
+        Me.lblVIZNYOM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblVIZNYOM_X.TabIndex = 3
+        Me.lblVIZNYOM_X.Text = "bar"
+        Me.lblVIZNYOM_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblLEVNYOM_X
+        '
+        Me.lblLEVNYOM_X.Location = New System.Drawing.Point(512, 62)
+        Me.lblLEVNYOM_X.Name = "lblLEVNYOM_X"
+        Me.lblLEVNYOM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblLEVNYOM_X.TabIndex = 3
+        Me.lblLEVNYOM_X.Text = "bar"
+        Me.lblLEVNYOM_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblVEGNYOM_X
+        '
+        Me.lblVEGNYOM_X.Location = New System.Drawing.Point(218, 140)
+        Me.lblVEGNYOM_X.Name = "lblVEGNYOM_X"
+        Me.lblVEGNYOM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblVEGNYOM_X.TabIndex = 3
+        Me.lblVEGNYOM_X.Text = "bar"
+        Me.lblVEGNYOM_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHOSSZ_NAGY_X
+        '
+        Me.lblHOSSZ_NAGY_X.Location = New System.Drawing.Point(218, 114)
+        Me.lblHOSSZ_NAGY_X.Name = "lblHOSSZ_NAGY_X"
+        Me.lblHOSSZ_NAGY_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblHOSSZ_NAGY_X.TabIndex = 3
+        Me.lblHOSSZ_NAGY_X.Text = "mm"
+        Me.lblHOSSZ_NAGY_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHOSSZ_KICS_X
+        '
+        Me.lblHOSSZ_KICS_X.Location = New System.Drawing.Point(218, 88)
+        Me.lblHOSSZ_KICS_X.Name = "lblHOSSZ_KICS_X"
+        Me.lblHOSSZ_KICS_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblHOSSZ_KICS_X.TabIndex = 3
+        Me.lblHOSSZ_KICS_X.Text = "mm"
+        Me.lblHOSSZ_KICS_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblPRIM_ARAM_X
+        '
+        Me.lblPRIM_ARAM_X.Location = New System.Drawing.Point(218, 62)
+        Me.lblPRIM_ARAM_X.Name = "lblPRIM_ARAM_X"
+        Me.lblPRIM_ARAM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblPRIM_ARAM_X.TabIndex = 3
+        Me.lblPRIM_ARAM_X.Text = "m3/h"
+        Me.lblPRIM_ARAM_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblGAZCSUCS_X
+        '
+        Me.lblGAZCSUCS_X.Location = New System.Drawing.Point(218, 36)
+        Me.lblGAZCSUCS_X.Name = "lblGAZCSUCS_X"
+        Me.lblGAZCSUCS_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblGAZCSUCS_X.TabIndex = 3
+        Me.lblGAZCSUCS_X.Text = "GNM3/h"
+        Me.lblGAZCSUCS_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHOTELJ_X
+        '
+        Me.lblHOTELJ_X.Location = New System.Drawing.Point(218, 10)
+        Me.lblHOTELJ_X.Name = "lblHOTELJ_X"
+        Me.lblHOTELJ_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblHOTELJ_X.TabIndex = 3
+        Me.lblHOTELJ_X.Text = "MW"
+        Me.lblHOTELJ_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblZARNYOM
+        '
+        Me.lblZARNYOM.Location = New System.Drawing.Point(12, 271)
+        Me.lblZARNYOM.Name = "lblZARNYOM"
+        Me.lblZARNYOM.Size = New System.Drawing.Size(125, 13)
+        Me.lblZARNYOM.TabIndex = 2
+        Me.lblZARNYOM.Text = "Beállított záró nyomás"
+        Me.lblZARNYOM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblNYITNYOM
+        '
+        Me.lblNYITNYOM.Location = New System.Drawing.Point(12, 245)
+        Me.lblNYITNYOM.Name = "lblNYITNYOM"
+        Me.lblNYITNYOM.Size = New System.Drawing.Size(125, 13)
+        Me.lblNYITNYOM.TabIndex = 2
+        Me.lblNYITNYOM.Text = "Beállított nyitó nyomás"
+        Me.lblNYITNYOM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblLEGSZAL
+        '
+        Me.lblLEGSZAL.Location = New System.Drawing.Point(12, 218)
+        Me.lblLEGSZAL.Name = "lblLEGSZAL"
+        Me.lblLEGSZAL.Size = New System.Drawing.Size(125, 13)
+        Me.lblLEGSZAL.TabIndex = 2
+        Me.lblLEGSZAL.Text = "Légszállítás"
+        Me.lblLEGSZAL.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblSZIV_FOK
+        '
+        Me.lblSZIV_FOK.Location = New System.Drawing.Point(12, 192)
+        Me.lblSZIV_FOK.Name = "lblSZIV_FOK"
+        Me.lblSZIV_FOK.Size = New System.Drawing.Size(125, 13)
+        Me.lblSZIV_FOK.TabIndex = 2
+        Me.lblSZIV_FOK.Text = "Szivattyú fokozat"
+        Me.lblSZIV_FOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblTERHEL
+        '
+        Me.lblTERHEL.Location = New System.Drawing.Point(12, 166)
+        Me.lblTERHEL.Name = "lblTERHEL"
+        Me.lblTERHEL.Size = New System.Drawing.Size(125, 13)
+        Me.lblTERHEL.TabIndex = 2
+        Me.lblTERHEL.Text = "Terhelhetőség"
+        Me.lblTERHEL.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblVEGNYOM
+        '
+        Me.lblVEGNYOM.Location = New System.Drawing.Point(12, 140)
+        Me.lblVEGNYOM.Name = "lblVEGNYOM"
+        Me.lblVEGNYOM.Size = New System.Drawing.Size(125, 13)
+        Me.lblVEGNYOM.TabIndex = 2
+        Me.lblVEGNYOM.Text = "Végnyomás"
+        Me.lblVEGNYOM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHOSSZ_NAGY
+        '
+        Me.lblHOSSZ_NAGY.Location = New System.Drawing.Point(12, 114)
+        Me.lblHOSSZ_NAGY.Name = "lblHOSSZ_NAGY"
+        Me.lblHOSSZ_NAGY.Size = New System.Drawing.Size(125, 13)
+        Me.lblHOSSZ_NAGY.TabIndex = 2
+        Me.lblHOSSZ_NAGY.Text = "Legnagyobb hossz"
+        Me.lblHOSSZ_NAGY.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHOSSZ_KICS
+        '
+        Me.lblHOSSZ_KICS.Location = New System.Drawing.Point(12, 88)
+        Me.lblHOSSZ_KICS.Name = "lblHOSSZ_KICS"
+        Me.lblHOSSZ_KICS.Size = New System.Drawing.Size(125, 13)
+        Me.lblHOSSZ_KICS.TabIndex = 2
+        Me.lblHOSSZ_KICS.Text = "Legkisebb hossz"
+        Me.lblHOSSZ_KICS.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblPRIM_ARAM
+        '
+        Me.lblPRIM_ARAM.Location = New System.Drawing.Point(12, 62)
+        Me.lblPRIM_ARAM.Name = "lblPRIM_ARAM"
+        Me.lblPRIM_ARAM.Size = New System.Drawing.Size(125, 13)
+        Me.lblPRIM_ARAM.TabIndex = 2
+        Me.lblPRIM_ARAM.Text = "Primer tömegáram"
+        Me.lblPRIM_ARAM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblGAZCSUCS
+        '
+        Me.lblGAZCSUCS.Location = New System.Drawing.Point(12, 36)
+        Me.lblGAZCSUCS.Name = "lblGAZCSUCS"
+        Me.lblGAZCSUCS.Size = New System.Drawing.Size(125, 13)
+        Me.lblGAZCSUCS.TabIndex = 2
+        Me.lblGAZCSUCS.Text = "Gázcsúcs igény"
+        Me.lblGAZCSUCS.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblVIZSZ
+        '
+        Me.lblVIZSZ.Location = New System.Drawing.Point(306, 270)
+        Me.lblVIZSZ.Name = "lblVIZSZ"
+        Me.lblVIZSZ.Size = New System.Drawing.Size(125, 13)
+        Me.lblVIZSZ.TabIndex = 2
+        Me.lblVIZSZ.Text = "Vízszint"
+        Me.lblVIZSZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblIMPULZUS
+        '
+        Me.lblIMPULZUS.Location = New System.Drawing.Point(306, 244)
+        Me.lblIMPULZUS.Name = "lblIMPULZUS"
+        Me.lblIMPULZUS.Size = New System.Drawing.Size(125, 13)
+        Me.lblIMPULZUS.TabIndex = 2
+        Me.lblIMPULZUS.Text = "Impulzusszám"
+        Me.lblIMPULZUS.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblDB
+        '
+        Me.lblDB.Location = New System.Drawing.Point(306, 218)
+        Me.lblDB.Name = "lblDB"
+        Me.lblDB.Size = New System.Drawing.Size(125, 13)
+        Me.lblDB.TabIndex = 2
+        Me.lblDB.Text = "DB"
+        Me.lblDB.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblBEVTELJ
+        '
+        Me.lblBEVTELJ.Location = New System.Drawing.Point(306, 192)
+        Me.lblBEVTELJ.Name = "lblBEVTELJ"
+        Me.lblBEVTELJ.Size = New System.Drawing.Size(125, 13)
+        Me.lblBEVTELJ.TabIndex = 2
+        Me.lblBEVTELJ.Text = "Bevitt teljesítmény"
+        Me.lblBEVTELJ.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblLEMSZAM
+        '
+        Me.lblLEMSZAM.Location = New System.Drawing.Point(306, 166)
+        Me.lblLEMSZAM.Name = "lblLEMSZAM"
+        Me.lblLEMSZAM.Size = New System.Drawing.Size(125, 13)
+        Me.lblLEMSZAM.TabIndex = 2
+        Me.lblLEMSZAM.Text = "Lemezszám"
+        Me.lblLEMSZAM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblELLENALL
+        '
+        Me.lblELLENALL.Location = New System.Drawing.Point(306, 140)
+        Me.lblELLENALL.Name = "lblELLENALL"
+        Me.lblELLENALL.Size = New System.Drawing.Size(125, 13)
+        Me.lblELLENALL.TabIndex = 2
+        Me.lblELLENALL.Text = "Ellenállás"
+        Me.lblELLENALL.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblSZURTIP
+        '
+        Me.lblSZURTIP.Location = New System.Drawing.Point(306, 114)
+        Me.lblSZURTIP.Name = "lblSZURTIP"
+        Me.lblSZURTIP.Size = New System.Drawing.Size(125, 13)
+        Me.lblSZURTIP.TabIndex = 2
+        Me.lblSZURTIP.Text = "Szűrőtípus"
+        Me.lblSZURTIP.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblVIZNYOM
+        '
+        Me.lblVIZNYOM.Location = New System.Drawing.Point(306, 88)
+        Me.lblVIZNYOM.Name = "lblVIZNYOM"
+        Me.lblVIZNYOM.Size = New System.Drawing.Size(125, 13)
+        Me.lblVIZNYOM.TabIndex = 2
+        Me.lblVIZNYOM.Text = "Víznyomás"
+        Me.lblVIZNYOM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblLEVNYOM
+        '
+        Me.lblLEVNYOM.Location = New System.Drawing.Point(306, 62)
+        Me.lblLEVNYOM.Name = "lblLEVNYOM"
+        Me.lblLEVNYOM.Size = New System.Drawing.Size(125, 13)
+        Me.lblLEVNYOM.TabIndex = 2
+        Me.lblLEVNYOM.Text = "Levegő nyomás"
+        Me.lblLEVNYOM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblSZELTIP
+        '
+        Me.lblSZELTIP.Location = New System.Drawing.Point(306, 36)
+        Me.lblSZELTIP.Name = "lblSZELTIP"
+        Me.lblSZELTIP.Size = New System.Drawing.Size(125, 13)
+        Me.lblSZELTIP.TabIndex = 2
+        Me.lblSZELTIP.Text = "Szelep típusa"
+        Me.lblSZELTIP.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblBOYTIP
+        '
+        Me.lblBOYTIP.Location = New System.Drawing.Point(306, 10)
+        Me.lblBOYTIP.Name = "lblBOYTIP"
+        Me.lblBOYTIP.Size = New System.Drawing.Size(125, 13)
+        Me.lblBOYTIP.TabIndex = 2
+        Me.lblBOYTIP.Text = "Boyler típusa"
+        Me.lblBOYTIP.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHOTELJ
+        '
+        Me.lblHOTELJ.Location = New System.Drawing.Point(12, 10)
+        Me.lblHOTELJ.Name = "lblHOTELJ"
+        Me.lblHOTELJ.Size = New System.Drawing.Size(125, 13)
+        Me.lblHOTELJ.TabIndex = 2
+        Me.lblHOTELJ.Text = "Kiadható hőteljesítmény"
+        Me.lblHOTELJ.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'cmbSZURTIP
+        '
+        Me.cmbSZURTIP.DataSource = Me.SpQ322BindingSource
+        Me.cmbSZURTIP.DisplayMember = "KODENEV"
+        Me.cmbSZURTIP.FormattingEnabled = True
+        Me.cmbSZURTIP.Location = New System.Drawing.Point(437, 110)
+        Me.cmbSZURTIP.Name = "cmbSZURTIP"
+        Me.cmbSZURTIP.Size = New System.Drawing.Size(138, 21)
+        Me.cmbSZURTIP.TabIndex = 1
+        Me.cmbSZURTIP.Tag = "322"
+        Me.cmbSZURTIP.ValueMember = "KODERT"
+        '
+        'SpQ322BindingSource
+        '
+        Me.SpQ322BindingSource.DataMember = "sp_Q322"
+        Me.SpQ322BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'cmbSZELTIP
+        '
+        Me.cmbSZELTIP.DataSource = Me.SpQ325BindingSource
+        Me.cmbSZELTIP.DisplayMember = "KODENEV"
+        Me.cmbSZELTIP.FormattingEnabled = True
+        Me.cmbSZELTIP.Location = New System.Drawing.Point(437, 32)
+        Me.cmbSZELTIP.Name = "cmbSZELTIP"
+        Me.cmbSZELTIP.Size = New System.Drawing.Size(138, 21)
+        Me.cmbSZELTIP.TabIndex = 1
+        Me.cmbSZELTIP.Tag = "325"
+        Me.cmbSZELTIP.ValueMember = "KODENEV"
+        '
+        'SpQ325BindingSource
+        '
+        Me.SpQ325BindingSource.DataMember = "sp_Q325"
+        Me.SpQ325BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'cmbBOYTIP
+        '
+        Me.cmbBOYTIP.DataSource = Me.SpQ320BindingSource
+        Me.cmbBOYTIP.DisplayMember = "KODENEV"
+        Me.cmbBOYTIP.FormattingEnabled = True
+        Me.cmbBOYTIP.Location = New System.Drawing.Point(437, 7)
+        Me.cmbBOYTIP.Name = "cmbBOYTIP"
+        Me.cmbBOYTIP.Size = New System.Drawing.Size(138, 21)
+        Me.cmbBOYTIP.TabIndex = 1
+        Me.cmbBOYTIP.Tag = "320"
+        Me.cmbBOYTIP.ValueMember = "KODERT"
+        '
+        'SpQ320BindingSource
+        '
+        Me.SpQ320BindingSource.DataMember = "sp_Q320"
+        Me.SpQ320BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'cmbSZIV_FOK
+        '
+        Me.cmbSZIV_FOK.DataSource = Me.SpQ319BindingSource
+        Me.cmbSZIV_FOK.DisplayMember = "KODENEV"
+        Me.cmbSZIV_FOK.FormattingEnabled = True
+        Me.cmbSZIV_FOK.Location = New System.Drawing.Point(143, 189)
+        Me.cmbSZIV_FOK.Name = "cmbSZIV_FOK"
+        Me.cmbSZIV_FOK.Size = New System.Drawing.Size(138, 21)
+        Me.cmbSZIV_FOK.TabIndex = 1
+        Me.cmbSZIV_FOK.Tag = "319"
+        Me.cmbSZIV_FOK.ValueMember = "KODERT"
+        '
+        'SpQ319BindingSource
+        '
+        Me.SpQ319BindingSource.DataMember = "sp_Q319"
+        Me.SpQ319BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'txtZARNYOM
+        '
+        Me.txtZARNYOM.Location = New System.Drawing.Point(143, 268)
+        Me.txtZARNYOM.Name = "txtZARNYOM"
+        Me.txtZARNYOM.Size = New System.Drawing.Size(69, 20)
+        Me.txtZARNYOM.TabIndex = 0
+        '
+        'txtNYITNYOM
+        '
+        Me.txtNYITNYOM.Location = New System.Drawing.Point(143, 242)
+        Me.txtNYITNYOM.Name = "txtNYITNYOM"
+        Me.txtNYITNYOM.Size = New System.Drawing.Size(69, 20)
+        Me.txtNYITNYOM.TabIndex = 0
+        '
+        'txtLEGSZAL
+        '
+        Me.txtLEGSZAL.Location = New System.Drawing.Point(143, 216)
+        Me.txtLEGSZAL.Name = "txtLEGSZAL"
+        Me.txtLEGSZAL.Size = New System.Drawing.Size(69, 20)
+        Me.txtLEGSZAL.TabIndex = 0
+        '
+        'txtTERHEL
+        '
+        Me.txtTERHEL.Location = New System.Drawing.Point(143, 163)
+        Me.txtTERHEL.Name = "txtTERHEL"
+        Me.txtTERHEL.Size = New System.Drawing.Size(69, 20)
+        Me.txtTERHEL.TabIndex = 0
+        '
+        'txtVEGNYOM
+        '
+        Me.txtVEGNYOM.Location = New System.Drawing.Point(143, 137)
+        Me.txtVEGNYOM.Name = "txtVEGNYOM"
+        Me.txtVEGNYOM.Size = New System.Drawing.Size(69, 20)
+        Me.txtVEGNYOM.TabIndex = 0
+        '
+        'txtHOSSZ_NAGY
+        '
+        Me.txtHOSSZ_NAGY.Location = New System.Drawing.Point(143, 111)
+        Me.txtHOSSZ_NAGY.Name = "txtHOSSZ_NAGY"
+        Me.txtHOSSZ_NAGY.Size = New System.Drawing.Size(69, 20)
+        Me.txtHOSSZ_NAGY.TabIndex = 0
+        '
+        'txtHOSSZ_KICS
+        '
+        Me.txtHOSSZ_KICS.Location = New System.Drawing.Point(143, 85)
+        Me.txtHOSSZ_KICS.Name = "txtHOSSZ_KICS"
+        Me.txtHOSSZ_KICS.Size = New System.Drawing.Size(69, 20)
+        Me.txtHOSSZ_KICS.TabIndex = 0
+        '
+        'txtVIZSZ
+        '
+        Me.txtVIZSZ.Location = New System.Drawing.Point(437, 267)
+        Me.txtVIZSZ.Name = "txtVIZSZ"
+        Me.txtVIZSZ.Size = New System.Drawing.Size(69, 20)
+        Me.txtVIZSZ.TabIndex = 0
+        '
+        'txtIMPULZUS
+        '
+        Me.txtIMPULZUS.Location = New System.Drawing.Point(437, 241)
+        Me.txtIMPULZUS.Name = "txtIMPULZUS"
+        Me.txtIMPULZUS.Size = New System.Drawing.Size(69, 20)
+        Me.txtIMPULZUS.TabIndex = 0
+        '
+        'txtDB
+        '
+        Me.txtDB.Location = New System.Drawing.Point(437, 215)
+        Me.txtDB.Name = "txtDB"
+        Me.txtDB.Size = New System.Drawing.Size(69, 20)
+        Me.txtDB.TabIndex = 0
+        '
+        'txtBEVTELJ
+        '
+        Me.txtBEVTELJ.Location = New System.Drawing.Point(437, 189)
+        Me.txtBEVTELJ.Name = "txtBEVTELJ"
+        Me.txtBEVTELJ.Size = New System.Drawing.Size(69, 20)
+        Me.txtBEVTELJ.TabIndex = 0
+        '
+        'txtLEMSZAM
+        '
+        Me.txtLEMSZAM.Location = New System.Drawing.Point(437, 163)
+        Me.txtLEMSZAM.Name = "txtLEMSZAM"
+        Me.txtLEMSZAM.Size = New System.Drawing.Size(69, 20)
+        Me.txtLEMSZAM.TabIndex = 0
+        '
+        'txtELLENALL
+        '
+        Me.txtELLENALL.Location = New System.Drawing.Point(437, 137)
+        Me.txtELLENALL.Name = "txtELLENALL"
+        Me.txtELLENALL.Size = New System.Drawing.Size(69, 20)
+        Me.txtELLENALL.TabIndex = 0
+        '
+        'txtVIZNYOM
+        '
+        Me.txtVIZNYOM.Location = New System.Drawing.Point(437, 85)
+        Me.txtVIZNYOM.Name = "txtVIZNYOM"
+        Me.txtVIZNYOM.Size = New System.Drawing.Size(69, 20)
+        Me.txtVIZNYOM.TabIndex = 0
+        '
+        'txtLEVNYOM
+        '
+        Me.txtLEVNYOM.Location = New System.Drawing.Point(437, 59)
+        Me.txtLEVNYOM.Name = "txtLEVNYOM"
+        Me.txtLEVNYOM.Size = New System.Drawing.Size(69, 20)
+        Me.txtLEVNYOM.TabIndex = 0
+        '
+        'txtPRIM_ARAM
+        '
+        Me.txtPRIM_ARAM.Location = New System.Drawing.Point(143, 59)
+        Me.txtPRIM_ARAM.Name = "txtPRIM_ARAM"
+        Me.txtPRIM_ARAM.Size = New System.Drawing.Size(69, 20)
+        Me.txtPRIM_ARAM.TabIndex = 0
+        '
+        'txtGAZCSUCS
+        '
+        Me.txtGAZCSUCS.Location = New System.Drawing.Point(143, 33)
+        Me.txtGAZCSUCS.Name = "txtGAZCSUCS"
+        Me.txtGAZCSUCS.Size = New System.Drawing.Size(69, 20)
+        Me.txtGAZCSUCS.TabIndex = 0
+        '
+        'txtHOTELJ
+        '
+        Me.txtHOTELJ.Location = New System.Drawing.Point(143, 7)
+        Me.txtHOTELJ.Name = "txtHOTELJ"
+        Me.txtHOTELJ.Size = New System.Drawing.Size(69, 20)
+        Me.txtHOTELJ.TabIndex = 0
         '
         'TabPage4
         '
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(721, 292)
+        Me.TabPage4.Size = New System.Drawing.Size(721, 322)
         Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Üzemeltetési"
+        Me.TabPage4.Text = "Gépészeti - jegyzőkönyv"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'TabPage5
+        '
+        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(721, 322)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "Villamos"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'TabPage6
+        '
+        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage6.Size = New System.Drawing.Size(721, 322)
+        Me.TabPage6.TabIndex = 5
+        Me.TabPage6.Text = "Üzemeltetési"
+        Me.TabPage6.UseVisualStyleBackColor = True
         '
         'txtOBJTIP
         '
-        Me.txtOBJTIP.Location = New System.Drawing.Point(139, 372)
+        Me.txtOBJTIP.Location = New System.Drawing.Point(139, 402)
         Me.txtOBJTIP.Name = "txtOBJTIP"
         Me.txtOBJTIP.Size = New System.Drawing.Size(100, 20)
         Me.txtOBJTIP.TabIndex = 12
@@ -724,13 +1992,45 @@ Partial Class Form011a
         '
         Me.Sp_Q315TableAdapter.ClearBeforeFill = True
         '
+        'Sp_Q285TableAdapter
+        '
+        Me.Sp_Q285TableAdapter.ClearBeforeFill = True
+        '
+        'Sp_Q326TableAdapter
+        '
+        Me.Sp_Q326TableAdapter.ClearBeforeFill = True
+        '
+        'Sp_Q318TableAdapter
+        '
+        Me.Sp_Q318TableAdapter.ClearBeforeFill = True
+        '
+        'Sp_Q272TableAdapter
+        '
+        Me.Sp_Q272TableAdapter.ClearBeforeFill = True
+        '
+        'Sp_Q319TableAdapter
+        '
+        Me.Sp_Q319TableAdapter.ClearBeforeFill = True
+        '
+        'Sp_Q320TableAdapter
+        '
+        Me.Sp_Q320TableAdapter.ClearBeforeFill = True
+        '
+        'Sp_Q325TableAdapter
+        '
+        Me.Sp_Q325TableAdapter.ClearBeforeFill = True
+        '
+        'Sp_Q322TableAdapter
+        '
+        Me.Sp_Q322TableAdapter.ClearBeforeFill = True
+        '
         'Form011a
         '
         Me.AcceptButton = Me.cmdOK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.cmdCANCEL
-        Me.ClientSize = New System.Drawing.Size(753, 407)
+        Me.ClientSize = New System.Drawing.Size(753, 437)
         Me.Controls.Add(Me.txtOBJTIP)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.cmdCANCEL)
@@ -754,6 +2054,21 @@ Partial Class Form011a
         CType(Me.SpQ297BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ313BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ312BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        CType(Me.SpQ279BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ285BindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ285BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ272BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ318BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ326BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ285BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
+        CType(Me.SpQ322BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ325BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ320BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ319BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ271BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ304BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -833,4 +2148,133 @@ Partial Class Form011a
     Friend WithEvents dtHITIDO As System.Windows.Forms.DateTimePicker
     Friend WithEvents SpQ315BindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Sp_Q315TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q315TableAdapter
+    Friend WithEvents txtOSZL_SZAM As System.Windows.Forms.TextBox
+    Friend WithEvents txtMKHOM As System.Windows.Forms.TextBox
+    Friend WithEvents txtHOSSZ As System.Windows.Forms.TextBox
+    Friend WithEvents txtTERFOGAT As System.Windows.Forms.TextBox
+    Friend WithEvents txtFUTOFEL As System.Windows.Forms.TextBox
+    Friend WithEvents txtATMERO As System.Windows.Forms.TextBox
+    Friend WithEvents txtMERET As System.Windows.Forms.TextBox
+    Friend WithEvents txtSZAL_MENNY As System.Windows.Forms.TextBox
+    Friend WithEvents cmbMERETME As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbFU_KOZ As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbHOHOR_KO As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbSZAL_KOZ As System.Windows.Forms.ComboBox
+    Friend WithEvents lbl_SZAL_MENNY_X As System.Windows.Forms.Label
+    Friend WithEvents lblOSZLSZAM As System.Windows.Forms.Label
+    Friend WithEvents lblMKHOM As System.Windows.Forms.Label
+    Friend WithEvents lblHOSSZ As System.Windows.Forms.Label
+    Friend WithEvents lblTERFOGAT As System.Windows.Forms.Label
+    Friend WithEvents lblFU_KOZ As System.Windows.Forms.Label
+    Friend WithEvents lblHOHOR_KO As System.Windows.Forms.Label
+    Friend WithEvents lblFUTOFEL As System.Windows.Forms.Label
+    Friend WithEvents lblATMERO As System.Windows.Forms.Label
+    Friend WithEvents lblMERET As System.Windows.Forms.Label
+    Friend WithEvents lblSZAL_MENNY As System.Windows.Forms.Label
+    Friend WithEvents lblSZAL_KOZ As System.Windows.Forms.Label
+    Friend WithEvents chkFAGYVED As System.Windows.Forms.CheckBox
+    Friend WithEvents chkFELUGY As System.Windows.Forms.CheckBox
+    Friend WithEvents lblFELEP As System.Windows.Forms.Label
+    Friend WithEvents txtBEALL_ERTEK As System.Windows.Forms.TextBox
+    Friend WithEvents txtBECSOV As System.Windows.Forms.TextBox
+    Friend WithEvents txtEMEL_MAG As System.Windows.Forms.TextBox
+    Friend WithEvents txtTERFARAM As System.Windows.Forms.TextBox
+    Friend WithEvents txtUZEMINYOM As System.Windows.Forms.TextBox
+    Friend WithEvents txtFORDSZ As System.Windows.Forms.TextBox
+    Friend WithEvents cmbHOLEP As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbSZABMOD As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbFELEP As System.Windows.Forms.ComboBox
+    Friend WithEvents lblFORDSZ_X As System.Windows.Forms.Label
+    Friend WithEvents lblFAGYVED As System.Windows.Forms.Label
+    Friend WithEvents lblFELUGY As System.Windows.Forms.Label
+    Friend WithEvents lblBECSOV As System.Windows.Forms.Label
+    Friend WithEvents lblEMEL_MAG As System.Windows.Forms.Label
+    Friend WithEvents lblTERFARAM As System.Windows.Forms.Label
+    Friend WithEvents lblHOLEP As System.Windows.Forms.Label
+    Friend WithEvents lblSZABMOD As System.Windows.Forms.Label
+    Friend WithEvents lblUZEMINYOM As System.Windows.Forms.Label
+    Friend WithEvents lblBEALL_ERTEK As System.Windows.Forms.Label
+    Friend WithEvents lblFORDSZ As System.Windows.Forms.Label
+    Friend WithEvents cmbSZIV_FOK As System.Windows.Forms.ComboBox
+    Friend WithEvents txtZARNYOM As System.Windows.Forms.TextBox
+    Friend WithEvents txtNYITNYOM As System.Windows.Forms.TextBox
+    Friend WithEvents txtLEGSZAL As System.Windows.Forms.TextBox
+    Friend WithEvents txtTERHEL As System.Windows.Forms.TextBox
+    Friend WithEvents txtVEGNYOM As System.Windows.Forms.TextBox
+    Friend WithEvents txtHOSSZ_NAGY As System.Windows.Forms.TextBox
+    Friend WithEvents txtHOSSZ_KICS As System.Windows.Forms.TextBox
+    Friend WithEvents txtPRIM_ARAM As System.Windows.Forms.TextBox
+    Friend WithEvents txtGAZCSUCS As System.Windows.Forms.TextBox
+    Friend WithEvents txtHOTELJ As System.Windows.Forms.TextBox
+    Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage6 As System.Windows.Forms.TabPage
+    Friend WithEvents cmbSZURTIP As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbSZELTIP As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbBOYTIP As System.Windows.Forms.ComboBox
+    Friend WithEvents txtVIZSZ As System.Windows.Forms.TextBox
+    Friend WithEvents txtIMPULZUS As System.Windows.Forms.TextBox
+    Friend WithEvents txtDB As System.Windows.Forms.TextBox
+    Friend WithEvents txtBEVTELJ As System.Windows.Forms.TextBox
+    Friend WithEvents txtLEMSZAM As System.Windows.Forms.TextBox
+    Friend WithEvents txtELLENALL As System.Windows.Forms.TextBox
+    Friend WithEvents txtVIZNYOM As System.Windows.Forms.TextBox
+    Friend WithEvents txtLEVNYOM As System.Windows.Forms.TextBox
+    Friend WithEvents lblZARNYOM As System.Windows.Forms.Label
+    Friend WithEvents lblNYITNYOM As System.Windows.Forms.Label
+    Friend WithEvents lblLEGSZAL As System.Windows.Forms.Label
+    Friend WithEvents lblSZIV_FOK As System.Windows.Forms.Label
+    Friend WithEvents lblTERHEL As System.Windows.Forms.Label
+    Friend WithEvents lblVEGNYOM As System.Windows.Forms.Label
+    Friend WithEvents lblHOSSZ_NAGY As System.Windows.Forms.Label
+    Friend WithEvents lblHOSSZ_KICS As System.Windows.Forms.Label
+    Friend WithEvents lblPRIM_ARAM As System.Windows.Forms.Label
+    Friend WithEvents lblGAZCSUCS As System.Windows.Forms.Label
+    Friend WithEvents lblHOTELJ As System.Windows.Forms.Label
+    Friend WithEvents lblVIZSZ As System.Windows.Forms.Label
+    Friend WithEvents lblIMPULZUS As System.Windows.Forms.Label
+    Friend WithEvents lblDB As System.Windows.Forms.Label
+    Friend WithEvents lblBEVTELJ As System.Windows.Forms.Label
+    Friend WithEvents lblLEMSZAM As System.Windows.Forms.Label
+    Friend WithEvents lblELLENALL As System.Windows.Forms.Label
+    Friend WithEvents lblSZURTIP As System.Windows.Forms.Label
+    Friend WithEvents lblVIZNYOM As System.Windows.Forms.Label
+    Friend WithEvents lblLEVNYOM As System.Windows.Forms.Label
+    Friend WithEvents lblSZELTIP As System.Windows.Forms.Label
+    Friend WithEvents lblBOYTIP As System.Windows.Forms.Label
+    Friend WithEvents lblZARNYOM_X As System.Windows.Forms.Label
+    Friend WithEvents lblNYITNYOM_X As System.Windows.Forms.Label
+    Friend WithEvents lblLEGSZAL_X As System.Windows.Forms.Label
+    Friend WithEvents lblTERHEL_X As System.Windows.Forms.Label
+    Friend WithEvents lblVEGNYOM_X As System.Windows.Forms.Label
+    Friend WithEvents lblHOSSZ_NAGY_X As System.Windows.Forms.Label
+    Friend WithEvents lblHOSSZ_KICS_X As System.Windows.Forms.Label
+    Friend WithEvents lblPRIM_ARAM_X As System.Windows.Forms.Label
+    Friend WithEvents lblGAZCSUCS_X As System.Windows.Forms.Label
+    Friend WithEvents lblHOTELJ_X As System.Windows.Forms.Label
+    Friend WithEvents lblVIZSZ_X As System.Windows.Forms.Label
+    Friend WithEvents lblIMPULZUS_X As System.Windows.Forms.Label
+    Friend WithEvents lblBEVTELJ_X As System.Windows.Forms.Label
+    Friend WithEvents lblLEMSZAM_X As System.Windows.Forms.Label
+    Friend WithEvents lblELLENALL_X As System.Windows.Forms.Label
+    Friend WithEvents lblVIZNYOM_X As System.Windows.Forms.Label
+    Friend WithEvents lblLEVNYOM_X As System.Windows.Forms.Label
+    Friend WithEvents SpQ285BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q285TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q285TableAdapter
+    Friend WithEvents SpQ279BindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents SpQ285BindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents SpQ285BindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents SpQ326BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q326TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q326TableAdapter
+    Friend WithEvents SpQ318BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q318TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q318TableAdapter
+    Friend WithEvents SpQ272BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q272TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q272TableAdapter
+    Friend WithEvents SpQ319BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q319TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q319TableAdapter
+    Friend WithEvents SpQ320BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q320TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q320TableAdapter
+    Friend WithEvents SpQ325BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q325TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q325TableAdapter
+    Friend WithEvents SpQ322BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q322TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q322TableAdapter
 End Class

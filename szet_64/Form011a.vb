@@ -4,6 +4,15 @@ Public Class Form011a
     Private sqlConn As SqlConnection
 
     Private Sub Form011a_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Cursor.Current = Cursors.WaitCursor
+        Me.Sp_Q322TableAdapter.Fill(Me.SZETAVDataSet.sp_Q322)
+        Me.Sp_Q325TableAdapter.Fill(Me.SZETAVDataSet.sp_Q325)
+        Me.Sp_Q320TableAdapter.Fill(Me.SZETAVDataSet.sp_Q320)
+        Me.Sp_Q319TableAdapter.Fill(Me.SZETAVDataSet.sp_Q319)
+        Me.Sp_Q272TableAdapter.Fill(Me.SZETAVDataSet.sp_Q272)
+        Me.Sp_Q318TableAdapter.Fill(Me.SZETAVDataSet.sp_Q318)
+        Me.Sp_Q326TableAdapter.Fill(Me.SZETAVDataSet.sp_Q326)
+        Me.Sp_Q285TableAdapter.Fill(Me.SZETAVDataSet.sp_Q285)
         Me.Sp_Q315TableAdapter.Fill(Me.SZETAVDataSet.sp_Q315)
         Me.Sp_Q310TableAdapter.Fill(Me.SZETAVDataSet.sp_Q310)
         Me.Sp_Q279TableAdapter.Fill(Me.SZETAVDataSet.sp_Q279)
@@ -66,9 +75,15 @@ Public Class Form011a
             cmbUZALL.SelectedIndex = -1
             cmbVAROS.SelectedIndex = -1
             cmbVESZO.SelectedIndex = -1
+            Me.TabControl1.TabPages(1).Enabled = False
+            Me.TabControl1.TabPages(2).Enabled = False
+            Me.TabControl1.TabPages(3).Enabled = False
+            Me.TabControl1.TabPages(4).Enabled = False
+            Me.TabControl1.TabPages(5).Enabled = False
         End If
 
         Me.HideUnusedControls()
+        Cursor.Current = Cursors.Default
     End Sub
 
     Private Sub cmdCANCEL_Click(sender As Object, e As EventArgs) Handles cmdCANCEL.Click
