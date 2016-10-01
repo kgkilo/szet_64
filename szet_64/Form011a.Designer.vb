@@ -106,7 +106,7 @@ Partial Class Form011a
         Me.lblFORDSZ = New System.Windows.Forms.Label()
         Me.lblFELEP = New System.Windows.Forms.Label()
         Me.lblSZAL_KOZ = New System.Windows.Forms.Label()
-        Me.txtOSZL_SZAM = New System.Windows.Forms.TextBox()
+        Me.txtOSZLSZAM = New System.Windows.Forms.TextBox()
         Me.txtMKHOM = New System.Windows.Forms.TextBox()
         Me.txtHOSSZ = New System.Windows.Forms.TextBox()
         Me.txtTERFOGAT = New System.Windows.Forms.TextBox()
@@ -155,7 +155,7 @@ Partial Class Form011a
         Me.lblZARNYOM = New System.Windows.Forms.Label()
         Me.lblNYITNYOM = New System.Windows.Forms.Label()
         Me.lblLEGSZAL = New System.Windows.Forms.Label()
-        Me.lblSZIV_FOK = New System.Windows.Forms.Label()
+        Me.lblSZIVFOK = New System.Windows.Forms.Label()
         Me.lblTERHEL = New System.Windows.Forms.Label()
         Me.lblVEGNYOM = New System.Windows.Forms.Label()
         Me.lblHOSSZ_NAGY = New System.Windows.Forms.Label()
@@ -180,7 +180,7 @@ Partial Class Form011a
         Me.SpQ325BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.cmbBOYTIP = New System.Windows.Forms.ComboBox()
         Me.SpQ320BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.cmbSZIV_FOK = New System.Windows.Forms.ComboBox()
+        Me.cmbSZIVFOK = New System.Windows.Forms.ComboBox()
         Me.SpQ319BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtZARNYOM = New System.Windows.Forms.TextBox()
         Me.txtNYITNYOM = New System.Windows.Forms.TextBox()
@@ -299,6 +299,7 @@ Partial Class Form011a
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.Color.Transparent
         Me.TabPage1.Controls.Add(Me.dtHITIDO)
         Me.TabPage1.Controls.Add(Me.dtUZEMIDO)
         Me.TabPage1.Controls.Add(Me.lblMEGJ)
@@ -346,7 +347,6 @@ Partial Class Form011a
         Me.TabPage1.Size = New System.Drawing.Size(721, 322)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Általános"
-        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'dtHITIDO
         '
@@ -779,6 +779,7 @@ Partial Class Form011a
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.Color.Transparent
         Me.TabPage2.Controls.Add(Me.chkFAGYVED)
         Me.TabPage2.Controls.Add(Me.chkFELUGY)
         Me.TabPage2.Controls.Add(Me.lblFORDSZ_X)
@@ -805,7 +806,7 @@ Partial Class Form011a
         Me.TabPage2.Controls.Add(Me.lblFORDSZ)
         Me.TabPage2.Controls.Add(Me.lblFELEP)
         Me.TabPage2.Controls.Add(Me.lblSZAL_KOZ)
-        Me.TabPage2.Controls.Add(Me.txtOSZL_SZAM)
+        Me.TabPage2.Controls.Add(Me.txtOSZLSZAM)
         Me.TabPage2.Controls.Add(Me.txtMKHOM)
         Me.TabPage2.Controls.Add(Me.txtHOSSZ)
         Me.TabPage2.Controls.Add(Me.txtTERFOGAT)
@@ -832,7 +833,6 @@ Partial Class Form011a
         Me.TabPage2.Size = New System.Drawing.Size(721, 322)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Gépészeti - általános"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'chkFAGYVED
         '
@@ -1068,12 +1068,12 @@ Partial Class Form011a
         Me.lblSZAL_KOZ.Text = "Szállított közeg"
         Me.lblSZAL_KOZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'txtOSZL_SZAM
+        'txtOSZLSZAM
         '
-        Me.txtOSZL_SZAM.Location = New System.Drawing.Point(143, 271)
-        Me.txtOSZL_SZAM.Name = "txtOSZL_SZAM"
-        Me.txtOSZL_SZAM.Size = New System.Drawing.Size(69, 20)
-        Me.txtOSZL_SZAM.TabIndex = 1
+        Me.txtOSZLSZAM.Location = New System.Drawing.Point(143, 271)
+        Me.txtOSZLSZAM.Name = "txtOSZLSZAM"
+        Me.txtOSZLSZAM.Size = New System.Drawing.Size(69, 20)
+        Me.txtOSZLSZAM.TabIndex = 1
         '
         'txtMKHOM
         '
@@ -1287,6 +1287,7 @@ Partial Class Form011a
         '
         'TabPage3
         '
+        Me.TabPage3.BackColor = System.Drawing.Color.Transparent
         Me.TabPage3.Controls.Add(Me.lblZARNYOM_X)
         Me.TabPage3.Controls.Add(Me.lblNYITNYOM_X)
         Me.TabPage3.Controls.Add(Me.lblLEGSZAL_X)
@@ -1307,7 +1308,7 @@ Partial Class Form011a
         Me.TabPage3.Controls.Add(Me.lblZARNYOM)
         Me.TabPage3.Controls.Add(Me.lblNYITNYOM)
         Me.TabPage3.Controls.Add(Me.lblLEGSZAL)
-        Me.TabPage3.Controls.Add(Me.lblSZIV_FOK)
+        Me.TabPage3.Controls.Add(Me.lblSZIVFOK)
         Me.TabPage3.Controls.Add(Me.lblTERHEL)
         Me.TabPage3.Controls.Add(Me.lblVEGNYOM)
         Me.TabPage3.Controls.Add(Me.lblHOSSZ_NAGY)
@@ -1329,7 +1330,7 @@ Partial Class Form011a
         Me.TabPage3.Controls.Add(Me.cmbSZURTIP)
         Me.TabPage3.Controls.Add(Me.cmbSZELTIP)
         Me.TabPage3.Controls.Add(Me.cmbBOYTIP)
-        Me.TabPage3.Controls.Add(Me.cmbSZIV_FOK)
+        Me.TabPage3.Controls.Add(Me.cmbSZIVFOK)
         Me.TabPage3.Controls.Add(Me.txtZARNYOM)
         Me.TabPage3.Controls.Add(Me.txtNYITNYOM)
         Me.TabPage3.Controls.Add(Me.txtLEGSZAL)
@@ -1353,7 +1354,6 @@ Partial Class Form011a
         Me.TabPage3.Size = New System.Drawing.Size(721, 322)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Gépészeti - egyedi"
-        Me.TabPage3.UseVisualStyleBackColor = True
         '
         'lblZARNYOM_X
         '
@@ -1535,14 +1535,14 @@ Partial Class Form011a
         Me.lblLEGSZAL.Text = "Légszállítás"
         Me.lblLEGSZAL.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'lblSZIV_FOK
+        'lblSZIVFOK
         '
-        Me.lblSZIV_FOK.Location = New System.Drawing.Point(12, 192)
-        Me.lblSZIV_FOK.Name = "lblSZIV_FOK"
-        Me.lblSZIV_FOK.Size = New System.Drawing.Size(125, 13)
-        Me.lblSZIV_FOK.TabIndex = 2
-        Me.lblSZIV_FOK.Text = "Szivattyú fokozat"
-        Me.lblSZIV_FOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblSZIVFOK.Location = New System.Drawing.Point(12, 192)
+        Me.lblSZIVFOK.Name = "lblSZIVFOK"
+        Me.lblSZIVFOK.Size = New System.Drawing.Size(125, 13)
+        Me.lblSZIVFOK.TabIndex = 2
+        Me.lblSZIVFOK.Text = "Szivattyú fokozat"
+        Me.lblSZIVFOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblTERHEL
         '
@@ -1757,17 +1757,17 @@ Partial Class Form011a
         Me.SpQ320BindingSource.DataMember = "sp_Q320"
         Me.SpQ320BindingSource.DataSource = Me.SZETAVDataSet
         '
-        'cmbSZIV_FOK
+        'cmbSZIVFOK
         '
-        Me.cmbSZIV_FOK.DataSource = Me.SpQ319BindingSource
-        Me.cmbSZIV_FOK.DisplayMember = "KODENEV"
-        Me.cmbSZIV_FOK.FormattingEnabled = True
-        Me.cmbSZIV_FOK.Location = New System.Drawing.Point(143, 189)
-        Me.cmbSZIV_FOK.Name = "cmbSZIV_FOK"
-        Me.cmbSZIV_FOK.Size = New System.Drawing.Size(138, 21)
-        Me.cmbSZIV_FOK.TabIndex = 1
-        Me.cmbSZIV_FOK.Tag = "319"
-        Me.cmbSZIV_FOK.ValueMember = "KODERT"
+        Me.cmbSZIVFOK.DataSource = Me.SpQ319BindingSource
+        Me.cmbSZIVFOK.DisplayMember = "KODENEV"
+        Me.cmbSZIVFOK.FormattingEnabled = True
+        Me.cmbSZIVFOK.Location = New System.Drawing.Point(143, 189)
+        Me.cmbSZIVFOK.Name = "cmbSZIVFOK"
+        Me.cmbSZIVFOK.Size = New System.Drawing.Size(138, 21)
+        Me.cmbSZIVFOK.TabIndex = 1
+        Me.cmbSZIVFOK.Tag = "319"
+        Me.cmbSZIVFOK.ValueMember = "KODERT"
         '
         'SpQ319BindingSource
         '
@@ -1902,12 +1902,12 @@ Partial Class Form011a
         '
         'TabPage4
         '
+        Me.TabPage4.BackColor = System.Drawing.Color.Transparent
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Size = New System.Drawing.Size(721, 322)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Gépészeti - jegyzőkönyv"
-        Me.TabPage4.UseVisualStyleBackColor = True
         '
         'TabPage5
         '
@@ -2148,7 +2148,7 @@ Partial Class Form011a
     Friend WithEvents dtHITIDO As System.Windows.Forms.DateTimePicker
     Friend WithEvents SpQ315BindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Sp_Q315TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q315TableAdapter
-    Friend WithEvents txtOSZL_SZAM As System.Windows.Forms.TextBox
+    Friend WithEvents txtOSZLSZAM As System.Windows.Forms.TextBox
     Friend WithEvents txtMKHOM As System.Windows.Forms.TextBox
     Friend WithEvents txtHOSSZ As System.Windows.Forms.TextBox
     Friend WithEvents txtTERFOGAT As System.Windows.Forms.TextBox
@@ -2195,7 +2195,7 @@ Partial Class Form011a
     Friend WithEvents lblUZEMINYOM As System.Windows.Forms.Label
     Friend WithEvents lblBEALL_ERTEK As System.Windows.Forms.Label
     Friend WithEvents lblFORDSZ As System.Windows.Forms.Label
-    Friend WithEvents cmbSZIV_FOK As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbSZIVFOK As System.Windows.Forms.ComboBox
     Friend WithEvents txtZARNYOM As System.Windows.Forms.TextBox
     Friend WithEvents txtNYITNYOM As System.Windows.Forms.TextBox
     Friend WithEvents txtLEGSZAL As System.Windows.Forms.TextBox
@@ -2222,7 +2222,7 @@ Partial Class Form011a
     Friend WithEvents lblZARNYOM As System.Windows.Forms.Label
     Friend WithEvents lblNYITNYOM As System.Windows.Forms.Label
     Friend WithEvents lblLEGSZAL As System.Windows.Forms.Label
-    Friend WithEvents lblSZIV_FOK As System.Windows.Forms.Label
+    Friend WithEvents lblSZIVFOK As System.Windows.Forms.Label
     Friend WithEvents lblTERHEL As System.Windows.Forms.Label
     Friend WithEvents lblVEGNYOM As System.Windows.Forms.Label
     Friend WithEvents lblHOSSZ_NAGY As System.Windows.Forms.Label
