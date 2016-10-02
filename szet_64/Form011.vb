@@ -104,8 +104,12 @@ Public Class Form011
     End Sub
 
     Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click
-        Form011a.Tag = grd011.SelectedRows(0).Cells(0).Value
-        Form011a.ShowDialog(Me)
+        Try
+            Form011a.Tag = grd011.SelectedRows(0).Cells(0).Value
+            Form011a.ShowDialog(Me)
+        Catch ex As Exception
+            MsgBox("Nincs kiválasztott berendezés!")
+        End Try
         LoadGrid()
     End Sub
 
