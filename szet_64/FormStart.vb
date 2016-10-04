@@ -55,4 +55,8 @@ Public Class FormStart
     Private Sub cmdBERENDEZES_Click(sender As Object, e As EventArgs) Handles cmdBERENDEZES.Click
         Form011.Show(Me)
     End Sub
+
+    Private Sub cmdNEXON_Click(sender As Object, e As EventArgs) Handles cmdNEXON.Click
+        Form091.Show(Me)
+    End Sub
 End Class

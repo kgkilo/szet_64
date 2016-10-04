@@ -28,6 +28,7 @@ Partial Class FormStart
         Me.cmdDOLGOZO = New System.Windows.Forms.Button()
         Me.lblFormel = New System.Windows.Forms.Label()
         Me.cmdBERENDEZES = New System.Windows.Forms.Button()
+        Me.cmdNEXON = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cmdExit
@@ -35,7 +36,7 @@ Partial Class FormStart
         Me.cmdExit.Location = New System.Drawing.Point(433, 367)
         Me.cmdExit.Name = "cmdExit"
         Me.cmdExit.Size = New System.Drawing.Size(150, 46)
-        Me.cmdExit.TabIndex = 4
+        Me.cmdExit.TabIndex = 5
         Me.cmdExit.Text = "Kilépés"
         Me.cmdExit.UseVisualStyleBackColor = True
         '
@@ -84,6 +85,15 @@ Partial Class FormStart
         Me.cmdBERENDEZES.Text = "Berendezések"
         Me.cmdBERENDEZES.UseVisualStyleBackColor = True
         '
+        'cmdNEXON
+        '
+        Me.cmdNEXON.Location = New System.Drawing.Point(395, 240)
+        Me.cmdNEXON.Name = "cmdNEXON"
+        Me.cmdNEXON.Size = New System.Drawing.Size(150, 46)
+        Me.cmdNEXON.TabIndex = 4
+        Me.cmdNEXON.Text = "Export"
+        Me.cmdNEXON.UseVisualStyleBackColor = True
+        '
         'FormStart
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -92,6 +102,7 @@ Partial Class FormStart
         Me.Controls.Add(Me.cmdDOLGOZO)
         Me.Controls.Add(Me.lblFormel)
         Me.Controls.Add(Me.cmdJegyz)
+        Me.Controls.Add(Me.cmdNEXON)
         Me.Controls.Add(Me.cmdBERENDEZES)
         Me.Controls.Add(Me.cmdMunkalap)
         Me.Controls.Add(Me.cmdExit)
@@ -108,5 +119,6 @@ Partial Class FormStart
     Friend WithEvents cmdDOLGOZO As System.Windows.Forms.Button
     Friend WithEvents lblFormel As System.Windows.Forms.Label
     Friend WithEvents cmdBERENDEZES As System.Windows.Forms.Button
+    Friend WithEvents cmdNEXON As System.Windows.Forms.Button
 
 End Class
