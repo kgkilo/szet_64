@@ -42,6 +42,11 @@ Public Class Form011a
         Me.Sp_Q312TableAdapter.Fill(Me.SZETAVDataSet.sp_Q312)
 
         If Me.Tag > 0 Then  'Tag fel volt toltve ertelmes indexszel, be kell tolteni azt a rekordot
+            Me.TabControl1.TabPages(1).Enabled = True
+            Me.TabControl1.TabPages(2).Enabled = True
+            Me.TabControl1.TabPages(3).Enabled = True
+            Me.TabControl1.TabPages(4).Enabled = True
+            Me.TabControl1.TabPages(5).Enabled = True
             LoadAltalanos()
             LoadEgyedi()
         Else
@@ -65,7 +70,7 @@ Public Class Form011a
             Me.TabControl1.TabPages(5).Enabled = False
         End If
 
-        Me.HideUnusedControls()
+        HideUnusedControls()
         Cursor.Current = Cursors.Default
     End Sub
 
@@ -134,9 +139,19 @@ Public Class Form011a
                         If EnableThese.Contains(sName) Then
                             o.Visible = True
                             o.Enabled = True
+                            Try
+                                t.Controls.Item("lbl" + sName + "_X").Visible = True
+                                t.Controls.Item("lbl" + sName + "_X").Enabled = True
+                            Catch
+                            End Try
                         Else
                             o.Visible = False
                             o.Enabled = False
+                            Try
+                                t.Controls.Item("lbl" + sName + "_X").Visible = False
+                                t.Controls.Item("lbl" + sName + "_X").Enabled = False
+                            Catch
+                            End Try
                         End If
                     End If  'o.Name.StartsWith
                 End With    'o.Name
