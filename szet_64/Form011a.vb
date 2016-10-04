@@ -5,6 +5,8 @@ Public Class Form011a
 
     Private Sub Form011a_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cursor.Current = Cursors.WaitCursor
+        Me.Sp_Q323TableAdapter.Fill(Me.SZETAVDataSet.sp_Q323)
+        Me.Sp_Q324TableAdapter.Fill(Me.SZETAVDataSet.sp_Q324)
         Me.Sp_Q363TableAdapter.Fill(Me.SZETAVDataSet.sp_Q363)
         Me.Sp_Q362TableAdapter.Fill(Me.SZETAVDataSet.sp_Q362)
         Me.Sp_Q360TableAdapter.Fill(Me.SZETAVDataSet.sp_Q360)
@@ -379,15 +381,35 @@ Public Class Form011a
                 sqlComm.ExecuteNonQuery()
             End Using
 
-            'Using sqlComm As New SqlCommand("sp_UpdObjVill", sqlConn)
-            'sqlComm.CommandType = CommandType.StoredProcedure
-            'With sqlComm.Parameters
-            '    .AddWithValue("pID", Me.Tag)
-
-            'End With
-            'sqlConn.Open()
-            'sqlComm.ExecuteNonQuery()
-            'End Using
+            Using sqlConn As New SqlConnection(GlobalVars.sConnStr)
+                Dim sqlComm = New SqlCommand("sp_UpdObjVill", sqlConn)
+                sqlComm.CommandType = CommandType.StoredProcedure
+                With sqlComm.Parameters
+                    .AddWithValue("pID", Me.Tag)
+                    'Villamos
+                    If txtARAMFELV.Text <> "" Then .AddWithValue("ARAMFELV", Double.Parse(txtARAMFELV.Text))
+                    If txtFESZULTS.Text <> "" Then .AddWithValue("FESZULTS", Double.Parse(txtFESZULTS.Text))
+                    If txtVEZHOSSZ.Text <> "" Then .AddWithValue("VEZHOSSZ", Double.Parse(txtVEZHOSSZ.Text))
+                    If txtBENYHOSSZ.Text <> "" Then .AddWithValue("BENYHOSSZ", Double.Parse(txtBENYHOSSZ.Text))
+                    If txtNYOMATEK.Text <> "" Then .AddWithValue("NYOMATEK", Double.Parse(txtNYOMATEK.Text))
+                    If txtERZEKENY.Text <> "" Then .AddWithValue("ERZEKENY", Double.Parse(txtERZEKENY.Text))
+                    .AddWithValue("MUKMOD", cmbMUKMOD.SelectedValue)
+                    If txtKVS.Text <> "" Then .AddWithValue("KVS", Double.Parse(txtKVS.Text))
+                    If txtKIMARAM.Text <> "" Then .AddWithValue("KIMARAM", Double.Parse(txtKIMARAM.Text))
+                    If txtTELJT.Text <> "" Then .AddWithValue("TELJT", Double.Parse(txtTELJT.Text))
+                    If txtFOGYMERHELY.Text <> "" Then .AddWithValue("FOGYMERHELY", txtERZEKENY.Text)
+                    .AddWithValue("KIMENET", cmbKIMENET.SelectedValue)
+                    If txtCSATLMERET.Text <> "" Then .AddWithValue("CSATLMERET", Double.Parse(txtCSATLMERET.Text))
+                    If txtMEDDTELJ.Text <> "" Then .AddWithValue("MEDDTELJ", Double.Parse(txtMEDDTELJ.Text))
+                    If txtKISMEGSZAK.Text <> "" Then .AddWithValue("KISMEGSZAK", Double.Parse(txtKISMEGSZAK.Text))
+                    If txtLEKVILLTELJ.Text <> "" Then .AddWithValue("LEKVILLTELJ", Double.Parse(txtLEKVILLTELJ.Text))
+                    If txtVILLCSUCSNY.Text <> "" Then .AddWithValue("VILLCSUCSNY", Double.Parse(txtVILLCSUCSNY.Text))
+                    If txtVILLCSUCST.Text <> "" Then .AddWithValue("VILLCSUCST", Double.Parse(txtVILLCSUCST.Text))
+                    If txtVILLFORDSZ.Text <> "" Then .AddWithValue("VILLFORDSZ", Double.Parse(txtVILLFORDSZ.Text))
+                End With
+                sqlConn.Open()
+                sqlComm.ExecuteNonQuery()
+            End Using
 
             'Using sqlComm As New SqlCommand("sp_UpdObjUzem", sqlConn)
             'sqlComm.CommandType = CommandType.StoredProcedure
@@ -402,4 +424,5 @@ Public Class Form011a
             MsgBox(ex.Message, , ex.ToString)
         End Try
     End Sub
+
 End Class
