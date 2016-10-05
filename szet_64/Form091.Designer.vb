@@ -33,6 +33,11 @@ Partial Class Form091
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Sp_Q334TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q334TableAdapter()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.lblDATUMIG = New System.Windows.Forms.Label()
+        Me.datDATUMIG = New System.Windows.Forms.DateTimePicker()
+        Me.datDATUMTOL = New System.Windows.Forms.DateTimePicker()
+        Me.lblDATUMTOL = New System.Windows.Forms.Label()
+        Me.cmdFRISSIT = New System.Windows.Forms.Button()
         CType(Me.grdPreview, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ334BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,17 +60,17 @@ Partial Class Form091
         Me.cmdExport.Location = New System.Drawing.Point(275, 377)
         Me.cmdExport.Name = "cmdExport"
         Me.cmdExport.Size = New System.Drawing.Size(75, 23)
-        Me.cmdExport.TabIndex = 2
+        Me.cmdExport.TabIndex = 4
         Me.cmdExport.Text = "Export CSV"
         Me.cmdExport.UseVisualStyleBackColor = True
         '
         'cmdEXIT
         '
         Me.cmdEXIT.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.cmdEXIT.Location = New System.Drawing.Point(12, 406)
+        Me.cmdEXIT.Location = New System.Drawing.Point(537, 404)
         Me.cmdEXIT.Name = "cmdEXIT"
         Me.cmdEXIT.Size = New System.Drawing.Size(75, 25)
-        Me.cmdEXIT.TabIndex = 3
+        Me.cmdEXIT.TabIndex = 5
         Me.cmdEXIT.Text = "Kilépés"
         Me.cmdEXIT.UseVisualStyleBackColor = True
         '
@@ -73,7 +78,7 @@ Partial Class Form091
         '
         Me.lblDOLGID.Location = New System.Drawing.Point(12, 66)
         Me.lblDOLGID.Name = "lblDOLGID"
-        Me.lblDOLGID.Size = New System.Drawing.Size(75, 13)
+        Me.lblDOLGID.Size = New System.Drawing.Size(47, 13)
         Me.lblDOLGID.TabIndex = 14
         Me.lblDOLGID.Text = "Dolgozó"
         Me.lblDOLGID.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -83,7 +88,7 @@ Partial Class Form091
         Me.cmbDOLGID.DataSource = Me.SpQ334BindingSource
         Me.cmbDOLGID.DisplayMember = "NEV"
         Me.cmbDOLGID.FormattingEnabled = True
-        Me.cmbDOLGID.Location = New System.Drawing.Point(93, 63)
+        Me.cmbDOLGID.Location = New System.Drawing.Point(63, 63)
         Me.cmbDOLGID.Name = "cmbDOLGID"
         Me.cmbDOLGID.Size = New System.Drawing.Size(180, 21)
         Me.cmbDOLGID.TabIndex = 0
@@ -114,6 +119,56 @@ Partial Class Form091
         '
         Me.Sp_Q334TableAdapter.ClearBeforeFill = True
         '
+        'lblDATUMIG
+        '
+        Me.lblDATUMIG.AutoSize = True
+        Me.lblDATUMIG.Location = New System.Drawing.Point(500, 67)
+        Me.lblDATUMIG.Name = "lblDATUMIG"
+        Me.lblDATUMIG.Size = New System.Drawing.Size(10, 13)
+        Me.lblDATUMIG.TabIndex = 32
+        Me.lblDATUMIG.Text = "-"
+        Me.lblDATUMIG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'datDATUMIG
+        '
+        Me.datDATUMIG.Checked = False
+        Me.datDATUMIG.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.datDATUMIG.Location = New System.Drawing.Point(512, 64)
+        Me.datDATUMIG.Name = "datDATUMIG"
+        Me.datDATUMIG.ShowCheckBox = True
+        Me.datDATUMIG.Size = New System.Drawing.Size(100, 20)
+        Me.datDATUMIG.TabIndex = 2
+        Me.datDATUMIG.Value = New Date(2016, 10, 1, 0, 0, 0, 0)
+        '
+        'datDATUMTOL
+        '
+        Me.datDATUMTOL.Checked = False
+        Me.datDATUMTOL.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.datDATUMTOL.Location = New System.Drawing.Point(398, 64)
+        Me.datDATUMTOL.Name = "datDATUMTOL"
+        Me.datDATUMTOL.ShowCheckBox = True
+        Me.datDATUMTOL.Size = New System.Drawing.Size(100, 20)
+        Me.datDATUMTOL.TabIndex = 1
+        Me.datDATUMTOL.Value = New Date(2016, 10, 1, 0, 0, 0, 0)
+        '
+        'lblDATUMTOL
+        '
+        Me.lblDATUMTOL.Location = New System.Drawing.Point(292, 67)
+        Me.lblDATUMTOL.Name = "lblDATUMTOL"
+        Me.lblDATUMTOL.Size = New System.Drawing.Size(99, 14)
+        Me.lblDATUMTOL.TabIndex = 31
+        Me.lblDATUMTOL.Text = "Intervallum"
+        Me.lblDATUMTOL.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'cmdFRISSIT
+        '
+        Me.cmdFRISSIT.Location = New System.Drawing.Point(12, 406)
+        Me.cmdFRISSIT.Name = "cmdFRISSIT"
+        Me.cmdFRISSIT.Size = New System.Drawing.Size(75, 23)
+        Me.cmdFRISSIT.TabIndex = 3
+        Me.cmdFRISSIT.Text = "Frissít"
+        Me.cmdFRISSIT.UseVisualStyleBackColor = True
+        '
         'Form091
         '
         Me.AcceptButton = Me.cmdExport
@@ -121,10 +176,15 @@ Partial Class Form091
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.cmdEXIT
         Me.ClientSize = New System.Drawing.Size(624, 441)
+        Me.Controls.Add(Me.lblDATUMIG)
+        Me.Controls.Add(Me.datDATUMIG)
+        Me.Controls.Add(Me.datDATUMTOL)
+        Me.Controls.Add(Me.lblDATUMTOL)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.lblDOLGID)
         Me.Controls.Add(Me.cmbDOLGID)
         Me.Controls.Add(Me.cmdEXIT)
+        Me.Controls.Add(Me.cmdFRISSIT)
         Me.Controls.Add(Me.cmdExport)
         Me.Controls.Add(Me.grdPreview)
         Me.Name = "Form091"
@@ -146,4 +206,9 @@ Partial Class Form091
     Friend WithEvents SpQ334BindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Sp_Q334TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q334TableAdapter
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents lblDATUMIG As System.Windows.Forms.Label
+    Friend WithEvents datDATUMIG As System.Windows.Forms.DateTimePicker
+    Friend WithEvents datDATUMTOL As System.Windows.Forms.DateTimePicker
+    Friend WithEvents lblDATUMTOL As System.Windows.Forms.Label
+    Friend WithEvents cmdFRISSIT As System.Windows.Forms.Button
 End Class

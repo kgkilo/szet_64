@@ -6,7 +6,13 @@ Public Class Form091
     Private Sub Form091_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cursor.Current = Cursors.WaitCursor
         Me.Sp_Q334TableAdapter.Fill(Me.SZETAVDataSet.sp_Q334)
-        cmbDOLGID.SelectedIndex = -1
+
+        cmbDOLGID.SelectedIndex = -1    'Nincs dolgozo kivalasztva
+        Dim lastDay = DateSerial(Year(Today), Month(Today), 0)  'Elozo honap utolso napja = aktualis honap 0. napja
+        Dim firstDay = DateSerial(Year(Today), Month(lastDay), 1)   'Elozo honap elso napja
+        datDATUMTOL.Value = firstDay
+        datDATUMIG.Value = lastDay
+
         Me.BindDataGridView()
         Cursor.Current = Cursors.Default
     End Sub
@@ -19,6 +25,12 @@ Public Class Form091
             .CommandType = CommandType.StoredProcedure
             If cmbDOLGID.SelectedIndex > -1 Then
                 .Parameters.Add("@pDOLGID", SqlDbType.Int).Value = cmbDOLGID.SelectedValue
+            End If
+            If datDATUMTOL.Checked Then
+                .Parameters.Add("@pDATUMTOL", SqlDbType.Date).Value = datDATUMTOL.Value
+            End If
+            If datDATUMIG.Checked Then
+                .Parameters.Add("@pDATUMIG", SqlDbType.Date).Value = datDATUMIG.Value
             End If
 
             Dim dt As New DataTable
@@ -75,7 +87,8 @@ Public Class Form091
         Me.Close()
     End Sub
 
-    Private Sub cmbDOLGID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbDOLGID.SelectedIndexChanged
+    Private Sub cmbDOLGID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbDOLGID.SelectedIndexChanged, cmdFRISSIT.Click
         BindDataGridView()
     End Sub
+
 End Class
