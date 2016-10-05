@@ -1,22 +1,32 @@
 ﻿Imports System.IO
 Imports System.Data
+Imports System.Data.SqlClient
 
 Public Class Form091
     Private Sub Form091_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'InitializeComponent()
+        Cursor.Current = Cursors.WaitCursor
+        Me.Sp_Q334TableAdapter.Fill(Me.SZETAVDataSet.sp_Q334)
+        cmbDOLGID.SelectedIndex = -1
         Me.BindDataGridView()
+        Cursor.Current = Cursors.Default
     End Sub
 
     Private Sub BindDataGridView()
-        Dim dt As New DataTable()
-        dt.Columns.AddRange(New DataColumn() {New DataColumn("Id", GetType(Integer)), _
-                                               New DataColumn("Name", GetType(String)), _
-                                               New DataColumn("Country", GetType(String))})
-        dt.Rows.Add(1, "John Hammond", "United States")
-        dt.Rows.Add(2, "Mudassar Khan", "India")
-        dt.Rows.Add(3, "Suzanne Mathews", "France")
-        dt.Rows.Add(4, "Robert Schidner", "Russia")
-        Me.grdPreview.DataSource = dt
+        Cursor.Current = Cursors.WaitCursor
+        'Grid feltoltese tarolt eljarasbol
+        Dim dbadp As New SqlDataAdapter("sp_LekerdNexon", GlobalVars.sConnStr)
+        With dbadp.SelectCommand
+            .CommandType = CommandType.StoredProcedure
+            If cmbDOLGID.SelectedIndex > -1 Then
+                .Parameters.Add("@pDOLGID", SqlDbType.Int).Value = cmbDOLGID.SelectedValue
+            End If
+
+            Dim dt As New DataTable
+            dbadp.Fill(dt)
+            dbadp.Dispose()
+            grdPreview.DataSource = dt
+        End With
+        Cursor.Current = Cursors.Default
     End Sub
 
 
@@ -28,11 +38,9 @@ Public Class Form091
         For Each column As DataGridViewColumn In grdPreview.Columns
             csv += column.HeaderText & ","c
         Next
-        MsgBox(csv)
 
         'Add new line.
         csv += vbCr & vbLf
-        MsgBox(csv)
 
         'Adding the Rows
         For Each row As DataGridViewRow In grdPreview.Rows
@@ -55,4 +63,7 @@ Public Class Form091
         Me.Close()
     End Sub
 
+    Private Sub cmbDOLGID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbDOLGID.SelectedIndexChanged
+        BindDataGridView()
+    End Sub
 End Class
