@@ -54,9 +54,21 @@ Public Class Form091
         Next
 
         'Exporting to Excel
-        Dim folderPath As String = "C:\CSV\"
-        File.WriteAllText(folderPath & "DataGridViewExport.csv", csv)
+        'Dim folderPath As String = "C:\CSV\"
+        'Dim fileName As String = Now().Year & Now().Month.ToString("00") & Now().Day.ToString("00") _
+        '                         & Now.Hour.ToString("00") & Now().Minute.ToString("00") _
+        '                         & Now().Second.ToString("00")
+        'File.WriteAllText(folderPath & fileName & ".csv", csv)
+        'MsgBox("Az exportált állomány: " & folderPath & fileName & ".csv", , "Sikeres export")
 
+        With SaveFileDialog1
+            .Filter = "CSV fájlok (*.csv*)|*.csv"
+            .AddExtension = True
+            .OverwritePrompt = True
+            If .ShowDialog = Windows.Forms.DialogResult.OK Then
+                File.WriteAllText(.FileName, csv)
+            End If
+        End With
     End Sub
 
     Private Sub cmdEXIT_Click(sender As Object, e As EventArgs) Handles cmdEXIT.Click
