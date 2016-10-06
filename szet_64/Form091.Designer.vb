@@ -188,6 +188,7 @@ Partial Class Form091
         Me.Controls.Add(Me.cmdExport)
         Me.Controls.Add(Me.grdPreview)
         Me.Name = "Form091"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form091 - NEXON export"
         CType(Me.grdPreview, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ334BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
