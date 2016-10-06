@@ -77,6 +77,7 @@ Public Class Form091
             .Filter = "CSV fájlok (*.csv*)|*.csv"
             .AddExtension = True
             .OverwritePrompt = True
+            .FileName = DateAdd("m", -1, Now).ToString("yyyyMM")    'Alapertelmezett filenev: (ev+elozo honap).csv
             If .ShowDialog = Windows.Forms.DialogResult.OK Then
                 File.WriteAllText(.FileName, csv)
             End If
