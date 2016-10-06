@@ -27,10 +27,10 @@ Public Class Form091
                 .Parameters.Add("@pDOLGID", SqlDbType.Int).Value = cmbDOLGID.SelectedValue
             End If
             If datDATUMTOL.Checked Then
-                .Parameters.Add("@pDATUMTOL", SqlDbType.Date).Value = datDATUMTOL.Value
+                .Parameters.Add("@pDATUMTOL", SqlDbType.DateTime).Value = datDATUMTOL.Value
             End If
             If datDATUMIG.Checked Then
-                .Parameters.Add("@pDATUMIG", SqlDbType.Date).Value = datDATUMIG.Value
+                .Parameters.Add("@pDATUMIG", SqlDbType.DateTime).Value = datDATUMIG.Value
             End If
 
             Dim dt As New DataTable
