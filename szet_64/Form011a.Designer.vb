@@ -281,7 +281,9 @@ Partial Class Form011a
         Me.lblFOGYMERHELY = New System.Windows.Forms.Label()
         Me.lblARAMFELV = New System.Windows.Forms.Label()
         Me.cmbKIMENET = New System.Windows.Forms.ComboBox()
+        Me.SpQ323BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.cmbMUKMOD = New System.Windows.Forms.ComboBox()
+        Me.SpQ324BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtTELJT = New System.Windows.Forms.TextBox()
         Me.txtKIMARAM = New System.Windows.Forms.TextBox()
         Me.txtKVS = New System.Windows.Forms.TextBox()
@@ -300,6 +302,68 @@ Partial Class Form011a
         Me.txtFOGYMERHELY = New System.Windows.Forms.TextBox()
         Me.txtARAMFELV = New System.Windows.Forms.TextBox()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.chkFUTOTT = New System.Windows.Forms.CheckBox()
+        Me.lblFUTOTT = New System.Windows.Forms.Label()
+        Me.cmbTOLTESMOD = New System.Windows.Forms.ComboBox()
+        Me.lblHMV_LAKAS_X = New System.Windows.Forms.Label()
+        Me.lblTOMEGARAM_X = New System.Windows.Forms.Label()
+        Me.lblNYOMAS_K_X = New System.Windows.Forms.Label()
+        Me.lblNYOMKUL_X = New System.Windows.Forms.Label()
+        Me.lblSZEKU_TOM_X = New System.Windows.Forms.Label()
+        Me.lblHOKOZP_SZAM_X = New System.Windows.Forms.Label()
+        Me.lblHMV_KOZULET_X = New System.Windows.Forms.Label()
+        Me.lblFUT_KOZULET_X = New System.Windows.Forms.Label()
+        Me.lblFUT_LAKAS_X = New System.Windows.Forms.Label()
+        Me.lblHMVHOMERS_X = New System.Windows.Forms.Label()
+        Me.lblHOMER_SZ_X = New System.Windows.Forms.Label()
+        Me.lblHOMERS_X = New System.Windows.Forms.Label()
+        Me.lblCIRKTERFARAM_X = New System.Windows.Forms.Label()
+        Me.lblKUTFNYOM_X = New System.Windows.Forms.Label()
+        Me.lblPRIMELL_X = New System.Windows.Forms.Label()
+        Me.lblFUR_ATM_X = New System.Windows.Forms.Label()
+        Me.lblTOLTESMOD = New System.Windows.Forms.Label()
+        Me.lblNYOMTARTTIP = New System.Windows.Forms.Label()
+        Me.lblUZEMIVIZSZ = New System.Windows.Forms.Label()
+        Me.lblNYUGVIZSZ = New System.Windows.Forms.Label()
+        Me.lblHMV_LAKAS = New System.Windows.Forms.Label()
+        Me.lblTOMEGARAM = New System.Windows.Forms.Label()
+        Me.lblNYOMAS_K = New System.Windows.Forms.Label()
+        Me.lblNYOMKUL = New System.Windows.Forms.Label()
+        Me.lblSZEKU_TOM = New System.Windows.Forms.Label()
+        Me.lblHOKOZP_SZAM = New System.Windows.Forms.Label()
+        Me.lblHMV_KOZULET = New System.Windows.Forms.Label()
+        Me.lblFUT_KOZULET = New System.Windows.Forms.Label()
+        Me.lblFUT_LAKAS = New System.Windows.Forms.Label()
+        Me.lblHMVHOMERS = New System.Windows.Forms.Label()
+        Me.lblHOMER_SZ = New System.Windows.Forms.Label()
+        Me.lblHOMERS = New System.Windows.Forms.Label()
+        Me.lblCIRKTERFARAM = New System.Windows.Forms.Label()
+        Me.lblKUTFNYOM = New System.Windows.Forms.Label()
+        Me.lblSZABALYOZAS = New System.Windows.Forms.Label()
+        Me.lblKAPCSOLAS = New System.Windows.Forms.Label()
+        Me.lblPRIMELL = New System.Windows.Forms.Label()
+        Me.lblFUR_ATM = New System.Windows.Forms.Label()
+        Me.txtNYOMTARTTIP = New System.Windows.Forms.TextBox()
+        Me.txtUZEMIVIZSZ = New System.Windows.Forms.TextBox()
+        Me.txtNYUGVIZSZ = New System.Windows.Forms.TextBox()
+        Me.txtHMV_LAKAS = New System.Windows.Forms.TextBox()
+        Me.txtTOMEGARAM = New System.Windows.Forms.TextBox()
+        Me.txtNYOMAS_K = New System.Windows.Forms.TextBox()
+        Me.txtNYOMKUL = New System.Windows.Forms.TextBox()
+        Me.txtSZEKU_TOM = New System.Windows.Forms.TextBox()
+        Me.txtHOKOZP_SZAM = New System.Windows.Forms.TextBox()
+        Me.txtHMV_KOZULET = New System.Windows.Forms.TextBox()
+        Me.txtFUT_KOZULET = New System.Windows.Forms.TextBox()
+        Me.txtFUT_LAKAS = New System.Windows.Forms.TextBox()
+        Me.txtHMVHOMERS = New System.Windows.Forms.TextBox()
+        Me.txtHOMER_SZ = New System.Windows.Forms.TextBox()
+        Me.txtHOMERS = New System.Windows.Forms.TextBox()
+        Me.txtCIRKTERFARAM = New System.Windows.Forms.TextBox()
+        Me.txtKUTFNYOM = New System.Windows.Forms.TextBox()
+        Me.txtSZABALYOZAS = New System.Windows.Forms.TextBox()
+        Me.txtKAPCSOLAS = New System.Windows.Forms.TextBox()
+        Me.txtPRIMELL = New System.Windows.Forms.TextBox()
+        Me.txtFUR_ATM = New System.Windows.Forms.TextBox()
         Me.txtOBJTIP = New System.Windows.Forms.TextBox()
         Me.SpQ271BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SpQ304BindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -339,9 +403,7 @@ Partial Class Form011a
         Me.Sp_Q360TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q360TableAdapter()
         Me.Sp_Q362TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q362TableAdapter()
         Me.Sp_Q363TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q363TableAdapter()
-        Me.SpQ324BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Sp_Q324TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q324TableAdapter()
-        Me.SpQ323BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Sp_Q323TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q323TableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -386,11 +448,12 @@ Partial Class Form011a
         CType(Me.SpQ350BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ349BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage5.SuspendLayout()
+        CType(Me.SpQ323BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ324BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage6.SuspendLayout()
         CType(Me.SpQ271BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ304BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ359BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpQ324BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpQ323BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -408,7 +471,7 @@ Partial Class Form011a
         Me.cmdOK.Location = New System.Drawing.Point(662, 402)
         Me.cmdOK.Name = "cmdOK"
         Me.cmdOK.Size = New System.Drawing.Size(75, 23)
-        Me.cmdOK.TabIndex = 20
+        Me.cmdOK.TabIndex = 24
         Me.cmdOK.Text = "Rendben"
         Me.cmdOK.UseVisualStyleBackColor = True
         '
@@ -418,7 +481,7 @@ Partial Class Form011a
         Me.cmdCANCEL.Location = New System.Drawing.Point(13, 402)
         Me.cmdCANCEL.Name = "cmdCANCEL"
         Me.cmdCANCEL.Size = New System.Drawing.Size(75, 23)
-        Me.cmdCANCEL.TabIndex = 19
+        Me.cmdCANCEL.TabIndex = 23
         Me.cmdCANCEL.Text = "Mégsem"
         Me.cmdCANCEL.UseVisualStyleBackColor = True
         '
@@ -2562,7 +2625,7 @@ Partial Class Form011a
         Me.lblTELJT_X.Size = New System.Drawing.Size(63, 13)
         Me.lblTELJT_X.TabIndex = 18
         Me.lblTELJT_X.Text = "cos(fi)"
-        Me.lblTELJT_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblTELJT_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblBENYHOSSZ_X
         '
@@ -2571,7 +2634,7 @@ Partial Class Form011a
         Me.lblBENYHOSSZ_X.Size = New System.Drawing.Size(63, 13)
         Me.lblBENYHOSSZ_X.TabIndex = 18
         Me.lblBENYHOSSZ_X.Text = "mm"
-        Me.lblBENYHOSSZ_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblBENYHOSSZ_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblVEZHOSSZ_X
         '
@@ -2580,7 +2643,7 @@ Partial Class Form011a
         Me.lblVEZHOSSZ_X.Size = New System.Drawing.Size(63, 13)
         Me.lblVEZHOSSZ_X.TabIndex = 18
         Me.lblVEZHOSSZ_X.Text = "m"
-        Me.lblVEZHOSSZ_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblVEZHOSSZ_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblFESZULTS_X
         '
@@ -2589,7 +2652,7 @@ Partial Class Form011a
         Me.lblFESZULTS_X.Size = New System.Drawing.Size(63, 13)
         Me.lblFESZULTS_X.TabIndex = 18
         Me.lblFESZULTS_X.Text = "V"
-        Me.lblFESZULTS_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblFESZULTS_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblVILLFORDSZ_X
         '
@@ -2598,7 +2661,7 @@ Partial Class Form011a
         Me.lblVILLFORDSZ_X.Size = New System.Drawing.Size(63, 13)
         Me.lblVILLFORDSZ_X.TabIndex = 18
         Me.lblVILLFORDSZ_X.Text = "1/min"
-        Me.lblVILLFORDSZ_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblVILLFORDSZ_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblVILLCSUCST_X
         '
@@ -2607,7 +2670,7 @@ Partial Class Form011a
         Me.lblVILLCSUCST_X.Size = New System.Drawing.Size(63, 13)
         Me.lblVILLCSUCST_X.TabIndex = 18
         Me.lblVILLCSUCST_X.Text = "kW"
-        Me.lblVILLCSUCST_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblVILLCSUCST_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblVILLCSUCSNY_X
         '
@@ -2616,7 +2679,7 @@ Partial Class Form011a
         Me.lblVILLCSUCSNY_X.Size = New System.Drawing.Size(63, 13)
         Me.lblVILLCSUCSNY_X.TabIndex = 18
         Me.lblVILLCSUCSNY_X.Text = "kW"
-        Me.lblVILLCSUCSNY_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblVILLCSUCSNY_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblLEKVILLTELJ_X
         '
@@ -2625,7 +2688,7 @@ Partial Class Form011a
         Me.lblLEKVILLTELJ_X.Size = New System.Drawing.Size(63, 13)
         Me.lblLEKVILLTELJ_X.TabIndex = 18
         Me.lblLEKVILLTELJ_X.Text = "kW"
-        Me.lblLEKVILLTELJ_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblLEKVILLTELJ_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblKISMEGSZAK_X
         '
@@ -2634,7 +2697,7 @@ Partial Class Form011a
         Me.lblKISMEGSZAK_X.Size = New System.Drawing.Size(63, 13)
         Me.lblKISMEGSZAK_X.TabIndex = 18
         Me.lblKISMEGSZAK_X.Text = "A"
-        Me.lblKISMEGSZAK_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblKISMEGSZAK_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblMEDDTELJ_X
         '
@@ -2643,7 +2706,7 @@ Partial Class Form011a
         Me.lblMEDDTELJ_X.Size = New System.Drawing.Size(63, 13)
         Me.lblMEDDTELJ_X.TabIndex = 18
         Me.lblMEDDTELJ_X.Text = "kvar"
-        Me.lblMEDDTELJ_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblMEDDTELJ_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblARAMFELV_X
         '
@@ -2652,7 +2715,7 @@ Partial Class Form011a
         Me.lblARAMFELV_X.Size = New System.Drawing.Size(63, 13)
         Me.lblARAMFELV_X.TabIndex = 18
         Me.lblARAMFELV_X.Text = "A"
-        Me.lblARAMFELV_X.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblARAMFELV_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblTELJT
         '
@@ -2837,6 +2900,11 @@ Partial Class Form011a
         Me.cmbKIMENET.Tag = "323"
         Me.cmbKIMENET.ValueMember = "KODERT"
         '
+        'SpQ323BindingSource
+        '
+        Me.SpQ323BindingSource.DataMember = "sp_Q323"
+        Me.SpQ323BindingSource.DataSource = Me.SZETAVDataSet
+        '
         'cmbMUKMOD
         '
         Me.cmbMUKMOD.DataSource = Me.SpQ324BindingSource
@@ -2848,6 +2916,11 @@ Partial Class Form011a
         Me.cmbMUKMOD.TabIndex = 6
         Me.cmbMUKMOD.Tag = "324"
         Me.cmbMUKMOD.ValueMember = "KODERT"
+        '
+        'SpQ324BindingSource
+        '
+        Me.SpQ324BindingSource.DataMember = "sp_Q324"
+        Me.SpQ324BindingSource.DataSource = Me.SZETAVDataSet
         '
         'txtTELJT
         '
@@ -2970,13 +3043,594 @@ Partial Class Form011a
         '
         'TabPage6
         '
+        Me.TabPage6.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage6.Controls.Add(Me.chkFUTOTT)
+        Me.TabPage6.Controls.Add(Me.lblFUTOTT)
+        Me.TabPage6.Controls.Add(Me.cmbTOLTESMOD)
+        Me.TabPage6.Controls.Add(Me.lblHMV_LAKAS_X)
+        Me.TabPage6.Controls.Add(Me.lblTOMEGARAM_X)
+        Me.TabPage6.Controls.Add(Me.lblNYOMAS_K_X)
+        Me.TabPage6.Controls.Add(Me.lblNYOMKUL_X)
+        Me.TabPage6.Controls.Add(Me.lblSZEKU_TOM_X)
+        Me.TabPage6.Controls.Add(Me.lblHOKOZP_SZAM_X)
+        Me.TabPage6.Controls.Add(Me.lblHMV_KOZULET_X)
+        Me.TabPage6.Controls.Add(Me.lblFUT_KOZULET_X)
+        Me.TabPage6.Controls.Add(Me.lblFUT_LAKAS_X)
+        Me.TabPage6.Controls.Add(Me.lblHMVHOMERS_X)
+        Me.TabPage6.Controls.Add(Me.lblHOMER_SZ_X)
+        Me.TabPage6.Controls.Add(Me.lblHOMERS_X)
+        Me.TabPage6.Controls.Add(Me.lblCIRKTERFARAM_X)
+        Me.TabPage6.Controls.Add(Me.lblKUTFNYOM_X)
+        Me.TabPage6.Controls.Add(Me.lblPRIMELL_X)
+        Me.TabPage6.Controls.Add(Me.lblFUR_ATM_X)
+        Me.TabPage6.Controls.Add(Me.lblTOLTESMOD)
+        Me.TabPage6.Controls.Add(Me.lblNYOMTARTTIP)
+        Me.TabPage6.Controls.Add(Me.lblUZEMIVIZSZ)
+        Me.TabPage6.Controls.Add(Me.lblNYUGVIZSZ)
+        Me.TabPage6.Controls.Add(Me.lblHMV_LAKAS)
+        Me.TabPage6.Controls.Add(Me.lblTOMEGARAM)
+        Me.TabPage6.Controls.Add(Me.lblNYOMAS_K)
+        Me.TabPage6.Controls.Add(Me.lblNYOMKUL)
+        Me.TabPage6.Controls.Add(Me.lblSZEKU_TOM)
+        Me.TabPage6.Controls.Add(Me.lblHOKOZP_SZAM)
+        Me.TabPage6.Controls.Add(Me.lblHMV_KOZULET)
+        Me.TabPage6.Controls.Add(Me.lblFUT_KOZULET)
+        Me.TabPage6.Controls.Add(Me.lblFUT_LAKAS)
+        Me.TabPage6.Controls.Add(Me.lblHMVHOMERS)
+        Me.TabPage6.Controls.Add(Me.lblHOMER_SZ)
+        Me.TabPage6.Controls.Add(Me.lblHOMERS)
+        Me.TabPage6.Controls.Add(Me.lblCIRKTERFARAM)
+        Me.TabPage6.Controls.Add(Me.lblKUTFNYOM)
+        Me.TabPage6.Controls.Add(Me.lblSZABALYOZAS)
+        Me.TabPage6.Controls.Add(Me.lblKAPCSOLAS)
+        Me.TabPage6.Controls.Add(Me.lblPRIMELL)
+        Me.TabPage6.Controls.Add(Me.lblFUR_ATM)
+        Me.TabPage6.Controls.Add(Me.txtNYOMTARTTIP)
+        Me.TabPage6.Controls.Add(Me.txtUZEMIVIZSZ)
+        Me.TabPage6.Controls.Add(Me.txtNYUGVIZSZ)
+        Me.TabPage6.Controls.Add(Me.txtHMV_LAKAS)
+        Me.TabPage6.Controls.Add(Me.txtTOMEGARAM)
+        Me.TabPage6.Controls.Add(Me.txtNYOMAS_K)
+        Me.TabPage6.Controls.Add(Me.txtNYOMKUL)
+        Me.TabPage6.Controls.Add(Me.txtSZEKU_TOM)
+        Me.TabPage6.Controls.Add(Me.txtHOKOZP_SZAM)
+        Me.TabPage6.Controls.Add(Me.txtHMV_KOZULET)
+        Me.TabPage6.Controls.Add(Me.txtFUT_KOZULET)
+        Me.TabPage6.Controls.Add(Me.txtFUT_LAKAS)
+        Me.TabPage6.Controls.Add(Me.txtHMVHOMERS)
+        Me.TabPage6.Controls.Add(Me.txtHOMER_SZ)
+        Me.TabPage6.Controls.Add(Me.txtHOMERS)
+        Me.TabPage6.Controls.Add(Me.txtCIRKTERFARAM)
+        Me.TabPage6.Controls.Add(Me.txtKUTFNYOM)
+        Me.TabPage6.Controls.Add(Me.txtSZABALYOZAS)
+        Me.TabPage6.Controls.Add(Me.txtKAPCSOLAS)
+        Me.TabPage6.Controls.Add(Me.txtPRIMELL)
+        Me.TabPage6.Controls.Add(Me.txtFUR_ATM)
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage6.Size = New System.Drawing.Size(721, 322)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Üzemeltetési"
-        Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'chkFUTOTT
+        '
+        Me.chkFUTOTT.AutoSize = True
+        Me.chkFUTOTT.Location = New System.Drawing.Point(437, 294)
+        Me.chkFUTOTT.Name = "chkFUTOTT"
+        Me.chkFUTOTT.Size = New System.Drawing.Size(15, 14)
+        Me.chkFUTOTT.TabIndex = 22
+        Me.chkFUTOTT.UseVisualStyleBackColor = True
+        '
+        'lblFUTOTT
+        '
+        Me.lblFUTOTT.Location = New System.Drawing.Point(306, 294)
+        Me.lblFUTOTT.Name = "lblFUTOTT"
+        Me.lblFUTOTT.Size = New System.Drawing.Size(125, 13)
+        Me.lblFUTOTT.TabIndex = 23
+        Me.lblFUTOTT.Text = "Fűtött"
+        Me.lblFUTOTT.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'cmbTOLTESMOD
+        '
+        Me.cmbTOLTESMOD.DataSource = Me.SpQ324BindingSource
+        Me.cmbTOLTESMOD.DisplayMember = "KODENEV"
+        Me.cmbTOLTESMOD.FormattingEnabled = True
+        Me.cmbTOLTESMOD.Location = New System.Drawing.Point(143, 85)
+        Me.cmbTOLTESMOD.Name = "cmbTOLTESMOD"
+        Me.cmbTOLTESMOD.Size = New System.Drawing.Size(138, 21)
+        Me.cmbTOLTESMOD.TabIndex = 3
+        Me.cmbTOLTESMOD.Tag = "321"
+        Me.cmbTOLTESMOD.ValueMember = "KODERT"
+        '
+        'lblHMV_LAKAS_X
+        '
+        Me.lblHMV_LAKAS_X.Location = New System.Drawing.Point(512, 62)
+        Me.lblHMV_LAKAS_X.Name = "lblHMV_LAKAS_X"
+        Me.lblHMV_LAKAS_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblHMV_LAKAS_X.TabIndex = 21
+        Me.lblHMV_LAKAS_X.Text = "db"
+        Me.lblHMV_LAKAS_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblTOMEGARAM_X
+        '
+        Me.lblTOMEGARAM_X.Location = New System.Drawing.Point(512, 219)
+        Me.lblTOMEGARAM_X.Name = "lblTOMEGARAM_X"
+        Me.lblTOMEGARAM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblTOMEGARAM_X.TabIndex = 21
+        Me.lblTOMEGARAM_X.Text = "m3/h"
+        Me.lblTOMEGARAM_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblNYOMAS_K_X
+        '
+        Me.lblNYOMAS_K_X.Location = New System.Drawing.Point(512, 245)
+        Me.lblNYOMAS_K_X.Name = "lblNYOMAS_K_X"
+        Me.lblNYOMAS_K_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblNYOMAS_K_X.TabIndex = 21
+        Me.lblNYOMAS_K_X.Text = "bar"
+        Me.lblNYOMAS_K_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblNYOMKUL_X
+        '
+        Me.lblNYOMKUL_X.Location = New System.Drawing.Point(512, 193)
+        Me.lblNYOMKUL_X.Name = "lblNYOMKUL_X"
+        Me.lblNYOMKUL_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblNYOMKUL_X.TabIndex = 21
+        Me.lblNYOMKUL_X.Text = "bar"
+        Me.lblNYOMKUL_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblSZEKU_TOM_X
+        '
+        Me.lblSZEKU_TOM_X.Location = New System.Drawing.Point(512, 167)
+        Me.lblSZEKU_TOM_X.Name = "lblSZEKU_TOM_X"
+        Me.lblSZEKU_TOM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblSZEKU_TOM_X.TabIndex = 21
+        Me.lblSZEKU_TOM_X.Text = "m3/h"
+        Me.lblSZEKU_TOM_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblHOKOZP_SZAM_X
+        '
+        Me.lblHOKOZP_SZAM_X.Location = New System.Drawing.Point(512, 141)
+        Me.lblHOKOZP_SZAM_X.Name = "lblHOKOZP_SZAM_X"
+        Me.lblHOKOZP_SZAM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblHOKOZP_SZAM_X.TabIndex = 21
+        Me.lblHOKOZP_SZAM_X.Text = "db"
+        Me.lblHOKOZP_SZAM_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblHMV_KOZULET_X
+        '
+        Me.lblHMV_KOZULET_X.Location = New System.Drawing.Point(512, 115)
+        Me.lblHMV_KOZULET_X.Name = "lblHMV_KOZULET_X"
+        Me.lblHMV_KOZULET_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblHMV_KOZULET_X.TabIndex = 21
+        Me.lblHMV_KOZULET_X.Text = "db"
+        Me.lblHMV_KOZULET_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFUT_KOZULET_X
+        '
+        Me.lblFUT_KOZULET_X.Location = New System.Drawing.Point(512, 88)
+        Me.lblFUT_KOZULET_X.Name = "lblFUT_KOZULET_X"
+        Me.lblFUT_KOZULET_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblFUT_KOZULET_X.TabIndex = 21
+        Me.lblFUT_KOZULET_X.Text = "db"
+        Me.lblFUT_KOZULET_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFUT_LAKAS_X
+        '
+        Me.lblFUT_LAKAS_X.Location = New System.Drawing.Point(512, 36)
+        Me.lblFUT_LAKAS_X.Name = "lblFUT_LAKAS_X"
+        Me.lblFUT_LAKAS_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblFUT_LAKAS_X.TabIndex = 21
+        Me.lblFUT_LAKAS_X.Text = "db"
+        Me.lblFUT_LAKAS_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblHMVHOMERS_X
+        '
+        Me.lblHMVHOMERS_X.Location = New System.Drawing.Point(512, 10)
+        Me.lblHMVHOMERS_X.Name = "lblHMVHOMERS_X"
+        Me.lblHMVHOMERS_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblHMVHOMERS_X.TabIndex = 21
+        Me.lblHMVHOMERS_X.Text = "°C"
+        Me.lblHMVHOMERS_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblHOMER_SZ_X
+        '
+        Me.lblHOMER_SZ_X.Location = New System.Drawing.Point(512, 271)
+        Me.lblHOMER_SZ_X.Name = "lblHOMER_SZ_X"
+        Me.lblHOMER_SZ_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblHOMER_SZ_X.TabIndex = 21
+        Me.lblHOMER_SZ_X.Text = "°C"
+        Me.lblHOMER_SZ_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblHOMERS_X
+        '
+        Me.lblHOMERS_X.Location = New System.Drawing.Point(218, 245)
+        Me.lblHOMERS_X.Name = "lblHOMERS_X"
+        Me.lblHOMERS_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblHOMERS_X.TabIndex = 21
+        Me.lblHOMERS_X.Text = "°C"
+        Me.lblHOMERS_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblCIRKTERFARAM_X
+        '
+        Me.lblCIRKTERFARAM_X.Location = New System.Drawing.Point(218, 219)
+        Me.lblCIRKTERFARAM_X.Name = "lblCIRKTERFARAM_X"
+        Me.lblCIRKTERFARAM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblCIRKTERFARAM_X.TabIndex = 21
+        Me.lblCIRKTERFARAM_X.Text = "m3/h"
+        Me.lblCIRKTERFARAM_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblKUTFNYOM_X
+        '
+        Me.lblKUTFNYOM_X.Location = New System.Drawing.Point(218, 141)
+        Me.lblKUTFNYOM_X.Name = "lblKUTFNYOM_X"
+        Me.lblKUTFNYOM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblKUTFNYOM_X.TabIndex = 21
+        Me.lblKUTFNYOM_X.Text = "bar"
+        Me.lblKUTFNYOM_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblPRIMELL_X
+        '
+        Me.lblPRIMELL_X.Location = New System.Drawing.Point(218, 36)
+        Me.lblPRIMELL_X.Name = "lblPRIMELL_X"
+        Me.lblPRIMELL_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblPRIMELL_X.TabIndex = 21
+        Me.lblPRIMELL_X.Text = "bar"
+        Me.lblPRIMELL_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFUR_ATM_X
+        '
+        Me.lblFUR_ATM_X.Location = New System.Drawing.Point(218, 10)
+        Me.lblFUR_ATM_X.Name = "lblFUR_ATM_X"
+        Me.lblFUR_ATM_X.Size = New System.Drawing.Size(63, 13)
+        Me.lblFUR_ATM_X.TabIndex = 21
+        Me.lblFUR_ATM_X.Text = "mm"
+        Me.lblFUR_ATM_X.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblTOLTESMOD
+        '
+        Me.lblTOLTESMOD.Location = New System.Drawing.Point(12, 88)
+        Me.lblTOLTESMOD.Name = "lblTOLTESMOD"
+        Me.lblTOLTESMOD.Size = New System.Drawing.Size(125, 13)
+        Me.lblTOLTESMOD.TabIndex = 20
+        Me.lblTOLTESMOD.Text = "Töltési mód"
+        Me.lblTOLTESMOD.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblNYOMTARTTIP
+        '
+        Me.lblNYOMTARTTIP.Location = New System.Drawing.Point(12, 271)
+        Me.lblNYOMTARTTIP.Name = "lblNYOMTARTTIP"
+        Me.lblNYOMTARTTIP.Size = New System.Drawing.Size(125, 13)
+        Me.lblNYOMTARTTIP.TabIndex = 20
+        Me.lblNYOMTARTTIP.Text = "Nyomástartás típusa"
+        Me.lblNYOMTARTTIP.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblUZEMIVIZSZ
+        '
+        Me.lblUZEMIVIZSZ.Location = New System.Drawing.Point(12, 193)
+        Me.lblUZEMIVIZSZ.Name = "lblUZEMIVIZSZ"
+        Me.lblUZEMIVIZSZ.Size = New System.Drawing.Size(125, 13)
+        Me.lblUZEMIVIZSZ.TabIndex = 20
+        Me.lblUZEMIVIZSZ.Text = "Üzemi vízszint"
+        Me.lblUZEMIVIZSZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblNYUGVIZSZ
+        '
+        Me.lblNYUGVIZSZ.Location = New System.Drawing.Point(12, 167)
+        Me.lblNYUGVIZSZ.Name = "lblNYUGVIZSZ"
+        Me.lblNYUGVIZSZ.Size = New System.Drawing.Size(125, 13)
+        Me.lblNYUGVIZSZ.TabIndex = 20
+        Me.lblNYUGVIZSZ.Text = "Nyugalmi vízszint"
+        Me.lblNYUGVIZSZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHMV_LAKAS
+        '
+        Me.lblHMV_LAKAS.Location = New System.Drawing.Point(306, 62)
+        Me.lblHMV_LAKAS.Name = "lblHMV_LAKAS"
+        Me.lblHMV_LAKAS.Size = New System.Drawing.Size(125, 13)
+        Me.lblHMV_LAKAS.TabIndex = 20
+        Me.lblHMV_LAKAS.Text = "HMV lakásszám"
+        Me.lblHMV_LAKAS.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblTOMEGARAM
+        '
+        Me.lblTOMEGARAM.Location = New System.Drawing.Point(306, 219)
+        Me.lblTOMEGARAM.Name = "lblTOMEGARAM"
+        Me.lblTOMEGARAM.Size = New System.Drawing.Size(125, 13)
+        Me.lblTOMEGARAM.TabIndex = 20
+        Me.lblTOMEGARAM.Text = "Tömegáram"
+        Me.lblTOMEGARAM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblNYOMAS_K
+        '
+        Me.lblNYOMAS_K.Location = New System.Drawing.Point(269, 245)
+        Me.lblNYOMAS_K.Name = "lblNYOMAS_K"
+        Me.lblNYOMAS_K.Size = New System.Drawing.Size(162, 13)
+        Me.lblNYOMAS_K.TabIndex = 20
+        Me.lblNYOMAS_K.Text = "Nyomáskül. szekunder oldalon"
+        Me.lblNYOMAS_K.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblNYOMKUL
+        '
+        Me.lblNYOMKUL.Location = New System.Drawing.Point(306, 193)
+        Me.lblNYOMKUL.Name = "lblNYOMKUL"
+        Me.lblNYOMKUL.Size = New System.Drawing.Size(125, 13)
+        Me.lblNYOMKUL.TabIndex = 20
+        Me.lblNYOMKUL.Text = "Nyomáskülönbség"
+        Me.lblNYOMKUL.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblSZEKU_TOM
+        '
+        Me.lblSZEKU_TOM.Location = New System.Drawing.Point(306, 167)
+        Me.lblSZEKU_TOM.Name = "lblSZEKU_TOM"
+        Me.lblSZEKU_TOM.Size = New System.Drawing.Size(125, 13)
+        Me.lblSZEKU_TOM.TabIndex = 20
+        Me.lblSZEKU_TOM.Text = "Szekunder tömegáram"
+        Me.lblSZEKU_TOM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHOKOZP_SZAM
+        '
+        Me.lblHOKOZP_SZAM.Location = New System.Drawing.Point(306, 141)
+        Me.lblHOKOZP_SZAM.Name = "lblHOKOZP_SZAM"
+        Me.lblHOKOZP_SZAM.Size = New System.Drawing.Size(125, 13)
+        Me.lblHOKOZP_SZAM.TabIndex = 20
+        Me.lblHOKOZP_SZAM.Text = "Hőközpontok száma"
+        Me.lblHOKOZP_SZAM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHMV_KOZULET
+        '
+        Me.lblHMV_KOZULET.Location = New System.Drawing.Point(306, 115)
+        Me.lblHMV_KOZULET.Name = "lblHMV_KOZULET"
+        Me.lblHMV_KOZULET.Size = New System.Drawing.Size(125, 13)
+        Me.lblHMV_KOZULET.TabIndex = 20
+        Me.lblHMV_KOZULET.Text = "HMV közületek száma"
+        Me.lblHMV_KOZULET.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblFUT_KOZULET
+        '
+        Me.lblFUT_KOZULET.Location = New System.Drawing.Point(306, 88)
+        Me.lblFUT_KOZULET.Name = "lblFUT_KOZULET"
+        Me.lblFUT_KOZULET.Size = New System.Drawing.Size(125, 13)
+        Me.lblFUT_KOZULET.TabIndex = 20
+        Me.lblFUT_KOZULET.Text = "Fűtött közületek száma"
+        Me.lblFUT_KOZULET.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblFUT_LAKAS
+        '
+        Me.lblFUT_LAKAS.Location = New System.Drawing.Point(306, 36)
+        Me.lblFUT_LAKAS.Name = "lblFUT_LAKAS"
+        Me.lblFUT_LAKAS.Size = New System.Drawing.Size(125, 13)
+        Me.lblFUT_LAKAS.TabIndex = 20
+        Me.lblFUT_LAKAS.Text = "Fűtött lakásszám"
+        Me.lblFUT_LAKAS.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHMVHOMERS
+        '
+        Me.lblHMVHOMERS.Location = New System.Drawing.Point(306, 10)
+        Me.lblHMVHOMERS.Name = "lblHMVHOMERS"
+        Me.lblHMVHOMERS.Size = New System.Drawing.Size(125, 13)
+        Me.lblHMVHOMERS.TabIndex = 20
+        Me.lblHMVHOMERS.Text = "HMV hőmérséklet"
+        Me.lblHMVHOMERS.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHOMER_SZ
+        '
+        Me.lblHOMER_SZ.Location = New System.Drawing.Point(272, 271)
+        Me.lblHOMER_SZ.Name = "lblHOMER_SZ"
+        Me.lblHOMER_SZ.Size = New System.Drawing.Size(159, 13)
+        Me.lblHOMER_SZ.TabIndex = 20
+        Me.lblHOMER_SZ.Text = "Hőmérséklet szekunder oldalon"
+        Me.lblHOMER_SZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblHOMERS
+        '
+        Me.lblHOMERS.Location = New System.Drawing.Point(3, 245)
+        Me.lblHOMERS.Name = "lblHOMERS"
+        Me.lblHOMERS.Size = New System.Drawing.Size(134, 13)
+        Me.lblHOMERS.TabIndex = 20
+        Me.lblHOMERS.Text = "Hőmérséklet"
+        Me.lblHOMERS.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblCIRKTERFARAM
+        '
+        Me.lblCIRKTERFARAM.Location = New System.Drawing.Point(3, 219)
+        Me.lblCIRKTERFARAM.Name = "lblCIRKTERFARAM"
+        Me.lblCIRKTERFARAM.Size = New System.Drawing.Size(134, 13)
+        Me.lblCIRKTERFARAM.TabIndex = 20
+        Me.lblCIRKTERFARAM.Text = "Cirk. térfogatáram menny."
+        Me.lblCIRKTERFARAM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblKUTFNYOM
+        '
+        Me.lblKUTFNYOM.Location = New System.Drawing.Point(12, 141)
+        Me.lblKUTFNYOM.Name = "lblKUTFNYOM"
+        Me.lblKUTFNYOM.Size = New System.Drawing.Size(125, 13)
+        Me.lblKUTFNYOM.TabIndex = 20
+        Me.lblKUTFNYOM.Text = "Kútfej nyomás"
+        Me.lblKUTFNYOM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblSZABALYOZAS
+        '
+        Me.lblSZABALYOZAS.Location = New System.Drawing.Point(12, 115)
+        Me.lblSZABALYOZAS.Name = "lblSZABALYOZAS"
+        Me.lblSZABALYOZAS.Size = New System.Drawing.Size(125, 13)
+        Me.lblSZABALYOZAS.TabIndex = 20
+        Me.lblSZABALYOZAS.Text = "Szabályozás"
+        Me.lblSZABALYOZAS.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblKAPCSOLAS
+        '
+        Me.lblKAPCSOLAS.Location = New System.Drawing.Point(12, 62)
+        Me.lblKAPCSOLAS.Name = "lblKAPCSOLAS"
+        Me.lblKAPCSOLAS.Size = New System.Drawing.Size(125, 13)
+        Me.lblKAPCSOLAS.TabIndex = 20
+        Me.lblKAPCSOLAS.Text = "Kapcsolás"
+        Me.lblKAPCSOLAS.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblPRIMELL
+        '
+        Me.lblPRIMELL.Location = New System.Drawing.Point(12, 36)
+        Me.lblPRIMELL.Name = "lblPRIMELL"
+        Me.lblPRIMELL.Size = New System.Drawing.Size(125, 13)
+        Me.lblPRIMELL.TabIndex = 20
+        Me.lblPRIMELL.Text = "Primer ellenállás"
+        Me.lblPRIMELL.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblFUR_ATM
+        '
+        Me.lblFUR_ATM.Location = New System.Drawing.Point(12, 10)
+        Me.lblFUR_ATM.Name = "lblFUR_ATM"
+        Me.lblFUR_ATM.Size = New System.Drawing.Size(125, 13)
+        Me.lblFUR_ATM.TabIndex = 20
+        Me.lblFUR_ATM.Text = "Furat átmérő"
+        Me.lblFUR_ATM.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtNYOMTARTTIP
+        '
+        Me.txtNYOMTARTTIP.Location = New System.Drawing.Point(143, 268)
+        Me.txtNYOMTARTTIP.Name = "txtNYOMTARTTIP"
+        Me.txtNYOMTARTTIP.Size = New System.Drawing.Size(69, 20)
+        Me.txtNYOMTARTTIP.TabIndex = 10
+        '
+        'txtUZEMIVIZSZ
+        '
+        Me.txtUZEMIVIZSZ.Location = New System.Drawing.Point(143, 190)
+        Me.txtUZEMIVIZSZ.Name = "txtUZEMIVIZSZ"
+        Me.txtUZEMIVIZSZ.Size = New System.Drawing.Size(69, 20)
+        Me.txtUZEMIVIZSZ.TabIndex = 7
+        '
+        'txtNYUGVIZSZ
+        '
+        Me.txtNYUGVIZSZ.Location = New System.Drawing.Point(143, 164)
+        Me.txtNYUGVIZSZ.Name = "txtNYUGVIZSZ"
+        Me.txtNYUGVIZSZ.Size = New System.Drawing.Size(69, 20)
+        Me.txtNYUGVIZSZ.TabIndex = 6
+        '
+        'txtHMV_LAKAS
+        '
+        Me.txtHMV_LAKAS.Location = New System.Drawing.Point(437, 59)
+        Me.txtHMV_LAKAS.Name = "txtHMV_LAKAS"
+        Me.txtHMV_LAKAS.Size = New System.Drawing.Size(69, 20)
+        Me.txtHMV_LAKAS.TabIndex = 13
+        '
+        'txtTOMEGARAM
+        '
+        Me.txtTOMEGARAM.Location = New System.Drawing.Point(437, 216)
+        Me.txtTOMEGARAM.Name = "txtTOMEGARAM"
+        Me.txtTOMEGARAM.Size = New System.Drawing.Size(69, 20)
+        Me.txtTOMEGARAM.TabIndex = 19
+        '
+        'txtNYOMAS_K
+        '
+        Me.txtNYOMAS_K.Location = New System.Drawing.Point(437, 242)
+        Me.txtNYOMAS_K.Name = "txtNYOMAS_K"
+        Me.txtNYOMAS_K.Size = New System.Drawing.Size(69, 20)
+        Me.txtNYOMAS_K.TabIndex = 20
+        '
+        'txtNYOMKUL
+        '
+        Me.txtNYOMKUL.Location = New System.Drawing.Point(437, 190)
+        Me.txtNYOMKUL.Name = "txtNYOMKUL"
+        Me.txtNYOMKUL.Size = New System.Drawing.Size(69, 20)
+        Me.txtNYOMKUL.TabIndex = 18
+        '
+        'txtSZEKU_TOM
+        '
+        Me.txtSZEKU_TOM.Location = New System.Drawing.Point(437, 164)
+        Me.txtSZEKU_TOM.Name = "txtSZEKU_TOM"
+        Me.txtSZEKU_TOM.Size = New System.Drawing.Size(69, 20)
+        Me.txtSZEKU_TOM.TabIndex = 17
+        '
+        'txtHOKOZP_SZAM
+        '
+        Me.txtHOKOZP_SZAM.Location = New System.Drawing.Point(437, 138)
+        Me.txtHOKOZP_SZAM.Name = "txtHOKOZP_SZAM"
+        Me.txtHOKOZP_SZAM.Size = New System.Drawing.Size(69, 20)
+        Me.txtHOKOZP_SZAM.TabIndex = 16
+        '
+        'txtHMV_KOZULET
+        '
+        Me.txtHMV_KOZULET.Location = New System.Drawing.Point(437, 112)
+        Me.txtHMV_KOZULET.Name = "txtHMV_KOZULET"
+        Me.txtHMV_KOZULET.Size = New System.Drawing.Size(69, 20)
+        Me.txtHMV_KOZULET.TabIndex = 15
+        '
+        'txtFUT_KOZULET
+        '
+        Me.txtFUT_KOZULET.Location = New System.Drawing.Point(437, 85)
+        Me.txtFUT_KOZULET.Name = "txtFUT_KOZULET"
+        Me.txtFUT_KOZULET.Size = New System.Drawing.Size(69, 20)
+        Me.txtFUT_KOZULET.TabIndex = 14
+        '
+        'txtFUT_LAKAS
+        '
+        Me.txtFUT_LAKAS.Location = New System.Drawing.Point(437, 33)
+        Me.txtFUT_LAKAS.Name = "txtFUT_LAKAS"
+        Me.txtFUT_LAKAS.Size = New System.Drawing.Size(69, 20)
+        Me.txtFUT_LAKAS.TabIndex = 12
+        '
+        'txtHMVHOMERS
+        '
+        Me.txtHMVHOMERS.Location = New System.Drawing.Point(437, 7)
+        Me.txtHMVHOMERS.Name = "txtHMVHOMERS"
+        Me.txtHMVHOMERS.Size = New System.Drawing.Size(69, 20)
+        Me.txtHMVHOMERS.TabIndex = 11
+        '
+        'txtHOMER_SZ
+        '
+        Me.txtHOMER_SZ.Location = New System.Drawing.Point(437, 268)
+        Me.txtHOMER_SZ.Name = "txtHOMER_SZ"
+        Me.txtHOMER_SZ.Size = New System.Drawing.Size(69, 20)
+        Me.txtHOMER_SZ.TabIndex = 21
+        '
+        'txtHOMERS
+        '
+        Me.txtHOMERS.Location = New System.Drawing.Point(143, 242)
+        Me.txtHOMERS.Name = "txtHOMERS"
+        Me.txtHOMERS.Size = New System.Drawing.Size(69, 20)
+        Me.txtHOMERS.TabIndex = 9
+        '
+        'txtCIRKTERFARAM
+        '
+        Me.txtCIRKTERFARAM.Location = New System.Drawing.Point(143, 216)
+        Me.txtCIRKTERFARAM.Name = "txtCIRKTERFARAM"
+        Me.txtCIRKTERFARAM.Size = New System.Drawing.Size(69, 20)
+        Me.txtCIRKTERFARAM.TabIndex = 8
+        '
+        'txtKUTFNYOM
+        '
+        Me.txtKUTFNYOM.Location = New System.Drawing.Point(143, 138)
+        Me.txtKUTFNYOM.Name = "txtKUTFNYOM"
+        Me.txtKUTFNYOM.Size = New System.Drawing.Size(69, 20)
+        Me.txtKUTFNYOM.TabIndex = 5
+        '
+        'txtSZABALYOZAS
+        '
+        Me.txtSZABALYOZAS.Location = New System.Drawing.Point(143, 112)
+        Me.txtSZABALYOZAS.Name = "txtSZABALYOZAS"
+        Me.txtSZABALYOZAS.Size = New System.Drawing.Size(69, 20)
+        Me.txtSZABALYOZAS.TabIndex = 4
+        '
+        'txtKAPCSOLAS
+        '
+        Me.txtKAPCSOLAS.Location = New System.Drawing.Point(143, 59)
+        Me.txtKAPCSOLAS.Name = "txtKAPCSOLAS"
+        Me.txtKAPCSOLAS.Size = New System.Drawing.Size(69, 20)
+        Me.txtKAPCSOLAS.TabIndex = 2
+        '
+        'txtPRIMELL
+        '
+        Me.txtPRIMELL.Location = New System.Drawing.Point(143, 33)
+        Me.txtPRIMELL.Name = "txtPRIMELL"
+        Me.txtPRIMELL.Size = New System.Drawing.Size(69, 20)
+        Me.txtPRIMELL.TabIndex = 1
+        '
+        'txtFUR_ATM
+        '
+        Me.txtFUR_ATM.Location = New System.Drawing.Point(143, 7)
+        Me.txtFUR_ATM.Name = "txtFUR_ATM"
+        Me.txtFUR_ATM.Size = New System.Drawing.Size(69, 20)
+        Me.txtFUR_ATM.TabIndex = 0
         '
         'txtOBJTIP
         '
@@ -3142,19 +3796,9 @@ Partial Class Form011a
         '
         Me.Sp_Q363TableAdapter.ClearBeforeFill = True
         '
-        'SpQ324BindingSource
-        '
-        Me.SpQ324BindingSource.DataMember = "sp_Q324"
-        Me.SpQ324BindingSource.DataSource = Me.SZETAVDataSet
-        '
         'Sp_Q324TableAdapter
         '
         Me.Sp_Q324TableAdapter.ClearBeforeFill = True
-        '
-        'SpQ323BindingSource
-        '
-        Me.SpQ323BindingSource.DataMember = "sp_Q323"
-        Me.SpQ323BindingSource.DataSource = Me.SZETAVDataSet
         '
         'Sp_Q323TableAdapter
         '
@@ -3224,11 +3868,13 @@ Partial Class Form011a
         CType(Me.SpQ349BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout()
+        CType(Me.SpQ323BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ324BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage6.ResumeLayout(False)
+        Me.TabPage6.PerformLayout()
         CType(Me.SpQ271BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ304BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ359BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpQ324BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpQ323BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3553,4 +4199,66 @@ Partial Class Form011a
     Friend WithEvents Sp_Q324TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q324TableAdapter
     Friend WithEvents SpQ323BindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Sp_Q323TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q323TableAdapter
+    Friend WithEvents lblPRIMELL_X As System.Windows.Forms.Label
+    Friend WithEvents lblFUR_ATM_X As System.Windows.Forms.Label
+    Friend WithEvents lblKAPCSOLAS As System.Windows.Forms.Label
+    Friend WithEvents lblPRIMELL As System.Windows.Forms.Label
+    Friend WithEvents lblFUR_ATM As System.Windows.Forms.Label
+    Friend WithEvents txtKAPCSOLAS As System.Windows.Forms.TextBox
+    Friend WithEvents txtPRIMELL As System.Windows.Forms.TextBox
+    Friend WithEvents txtFUR_ATM As System.Windows.Forms.TextBox
+    Friend WithEvents cmbTOLTESMOD As System.Windows.Forms.ComboBox
+    Friend WithEvents lblTOLTESMOD As System.Windows.Forms.Label
+    Friend WithEvents lblSZABALYOZAS As System.Windows.Forms.Label
+    Friend WithEvents txtSZABALYOZAS As System.Windows.Forms.TextBox
+    Friend WithEvents lblKUTFNYOM_X As System.Windows.Forms.Label
+    Friend WithEvents lblKUTFNYOM As System.Windows.Forms.Label
+    Friend WithEvents txtKUTFNYOM As System.Windows.Forms.TextBox
+    Friend WithEvents lblNYUGVIZSZ As System.Windows.Forms.Label
+    Friend WithEvents txtNYUGVIZSZ As System.Windows.Forms.TextBox
+    Friend WithEvents lblNYOMTARTTIP As System.Windows.Forms.Label
+    Friend WithEvents txtNYOMTARTTIP As System.Windows.Forms.TextBox
+    Friend WithEvents lblHOMERS_X As System.Windows.Forms.Label
+    Friend WithEvents lblCIRKTERFARAM_X As System.Windows.Forms.Label
+    Friend WithEvents lblHOMERS As System.Windows.Forms.Label
+    Friend WithEvents lblCIRKTERFARAM As System.Windows.Forms.Label
+    Friend WithEvents txtHOMERS As System.Windows.Forms.TextBox
+    Friend WithEvents txtCIRKTERFARAM As System.Windows.Forms.TextBox
+    Friend WithEvents lblHMV_LAKAS_X As System.Windows.Forms.Label
+    Friend WithEvents lblFUT_LAKAS_X As System.Windows.Forms.Label
+    Friend WithEvents lblHMVHOMERS_X As System.Windows.Forms.Label
+    Friend WithEvents lblHMV_LAKAS As System.Windows.Forms.Label
+    Friend WithEvents lblFUT_LAKAS As System.Windows.Forms.Label
+    Friend WithEvents lblHMVHOMERS As System.Windows.Forms.Label
+    Friend WithEvents txtHMV_LAKAS As System.Windows.Forms.TextBox
+    Friend WithEvents txtFUT_LAKAS As System.Windows.Forms.TextBox
+    Friend WithEvents txtHMVHOMERS As System.Windows.Forms.TextBox
+    Friend WithEvents lblNYOMKUL_X As System.Windows.Forms.Label
+    Friend WithEvents lblSZEKU_TOM_X As System.Windows.Forms.Label
+    Friend WithEvents lblHOKOZP_SZAM_X As System.Windows.Forms.Label
+    Friend WithEvents lblHMV_KOZULET_X As System.Windows.Forms.Label
+    Friend WithEvents lblFUT_KOZULET_X As System.Windows.Forms.Label
+    Friend WithEvents lblNYOMKUL As System.Windows.Forms.Label
+    Friend WithEvents lblSZEKU_TOM As System.Windows.Forms.Label
+    Friend WithEvents lblHOKOZP_SZAM As System.Windows.Forms.Label
+    Friend WithEvents lblHMV_KOZULET As System.Windows.Forms.Label
+    Friend WithEvents lblFUT_KOZULET As System.Windows.Forms.Label
+    Friend WithEvents txtNYOMKUL As System.Windows.Forms.TextBox
+    Friend WithEvents txtSZEKU_TOM As System.Windows.Forms.TextBox
+    Friend WithEvents txtHOKOZP_SZAM As System.Windows.Forms.TextBox
+    Friend WithEvents txtHMV_KOZULET As System.Windows.Forms.TextBox
+    Friend WithEvents txtFUT_KOZULET As System.Windows.Forms.TextBox
+    Friend WithEvents lblTOMEGARAM_X As System.Windows.Forms.Label
+    Friend WithEvents lblNYOMAS_K_X As System.Windows.Forms.Label
+    Friend WithEvents lblHOMER_SZ_X As System.Windows.Forms.Label
+    Friend WithEvents lblTOMEGARAM As System.Windows.Forms.Label
+    Friend WithEvents lblNYOMAS_K As System.Windows.Forms.Label
+    Friend WithEvents lblHOMER_SZ As System.Windows.Forms.Label
+    Friend WithEvents txtTOMEGARAM As System.Windows.Forms.TextBox
+    Friend WithEvents txtNYOMAS_K As System.Windows.Forms.TextBox
+    Friend WithEvents txtHOMER_SZ As System.Windows.Forms.TextBox
+    Friend WithEvents chkFUTOTT As System.Windows.Forms.CheckBox
+    Friend WithEvents lblFUTOTT As System.Windows.Forms.Label
+    Friend WithEvents lblUZEMIVIZSZ As System.Windows.Forms.Label
+    Friend WithEvents txtUZEMIVIZSZ As System.Windows.Forms.TextBox
 End Class

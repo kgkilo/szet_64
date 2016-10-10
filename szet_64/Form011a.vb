@@ -426,18 +426,44 @@ Public Class Form011a
                 sqlComm.ExecuteNonQuery()
             End Using
 
-            'Using sqlComm As New SqlCommand("sp_UpdObjUzem", sqlConn)
-            'sqlComm.CommandType = CommandType.StoredProcedure
-            'With sqlComm.Parameters
-            '    .AddWithValue("pID", Me.Tag)
-
-            'End With
-            'sqlConn.Open()
-            'sqlComm.ExecuteNonQuery()
-            'End Using
+            Using sqlConn As New SqlConnection(GlobalVars.sConnStr)
+                Dim sqlComm As New SqlCommand("sp_UpdObjUzem", sqlConn)
+                sqlComm.CommandType = CommandType.StoredProcedure
+                With sqlComm.Parameters
+                    .AddWithValue("pID", Me.Tag)
+                    'Uzemeltetes
+                    'If txt.Text <> "" Then .AddWithValue("", Double.Parse(txt.Text))
+                    If txtFUR_ATM.Text <> "" Then .AddWithValue("FUR_ATM", Double.Parse(txtFUR_ATM.Text))
+                    If txtPRIMELL.Text <> "" Then .AddWithValue("PRIMELL", Double.Parse(txtPRIMELL.Text))
+                    If txtKAPCSOLAS.Text <> "" Then .AddWithValue("KAPCSOLAS", Double.Parse(txtKAPCSOLAS.Text))
+                    .AddWithValue("TOLTESMOD", cmbTOLTESMOD.SelectedValue)
+                    If txtSZABALYOZAS.Text <> "" Then .AddWithValue("SZABALYOZAS", Double.Parse(txtSZABALYOZAS.Text))
+                    If txtKUTFNYOM.Text <> "" Then .AddWithValue("KUTFNYOM", Double.Parse(txtKUTFNYOM.Text))
+                    If txtNYUGVIZSZ.Text <> "" Then .AddWithValue("NYUGVIZSZ", Double.Parse(txtNYUGVIZSZ.Text))
+                    If txtUZEMIVIZSZ.Text <> "" Then .AddWithValue("UZEMIVIZSZ", Double.Parse(txtUZEMIVIZSZ.Text))
+                    If txtCIRKTERFARAM.Text <> "" Then .AddWithValue("CIRKTERFARAM", Double.Parse(txtCIRKTERFARAM.Text))
+                    If txtHOMERS.Text <> "" Then .AddWithValue("HOMERS", Double.Parse(txtHOMERS.Text))
+                    If txtNYOMTARTTIP.Text <> "" Then .AddWithValue("NYOMTARTTIP", txtNYOMTARTTIP.Text)
+                    If txtHMVHOMERS.Text <> "" Then .AddWithValue("HMVHOMERS", Double.Parse(txtHMVHOMERS.Text))
+                    If txtFUT_LAKAS.Text <> "" Then .AddWithValue("FUT_LAKAS", Integer.Parse(txtFUT_LAKAS.Text))
+                    If txtHMV_LAKAS.Text <> "" Then .AddWithValue("HMV_LAKAS", Integer.Parse(txtHMV_LAKAS.Text))
+                    If txtFUT_KOZULET.Text <> "" Then .AddWithValue("FUT_KOZULET", Integer.Parse(txtFUT_KOZULET.Text))
+                    If txtHMV_KOZULET.Text <> "" Then .AddWithValue("HMV_KOZULET", Integer.Parse(txtHMV_KOZULET.Text))
+                    If txtHOKOZP_SZAM.Text <> "" Then .AddWithValue("HOKOZP_SZAM", Integer.Parse(txtHOKOZP_SZAM.Text))
+                    If txtSZEKU_TOM.Text <> "" Then .AddWithValue("SZEKU_TOM", Double.Parse(txtSZEKU_TOM.Text))
+                    If txtNYOMKUL.Text <> "" Then .AddWithValue("NYOMKUL", Double.Parse(txtNYOMKUL.Text))
+                    If txtTOMEGARAM.Text <> "" Then .AddWithValue("TOMEGARAM", Double.Parse(txtTOMEGARAM.Text))
+                    If txtNYOMAS_K.Text <> "" Then .AddWithValue("NYOMAS_K", Double.Parse(txtNYOMAS_K.Text))
+                    If txtHOMER_SZ.Text <> "" Then .AddWithValue("HOMER_SZ", Double.Parse(txtHOMER_SZ.Text))
+                    .AddWithValue("FUTOTT", chkFUTOTT.Checked)
+                End With
+                sqlConn.Open()
+                sqlComm.ExecuteNonQuery()
+            End Using
         Catch ex As Exception
             MsgBox(ex.Message, , ex.ToString)
         End Try
     End Sub
+
 
 End Class
