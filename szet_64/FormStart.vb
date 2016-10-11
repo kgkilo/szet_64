@@ -56,6 +56,10 @@ Public Class FormStart
         Form011.Show(Me)
     End Sub
 
+    Private Sub cmdKAPCSOLATOK_Click(sender As Object, e As EventArgs) Handles cmdKAPCSOLATOK.Click
+        Form012.Show(Me)
+    End Sub
+
     Private Sub cmdNEXON_Click(sender As Object, e As EventArgs) Handles cmdNEXON.Click
         Form091.Show(Me)
     End Sub
