@@ -38,10 +38,17 @@ Public Class Form012
                     End With
 
                     .Columns(0).Visible = False
-                    .Columns(1).HeaderText = "Megnevezés"
-                    .Columns(2).HeaderText = "Típus"
-                    .Columns(3).HeaderText = "Telepítési helyszám"
-                    .Columns(4).HeaderText = "Gyári szám"
+                    If cmbOBJTIP.SelectedValue.Equals("01") Then    'Epulet
+                        .Columns(1).HeaderText = "Utca"
+                        .Columns(2).HeaderText = "Házszám"
+                        .Columns(3).HeaderText = "Épületszám"
+                        .Columns(4).HeaderText = " "
+                    Else
+                        .Columns(1).HeaderText = "Megnevezés"
+                        .Columns(2).HeaderText = "Típus"
+                        .Columns(3).HeaderText = "Telepítési helyszám"
+                        .Columns(4).HeaderText = "Gyári szám"
+                    End If
                 End With
             Catch ex As Exception
                 MsgBox(ex.Message, , ex.ToString)
