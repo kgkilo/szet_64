@@ -145,10 +145,10 @@ Public Class Form011a
                             Catch
                             End Try
                         Else
-                            o.Visible = False
+                            'o.Visible = False
                             o.Enabled = False
                             Try
-                                t.Controls.Item("lbl" + sName + "_X").Visible = False
+                                't.Controls.Item("lbl" + sName + "_X").Visible = False
                                 t.Controls.Item("lbl" + sName + "_X").Enabled = False
                             Catch
                             End Try
