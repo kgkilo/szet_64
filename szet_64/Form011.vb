@@ -97,20 +97,32 @@ Public Class Form011
 
     Private Sub cmdUJ_Click(sender As Object, e As EventArgs) Handles cmdUJ.Click
         If cmbOBJTIP.SelectedIndex <> -1 Then
-            Form011a.Tag = CInt(cmbOBJTIP.SelectedValue) * -1   'Insert
-            Form011a.ShowDialog(Me)
+            If cmbOBJTIP.SelectedValue = "01" Then    'Epulet
+                Form011b.Tag = -1
+                Form011b.Show(Me)
+                'Form011b.Dispose()
+            Else
+                Form011a.Tag = CInt(cmbOBJTIP.SelectedValue) * -1   'Insert
+                Form011a.Show(Me)
+                'Form011a.Dispose()
+            End If
             LoadGrid()
         End If
     End Sub
 
     Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click
         Try
-            Form011a.Tag = grd011.SelectedRows(0).Cells(0).Value
-            Form011a.ShowDialog(Me)
+            If cmbOBJTIP.SelectedValue.Equals("01") Then    'Epulet
+                Form011b.Tag = grd011.SelectedRows(0).Cells(0).Value
+                Form011b.Show(Me)
+            Else
+                Form011a.Tag = grd011.SelectedRows(0).Cells(0).Value
+                Form011a.Show(Me)
+            End If
+            LoadGrid()
         Catch ex As Exception
             MsgBox("Nincs kiválasztott berendezés!")
         End Try
-        LoadGrid()
     End Sub
 
     Private Sub cmbOBJTIP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbOBJTIP.SelectedIndexChanged
