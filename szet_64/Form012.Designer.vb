@@ -213,6 +213,7 @@ Partial Class Form012
         Me.grdNEMKAPCSOLT.Location = New System.Drawing.Point(9, 69)
         Me.grdNEMKAPCSOLT.Name = "grdNEMKAPCSOLT"
         Me.grdNEMKAPCSOLT.ReadOnly = True
+        Me.grdNEMKAPCSOLT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.grdNEMKAPCSOLT.Size = New System.Drawing.Size(360, 240)
         Me.grdNEMKAPCSOLT.TabIndex = 15
         '
