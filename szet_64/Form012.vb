@@ -79,32 +79,7 @@ Public Class Form012
             grdKAPCSOLT.Enabled = True
             cmdODA.Enabled = True
             cmdVISSZA.Enabled = True
-
-            'Nem kapcsolt grid feltoltese
-            Using dbadp As New SqlDataAdapter("sp_FillNotConnected", GlobalVars.sConnStr)
-                With dbadp.SelectCommand
-                    .CommandType = CommandType.StoredProcedure
-                    .Parameters.Add("@pOBJTIP", SqlDbType.VarChar, 2).Value = cmbOBJTIP2.SelectedValue
-                    .Parameters.Add("@pID", SqlDbType.Int).Value = grdMEGNEV.SelectedRows(0).Cells(0).Value
-                    Dim dtNemKapcsolt As New DataTable
-                    dbadp.Fill(dtNemKapcsolt)
-                    dbadp.Dispose()
-                    grdNEMKAPCSOLT.DataSource = dtNemKapcsolt
-                End With
-            End Using
-
-            'Kapcsolt grid feltoltese
-            Using dbadp As New SqlDataAdapter("sp_FillConnected", GlobalVars.sConnStr)
-                With dbadp.SelectCommand
-                    .CommandType = CommandType.StoredProcedure
-                    .Parameters.Add("@pOBJTIP", SqlDbType.VarChar, 2).Value = cmbOBJTIP2.SelectedValue
-                    .Parameters.Add("@pID", SqlDbType.Int).Value = grdMEGNEV.SelectedRows(0).Cells(0).Value
-                    Dim dtKapcsolt As New DataTable
-                    dbadp.Fill(dtKapcsolt)
-                    dbadp.Dispose()
-                    grdKAPCSOLT.DataSource = dtKapcsolt
-                End With
-            End Using
+            LoadGrids()
         End If
     End Sub
 
@@ -114,5 +89,91 @@ Public Class Form012
 
     Private Sub grdMEGNEV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdMEGNEV.CellContentClick
         cmbOBJTIP2.Enabled = True
+    End Sub
+
+    Private Sub LoadGrids()
+        Try
+            'Nem kapcsolt grid feltoltese
+            Using dbadp As New SqlDataAdapter("sp_FillNotConnected", GlobalVars.sConnStr)
+                With dbadp.SelectCommand
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.Add("@pOBJTIP", SqlDbType.VarChar, 2).Value = cmbOBJTIP2.SelectedValue
+                    .Parameters.Add("@pID", SqlDbType.Int).Value = grdMEGNEV.SelectedRows(0).Cells(0).Value
+
+                    Dim dtNemKapcsolt As New DataTable
+                    dbadp.Fill(dtNemKapcsolt)
+                    dbadp.Dispose()
+
+                    With grdNEMKAPCSOLT
+                        .DataSource = dtNemKapcsolt
+                        .AllowUserToAddRows = False
+                        .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                        .ReadOnly = True
+                        .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+
+                        With .ColumnHeadersDefaultCellStyle
+                            .BackColor = Color.DarkGray
+                            .ForeColor = Color.Gray
+                            .Font = New Font(.Font, FontStyle.Bold)
+                        End With
+
+                        .Columns(0).Visible = False
+                        If cmbOBJTIP2.SelectedValue.Equals("01") Then   'Epulet
+                            .Columns(1).HeaderText = "Utca"
+                            .Columns(2).HeaderText = "Házszám"
+                            .Columns(3).HeaderText = "Épületszám"
+                            .Columns(4).HeaderText = "Helyrajzi szám"
+                        Else
+                            .Columns(1).HeaderText = "Megnevezés"
+                            .Columns(2).HeaderText = "Típus"
+                            .Columns(3).HeaderText = "Telepítési helyszám"
+                            .Columns(4).HeaderText = "Gyári szám"
+                        End If
+                    End With
+                End With
+            End Using
+
+            'Kapcsolt grid feltoltese
+            Using dbadp As New SqlDataAdapter("sp_FillConnected", GlobalVars.sConnStr)
+                With dbadp.SelectCommand
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.Add("@pOBJTIP", SqlDbType.VarChar, 2).Value = cmbOBJTIP2.SelectedValue
+                    .Parameters.Add("@pID", SqlDbType.Int).Value = grdMEGNEV.SelectedRows(0).Cells(0).Value
+
+                    Dim dtKapcsolt As New DataTable
+                    dbadp.Fill(dtKapcsolt)
+                    dbadp.Dispose()
+
+                    With grdKAPCSOLT
+                        .DataSource = dtKapcsolt
+                        .AllowUserToAddRows = False
+                        .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                        .ReadOnly = True
+                        .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+
+                        With .ColumnHeadersDefaultCellStyle
+                            .BackColor = Color.DarkGray
+                            .ForeColor = Color.Gray
+                            .Font = New Font(.Font, FontStyle.Bold)
+                        End With
+
+                        .Columns(0).Visible = False
+                        If cmbOBJTIP2.SelectedValue.Equals("01") Then   'Epulet
+                            .Columns(1).HeaderText = "Utca"
+                            .Columns(2).HeaderText = "Házszám"
+                            .Columns(3).HeaderText = "Épületszám"
+                            .Columns(4).HeaderText = "Helyrajzi szám"
+                        Else
+                            .Columns(1).HeaderText = "Megnevezés"
+                            .Columns(2).HeaderText = "Típus"
+                            .Columns(3).HeaderText = "Telepítési helyszám"
+                            .Columns(4).HeaderText = "Gyári szám"
+                        End If
+                    End With
+                End With
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.ToString(), MsgBoxStyle.Critical, ex.Message)
+        End Try
     End Sub
 End Class
