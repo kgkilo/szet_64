@@ -31,3 +31,23 @@ http://stackoverflow.com/questions/9069691/how-to-change-the-connection-string-s
 
 Connection string used in install:
 "Database=10.1.1.1;Database=HOSZOLG;User Id=sa;Password=;"
+
+
+Ahhoz, hogy a Form001 jol mukodjon, az alabbi tarolt eljarasok kellenek (combobox feltolteshez)
+ALTER PROCEDURE [dbo].[sp_FillObjMegnev]
+	@pObjTip varchar(2),
+	@pAKTIV integer = 0,
+	@ELSOOSZLOP varchar(1) = NULL
+AS
+SET NOCOUNT ONDECLARE @IS_AKTIV VARCHAR(1)IF @pAKTIV = 1BEGIN	SELECT @IS_AKTIV = 'n'ENDELSEBEGIN	SELECT @IS_AKTIV = 'y'ENDSET NOCOUNT OFF
+IF @pObjTip = '01'	--EpuletBEGIN	SELECT		OBJEKTUM.ID,			RTRIM(COALESCE(UTCA, ' - ')) + ' ' +			RTRIM(COALESCE(HSZ, ' - ')) + ', ' +			COALESCE(EPULSZ, ' - ') AS MEGNEV	FROM		OBJEKTUM JOIN EPULET ON EPULET.ID = OBJEKTUM.ID	WHERE		OBJTIP = '01' AND (AKTIV='y' OR AKTIV = @IS_AKTIV)	ORDER BY		UTCA,		HSZ,		EPULSZENDELSE IF @pObjTip = '37'	--LepcsohazBEGIN	SELECT		ID,		RTRIM(COALESCE(CIM, ' - ')) /*+ ';' +			COALESCE(EPULSZ, ' - ') + ';'*/			AS MEGNEV	FROM		LEPCSOHAZ	ORDER BY		CIMENDELSE	--Ha nem lepcsohaz es nem epuletBEGIN	IF @ELSOOSZLOP = 'T'	BEGIN		SELECT			ID,			COALESCE(TELEPHSZ, ' - ') + ', '  +				COALESCE(MEGNEV, ' - ') + ', ' +				COALESCE(TIPUS, ' - ') + ', ' +				COALESCE(GYSZAM, ' - ') AS MEGNEV		FROM			OBJEKTUM		WHERE			OBJTIP=@pObjTip AND (AKTIV='y' OR AKTIV = @IS_AKTIV)		ORDER BY			TELEPHSZ,					MEGNEV,			TIPUS	END
+	ELSE	BEGIN		SELECT			ID,			COALESCE(MEGNEV, ' - ') + ', ' +				COALESCE(TIPUS, ' - ') + ', ' +				COALESCE(TELEPHSZ, ' - ') + ', '  +				COALESCE(GYSZAM, ' - ') AS MEGNEV		FROM			OBJEKTUM		WHERE			OBJTIP=@pObjTip AND (AKTIV='y' OR AKTIV = @IS_AKTIV)		ORDER BY			MEGNEV,			TIPUS,			TELEPHSZ	ENDEND
+RETURN 0
+
+
+
+es
+
+ALTER PROCEDURE [dbo].[sp_FillObjTelephsz]
+	@pObjTip varchar(2)
+ASSELECT	ID,	COALESCE(TELEPHSZ, ' - ') AS MEGNEVFROM	OBJEKTUMWHERE	OBJTIP = @pObjTip AND AKTIV = 'y'ORDER BY	TELEPHSZRETURN 0

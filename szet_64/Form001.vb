@@ -152,14 +152,16 @@ Public Class Form001
             With dbadpObjid
                 With .SelectCommand
                     .CommandType = CommandType.StoredProcedure
-                    Dim sParam As SqlParameter = .Parameters.Add("@pObjTip", SqlDbType.VarChar, 2)
-                    sParam.Value = cmbOBJTIP.SelectedValue
+                    .Parameters.Add("@pObjTip", SqlDbType.VarChar, 2).Value = cmbOBJTIP.SelectedValue
                 End With
 
                 Dim dtObjid As New DataTable
                 .Fill(dtObjid)
                 .Dispose()
                 cmbOBJID.DataSource = dtObjid
+                cmbOBJID.DisplayMember = "MEGNEV"
+                cmbOBJID.ValueMember = "ID"
+                cmbOBJID.SelectedIndex = -1
             End With
 
             'Objektum tipus alapjan telepitesi helyszam combobox feltoltese
@@ -175,6 +177,9 @@ Public Class Form001
                 .Fill(dtTelephsz)
                 .Dispose()
                 cmbTELEPHSZ.DataSource = dtTelephsz
+                cmbTELEPHSZ.DisplayMember = "MEGNEV"
+                cmbTELEPHSZ.ValueMember = "ID"
+                cmbTELEPHSZ.SelectedIndex = -1
             End With
 
             Cursor.Current = Cursors.Default
