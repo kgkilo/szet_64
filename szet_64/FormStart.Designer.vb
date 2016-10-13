@@ -30,15 +30,17 @@ Partial Class FormStart
         Me.cmdBERENDEZES = New System.Windows.Forms.Button()
         Me.cmdNEXON = New System.Windows.Forms.Button()
         Me.cmdKAPCSOLATOK = New System.Windows.Forms.Button()
+        Me.cmdKARBAN = New System.Windows.Forms.Button()
+        Me.cmdKODSZOTAR = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cmdExit
         '
         Me.cmdExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.cmdExit.Location = New System.Drawing.Point(433, 367)
+        Me.cmdExit.Location = New System.Drawing.Point(537, 404)
         Me.cmdExit.Name = "cmdExit"
-        Me.cmdExit.Size = New System.Drawing.Size(150, 46)
-        Me.cmdExit.TabIndex = 6
+        Me.cmdExit.Size = New System.Drawing.Size(75, 25)
+        Me.cmdExit.TabIndex = 8
         Me.cmdExit.Text = "Kilépés"
         Me.cmdExit.UseVisualStyleBackColor = True
         '
@@ -53,26 +55,27 @@ Partial Class FormStart
         '
         'cmdJegyz
         '
-        Me.cmdJegyz.Location = New System.Drawing.Point(81, 162)
+        Me.cmdJegyz.Enabled = False
+        Me.cmdJegyz.Location = New System.Drawing.Point(81, 224)
         Me.cmdJegyz.Name = "cmdJegyz"
         Me.cmdJegyz.Size = New System.Drawing.Size(150, 46)
-        Me.cmdJegyz.TabIndex = 1
+        Me.cmdJegyz.TabIndex = 4
         Me.cmdJegyz.Text = "Jegyzőkönyvek"
         Me.cmdJegyz.UseVisualStyleBackColor = True
         '
         'cmdDOLGOZO
         '
-        Me.cmdDOLGOZO.Location = New System.Drawing.Point(81, 240)
+        Me.cmdDOLGOZO.Location = New System.Drawing.Point(395, 224)
         Me.cmdDOLGOZO.Name = "cmdDOLGOZO"
         Me.cmdDOLGOZO.Size = New System.Drawing.Size(150, 46)
-        Me.cmdDOLGOZO.TabIndex = 2
+        Me.cmdDOLGOZO.TabIndex = 5
         Me.cmdDOLGOZO.Text = "Dolgozók"
         Me.cmdDOLGOZO.UseVisualStyleBackColor = True
         '
         'lblFormel
         '
         Me.lblFormel.AutoSize = True
-        Me.lblFormel.Location = New System.Drawing.Point(81, 416)
+        Me.lblFormel.Location = New System.Drawing.Point(12, 416)
         Me.lblFormel.Name = "lblFormel"
         Me.lblFormel.Size = New System.Drawing.Size(127, 13)
         Me.lblFormel.TabIndex = 4
@@ -83,27 +86,47 @@ Partial Class FormStart
         Me.cmdBERENDEZES.Location = New System.Drawing.Point(395, 84)
         Me.cmdBERENDEZES.Name = "cmdBERENDEZES"
         Me.cmdBERENDEZES.Size = New System.Drawing.Size(150, 46)
-        Me.cmdBERENDEZES.TabIndex = 3
+        Me.cmdBERENDEZES.TabIndex = 1
         Me.cmdBERENDEZES.Text = "Berendezések"
         Me.cmdBERENDEZES.UseVisualStyleBackColor = True
         '
         'cmdNEXON
         '
-        Me.cmdNEXON.Location = New System.Drawing.Point(395, 240)
+        Me.cmdNEXON.Location = New System.Drawing.Point(395, 294)
         Me.cmdNEXON.Name = "cmdNEXON"
         Me.cmdNEXON.Size = New System.Drawing.Size(150, 46)
-        Me.cmdNEXON.TabIndex = 5
+        Me.cmdNEXON.TabIndex = 7
         Me.cmdNEXON.Text = "Export"
         Me.cmdNEXON.UseVisualStyleBackColor = True
         '
         'cmdKAPCSOLATOK
         '
-        Me.cmdKAPCSOLATOK.Location = New System.Drawing.Point(395, 162)
+        Me.cmdKAPCSOLATOK.Location = New System.Drawing.Point(395, 154)
         Me.cmdKAPCSOLATOK.Name = "cmdKAPCSOLATOK"
         Me.cmdKAPCSOLATOK.Size = New System.Drawing.Size(150, 46)
-        Me.cmdKAPCSOLATOK.TabIndex = 4
+        Me.cmdKAPCSOLATOK.TabIndex = 3
         Me.cmdKAPCSOLATOK.Text = "Kapcsolatok"
         Me.cmdKAPCSOLATOK.UseVisualStyleBackColor = True
+        '
+        'cmdKARBAN
+        '
+        Me.cmdKARBAN.Enabled = False
+        Me.cmdKARBAN.Location = New System.Drawing.Point(81, 154)
+        Me.cmdKARBAN.Name = "cmdKARBAN"
+        Me.cmdKARBAN.Size = New System.Drawing.Size(150, 46)
+        Me.cmdKARBAN.TabIndex = 2
+        Me.cmdKARBAN.Text = "Karbantartások"
+        Me.cmdKARBAN.UseVisualStyleBackColor = True
+        '
+        'cmdKODSZOTAR
+        '
+        Me.cmdKODSZOTAR.Enabled = False
+        Me.cmdKODSZOTAR.Location = New System.Drawing.Point(81, 294)
+        Me.cmdKODSZOTAR.Name = "cmdKODSZOTAR"
+        Me.cmdKODSZOTAR.Size = New System.Drawing.Size(150, 46)
+        Me.cmdKODSZOTAR.TabIndex = 6
+        Me.cmdKODSZOTAR.Text = "Kódszótár"
+        Me.cmdKODSZOTAR.UseVisualStyleBackColor = True
         '
         'FormStart
         '
@@ -114,6 +137,8 @@ Partial Class FormStart
         Me.Controls.Add(Me.cmdDOLGOZO)
         Me.Controls.Add(Me.lblFormel)
         Me.Controls.Add(Me.cmdJegyz)
+        Me.Controls.Add(Me.cmdKODSZOTAR)
+        Me.Controls.Add(Me.cmdKARBAN)
         Me.Controls.Add(Me.cmdNEXON)
         Me.Controls.Add(Me.cmdKAPCSOLATOK)
         Me.Controls.Add(Me.cmdBERENDEZES)
@@ -134,5 +159,7 @@ Partial Class FormStart
     Friend WithEvents cmdBERENDEZES As System.Windows.Forms.Button
     Friend WithEvents cmdNEXON As System.Windows.Forms.Button
     Friend WithEvents cmdKAPCSOLATOK As System.Windows.Forms.Button
+    Friend WithEvents cmdKARBAN As System.Windows.Forms.Button
+    Friend WithEvents cmdKODSZOTAR As System.Windows.Forms.Button
 
 End Class

@@ -60,7 +60,7 @@ Public Class FormStart
         Form012.Show(Me)
     End Sub
 
-    Private Sub cmdNEXON_Click(sender As Object, e As EventArgs) Handles cmdNEXON.Click
+    Private Sub cmdNEXON_Click(sender As Object, e As EventArgs) Handles cmdNEXON.Click, cmdKODSZOTAR.Click, cmdKARBAN.Click
         Form091.Show(Me)
     End Sub
 End Class
