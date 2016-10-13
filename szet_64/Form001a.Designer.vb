@@ -332,7 +332,7 @@ Partial Class Form001a
         '
         Me.txtMUNELV.Location = New System.Drawing.Point(381, 83)
         Me.txtMUNELV.Name = "txtMUNELV"
-        Me.txtMUNELV.Size = New System.Drawing.Size(64, 20)
+        Me.txtMUNELV.Size = New System.Drawing.Size(138, 20)
         Me.txtMUNELV.TabIndex = 10
         '
         'lblMUNELV

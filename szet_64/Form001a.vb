@@ -70,6 +70,7 @@ Public Class Form001a
                         cmbKARBTIP.SelectedValue = sqlReader.Item("KARBTIP")
                         txtHIBLEIR.Text = sqlReader.Item("HIBLEIR").ToString
                         txtOBJID.Text = sqlReader.Item("OBJID").ToString
+                        txtLAKAS.Text = sqlReader.Item("LAKAS").ToString
                         txtREF.Text = sqlReader.Item("REF").ToString
                         txtALLAPOT.Text = sqlReader.Item("ALLAPOT").ToString
                         Select Case txtALLAPOT.Text
@@ -370,8 +371,8 @@ Public Class Form001a
     End Sub
 
     Private Sub cmdHELY_Click(sender As Object, e As EventArgs) Handles cmdHELY.Click
-        'Form001b.Tag = -1
-        'Form001b.Show(Me)
+        Form001b.Tag = -1
+        Form001b.Show(Me)
         'If iWorkMode = DISZPECSER Then cmbSZOLGJELL_SelectedIndexChanged(sender, e)
     End Sub
 
