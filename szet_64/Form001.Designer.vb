@@ -56,6 +56,7 @@ Partial Class Form001
         Me.cmbOBJID = New System.Windows.Forms.ComboBox()
         Me.lblOBJID = New System.Windows.Forms.Label()
         Me.cmbDOLGID = New System.Windows.Forms.ComboBox()
+        Me.SpQ334BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblDOLGID = New System.Windows.Forms.Label()
         Me.lblMUNDAT = New System.Windows.Forms.Label()
         Me.datMUNDATTOL = New System.Windows.Forms.DateTimePicker()
@@ -82,7 +83,6 @@ Partial Class Form001
         Me.Sp_Q337TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q337TableAdapter()
         Me.Sp_Q335TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q335TableAdapter()
         Me.Sp_Q296TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter()
-        Me.SpQ334BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Sp_Q334TableAdapter1 = New szet_64.SZETAVDataSetTableAdapters.sp_Q334TableAdapter()
         CType(Me.SpQ291BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,8 +92,8 @@ Partial Class Form001
         CType(Me.SpQ337BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ335BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.boxPRINT.SuspendLayout()
         CType(Me.SpQ334BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.boxPRINT.SuspendLayout()
         Me.SuspendLayout()
         '
         'cmdEXIT
@@ -391,6 +391,11 @@ Partial Class Form001
         Me.cmbDOLGID.Tag = "334"
         Me.cmbDOLGID.ValueMember = "ID"
         '
+        'SpQ334BindingSource
+        '
+        Me.SpQ334BindingSource.DataMember = "sp_Q334"
+        Me.SpQ334BindingSource.DataSource = Me.SZETAVDataSet
+        '
         'lblDOLGID
         '
         Me.lblDOLGID.Location = New System.Drawing.Point(400, 145)
@@ -607,11 +612,6 @@ Partial Class Form001
         '
         Me.Sp_Q296TableAdapter.ClearBeforeFill = True
         '
-        'SpQ334BindingSource
-        '
-        Me.SpQ334BindingSource.DataMember = "sp_Q334"
-        Me.SpQ334BindingSource.DataSource = Me.SZETAVDataSet
-        '
         'Sp_Q334TableAdapter1
         '
         Me.Sp_Q334TableAdapter1.ClearBeforeFill = True
@@ -678,8 +678,8 @@ Partial Class Form001
         CType(Me.SpQ337BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ335BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.boxPRINT.ResumeLayout(False)
         CType(Me.SpQ334BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.boxPRINT.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

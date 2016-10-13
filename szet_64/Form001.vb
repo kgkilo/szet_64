@@ -47,6 +47,22 @@ Public Class Form001
                 .Parameters.Add("@DOLGID", SqlDbType.Int).Value = cmbDOLGID.SelectedValue
             End If
 
+            If datDATUMTOL.Checked Then
+                .Parameters.Add("@DATUMTOL", SqlDbType.DateTime).Value = datDATUMTOL.Value
+            End If
+
+            If datDATUMIG.Checked Then
+                .Parameters.Add("@DATUMIG", SqlDbType.DateTime).Value = datDATUMIG.Value
+            End If
+
+            If datMUNDATTOL.Checked Then
+                .Parameters.Add("@MUNDATTOL", SqlDbType.DateTime).Value = datMUNDATTOL.Value
+            End If
+
+            If datMUNDATIG.Checked Then
+                .Parameters.Add("@MUNDATIG", SqlDbType.DateTime).Value = datMUNDATIG.Value
+            End If
+
             If cmbALLAPOT.SelectedIndex <> -1 Then
                 .Parameters.Add("@ALLAPOT", SqlDbType.Int).Value = cmbALLAPOT.SelectedValue
             End If
@@ -58,6 +74,11 @@ Public Class Form001
             If cmbTELEPHSZ.SelectedIndex <> -1 Then
                 .Parameters.Add("@TELEPHSZ", SqlDbType.VarChar, 20).Value = cmbTELEPHSZ.SelectedValue
             End If
+
+            If datMUNELV.Checked Then
+                .Parameters.Add("@MUNELV", SqlDbType.DateTime).Value = datMUNELV.Value
+            End If
+
         End With
 
         Dim dt As New DataTable
