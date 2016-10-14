@@ -88,6 +88,7 @@ Public Class Form001
 
         'Grid formazasa
         With grdMUNKALAP
+            .AllowUserToAddRows = False 'Nem kell a grid aljan ures sor
             .SelectionMode = DataGridViewSelectionMode.FullRowSelect
             .ReadOnly = True
 
@@ -111,6 +112,8 @@ Public Class Form001
             .Columns(11).HeaderText = "Dolgozó"
             .Columns(12).HeaderText = "Visszaírás"
             .Columns(13).HeaderText = "Munkaóra"
+
+            .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         End With
 
         'Munkaora osszeszamolasa
@@ -126,7 +129,7 @@ Public Class Form001
         txtMUNOSZ.Text = iOra
 
         'Talalatok szama
-        txtTALALAT.Text = grdMUNKALAP.RowCount - 1
+        txtTALALAT.Text = grdMUNKALAP.RowCount
 
         'Villogas vege
         Cursor.Current = Cursors.Default
