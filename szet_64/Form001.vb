@@ -2,8 +2,17 @@
 
 Public Class Form001
 
-    Private Sub cmdEXIT_Click(sender As Object, e As EventArgs) Handles cmdEXIT.Click, cmdVISSZAIR.Click, cmdMASOL.Click, cmdLIST.Click, cmdCSOPLIST.Click
+    Private Sub cmdEXIT_Click(sender As Object, e As EventArgs) Handles cmdEXIT.Click, cmdMASOL.Click, cmdLIST.Click, cmdCSOPLIST.Click
         Me.Close()
+    End Sub
+
+    Private Sub cmdVISSZAIR_Click(sender As Object, e As EventArgs) Handles cmdVISSZAIR.Click
+        Try
+            Form002.Tag = grdMUNKALAP.SelectedRows(0).Cells(0).Value
+            Form002.Show(Me)
+            cmdFRISSIT_Click(sender, e)
+        Catch
+        End Try
     End Sub
 
     Private Sub cmdUJ_Click(sender As Object, e As EventArgs) Handles cmdUJ.Click
