@@ -118,14 +118,10 @@ Public Class Form001
 
         'Munkaora osszeszamolasa
         Dim iOra As Long = 0
-        Dim t As String
-
-        With grdMUNKALAP
-            For i As Long = 1 To (.RowCount - 1)
-                t = .Rows(i).Cells(13).Value
-                If t <> "" Then iOra += CLng(t)
-            Next i
-        End With
+        Dim o As DataGridViewRow
+        For Each o In grdMUNKALAP.Rows
+            iOra += CLng(If(o.Cells(13).Value, 0))
+        Next o
         txtMUNOSZ.Text = iOra
 
         'Talalatok szama
