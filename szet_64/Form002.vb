@@ -7,13 +7,26 @@ Public Class Form002
         Me.Sp_Q334TableAdapter.Fill(Me.SZETAVDataSet.sp_Q334)
         Me.Sp_Q336TableAdapter.Fill(Me.SZETAVDataSet.sp_Q336)
 
-        'If Me.Tag <> 0 Then 'A Tag-ban a visszairasra kijelolt munkalap ID-je van
-        'Else
-        'End If
-        cmbMUVLEIRROV.SelectedIndex = -1
-        cmbDOLG_ID.SelectedIndex = -1
-        dtMUNDAT.Value = Now.Date
-        txtMUNORA.Text = ""
+        If Me.Tag <> 0 Then 'A Tag-ban a visszairasra kijelolt munkalap ID-je van
+            Using sqlConn As New SqlConnection(GlobalVars.sConnStr)
+                Dim sqlComm As SqlCommand = New SqlCommand("sp_LoadMunkalap", sqlConn)
+                sqlComm.CommandType = CommandType.StoredProcedure
+                sqlComm.Parameters.Add("pID", SqlDbType.Int).Value = Me.Tag
+
+                sqlConn.Open()
+                Dim sqlReader As SqlDataReader = sqlComm.ExecuteReader()
+                If sqlReader.HasRows Then
+                    While (sqlReader.Read())
+                        txtMUVLEIR.Text = sqlReader.Item("MUVLEIR").ToString
+                    End While
+                End If
+                sqlReader.Close()
+            End Using
+        End If
+                cmbMUVLEIRROV.SelectedIndex = -1
+                cmbDOLG_ID.SelectedIndex = -1
+                dtMUNDAT.Value = Now.Date
+                txtMUNORA.Text = ""
     End Sub
 
     Private Sub Form002_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
