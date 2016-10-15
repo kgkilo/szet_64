@@ -58,16 +58,12 @@ Public Class Form002
                 MsgBox(ex.Message, , ex.ToString)
             End Try
 
-            'Munkaora osszesen
+            'Munkaora osszeszamolasa
             Dim iOra As Long = 0
-            Dim t As String
-
-            With grdTELJ
-                For i As Long = 0 To .RowCount - 1
-                    t = .Rows(i).Cells(3).Value
-                    If t <> "" Then iOra += CLng(t)
-                Next i
-            End With
+            Dim o As DataGridViewRow
+            For Each o In grdTELJ.Rows
+                iOra += CLng(If(o.Cells(3).Value, 0))
+            Next o
             spcMUNORA.Text = iOra
         End If
         Cursor.Current = Cursors.Default
