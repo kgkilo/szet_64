@@ -1,14 +1,14 @@
 ﻿2016.10.18.
 FORM001
-	Betoltesnel kiakad sp_Q310A-nal
-	Allapot ne 'elojegyzett' legyen, hanem 'nem sztornozott'
-	Berendezes tipus ne legyen kivalasztva
-	Kiallitas datuma nem kerul beallitasra
+	Betoltesnel kiakad sp_Q310A-nal (a tarolt eljarast frissiteni kell, a regia KODERT/KODENEV-et ad vissza, az ujba FSZAM/FSZNEV kell)
+	Allapot ne 'elojegyzett' legyen, hanem 'nem sztornozott' (Ez igy volt, csak elobb leallt az init eljaras)
+	Berendezes tipus ne legyen kivalasztva (ld fent)
+	Kiallitas datuma nem kerul beallitasra (ld fent)
 FORM001A
 	Lehessen sztornozni
 FORM005
 	Grid nem scrollozik
 FORM012
-	sp_FillObjMegnev2 nem talalhato
+	sp_FillObjMegnev2 nem talalhato (email)
 
 	Gridek atmeretezese!
