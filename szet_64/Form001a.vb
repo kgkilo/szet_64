@@ -92,6 +92,8 @@ Public Class Form001a
                         txtKIALLDAT.Enabled = False   'Kiallitas datuma nem javithato utolag (altalaban)
 
                         If txtREF.Text <> "" Then   'Ha van mar errol a munkalaprol masolat, azaz a referencia mezo nem ures
+                            MsgBox(txtREF.Text & ". munkalapról készített másolat! Bizonyos adatai nem módosíthatóak!", vbExclamation, "Másolt munkalap!")
+
                             txtNAPSZAM.Enabled = False    'egy csomo minden nem javithato utolag.
                             txtBEJDAT.ReadOnly = True
                             cmbSZEREGYS.Enabled = False
@@ -392,10 +394,6 @@ Public Class Form001a
 
     Private Sub Form001a_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         If txtOBJID.Text <> "" Then Me.MunkalapObjKiir(CInt(txtOBJID.Text))
-
-        If txtREF.Text <> "" Then
-            MsgBox(txtREF.Text & ". munkalapról készített másolat! Bizonyos adatai nem módosíthatóak!", vbExclamation, "Tisztelt felhasználó!")
-        End If
     End Sub
 
     'A munkalaphoz kapcsolodo objektum adatait kiirja a bal also sarokban levo info mezokre
