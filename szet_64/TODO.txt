@@ -12,3 +12,9 @@ FORM012
 	sp_FillObjMegnev2 nem talalhato (email)
 
 	Gridek atmeretezese!
+
+
+
+
+LekerdKodszot
+FillKodtip
