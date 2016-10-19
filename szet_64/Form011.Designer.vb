@@ -39,7 +39,6 @@ Partial Class Form011
         Me.C13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SpLekerdDolgozoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
         Me.cmdUJ = New System.Windows.Forms.Button()
         Me.cmdMODOSIT = New System.Windows.Forms.Button()
@@ -53,7 +52,6 @@ Partial Class Form011
         Me.txtTALALAT = New System.Windows.Forms.TextBox()
         Me.lblTALALAT = New System.Windows.Forms.Label()
         CType(Me.grd011, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpLekerdDolgozoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -65,7 +63,6 @@ Partial Class Form011
         Me.grd011.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grd011.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grd011.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.MEGNEV, Me.TIPUS, Me.TELEPHSZ, Me.GYSZAM, Me.C6, Me.C7, Me.C8, Me.C9, Me.C10, Me.C11, Me.C12, Me.C13, Me.C14, Me.C15})
-        Me.grd011.DataSource = Me.SpLekerdDolgozoBindingSource
         Me.grd011.Location = New System.Drawing.Point(93, 86)
         Me.grd011.Name = "grd011"
         Me.grd011.ReadOnly = True
@@ -167,11 +164,6 @@ Partial Class Form011
         Me.C15.HeaderText = "C15"
         Me.C15.Name = "C15"
         Me.C15.ReadOnly = True
-        '
-        'SpLekerdDolgozoBindingSource
-        '
-        Me.SpLekerdDolgozoBindingSource.DataMember = "sp_LekerdDolgozo"
-        Me.SpLekerdDolgozoBindingSource.DataSource = Me.SZETAVDataSet
         '
         'SZETAVDataSet
         '
@@ -295,7 +287,6 @@ Partial Class Form011
         Me.Text = "Form011 - Berendezések"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.grd011, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpLekerdDolgozoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -303,7 +294,6 @@ Partial Class Form011
 
     End Sub
     Friend WithEvents grd011 As System.Windows.Forms.DataGridView
-    Friend WithEvents SpLekerdDolgozoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SZETAVDataSet As szet_64.SZETAVDataSet
     Friend WithEvents cmdUJ As System.Windows.Forms.Button
     Friend WithEvents cmdMODOSIT As System.Windows.Forms.Button
