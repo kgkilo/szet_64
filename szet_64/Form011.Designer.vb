@@ -41,7 +41,6 @@ Partial Class Form011
         Me.C15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SpLekerdDolgozoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
-        Me.Sp_LekerdDolgozoTableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_LekerdDolgozoTableAdapter()
         Me.cmdUJ = New System.Windows.Forms.Button()
         Me.cmdMODOSIT = New System.Windows.Forms.Button()
         Me.cmdTOROL = New System.Windows.Forms.Button()
@@ -179,10 +178,6 @@ Partial Class Form011
         Me.SZETAVDataSet.DataSetName = "SZETAVDataSet"
         Me.SZETAVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Sp_LekerdDolgozoTableAdapter
-        '
-        Me.Sp_LekerdDolgozoTableAdapter.ClearBeforeFill = True
-        '
         'cmdUJ
         '
         Me.cmdUJ.Location = New System.Drawing.Point(12, 116)
@@ -310,7 +305,6 @@ Partial Class Form011
     Friend WithEvents grd011 As System.Windows.Forms.DataGridView
     Friend WithEvents SpLekerdDolgozoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SZETAVDataSet As szet_64.SZETAVDataSet
-    Friend WithEvents Sp_LekerdDolgozoTableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_LekerdDolgozoTableAdapter
     Friend WithEvents cmdUJ As System.Windows.Forms.Button
     Friend WithEvents cmdMODOSIT As System.Windows.Forms.Button
     Friend WithEvents cmdTOROL As System.Windows.Forms.Button

@@ -24,9 +24,7 @@ Partial Class Form005
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.grd005 = New System.Windows.Forms.DataGridView()
-        Me.SpLekerdDolgozoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
-        Me.Sp_LekerdDolgozoTableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_LekerdDolgozoTableAdapter()
         Me.cmdUJ = New System.Windows.Forms.Button()
         Me.cmdMODOSIT = New System.Windows.Forms.Button()
         Me.cmdTOROL = New System.Windows.Forms.Button()
@@ -35,7 +33,6 @@ Partial Class Form005
         Me.lblTALALAT = New System.Windows.Forms.Label()
         Me.txtTALALAT = New System.Windows.Forms.TextBox()
         CType(Me.grd005, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpLekerdDolgozoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,19 +44,10 @@ Partial Class Form005
         Me.grd005.Size = New System.Drawing.Size(1026, 495)
         Me.grd005.TabIndex = 0
         '
-        'SpLekerdDolgozoBindingSource
-        '
-        Me.SpLekerdDolgozoBindingSource.DataMember = "sp_LekerdDolgozo"
-        Me.SpLekerdDolgozoBindingSource.DataSource = Me.SZETAVDataSet
-        '
         'SZETAVDataSet
         '
         Me.SZETAVDataSet.DataSetName = "SZETAVDataSet"
         Me.SZETAVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Sp_LekerdDolgozoTableAdapter
-        '
-        Me.Sp_LekerdDolgozoTableAdapter.ClearBeforeFill = True
         '
         'cmdUJ
         '
@@ -146,16 +134,13 @@ Partial Class Form005
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form005 - Dolgozók"
         CType(Me.grd005, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpLekerdDolgozoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents grd005 As System.Windows.Forms.DataGridView
-    Friend WithEvents SpLekerdDolgozoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SZETAVDataSet As szet_64.SZETAVDataSet
-    Friend WithEvents Sp_LekerdDolgozoTableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_LekerdDolgozoTableAdapter
     Friend WithEvents cmdUJ As System.Windows.Forms.Button
     Friend WithEvents cmdMODOSIT As System.Windows.Forms.Button
     Friend WithEvents cmdTOROL As System.Windows.Forms.Button
