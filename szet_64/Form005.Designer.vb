@@ -24,10 +24,6 @@ Partial Class Form005
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.grd005 = New System.Windows.Forms.DataGridView()
-        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NEVDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SZEREGYSDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BEOSZTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SpLekerdDolgozoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
         Me.Sp_LekerdDolgozoTableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_LekerdDolgozoTableAdapter()
@@ -45,47 +41,11 @@ Partial Class Form005
         '
         'grd005
         '
-        Me.grd005.AllowUserToAddRows = False
-        Me.grd005.AutoGenerateColumns = False
-        Me.grd005.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.grd005.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.grd005.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.NEVDataGridViewTextBoxColumn, Me.SZEREGYSDataGridViewTextBoxColumn, Me.BEOSZTDataGridViewTextBoxColumn})
-        Me.grd005.DataSource = Me.SpLekerdDolgozoBindingSource
+        Me.grd005.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grd005.Location = New System.Drawing.Point(93, 86)
         Me.grd005.Name = "grd005"
-        Me.grd005.ReadOnly = True
-        Me.grd005.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.grd005.Size = New System.Drawing.Size(1026, 495)
         Me.grd005.TabIndex = 0
-        '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IDDataGridViewTextBoxColumn.Visible = False
-        '
-        'NEVDataGridViewTextBoxColumn
-        '
-        Me.NEVDataGridViewTextBoxColumn.DataPropertyName = "NEV"
-        Me.NEVDataGridViewTextBoxColumn.HeaderText = "Név"
-        Me.NEVDataGridViewTextBoxColumn.Name = "NEVDataGridViewTextBoxColumn"
-        Me.NEVDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SZEREGYSDataGridViewTextBoxColumn
-        '
-        Me.SZEREGYSDataGridViewTextBoxColumn.DataPropertyName = "SZEREGYS"
-        Me.SZEREGYSDataGridViewTextBoxColumn.HeaderText = "Szervezeti egység"
-        Me.SZEREGYSDataGridViewTextBoxColumn.Name = "SZEREGYSDataGridViewTextBoxColumn"
-        Me.SZEREGYSDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'BEOSZTDataGridViewTextBoxColumn
-        '
-        Me.BEOSZTDataGridViewTextBoxColumn.DataPropertyName = "BEOSZT"
-        Me.BEOSZTDataGridViewTextBoxColumn.HeaderText = "Beosztás"
-        Me.BEOSZTDataGridViewTextBoxColumn.Name = "BEOSZTDataGridViewTextBoxColumn"
-        Me.BEOSZTDataGridViewTextBoxColumn.ReadOnly = True
         '
         'SpLekerdDolgozoBindingSource
         '
@@ -193,10 +153,6 @@ Partial Class Form005
 
     End Sub
     Friend WithEvents grd005 As System.Windows.Forms.DataGridView
-    Friend WithEvents IDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NEVDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents SZEREGYSDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents BEOSZTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents SpLekerdDolgozoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SZETAVDataSet As szet_64.SZETAVDataSet
     Friend WithEvents Sp_LekerdDolgozoTableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_LekerdDolgozoTableAdapter

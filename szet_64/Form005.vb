@@ -2,6 +2,8 @@
 
 Public Class Form005
     Private Sub LoadGrid()
+        Cursor.Current = Cursors.WaitCursor
+
         'Grid feltoltese tarolt eljarasbol
         Dim dbadp As New SqlDataAdapter("sp_LekerdDolgozo", GlobalVars.sConnStr)
         With dbadp.SelectCommand
@@ -26,12 +28,16 @@ Public Class Form005
             End With
 
             .Columns(0).Visible = False
-            .AutoSize = True
+            .Columns(1).HeaderText = "Név"
+            .Columns(2).HeaderText = "Szervezet"
+            .Columns(3).HeaderText = "Beosztás"
+            .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         End With
 
         'Talalatok szama
         txtTALALAT.Text = grd005.RowCount
 
+        Cursor.Current = Cursors.Default
     End Sub
 
     Private Sub Form005_Load(sender As Object, e As EventArgs) Handles MyBase.Load
