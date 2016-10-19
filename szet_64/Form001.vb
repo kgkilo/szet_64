@@ -151,9 +151,9 @@ Public Class Form001
         Me.Sp_Q334TableAdapter1.Fill(Me.SZETAVDataSet.sp_Q334)
 
         datDATUMTOL.Value = DateAdd("m", -1, Now)
-        datDATUMTOL.Checked = False
+        datDATUMTOL.Checked = True
         datDATUMIG.Value = Now
-        datDATUMIG.Checked = False
+        datDATUMIG.Checked = True
         datMUNDATTOL.Value = Now
         datMUNDATTOL.Checked = False
         datMUNDATIG.Value = Now
