@@ -9,7 +9,8 @@ Public Class Form001
     Private Sub cmdVISSZAIR_Click(sender As Object, e As EventArgs) Handles cmdVISSZAIR.Click
         Try
             Form002.Tag = grdMUNKALAP.SelectedRows(0).Cells(0).Value
-            Form002.Show(Me)
+            Form002.ShowDialog(Me)
+            Form002.Dispose()
             cmdFRISSIT_Click(sender, e)
         Catch
         End Try
@@ -17,7 +18,8 @@ Public Class Form001
 
     Private Sub cmdUJ_Click(sender As Object, e As EventArgs) Handles cmdUJ.Click
         Form001a.Tag = -1   'Insert
-        Form001a.Show(Me)
+        Form001a.ShowDialog(Me)
+        Form001a.Dispose()
     End Sub
 
     Private Sub cmdFRISSIT_Click(sender As Object, e As EventArgs) Handles cmdFRISSIT.Click
@@ -217,6 +219,7 @@ Public Class Form001
 
     Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click
         Form001a.Tag = grdMUNKALAP.SelectedRows(0).Cells(0).Value()   'Update
-        Form001a.Show(Me)
+        Form001a.ShowDialog(Me)
+        Form001a.Dispose()
     End Sub
 End Class
