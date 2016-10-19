@@ -1,4 +1,6 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Reflection
+
 
 Module GlobalVars
     Public iWorkMode As Integer = 0
@@ -50,6 +52,9 @@ Public Class FormStart
 
         My.Settings.Item("SZETAVConnectionString") = GlobalVars.sConnStr   'Ez allitja be az ossze bound DataSet eleresi utjat!!!
 
+        'A verzio kijelzese
+        Dim version As Version = Assembly.GetExecutingAssembly.GetName.Version
+        lblVERSION.Text = String.Format(lblVERSION.Text, version.Major, version.Minor, version.Build, version.Revision)
     End Sub
 
     Private Sub cmdBERENDEZES_Click(sender As Object, e As EventArgs) Handles cmdBERENDEZES.Click

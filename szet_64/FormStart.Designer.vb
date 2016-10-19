@@ -32,6 +32,7 @@ Partial Class FormStart
         Me.cmdKAPCSOLATOK = New System.Windows.Forms.Button()
         Me.cmdKARBAN = New System.Windows.Forms.Button()
         Me.cmdKODSZOTAR = New System.Windows.Forms.Button()
+        Me.lblVERSION = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'cmdExit
@@ -128,12 +129,22 @@ Partial Class FormStart
         Me.cmdKODSZOTAR.Text = "Kódszótár"
         Me.cmdKODSZOTAR.UseVisualStyleBackColor = True
         '
+        'lblVERSION
+        '
+        Me.lblVERSION.AutoSize = True
+        Me.lblVERSION.Location = New System.Drawing.Point(154, 416)
+        Me.lblVERSION.Name = "lblVERSION"
+        Me.lblVERSION.Size = New System.Drawing.Size(72, 13)
+        Me.lblVERSION.TabIndex = 9
+        Me.lblVERSION.Text = "{0}.{1}.{2}.{3}"
+        '
         'FormStart
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.cmdExit
         Me.ClientSize = New System.Drawing.Size(624, 441)
+        Me.Controls.Add(Me.lblVERSION)
         Me.Controls.Add(Me.cmdDOLGOZO)
         Me.Controls.Add(Me.lblFormel)
         Me.Controls.Add(Me.cmdJegyz)
@@ -146,7 +157,7 @@ Partial Class FormStart
         Me.Controls.Add(Me.cmdExit)
         Me.Name = "FormStart"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Szegedi Hőszolgáltató Kft."
+        Me.Text = "Szegedi Távfűtő Kft."
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -161,5 +172,6 @@ Partial Class FormStart
     Friend WithEvents cmdKAPCSOLATOK As System.Windows.Forms.Button
     Friend WithEvents cmdKARBAN As System.Windows.Forms.Button
     Friend WithEvents cmdKODSZOTAR As System.Windows.Forms.Button
+    Friend WithEvents lblVERSION As System.Windows.Forms.Label
 
 End Class
