@@ -63,6 +63,8 @@ Public Class Form011a
             cmbUZALL.SelectedIndex = -1
             cmbVAROS.SelectedIndex = -1
             cmbVESZO.SelectedIndex = -1
+            chkAKTIV.Checked = True
+
             Me.TabControl1.TabPages(1).Enabled = False
             Me.TabControl1.TabPages(2).Enabled = False
             Me.TabControl1.TabPages(3).Enabled = False
@@ -277,7 +279,7 @@ Public Class Form011a
                 .Parameters.AddWithValue("KATEG", cmbKATEG.SelectedValue)
                 .Parameters.AddWithValue("FSZAM", cmbFSZAM.SelectedValue)
                 .Parameters.AddWithValue("MEGJ", txtMEGJ.Text)
-                .Parameters.AddWithValue("AKTIV", "y")
+                .Parameters.AddWithValue("AKTIV", If(chkAKTIV.Checked, "y", "n"))
 
                 sqlConn.Open()
                 .ExecuteNonQuery()
@@ -316,7 +318,7 @@ Public Class Form011a
                     .AddWithValue("KATEG", cmbKATEG.SelectedValue)
                     .AddWithValue("FSZAM", cmbFSZAM.SelectedValue)
                     .AddWithValue("MEGJ", txtMEGJ.Text)
-                    .AddWithValue("AKTIV", "y")
+                    .AddWithValue("AKTIV", If(chkAKTIV.Checked, "y", "n"))
                 End With
                 sqlConn.Open()
                 sqlComm.ExecuteNonQuery()

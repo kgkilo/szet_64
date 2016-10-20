@@ -405,6 +405,8 @@ Partial Class Form011a
         Me.Sp_Q363TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q363TableAdapter()
         Me.Sp_Q324TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q324TableAdapter()
         Me.Sp_Q323TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q323TableAdapter()
+        Me.chkAKTIV = New System.Windows.Forms.CheckBox()
+        Me.lblAKTIV = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.SpQ289BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -502,8 +504,10 @@ Partial Class Form011a
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage1.Controls.Add(Me.chkAKTIV)
         Me.TabPage1.Controls.Add(Me.dtHITIDO)
         Me.TabPage1.Controls.Add(Me.dtUZEMIDO)
+        Me.TabPage1.Controls.Add(Me.lblAKTIV)
         Me.TabPage1.Controls.Add(Me.lblMEGJ)
         Me.TabPage1.Controls.Add(Me.lblHSZ)
         Me.TabPage1.Controls.Add(Me.lblUTCA)
@@ -3808,6 +3812,24 @@ Partial Class Form011a
         '
         Me.Sp_Q323TableAdapter.ClearBeforeFill = True
         '
+        'chkAKTIV
+        '
+        Me.chkAKTIV.AutoSize = True
+        Me.chkAKTIV.Location = New System.Drawing.Point(123, 291)
+        Me.chkAKTIV.Name = "chkAKTIV"
+        Me.chkAKTIV.Size = New System.Drawing.Size(15, 14)
+        Me.chkAKTIV.TabIndex = 21
+        Me.chkAKTIV.UseVisualStyleBackColor = True
+        '
+        'lblAKTIV
+        '
+        Me.lblAKTIV.Location = New System.Drawing.Point(12, 291)
+        Me.lblAKTIV.Name = "lblAKTIV"
+        Me.lblAKTIV.Size = New System.Drawing.Size(105, 13)
+        Me.lblAKTIV.TabIndex = 2
+        Me.lblAKTIV.Text = "Aktív?"
+        Me.lblAKTIV.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'Form011a
         '
         Me.AcceptButton = Me.cmdOK
@@ -4265,4 +4287,6 @@ Partial Class Form011a
     Friend WithEvents lblFUTOTT As System.Windows.Forms.Label
     Friend WithEvents lblUZEMIVIZSZ As System.Windows.Forms.Label
     Friend WithEvents txtUZEMIVIZSZ As System.Windows.Forms.TextBox
+    Friend WithEvents chkAKTIV As System.Windows.Forms.CheckBox
+    Friend WithEvents lblAKTIV As System.Windows.Forms.Label
 End Class
