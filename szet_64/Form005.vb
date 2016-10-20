@@ -82,10 +82,11 @@ Public Class Form005
         LoadGrid()
     End Sub
 
-    Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click
+    Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click, grd005.DoubleClick
         Form005a.Tag = grd005.SelectedRows(0).Cells(0).Value    'A 0. oszlop az ID
         Form005a.ShowDialog(Me)
         Form005a.Dispose()
         LoadGrid()
     End Sub
+
 End Class

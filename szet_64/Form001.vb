@@ -217,9 +217,10 @@ Public Class Form001
         End If
     End Sub
 
-    Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click
+    Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click, grdMUNKALAP.DoubleClick
         Form001a.Tag = grdMUNKALAP.SelectedRows(0).Cells(0).Value()   'Update
         Form001a.ShowDialog(Me)
         Form001a.Dispose()
     End Sub
+
 End Class

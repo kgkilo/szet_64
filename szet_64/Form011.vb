@@ -110,7 +110,7 @@ Public Class Form011
         End If
     End Sub
 
-    Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click
+    Private Sub cmdMODOSIT_Click(sender As Object, e As EventArgs) Handles cmdMODOSIT.Click, grd011.DoubleClick
         Try
             If cmbOBJTIP.SelectedValue.Equals("01") Then    'Epulet
                 Form011b.Tag = grd011.SelectedRows(0).Cells(0).Value

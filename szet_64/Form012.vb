@@ -88,13 +88,13 @@ Public Class Form012
         Me.Close()
     End Sub
 
-    Private Sub cmdODA_Click(sender As Object, e As EventArgs) Handles cmdODA.Click
+    Private Sub cmdODA_Click(sender As Object, e As EventArgs) Handles cmdODA.Click, grdNEMKAPCSOLT.DoubleClick
         Cursor.Current = Cursors.WaitCursor
         Try
             sqlConn = New SqlConnection(GlobalVars.sConnStr)
             Dim sqlComm As SqlCommand = New SqlCommand("sp_Kapcsol", sqlConn)
             sqlComm.CommandType = CommandType.StoredProcedure
-            sqlComm.Parameters.Add("@pID1", SqlDbType.Int).Value = grdMEGNEV.SelectedRows(0).Cells(0).Value
+            sqlComm.Parameters.Add("@pID1", SqlDbType.Int).Value = iMegnev
             sqlComm.Parameters.Add("@pID2", SqlDbType.Int).Value = grdNEMKAPCSOLT.SelectedRows(0).Cells(0).Value
             sqlConn.Open()
             sqlComm.ExecuteNonQuery()
@@ -107,13 +107,13 @@ Public Class Form012
         Cursor.Current = Cursors.Default
     End Sub
 
-    Private Sub cmdVISSZA_Click(sender As Object, e As EventArgs) Handles cmdVISSZA.Click
+    Private Sub cmdVISSZA_Click(sender As Object, e As EventArgs) Handles cmdVISSZA.Click, grdKAPCSOLT.DoubleClick
         Cursor.Current = Cursors.WaitCursor
         Try
             sqlConn = New SqlConnection(GlobalVars.sConnStr)
             Dim sqlComm As SqlCommand = New SqlCommand("sp_SzetKapcsol", sqlConn)
             sqlComm.CommandType = CommandType.StoredProcedure
-            sqlComm.Parameters.Add("@pID1", SqlDbType.Int).Value = grdMEGNEV.SelectedRows(0).Cells(0).Value
+            sqlComm.Parameters.Add("@pID1", SqlDbType.Int).Value = iMegnev
             sqlComm.Parameters.Add("@pID2", SqlDbType.Int).Value = grdKAPCSOLT.SelectedRows(0).Cells(0).Value
             sqlConn.Open()
             sqlComm.ExecuteNonQuery()
@@ -126,6 +126,10 @@ Public Class Form012
         Cursor.Current = Cursors.Default
     End Sub
 
+    'Az egesz iMegnev buveszkedesre azert van szukseg, mert amint mashova kattint, nem a felso grdMEGNEV grid-re,
+    ' annak nem lesz 'SelectedRow' ertelmezve, tehat amikor elkattint onnan, le kell menteni a
+    ' kivalasztott sort. NB a kijelolt sor ugy fog kinezni, mintha kivalasztott lenne, megsem adja vissza
+    ' annak erteket a SelectedRows(0)...
     Private Sub cmbOBJTIP2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbOBJTIP2.SelectedIndexChanged
         If cmbOBJTIP2.SelectedIndex <> -1 Then
             cmdODA.Enabled = True
@@ -244,4 +248,5 @@ Public Class Form012
         grdKAPCSOLT.Enabled = True
         Cursor.Current = Cursors.Default
     End Sub
+
 End Class

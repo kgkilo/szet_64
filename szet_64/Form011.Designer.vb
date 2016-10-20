@@ -24,21 +24,6 @@ Partial Class Form011
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.grd011 = New System.Windows.Forms.DataGridView()
-        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MEGNEV = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TIPUS = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TELEPHSZ = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GYSZAM = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
         Me.cmdUJ = New System.Windows.Forms.Button()
         Me.cmdMODOSIT = New System.Windows.Forms.Button()
@@ -59,111 +44,11 @@ Partial Class Form011
         'grd011
         '
         Me.grd011.AllowUserToAddRows = False
-        Me.grd011.AutoGenerateColumns = False
-        Me.grd011.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grd011.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grd011.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.MEGNEV, Me.TIPUS, Me.TELEPHSZ, Me.GYSZAM, Me.C6, Me.C7, Me.C8, Me.C9, Me.C10, Me.C11, Me.C12, Me.C13, Me.C14, Me.C15})
         Me.grd011.Location = New System.Drawing.Point(93, 86)
         Me.grd011.Name = "grd011"
-        Me.grd011.ReadOnly = True
         Me.grd011.Size = New System.Drawing.Size(1026, 495)
         Me.grd011.TabIndex = 0
-        '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IDDataGridViewTextBoxColumn.Visible = False
-        '
-        'MEGNEV
-        '
-        Me.MEGNEV.DataPropertyName = "MEGNEV"
-        Me.MEGNEV.HeaderText = "Megnevezés"
-        Me.MEGNEV.Name = "MEGNEV"
-        Me.MEGNEV.ReadOnly = True
-        '
-        'TIPUS
-        '
-        Me.TIPUS.DataPropertyName = "TIPUS"
-        Me.TIPUS.HeaderText = "Típus"
-        Me.TIPUS.Name = "TIPUS"
-        Me.TIPUS.ReadOnly = True
-        '
-        'TELEPHSZ
-        '
-        Me.TELEPHSZ.DataPropertyName = "TELEPHSZ"
-        Me.TELEPHSZ.HeaderText = "Telepítési helyszám"
-        Me.TELEPHSZ.Name = "TELEPHSZ"
-        Me.TELEPHSZ.ReadOnly = True
-        '
-        'GYSZAM
-        '
-        Me.GYSZAM.DataPropertyName = "GYSZAM"
-        Me.GYSZAM.HeaderText = "Gyári szám"
-        Me.GYSZAM.Name = "GYSZAM"
-        Me.GYSZAM.ReadOnly = True
-        '
-        'C6
-        '
-        Me.C6.HeaderText = "C6"
-        Me.C6.Name = "C6"
-        Me.C6.ReadOnly = True
-        '
-        'C7
-        '
-        Me.C7.HeaderText = "C7"
-        Me.C7.Name = "C7"
-        Me.C7.ReadOnly = True
-        '
-        'C8
-        '
-        Me.C8.HeaderText = "C8"
-        Me.C8.Name = "C8"
-        Me.C8.ReadOnly = True
-        '
-        'C9
-        '
-        Me.C9.HeaderText = "C9"
-        Me.C9.Name = "C9"
-        Me.C9.ReadOnly = True
-        '
-        'C10
-        '
-        Me.C10.HeaderText = "C10"
-        Me.C10.Name = "C10"
-        Me.C10.ReadOnly = True
-        '
-        'C11
-        '
-        Me.C11.HeaderText = "C11"
-        Me.C11.Name = "C11"
-        Me.C11.ReadOnly = True
-        '
-        'C12
-        '
-        Me.C12.HeaderText = "C12"
-        Me.C12.Name = "C12"
-        Me.C12.ReadOnly = True
-        '
-        'C13
-        '
-        Me.C13.HeaderText = "C13"
-        Me.C13.Name = "C13"
-        Me.C13.ReadOnly = True
-        '
-        'C14
-        '
-        Me.C14.HeaderText = "C14"
-        Me.C14.Name = "C14"
-        Me.C14.ReadOnly = True
-        '
-        'C15
-        '
-        Me.C15.HeaderText = "C15"
-        Me.C15.Name = "C15"
-        Me.C15.ReadOnly = True
         '
         'SZETAVDataSet
         '
@@ -307,18 +192,4 @@ Partial Class Form011
     Friend WithEvents txtTALALAT As System.Windows.Forms.TextBox
     Friend WithEvents lblTALALAT As System.Windows.Forms.Label
     Friend WithEvents IDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents MEGNEV As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents TIPUS As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents TELEPHSZ As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents GYSZAM As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents C6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents C7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents C8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents C9 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents C10 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents C11 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents C12 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents C13 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents C14 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents C15 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
