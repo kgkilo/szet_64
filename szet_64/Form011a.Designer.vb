@@ -552,20 +552,24 @@ Partial Class Form011a
         '
         'dtHITIDO
         '
+        Me.dtHITIDO.Checked = False
         Me.dtHITIDO.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtHITIDO.Location = New System.Drawing.Point(123, 139)
         Me.dtHITIDO.MinDate = New Date(1950, 1, 1, 0, 0, 0, 0)
         Me.dtHITIDO.Name = "dtHITIDO"
+        Me.dtHITIDO.ShowCheckBox = True
         Me.dtHITIDO.Size = New System.Drawing.Size(138, 20)
         Me.dtHITIDO.TabIndex = 5
         Me.dtHITIDO.Value = New Date(2016, 1, 1, 0, 0, 0, 0)
         '
         'dtUZEMIDO
         '
+        Me.dtUZEMIDO.Checked = False
         Me.dtUZEMIDO.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtUZEMIDO.Location = New System.Drawing.Point(123, 113)
         Me.dtUZEMIDO.MinDate = New Date(1950, 1, 1, 0, 0, 0, 0)
         Me.dtUZEMIDO.Name = "dtUZEMIDO"
+        Me.dtUZEMIDO.ShowCheckBox = True
         Me.dtUZEMIDO.Size = New System.Drawing.Size(138, 20)
         Me.dtUZEMIDO.TabIndex = 4
         Me.dtUZEMIDO.Value = New Date(2016, 1, 1, 0, 0, 0, 0)

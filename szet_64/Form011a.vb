@@ -183,7 +183,7 @@ Public Class Form011a
                             ElseIf o.Name.StartsWith("cmb") Then
                                 CType(o, ComboBox).SelectedValue = sqlReader.Item(sName)
                             ElseIf o.Name.StartsWith("dt") Then
-                                CType(o, DateTimePicker).Value = sqlReader.Item(sName)
+                                CType(o, DateTimePicker).Value = If(sqlReader.Item(sName), Nothing)
                             ElseIf o.Name.StartsWith("chk") Then
                                 CType(o, CheckBox).Checked = sqlReader.Item(sName).Equals("y")
                             End If
