@@ -121,7 +121,6 @@ Partial Class FormStart
         '
         'cmdKODSZOTAR
         '
-        Me.cmdKODSZOTAR.Enabled = False
         Me.cmdKODSZOTAR.Location = New System.Drawing.Point(81, 294)
         Me.cmdKODSZOTAR.Name = "cmdKODSZOTAR"
         Me.cmdKODSZOTAR.Size = New System.Drawing.Size(150, 46)

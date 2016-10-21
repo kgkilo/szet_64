@@ -8,18 +8,20 @@ Public Class Form092a
             sqlConn = New SqlConnection(GlobalVars.sConnStr)
 
             If Me.Tag <> -1 Then    'Tag fel volt toltve ertelmes indexszel, be kell tolteni azt a rekordot
-                Dim sqlComm As SqlCommand = New SqlCommand("sp_LoadKodszot", sqlConn)
+                Dim sqlComm As SqlCommand = New SqlCommand("sp_LoadKodszotElem", sqlConn)
                 sqlComm.CommandType = CommandType.StoredProcedure
-                sqlComm.Parameters.Add("@pID", SqlDbType.Int).Value = Me.Tag
+                sqlComm.Parameters.Add("pKODTIP", SqlDbType.VarChar, 4).Value = Me.txtKODTIP.Text
+                sqlComm.Parameters.Add("pKODERT", SqlDbType.VarChar, 12).Value = Me.Tag
 
                 sqlConn.Open()
                 Dim sqlReader As SqlDataReader = sqlComm.ExecuteReader()
                 With sqlReader
                     If .HasRows Then
-                        While (.Read())
-                            txtERTEK.Text = .GetString(1)
+                        While .Read()
+                            txtERTEK.Text = .GetString(0)
+                            txtERTEK.Enabled = False
                             Try
-                                txtNEV.Text = .GetString(2)  'Ez lehet NULL is es ettol lehalna a form
+                                txtNEV.Text = .GetString(1)  'Ez lehet NULL is es ettol lehalna a form
                             Catch ex As Exception
                                 txtNEV.Text = ""
                             End Try
@@ -49,7 +51,10 @@ Public Class Form092a
                 sqlComm = New SqlCommand("sp_InsKodszot", sqlConn)
                 With sqlComm
                     .CommandType = CommandType.StoredProcedure
-                    .Parameters.AddWithValue("KODTIP", txtKODTIP.text)
+                    MsgBox(txtKODTIP.Text)
+                    MsgBox(txtERTEK.Text)
+                    MsgBox(txtNEV.Text)
+                    .Parameters.AddWithValue("KODTIP", txtKODTIP.Text)
                     .Parameters.AddWithValue("KODERT", txtERTEK.Text)
                     .Parameters.AddWithValue("KODENEV", txtNEV.Text)
                 End With    'sqlComm

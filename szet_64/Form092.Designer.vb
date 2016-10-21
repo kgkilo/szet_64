@@ -31,26 +31,28 @@ Partial Class Form092
         Me.cmdEXIT = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.cmbKODTIP = New System.Windows.Forms.ComboBox()
+        Me.SpFillKodtipBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SpQ296BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblKODTIP = New System.Windows.Forms.Label()
         Me.Sp_Q296TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter()
         Me.txtTALALAT = New System.Windows.Forms.TextBox()
         Me.lblTALALAT = New System.Windows.Forms.Label()
+        Me.Sp_FillKodtipTableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_FillKodtipTableAdapter()
         CType(Me.grd092, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpFillKodtipBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'grd092
         '
         Me.grd092.AllowUserToAddRows = False
-        Me.grd092.AutoGenerateColumns = False
         Me.grd092.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grd092.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grd092.Location = New System.Drawing.Point(93, 86)
         Me.grd092.Name = "grd092"
         Me.grd092.ReadOnly = True
-        Me.grd092.Size = New System.Drawing.Size(1026, 495)
+        Me.grd092.Size = New System.Drawing.Size(795, 363)
         Me.grd092.TabIndex = 0
         '
         'SZETAVDataSet
@@ -87,7 +89,7 @@ Partial Class Form092
         '
         'cmdEXIT
         '
-        Me.cmdEXIT.Location = New System.Drawing.Point(12, 556)
+        Me.cmdEXIT.Location = New System.Drawing.Point(12, 424)
         Me.cmdEXIT.Name = "cmdEXIT"
         Me.cmdEXIT.Size = New System.Drawing.Size(75, 25)
         Me.cmdEXIT.TabIndex = 9
@@ -98,7 +100,7 @@ Partial Class Form092
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(482, 19)
+        Me.lblTitle.Location = New System.Drawing.Point(396, 19)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(109, 25)
         Me.lblTitle.TabIndex = 10
@@ -106,15 +108,20 @@ Partial Class Form092
         '
         'cmbKODTIP
         '
-        Me.cmbKODTIP.DataSource = Me.SpQ296BindingSource
-        Me.cmbKODTIP.DisplayMember = "KODENEV"
+        Me.cmbKODTIP.DataSource = Me.SpFillKodtipBindingSource
+        Me.cmbKODTIP.DisplayMember = "Column1"
         Me.cmbKODTIP.FormattingEnabled = True
         Me.cmbKODTIP.Location = New System.Drawing.Point(198, 58)
         Me.cmbKODTIP.Name = "cmbKODTIP"
         Me.cmbKODTIP.Size = New System.Drawing.Size(180, 21)
         Me.cmbKODTIP.TabIndex = 11
         Me.cmbKODTIP.Tag = "296"
-        Me.cmbKODTIP.ValueMember = "KODERT"
+        Me.cmbKODTIP.ValueMember = "KODAZ"
+        '
+        'SpFillKodtipBindingSource
+        '
+        Me.SpFillKodtipBindingSource.DataMember = "sp_FillKodtip"
+        Me.SpFillKodtipBindingSource.DataSource = Me.SZETAVDataSet
         '
         'SpQ296BindingSource
         '
@@ -155,11 +162,15 @@ Partial Class Form092
         Me.lblTALALAT.Text = "Találatok"
         Me.lblTALALAT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Sp_FillKodtipTableAdapter
+        '
+        Me.Sp_FillKodtipTableAdapter.ClearBeforeFill = True
+        '
         'Form092
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1129, 586)
+        Me.ClientSize = New System.Drawing.Size(900, 461)
         Me.Controls.Add(Me.lblTALALAT)
         Me.Controls.Add(Me.txtTALALAT)
         Me.Controls.Add(Me.lblKODTIP)
@@ -173,9 +184,9 @@ Partial Class Form092
         Me.Name = "Form092"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form092 - Kódszótár"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.grd092, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpFillKodtipBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -194,4 +205,6 @@ Partial Class Form092
     Friend WithEvents Sp_Q296TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter
     Friend WithEvents txtTALALAT As System.Windows.Forms.TextBox
     Friend WithEvents lblTALALAT As System.Windows.Forms.Label
+    Friend WithEvents SpFillKodtipBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_FillKodtipTableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_FillKodtipTableAdapter
 End Class
