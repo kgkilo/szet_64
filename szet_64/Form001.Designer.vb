@@ -156,6 +156,8 @@ Partial Class Form001
         '
         'cmbTIPUSH
         '
+        Me.cmbTIPUSH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbTIPUSH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbTIPUSH.DataSource = Me.SpQ293BindingSource
         Me.cmbTIPUSH.DisplayMember = "KODENEV"
         Me.cmbTIPUSH.FormattingEnabled = True
@@ -182,6 +184,8 @@ Partial Class Form001
         '
         'cmbFSZAM
         '
+        Me.cmbFSZAM.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbFSZAM.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbFSZAM.DataSource = Me.SpQ310ABindingSource
         Me.cmbFSZAM.DisplayMember = "FSZNEV"
         Me.cmbFSZAM.FormattingEnabled = True
@@ -337,6 +341,8 @@ Partial Class Form001
         '
         'cmbOBJTIP
         '
+        Me.cmbOBJTIP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbOBJTIP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbOBJTIP.DataSource = Me.SpQ296BindingSource
         Me.cmbOBJTIP.DisplayMember = "KODENEV"
         Me.cmbOBJTIP.FormattingEnabled = True
@@ -363,6 +369,8 @@ Partial Class Form001
         '
         'cmbOBJID
         '
+        Me.cmbOBJID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbOBJID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbOBJID.FormattingEnabled = True
         Me.cmbOBJID.Location = New System.Drawing.Point(505, 114)
         Me.cmbOBJID.Name = "cmbOBJID"
@@ -381,6 +389,8 @@ Partial Class Form001
         '
         'cmbDOLGID
         '
+        Me.cmbDOLGID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbDOLGID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbDOLGID.DataSource = Me.SpQ334BindingSource
         Me.cmbDOLGID.DisplayMember = "NEV"
         Me.cmbDOLGID.FormattingEnabled = True
@@ -448,6 +458,8 @@ Partial Class Form001
         '
         'cmbTELEPHSZ
         '
+        Me.cmbTELEPHSZ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbTELEPHSZ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbTELEPHSZ.FormattingEnabled = True
         Me.cmbTELEPHSZ.Location = New System.Drawing.Point(816, 142)
         Me.cmbTELEPHSZ.Name = "cmbTELEPHSZ"

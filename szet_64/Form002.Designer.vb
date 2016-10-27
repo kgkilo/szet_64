@@ -55,6 +55,8 @@ Partial Class Form002
         '
         'cmbMUVLEIRROV
         '
+        Me.cmbMUVLEIRROV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbMUVLEIRROV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbMUVLEIRROV.DataSource = Me.SpQ336BindingSource
         Me.cmbMUVLEIRROV.DisplayMember = "KODENEV"
         Me.cmbMUVLEIRROV.FormattingEnabled = True
@@ -176,6 +178,8 @@ Partial Class Form002
         '
         'cmbDOLG_ID
         '
+        Me.cmbDOLG_ID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbDOLG_ID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbDOLG_ID.DataSource = Me.SpQ334BindingSource
         Me.cmbDOLG_ID.DisplayMember = "NEV"
         Me.cmbDOLG_ID.FormattingEnabled = True

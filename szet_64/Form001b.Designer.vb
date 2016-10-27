@@ -27,15 +27,15 @@ Partial Class Form001b
         Me.lblOBJTIP = New System.Windows.Forms.Label()
         Me.cmbOBJID = New System.Windows.Forms.ComboBox()
         Me.cmbOBJTIP = New System.Windows.Forms.ComboBox()
+        Me.SpQ296BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
         Me.lblLAKAS = New System.Windows.Forms.Label()
         Me.txtLAKAS = New System.Windows.Forms.TextBox()
         Me.cmdOK = New System.Windows.Forms.Button()
         Me.cmdCANCEL = New System.Windows.Forms.Button()
-        Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
-        Me.SpQ296BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Sp_Q296TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter()
-        CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblOBJID
@@ -58,6 +58,8 @@ Partial Class Form001b
         '
         'cmbOBJID
         '
+        Me.cmbOBJID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbOBJID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbOBJID.FormattingEnabled = True
         Me.cmbOBJID.Location = New System.Drawing.Point(130, 58)
         Me.cmbOBJID.Name = "cmbOBJID"
@@ -67,6 +69,8 @@ Partial Class Form001b
         '
         'cmbOBJTIP
         '
+        Me.cmbOBJTIP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbOBJTIP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbOBJTIP.DataSource = Me.SpQ296BindingSource
         Me.cmbOBJTIP.DisplayMember = "KODENEV"
         Me.cmbOBJTIP.FormattingEnabled = True
@@ -76,6 +80,16 @@ Partial Class Form001b
         Me.cmbOBJTIP.TabIndex = 0
         Me.cmbOBJTIP.Tag = "296"
         Me.cmbOBJTIP.ValueMember = "KODERT"
+        '
+        'SpQ296BindingSource
+        '
+        Me.SpQ296BindingSource.DataMember = "sp_Q296"
+        Me.SpQ296BindingSource.DataSource = Me.SZETAVDataSet
+        '
+        'SZETAVDataSet
+        '
+        Me.SZETAVDataSet.DataSetName = "SZETAVDataSet"
+        Me.SZETAVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'lblLAKAS
         '
@@ -113,16 +127,6 @@ Partial Class Form001b
         Me.cmdCANCEL.Text = "Mégsem"
         Me.cmdCANCEL.UseVisualStyleBackColor = True
         '
-        'SZETAVDataSet
-        '
-        Me.SZETAVDataSet.DataSetName = "SZETAVDataSet"
-        Me.SZETAVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'SpQ296BindingSource
-        '
-        Me.SpQ296BindingSource.DataMember = "sp_Q296"
-        Me.SpQ296BindingSource.DataSource = Me.SZETAVDataSet
-        '
         'Sp_Q296TableAdapter
         '
         Me.Sp_Q296TableAdapter.ClearBeforeFill = True
@@ -144,8 +148,8 @@ Partial Class Form001b
         Me.Controls.Add(Me.cmbOBJTIP)
         Me.Name = "Form001b"
         Me.Text = "Form001b - Berendezés választás"
-        CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

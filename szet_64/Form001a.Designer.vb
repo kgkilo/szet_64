@@ -205,6 +205,8 @@ Partial Class Form001a
         '
         'cmbMFDOLG
         '
+        Me.cmbMFDOLG.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbMFDOLG.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbMFDOLG.DataSource = Me.SpQ334BindingSource
         Me.cmbMFDOLG.DisplayMember = "NEV"
         Me.cmbMFDOLG.FormattingEnabled = True
@@ -232,6 +234,8 @@ Partial Class Form001a
         '
         'cmbSZOLGJELL
         '
+        Me.cmbSZOLGJELL.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbSZOLGJELL.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbSZOLGJELL.DataSource = Me.SpQ291BindingSource
         Me.cmbSZOLGJELL.DisplayMember = "KODENEV"
         Me.cmbSZOLGJELL.FormattingEnabled = True
@@ -276,6 +280,8 @@ Partial Class Form001a
         '
         'cmbFSZAM
         '
+        Me.cmbFSZAM.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbFSZAM.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbFSZAM.DataSource = Me.SpQ310ABindingSource
         Me.cmbFSZAM.DisplayMember = "FSZAM"
         Me.cmbFSZAM.FormattingEnabled = True
@@ -303,6 +309,8 @@ Partial Class Form001a
         '
         'cmbTIPUSH
         '
+        Me.cmbTIPUSH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbTIPUSH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbTIPUSH.DataSource = Me.SpQ293BindingSource
         Me.cmbTIPUSH.DisplayMember = "KODENEV"
         Me.cmbTIPUSH.FormattingEnabled = True
@@ -371,6 +379,8 @@ Partial Class Form001a
         '
         'cmbMKAP
         '
+        Me.cmbMKAP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbMKAP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbMKAP.DataSource = Me.SpQ334BindingSource1
         Me.cmbMKAP.DisplayMember = "NEV"
         Me.cmbMKAP.FormattingEnabled = True
@@ -434,6 +444,8 @@ Partial Class Form001a
         '
         'cmbMUVEL
         '
+        Me.cmbMUVEL.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbMUVEL.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbMUVEL.DataSource = Me.SpQ298BindingSource
         Me.cmbMUVEL.DisplayMember = "KODENEV"
         Me.cmbMUVEL.FormattingEnabled = True
@@ -461,6 +473,8 @@ Partial Class Form001a
         '
         'cmbMUNVEGZ
         '
+        Me.cmbMUNVEGZ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbMUNVEGZ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbMUNVEGZ.DataSource = Me.SpQ306BindingSource
         Me.cmbMUNVEGZ.DisplayMember = "KODENEV"
         Me.cmbMUNVEGZ.FormattingEnabled = True
@@ -488,6 +502,8 @@ Partial Class Form001a
         '
         'cmbSZOLTIP
         '
+        Me.cmbSZOLTIP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbSZOLTIP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbSZOLTIP.DataSource = Me.SpQ309BindingSource
         Me.cmbSZOLTIP.DisplayMember = "KODENEV"
         Me.cmbSZOLTIP.FormattingEnabled = True
@@ -515,6 +531,8 @@ Partial Class Form001a
         '
         'cmbMUNSZ
         '
+        Me.cmbMUNSZ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbMUNSZ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbMUNSZ.DataSource = Me.SpQ271BindingSource1
         Me.cmbMUNSZ.DisplayMember = "KODENEV"
         Me.cmbMUNSZ.FormattingEnabled = True
@@ -542,6 +560,8 @@ Partial Class Form001a
         '
         'cmbKARBTIP
         '
+        Me.cmbKARBTIP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbKARBTIP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbKARBTIP.DataSource = Me.SpQ300BindingSource
         Me.cmbKARBTIP.DisplayMember = "KODENEV"
         Me.cmbKARBTIP.FormattingEnabled = True
