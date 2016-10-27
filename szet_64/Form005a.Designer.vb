@@ -60,6 +60,8 @@ Partial Class Form005a
         '
         'cmbSZEREGYS
         '
+        Me.cmbSZEREGYS.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbSZEREGYS.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbSZEREGYS.DataSource = Me.SpQ271BindingSource
         Me.cmbSZEREGYS.DisplayMember = "KODENEV"
         Me.cmbSZEREGYS.FormattingEnabled = True
@@ -81,6 +83,8 @@ Partial Class Form005a
         '
         'cmbBEOSZT
         '
+        Me.cmbBEOSZT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbBEOSZT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbBEOSZT.DataSource = Me.SpQ304BindingSource
         Me.cmbBEOSZT.DisplayMember = "KODENEV"
         Me.cmbBEOSZT.FormattingEnabled = True
