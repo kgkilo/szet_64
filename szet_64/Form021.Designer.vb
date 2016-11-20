@@ -60,6 +60,7 @@ Partial Class Form021
         Me.lblSZOLGJELL = New System.Windows.Forms.Label()
         Me.cmbSZOLGJELL = New System.Windows.Forms.ComboBox()
         Me.Sp_Q298TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q298TableAdapter()
+        Me.cmdTERVEK = New System.Windows.Forms.Button()
         CType(Me.SpQ291BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grdKARBAN, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,7 +78,7 @@ Partial Class Form021
         Me.cmdEXIT.Location = New System.Drawing.Point(12, 556)
         Me.cmdEXIT.Name = "cmdEXIT"
         Me.cmdEXIT.Size = New System.Drawing.Size(75, 25)
-        Me.cmdEXIT.TabIndex = 1
+        Me.cmdEXIT.TabIndex = 2
         Me.cmdEXIT.Text = "Kilépés"
         Me.cmdEXIT.UseVisualStyleBackColor = True
         '
@@ -97,7 +98,7 @@ Partial Class Form021
         Me.grdKARBAN.Location = New System.Drawing.Point(93, 170)
         Me.grdKARBAN.Name = "grdKARBAN"
         Me.grdKARBAN.Size = New System.Drawing.Size(1026, 411)
-        Me.grdKARBAN.TabIndex = 24
+        Me.grdKARBAN.TabIndex = 9
         '
         'lblTitle
         '
@@ -127,7 +128,7 @@ Partial Class Form021
         Me.cmbMUVEL.Location = New System.Drawing.Point(198, 114)
         Me.cmbMUVEL.Name = "cmbMUVEL"
         Me.cmbMUVEL.Size = New System.Drawing.Size(180, 22)
-        Me.cmbMUVEL.TabIndex = 4
+        Me.cmbMUVEL.TabIndex = 5
         Me.cmbMUVEL.Tag = "298"
         Me.cmbMUVEL.ValueMember = "KODERT"
         '
@@ -167,7 +168,7 @@ Partial Class Form021
         Me.datDATUMTOL.Name = "datDATUMTOL"
         Me.datDATUMTOL.ShowCheckBox = True
         Me.datDATUMTOL.Size = New System.Drawing.Size(100, 20)
-        Me.datDATUMTOL.TabIndex = 2
+        Me.datDATUMTOL.TabIndex = 3
         Me.datDATUMTOL.Value = New Date(2016, 9, 1, 0, 0, 0, 0)
         '
         'lblMUNIDO2
@@ -188,7 +189,7 @@ Partial Class Form021
         Me.datDATUMIG.Name = "datDATUMIG"
         Me.datDATUMIG.ShowCheckBox = True
         Me.datDATUMIG.Size = New System.Drawing.Size(100, 20)
-        Me.datDATUMIG.TabIndex = 3
+        Me.datDATUMIG.TabIndex = 4
         Me.datDATUMIG.Value = New Date(2016, 10, 1, 0, 0, 0, 0)
         '
         'SpQ335BindingSource
@@ -206,7 +207,7 @@ Partial Class Form021
         Me.cmbOBJTIP.Location = New System.Drawing.Point(505, 86)
         Me.cmbOBJTIP.Name = "cmbOBJTIP"
         Me.cmbOBJTIP.Size = New System.Drawing.Size(180, 22)
-        Me.cmbOBJTIP.TabIndex = 5
+        Me.cmbOBJTIP.TabIndex = 6
         Me.cmbOBJTIP.Tag = "296"
         Me.cmbOBJTIP.ValueMember = "KODERT"
         '
@@ -232,7 +233,7 @@ Partial Class Form021
         Me.cmbOBJID.Location = New System.Drawing.Point(505, 114)
         Me.cmbOBJID.Name = "cmbOBJID"
         Me.cmbOBJID.Size = New System.Drawing.Size(180, 22)
-        Me.cmbOBJID.TabIndex = 6
+        Me.cmbOBJID.TabIndex = 7
         Me.cmbOBJID.Tag = "MEGNEV"
         '
         'lblOBJID
@@ -345,7 +346,7 @@ Partial Class Form021
         Me.cmbSZOLGJELL.Location = New System.Drawing.Point(505, 142)
         Me.cmbSZOLGJELL.Name = "cmbSZOLGJELL"
         Me.cmbSZOLGJELL.Size = New System.Drawing.Size(180, 22)
-        Me.cmbSZOLGJELL.TabIndex = 7
+        Me.cmbSZOLGJELL.TabIndex = 8
         Me.cmbSZOLGJELL.Tag = "291"
         Me.cmbSZOLGJELL.ValueMember = "KODERT"
         '
@@ -353,11 +354,21 @@ Partial Class Form021
         '
         Me.Sp_Q298TableAdapter.ClearBeforeFill = True
         '
+        'cmdTERVEK
+        '
+        Me.cmdTERVEK.Location = New System.Drawing.Point(12, 284)
+        Me.cmdTERVEK.Name = "cmdTERVEK"
+        Me.cmdTERVEK.Size = New System.Drawing.Size(75, 25)
+        Me.cmdTERVEK.TabIndex = 1
+        Me.cmdTERVEK.Text = "Tervek"
+        Me.cmdTERVEK.UseVisualStyleBackColor = True
+        '
         'Form021
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1129, 593)
+        Me.Controls.Add(Me.cmdTERVEK)
         Me.Controls.Add(Me.txtTALALAT)
         Me.Controls.Add(Me.txtMUNOSZ)
         Me.Controls.Add(Me.lblMUNIDO2)
@@ -434,4 +445,5 @@ Partial Class Form021
     Friend WithEvents cmbSZOLGJELL As System.Windows.Forms.ComboBox
     Friend WithEvents SpQ298BindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Sp_Q298TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q298TableAdapter
+    Friend WithEvents cmdTERVEK As System.Windows.Forms.Button
 End Class

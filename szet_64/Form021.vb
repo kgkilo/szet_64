@@ -122,4 +122,9 @@ Public Class Form021
         End If
     End Sub
 
+    Private Sub cmdTERVEK_Click(sender As Object, e As EventArgs) Handles cmdTERVEK.Click
+        Form022.ShowDialog(Me)
+        Form022.Dispose()
+    End Sub
+
 End Class

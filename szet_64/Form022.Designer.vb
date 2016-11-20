@@ -45,10 +45,12 @@ Partial Class Form022
         Me.grdKAPCSOLT = New System.Windows.Forms.DataGridView()
         Me.grdNEMKAPCSOLT = New System.Windows.Forms.DataGridView()
         Me.cmbIDOE = New System.Windows.Forms.ComboBox()
+        Me.SpQ299BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblIDOE = New System.Windows.Forms.Label()
         Me.Sp_Q296TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter()
         Me.cmdCLOSE = New System.Windows.Forms.Button()
         Me.Sp_Q298TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q298TableAdapter()
+        Me.Sp_Q299TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q299TableAdapter()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,6 +59,7 @@ Partial Class Form022
         Me.GroupBox2.SuspendLayout()
         CType(Me.grdKAPCSOLT, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grdNEMKAPCSOLT, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ299BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -274,7 +277,8 @@ Partial Class Form022
         '
         Me.cmbIDOE.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbIDOE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.cmbIDOE.DisplayMember = "KODERT"
+        Me.cmbIDOE.DataSource = Me.SpQ299BindingSource
+        Me.cmbIDOE.DisplayMember = "KODENEV"
         Me.cmbIDOE.FormattingEnabled = True
         Me.cmbIDOE.Location = New System.Drawing.Point(247, 18)
         Me.cmbIDOE.Name = "cmbIDOE"
@@ -282,6 +286,11 @@ Partial Class Form022
         Me.cmbIDOE.TabIndex = 13
         Me.cmbIDOE.Tag = "299"
         Me.cmbIDOE.ValueMember = "KODERT"
+        '
+        'SpQ299BindingSource
+        '
+        Me.SpQ299BindingSource.DataMember = "sp_Q299"
+        Me.SpQ299BindingSource.DataSource = Me.SZETAVDataSet
         '
         'lblIDOE
         '
@@ -309,6 +318,10 @@ Partial Class Form022
         '
         Me.Sp_Q298TableAdapter.ClearBeforeFill = True
         '
+        'Sp_Q299TableAdapter
+        '
+        Me.Sp_Q299TableAdapter.ClearBeforeFill = True
+        '
         'Form022
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -331,6 +344,7 @@ Partial Class Form022
         Me.GroupBox2.PerformLayout()
         CType(Me.grdKAPCSOLT, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.grdNEMKAPCSOLT, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ299BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -361,4 +375,6 @@ Partial Class Form022
     Friend WithEvents optCSOPORTOS1 As System.Windows.Forms.RadioButton
     Friend WithEvents lblIDO As System.Windows.Forms.Label
     Friend WithEvents txtIDO As System.Windows.Forms.TextBox
+    Friend WithEvents SpQ299BindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Sp_Q299TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q299TableAdapter
 End Class

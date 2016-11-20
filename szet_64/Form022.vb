@@ -1,15 +1,15 @@
-﻿'TODO move both grids' formatting to one function
-
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 
 Public Class Form022
     Private sqlConn As SqlConnection
 
     Private Sub Form022_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cursor.Current = Cursors.WaitCursor
+        Me.Sp_Q299TableAdapter.Fill(Me.SZETAVDataSet.sp_Q299)
         Me.Sp_Q298TableAdapter.Fill(Me.SZETAVDataSet.sp_Q298)
         Me.Sp_Q296TableAdapter.Fill(Me.SZETAVDataSet.sp_Q296)
         Me.cmbMUVEL.SelectedIndex = -1
+        Me.cmbOBJTIP.SelectedIndex = -1
         Me.cmbIDOE.SelectedIndex = -1
         Me.cmbIDOE.Enabled = False
         Me.grdNEMKAPCSOLT.Enabled = False
@@ -19,22 +19,28 @@ Public Class Form022
         Cursor.Current = Cursors.Default
     End Sub
 
-    Private Sub cmbOBJTIP_Enter(sender As Object, e As EventArgs) Handles cmbMUVEL.Enter, cmbOBJTIP.Enter
-        cmbIDOE.Enabled = False
-        cmbIDOE.SelectedIndex = -1
-        grdNEMKAPCSOLT.DataSource = Nothing
-        grdKAPCSOLT.DataSource = Nothing
-        cmdODA.Enabled = False
-        cmdVISSZA.Enabled = False
-    End Sub
-
-    Private Sub cmbOBJTIP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbOBJTIP.SelectedIndexChanged
+    Private Sub cmbOBJTIP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbOBJTIP.SelectedIndexChanged, cmbMUVEL.SelectedIndexChanged
         Cursor.Current = Cursors.WaitCursor
 
-        If cmbOBJTIP.SelectedIndex <> -1 Then
+        If optCSOPORTOS1.Checked AndAlso cmbMUVEL.SelectedIndex <> -1 Then
             LoadGrids()
             cmdODA.Enabled = True
             cmdVISSZA.Enabled = True
+            txtIDO.Enabled = True
+            cmbIDOE.Enabled = True
+        ElseIf optCSOPORTOS2.Checked AndAlso cmbMUVEL.SelectedIndex <> -1 AndAlso cmbOBJTIP.SelectedIndex <> -1 Then
+            LoadGrids()
+            cmdODA.Enabled = True
+            cmdVISSZA.Enabled = True
+            txtIDO.Enabled = True
+            cmbIDOE.Enabled = True
+        Else
+            grdKAPCSOLT.DataSource = Nothing
+            grdNEMKAPCSOLT.DataSource = Nothing
+            cmdODA.Enabled = False
+            cmdVISSZA.Enabled = False
+            txtIDO.Enabled = False
+            cmbIDOE.Enabled = False
         End If
         Cursor.Current = Cursors.Default
     End Sub
@@ -117,16 +123,20 @@ Public Class Form022
                         End With
 
                         .Columns(0).Visible = False
-                        If cmbOBJTIP.SelectedValue.Equals("01") Then   'Epulet
-                            .Columns(1).HeaderText = "Utca"
-                            .Columns(2).HeaderText = "Házszám"
-                            .Columns(3).HeaderText = "Épületszám"
-                            .Columns(4).HeaderText = "Helyrajzi szám"
+                        If cmbOBJTIP.Enabled Then
+                            If cmbOBJTIP.SelectedValue.Equals("01") Then   'Epulet
+                                .Columns(1).HeaderText = "Utca"
+                                .Columns(2).HeaderText = "Házszám"
+                                .Columns(3).HeaderText = "Épületszám"
+                                .Columns(4).HeaderText = "Helyrajzi szám"
+                            Else
+                                .Columns(1).HeaderText = "Megnevezés"
+                                .Columns(2).HeaderText = "Típus"
+                                .Columns(3).HeaderText = "Telepítési helyszám"
+                                .Columns(4).HeaderText = "Gyári szám"
+                            End If
                         Else
-                            .Columns(1).HeaderText = "Megnevezés"
-                            .Columns(2).HeaderText = "Típus"
-                            .Columns(3).HeaderText = "Telepítési helyszám"
-                            .Columns(4).HeaderText = "Gyári szám"
+                            .Columns(1).HeaderText = "Berendezés típus"
                         End If
                     End With
                 End With
@@ -159,13 +169,22 @@ Public Class Form022
                         End With
 
                         .Columns(0).Visible = False
-                        If cmbIDOE.SelectedValue.Equals("01") Then   'Epulet
-                            .Columns(1).HeaderText = "Utca"
-                            .Columns(2).HeaderText = "Házszám"
-                            .Columns(3).HeaderText = "Épületszám"
-                            .Columns(4).HeaderText = "Helyrajzi szám"
-                            .Columns(5).HeaderText = "Idő"
-                            .Columns(6).HeaderText = "Időegység"
+                        If cmbOBJTIP.Enabled Then
+                            If cmbOBJTIP.SelectedValue.Equals("01") Then   'Epulet
+                                .Columns(1).HeaderText = "Utca"
+                                .Columns(2).HeaderText = "Házszám"
+                                .Columns(3).HeaderText = "Épületszám"
+                                .Columns(4).HeaderText = "Helyrajzi szám"
+                                .Columns(5).HeaderText = "Idő"
+                                .Columns(6).HeaderText = "Időegység"
+                            Else
+                                .Columns(1).HeaderText = "Megnevezés"
+                                .Columns(2).HeaderText = "Típus"
+                                .Columns(3).HeaderText = "Telepítési helyszám"
+                                .Columns(4).HeaderText = "Gyári szám"
+                                .Columns(5).HeaderText = "Idő"
+                                .Columns(6).HeaderText = "Időegység"
+                            End If
                         Else
                             .Columns(1).HeaderText = "Megnevezés"
                             .Columns(2).HeaderText = "Típus"
@@ -187,7 +206,7 @@ Public Class Form022
     End Sub
 
     Private Sub txtIDO_TextChanged(sender As Object, e As EventArgs) Handles txtIDO.TextChanged
-        If Not String.IsNullOrEmpty(txtIDO.Text) And cmbIDOE.SelectedIndex <> -1 Then
+        If Not String.IsNullOrEmpty(txtIDO.Text) AndAlso cmbIDOE.SelectedIndex <> -1 Then
             cmdODA.Enabled = True
             cmdVISSZA.Enabled = True
         Else
@@ -197,7 +216,7 @@ Public Class Form022
     End Sub
 
     Private Sub cmbIDOE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbIDOE.SelectedIndexChanged
-        If Not String.IsNullOrEmpty(txtIDO.Text) And cmbIDOE.SelectedIndex <> -1 Then
+        If Not String.IsNullOrEmpty(txtIDO.Text) AndAlso cmbIDOE.SelectedIndex <> -1 Then
             cmdODA.Enabled = True
             cmdVISSZA.Enabled = True
         Else
@@ -206,24 +225,37 @@ Public Class Form022
         End If
     End Sub
 
-    Private Sub cmbMUVEL_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbMUVEL.SelectedIndexChanged
-        If cmbMUVEL.SelectedIndex <> -1 Then
-            txtIDO.Enabled = True
-            cmbIDOE.Enabled = True
-            LoadGrids()
-        End If
-    End Sub
-
-    Private Sub GroupBox3_CausesValidationChanged(sender As Object, e As EventArgs) Handles GroupBox3.CausesValidationChanged
+    Private Sub RadioChanged()
         If optCSOPORTOS1.Checked Then
+            cmbMUVEL.SelectedIndex = -1
             cmbOBJTIP.Enabled = False
             cmbOBJTIP.SelectedIndex = -1
             lblOBJ.Text = "B E R E N D E Z É S  F É L E S É G E K"
+            txtIDO.Enabled = True
+            txtIDO.Text = String.Empty
+            cmbIDOE.Enabled = True
+            cmbIDOE.SelectedIndex = -1
             cmdODA.Enabled = False
             cmdVISSZA.Enabled = False
+            grdKAPCSOLT.DataSource = Nothing
+            grdNEMKAPCSOLT.DataSource = Nothing
         ElseIf optCSOPORTOS2.Checked Then
             cmbOBJTIP.Enabled = True
             lblOBJ.Text = "B E R E N D E Z É S E K"
+            txtIDO.Enabled = False
+            cmbIDOE.Enabled = False
+            cmdODA.Enabled = False
+            cmdVISSZA.Enabled = False
+            grdKAPCSOLT.DataSource = Nothing
+            grdNEMKAPCSOLT.DataSource = Nothing
         End If
+    End Sub
+
+    Private Sub optCSOPORTOS1_CheckedChanged(sender As Object, e As EventArgs) Handles optCSOPORTOS1.CheckedChanged
+        RadioChanged()
+    End Sub
+
+    Private Sub optCSOPORTOS2_CheckedChanged(sender As Object, e As EventArgs) Handles optCSOPORTOS2.CheckedChanged
+        RadioChanged()
     End Sub
 End Class
