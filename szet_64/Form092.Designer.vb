@@ -108,6 +108,8 @@ Partial Class Form092
         '
         'cmbKODTIP
         '
+        Me.cmbKODTIP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbKODTIP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbKODTIP.DataSource = Me.SpFillKodtipBindingSource
         Me.cmbKODTIP.DisplayMember = "Column1"
         Me.cmbKODTIP.FormattingEnabled = True

@@ -121,6 +121,8 @@ Partial Class Form012
         '
         'cmbOBJTIP
         '
+        Me.cmbOBJTIP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbOBJTIP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbOBJTIP.DataSource = Me.SpQ296BindingSource
         Me.cmbOBJTIP.DisplayMember = "KODENEV"
         Me.cmbOBJTIP.FormattingEnabled = True
@@ -219,6 +221,8 @@ Partial Class Form012
         '
         'cmbOBJTIP2
         '
+        Me.cmbOBJTIP2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbOBJTIP2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbOBJTIP2.DataSource = Me.SpQ296BindingSource1
         Me.cmbOBJTIP2.DisplayMember = "KODENEV"
         Me.cmbOBJTIP2.FormattingEnabled = True

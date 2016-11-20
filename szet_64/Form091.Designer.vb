@@ -85,6 +85,8 @@ Partial Class Form091
         '
         'cmbDOLGID
         '
+        Me.cmbDOLGID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbDOLGID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbDOLGID.DataSource = Me.SpQ334BindingSource
         Me.cmbDOLGID.DisplayMember = "NEV"
         Me.cmbDOLGID.FormattingEnabled = True
