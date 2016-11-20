@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form021
+Partial Class Form023
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -26,7 +26,7 @@ Partial Class Form021
         Me.cmdEXIT = New System.Windows.Forms.Button()
         Me.SpQ291BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
-        Me.grdKARBAN = New System.Windows.Forms.DataGridView()
+        Me.grdKARBTERV = New System.Windows.Forms.DataGridView()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.cmbMUVEL = New System.Windows.Forms.ComboBox()
         Me.SpQ298BindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -45,14 +45,10 @@ Partial Class Form021
         Me.lblTALALAT = New System.Windows.Forms.Label()
         Me.Sp_Q291TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q291TableAdapter()
         Me.Sp_Q296TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter()
-        Me.lblSZOLGJELL = New System.Windows.Forms.Label()
-        Me.cmbSZOLGJELL = New System.Windows.Forms.ComboBox()
         Me.Sp_Q298TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q298TableAdapter()
-        Me.cmdTERVEK = New System.Windows.Forms.Button()
-        Me.cmdTMK = New System.Windows.Forms.Button()
         CType(Me.SpQ291BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.grdKARBAN, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grdKARBTERV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ298BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -62,7 +58,7 @@ Partial Class Form021
         Me.cmdEXIT.Location = New System.Drawing.Point(12, 556)
         Me.cmdEXIT.Name = "cmdEXIT"
         Me.cmdEXIT.Size = New System.Drawing.Size(75, 25)
-        Me.cmdEXIT.TabIndex = 3
+        Me.cmdEXIT.TabIndex = 2
         Me.cmdEXIT.Text = "Kilépés"
         Me.cmdEXIT.UseVisualStyleBackColor = True
         '
@@ -76,23 +72,23 @@ Partial Class Form021
         Me.SZETAVDataSet.DataSetName = "SZETAVDataSet"
         Me.SZETAVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'grdKARBAN
+        'grdKARBTERV
         '
-        Me.grdKARBAN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdKARBAN.Location = New System.Drawing.Point(93, 170)
-        Me.grdKARBAN.Name = "grdKARBAN"
-        Me.grdKARBAN.Size = New System.Drawing.Size(1026, 411)
-        Me.grdKARBAN.TabIndex = 10
+        Me.grdKARBTERV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grdKARBTERV.Location = New System.Drawing.Point(93, 170)
+        Me.grdKARBTERV.Name = "grdKARBTERV"
+        Me.grdKARBTERV.Size = New System.Drawing.Size(1026, 411)
+        Me.grdKARBTERV.TabIndex = 9
         '
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.Font = New System.Drawing.Font("Arial", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.lblTitle.Location = New System.Drawing.Point(472, 9)
+        Me.lblTitle.Location = New System.Drawing.Point(416, 9)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(228, 36)
+        Me.lblTitle.Size = New System.Drawing.Size(296, 36)
         Me.lblTitle.TabIndex = 25
-        Me.lblTitle.Text = "Karbantartások"
+        Me.lblTitle.Text = "Karbantartási tervek"
         '
         'cmbMUVEL
         '
@@ -102,7 +98,7 @@ Partial Class Form021
         Me.cmbMUVEL.Location = New System.Drawing.Point(198, 114)
         Me.cmbMUVEL.Name = "cmbMUVEL"
         Me.cmbMUVEL.Size = New System.Drawing.Size(180, 22)
-        Me.cmbMUVEL.TabIndex = 6
+        Me.cmbMUVEL.TabIndex = 5
         Me.cmbMUVEL.Tag = "298"
         Me.cmbMUVEL.ValueMember = "KODERT"
         '
@@ -137,7 +133,7 @@ Partial Class Form021
         Me.datDATUMTOL.Name = "datDATUMTOL"
         Me.datDATUMTOL.ShowCheckBox = True
         Me.datDATUMTOL.Size = New System.Drawing.Size(100, 20)
-        Me.datDATUMTOL.TabIndex = 4
+        Me.datDATUMTOL.TabIndex = 3
         Me.datDATUMTOL.Value = New Date(2016, 9, 1, 0, 0, 0, 0)
         '
         'lblMUNIDO2
@@ -158,7 +154,7 @@ Partial Class Form021
         Me.datDATUMIG.Name = "datDATUMIG"
         Me.datDATUMIG.ShowCheckBox = True
         Me.datDATUMIG.Size = New System.Drawing.Size(100, 20)
-        Me.datDATUMIG.TabIndex = 5
+        Me.datDATUMIG.TabIndex = 4
         Me.datDATUMIG.Value = New Date(2016, 10, 1, 0, 0, 0, 0)
         '
         'cmbOBJTIP
@@ -171,7 +167,7 @@ Partial Class Form021
         Me.cmbOBJTIP.Location = New System.Drawing.Point(505, 86)
         Me.cmbOBJTIP.Name = "cmbOBJTIP"
         Me.cmbOBJTIP.Size = New System.Drawing.Size(180, 22)
-        Me.cmbOBJTIP.TabIndex = 7
+        Me.cmbOBJTIP.TabIndex = 6
         Me.cmbOBJTIP.Tag = "296"
         Me.cmbOBJTIP.ValueMember = "KODERT"
         '
@@ -197,7 +193,7 @@ Partial Class Form021
         Me.cmbOBJID.Location = New System.Drawing.Point(505, 114)
         Me.cmbOBJID.Name = "cmbOBJID"
         Me.cmbOBJID.Size = New System.Drawing.Size(180, 22)
-        Me.cmbOBJID.TabIndex = 8
+        Me.cmbOBJID.TabIndex = 7
         Me.cmbOBJID.Tag = "MEGNEV"
         '
         'lblOBJID
@@ -247,56 +243,15 @@ Partial Class Form021
         '
         Me.Sp_Q296TableAdapter.ClearBeforeFill = True
         '
-        'lblSZOLGJELL
-        '
-        Me.lblSZOLGJELL.Location = New System.Drawing.Point(400, 145)
-        Me.lblSZOLGJELL.Name = "lblSZOLGJELL"
-        Me.lblSZOLGJELL.Size = New System.Drawing.Size(99, 13)
-        Me.lblSZOLGJELL.TabIndex = 26
-        Me.lblSZOLGJELL.Text = "Szolgáltatás jellege"
-        Me.lblSZOLGJELL.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'cmbSZOLGJELL
-        '
-        Me.cmbSZOLGJELL.DataSource = Me.SpQ291BindingSource
-        Me.cmbSZOLGJELL.DisplayMember = "KODENEV"
-        Me.cmbSZOLGJELL.FormattingEnabled = True
-        Me.cmbSZOLGJELL.Location = New System.Drawing.Point(505, 142)
-        Me.cmbSZOLGJELL.Name = "cmbSZOLGJELL"
-        Me.cmbSZOLGJELL.Size = New System.Drawing.Size(180, 22)
-        Me.cmbSZOLGJELL.TabIndex = 9
-        Me.cmbSZOLGJELL.Tag = "291"
-        Me.cmbSZOLGJELL.ValueMember = "KODERT"
-        '
         'Sp_Q298TableAdapter
         '
         Me.Sp_Q298TableAdapter.ClearBeforeFill = True
         '
-        'cmdTERVEK
-        '
-        Me.cmdTERVEK.Location = New System.Drawing.Point(12, 284)
-        Me.cmdTERVEK.Name = "cmdTERVEK"
-        Me.cmdTERVEK.Size = New System.Drawing.Size(75, 25)
-        Me.cmdTERVEK.TabIndex = 1
-        Me.cmdTERVEK.Text = "Tervezés"
-        Me.cmdTERVEK.UseVisualStyleBackColor = True
-        '
-        'cmdTMK
-        '
-        Me.cmdTMK.Location = New System.Drawing.Point(12, 322)
-        Me.cmdTMK.Name = "cmdTMK"
-        Me.cmdTMK.Size = New System.Drawing.Size(75, 25)
-        Me.cmdTMK.TabIndex = 2
-        Me.cmdTMK.Text = "TMK"
-        Me.cmdTMK.UseVisualStyleBackColor = True
-        '
-        'Form021
+        'Form023
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1129, 593)
-        Me.Controls.Add(Me.cmdTMK)
-        Me.Controls.Add(Me.cmdTERVEK)
         Me.Controls.Add(Me.txtTALALAT)
         Me.Controls.Add(Me.lblMUNIDO2)
         Me.Controls.Add(Me.datDATUMIG)
@@ -306,23 +261,21 @@ Partial Class Form021
         Me.Controls.Add(Me.lblTALALAT)
         Me.Controls.Add(Me.lblOBJID)
         Me.Controls.Add(Me.lblOBJTIP)
-        Me.Controls.Add(Me.lblSZOLGJELL)
         Me.Controls.Add(Me.lblTitle)
-        Me.Controls.Add(Me.grdKARBAN)
+        Me.Controls.Add(Me.grdKARBTERV)
         Me.Controls.Add(Me.cmbMUVEL)
         Me.Controls.Add(Me.cmbOBJID)
         Me.Controls.Add(Me.cmbOBJTIP)
-        Me.Controls.Add(Me.cmbSZOLGJELL)
         Me.Controls.Add(Me.cmdFRISSIT)
         Me.Controls.Add(Me.cmdEXIT)
         Me.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Name = "Form021"
+        Me.Name = "Form023"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form021 - Karbantartások"
+        Me.Text = "Form023 - Karbantartási tervek"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.SpQ291BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.grdKARBAN, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grdKARBTERV, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ298BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -330,7 +283,7 @@ Partial Class Form021
 
     End Sub
     Friend WithEvents cmdEXIT As System.Windows.Forms.Button
-    Friend WithEvents grdKARBAN As System.Windows.Forms.DataGridView
+    Friend WithEvents grdKARBTERV As System.Windows.Forms.DataGridView
     Friend WithEvents lblTitle As System.Windows.Forms.Label
     Friend WithEvents cmbMUVEL As System.Windows.Forms.ComboBox
     Friend WithEvents lblMUVEL As System.Windows.Forms.Label
@@ -350,10 +303,6 @@ Partial Class Form021
     Friend WithEvents Sp_Q291TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q291TableAdapter
     Friend WithEvents SpQ296BindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Sp_Q296TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter
-    Friend WithEvents lblSZOLGJELL As System.Windows.Forms.Label
-    Friend WithEvents cmbSZOLGJELL As System.Windows.Forms.ComboBox
     Friend WithEvents SpQ298BindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Sp_Q298TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q298TableAdapter
-    Friend WithEvents cmdTERVEK As System.Windows.Forms.Button
-    Friend WithEvents cmdTMK As System.Windows.Forms.Button
 End Class

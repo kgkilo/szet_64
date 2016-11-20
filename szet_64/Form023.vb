@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class Form021
+Public Class Form023
 
     Private Sub cmdEXIT_Click(sender As Object, e As EventArgs) Handles cmdEXIT.Click
         Me.Close()
@@ -16,10 +16,6 @@ Public Class Form021
             'Tartolt eljaras parametereinek feltoltese
             If cmbMUVEL.SelectedIndex <> -1 Then
                 .Parameters.Add("@pMUVEL", SqlDbType.VarChar, 3).Value = cmbMUVEL.SelectedValue
-            End If
-
-            If cmbSZOLGJELL.SelectedIndex <> -1 Then
-                .Parameters.Add("@pSZOLGJ", SqlDbType.VarChar, 2).Value = cmbSZOLGJELL.SelectedValue
             End If
 
             If cmbOBJTIP.SelectedIndex <> -1 Then
@@ -43,10 +39,10 @@ Public Class Form021
         Dim dt As New DataTable
         dbadp.Fill(dt)
         dbadp.Dispose()
-        grdKARBAN.DataSource = dt
+        grdKARBTERV.DataSource = dt
 
         'Grid formazasa
-        With grdKARBAN
+        With grdKARBTERV
             .AllowUserToAddRows = False 'Nem kell a grid aljan ures sor
             .SelectionMode = DataGridViewSelectionMode.FullRowSelect
             .ReadOnly = True
@@ -54,32 +50,38 @@ Public Class Form021
             With .ColumnHeadersDefaultCellStyle
                 .BackColor = Color.DarkGray
                 .ForeColor = Color.Gray
-                .Font = New Font(grdKARBAN.Font, FontStyle.Bold)
+                .Font = New Font(grdKARBTERV.Font, FontStyle.Bold)
             End With
 
             .Columns(0).Visible = False
-            .Columns(1).HeaderText = "Berendezés típus"
-            .Columns(2).HeaderText = "Berendezés"
-            .Columns(3).HeaderText = "Típus"
-            .Columns(4).HeaderText = "Telep. hsz."
-            .Columns(5).HeaderText = "Gy. szám"
-            .Columns(6).HeaderText = "Szolgáltatás"
-            .Columns(7).HeaderText = "Művelet"
-            .Columns(8).HeaderText = "Dátum"
-            .Columns(9).HeaderText = "Munkalap"
-            .Columns(10).HeaderText = "Művelet leírása"
+            .Columns(1).HeaderText = "Fűtőmű"
+            .Columns(2).HeaderText = "Lépcsőház"
+            .Columns(3).HeaderText = "Ber. típus"
+            .Columns(4).HeaderText = "Berendezés"
+            .Columns(5).HeaderText = "Típus"
+            .Columns(6).HeaderText = "Telep. hsz"
+            .Columns(7).HeaderText = "Gy.szám"
+            .Columns(8).HeaderText = "Cím"
+            .Columns(9).HeaderText = "Művelet"
+            .Columns(10).HeaderText = "Terv. dátum"
+            .Columns(11).HeaderText = "Karb. dátum"
+            .Columns(12).HeaderText = "Átmérő"
+            .Columns(13).HeaderText = "Impulzus"
+            .Columns(14).HeaderText = "Vez. hossz"
+            .Columns(15).HeaderText = "Beny. hossz"
+            .Columns(16).HeaderText = "Megj."
 
             .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         End With
 
         'Talalatok szama
-        txtTALALAT.Text = grdKARBAN.RowCount
+        txtTALALAT.Text = grdKARBTERV.RowCount
 
         'Villogas vege
         Cursor.Current = Cursors.Default
     End Sub
 
-    Private Sub Form021_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form023_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cursor.Current = Cursors.WaitCursor
         Me.Sp_Q298TableAdapter.Fill(Me.SZETAVDataSet.sp_Q298)
         Me.Sp_Q296TableAdapter.Fill(Me.SZETAVDataSet.sp_Q296)
@@ -90,7 +92,6 @@ Public Class Form021
         datDATUMIG.Value = Now
         datDATUMIG.Checked = True
 
-        cmbSZOLGJELL.SelectedIndex = -1
         cmbMUVEL.SelectedValue = 1    'Uzemfenntartas
         cmbOBJTIP.SelectedIndex = -1
 
@@ -122,12 +123,4 @@ Public Class Form021
         End If
     End Sub
 
-    Private Sub cmdTERVEK_Click(sender As Object, e As EventArgs) Handles cmdTERVEK.Click
-        Form022.ShowDialog(Me)
-        Form022.Dispose()
-    End Sub
-
-    Private Sub cmdTMK_Click(sender As Object, e As EventArgs) Handles cmdTMK.Click
-        Form023.Show(Me)
-    End Sub
 End Class
