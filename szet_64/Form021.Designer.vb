@@ -26,11 +26,12 @@ Partial Class Form021
         Me.cmdEXIT = New System.Windows.Forms.Button()
         Me.SpQ291BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
-        Me.grdMUNKALAP = New System.Windows.Forms.DataGridView()
+        Me.grdKARBAN = New System.Windows.Forms.DataGridView()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.SpQ293BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SpQ310ABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.cmbMUVEL = New System.Windows.Forms.ComboBox()
+        Me.SpQ298BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SpQ337BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblMUVEL = New System.Windows.Forms.Label()
         Me.lblMUNIDO = New System.Windows.Forms.Label()
@@ -58,18 +59,17 @@ Partial Class Form021
         Me.Sp_Q334TableAdapter1 = New szet_64.SZETAVDataSetTableAdapters.sp_Q334TableAdapter()
         Me.lblSZOLGJELL = New System.Windows.Forms.Label()
         Me.cmbSZOLGJELL = New System.Windows.Forms.ComboBox()
-        Me.SpQ298BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Sp_Q298TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q298TableAdapter()
         CType(Me.SpQ291BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.grdMUNKALAP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grdKARBAN, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ293BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ310ABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpQ298BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ337BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ335BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ334BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpQ298BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdEXIT
@@ -91,13 +91,13 @@ Partial Class Form021
         Me.SZETAVDataSet.DataSetName = "SZETAVDataSet"
         Me.SZETAVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'grdMUNKALAP
+        'grdKARBAN
         '
-        Me.grdMUNKALAP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdMUNKALAP.Location = New System.Drawing.Point(93, 170)
-        Me.grdMUNKALAP.Name = "grdMUNKALAP"
-        Me.grdMUNKALAP.Size = New System.Drawing.Size(1026, 411)
-        Me.grdMUNKALAP.TabIndex = 24
+        Me.grdKARBAN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grdKARBAN.Location = New System.Drawing.Point(93, 170)
+        Me.grdKARBAN.Name = "grdKARBAN"
+        Me.grdKARBAN.Size = New System.Drawing.Size(1026, 411)
+        Me.grdKARBAN.TabIndex = 24
         '
         'lblTitle
         '
@@ -130,6 +130,11 @@ Partial Class Form021
         Me.cmbMUVEL.TabIndex = 4
         Me.cmbMUVEL.Tag = "298"
         Me.cmbMUVEL.ValueMember = "KODERT"
+        '
+        'SpQ298BindingSource
+        '
+        Me.SpQ298BindingSource.DataMember = "sp_Q298"
+        Me.SpQ298BindingSource.DataSource = Me.SZETAVDataSet
         '
         'SpQ337BindingSource
         '
@@ -344,11 +349,6 @@ Partial Class Form021
         Me.cmbSZOLGJELL.Tag = "291"
         Me.cmbSZOLGJELL.ValueMember = "KODERT"
         '
-        'SpQ298BindingSource
-        '
-        Me.SpQ298BindingSource.DataMember = "sp_Q298"
-        Me.SpQ298BindingSource.DataSource = Me.SZETAVDataSet
-        '
         'Sp_Q298TableAdapter
         '
         Me.Sp_Q298TableAdapter.ClearBeforeFill = True
@@ -371,7 +371,7 @@ Partial Class Form021
         Me.Controls.Add(Me.lblOBJTIP)
         Me.Controls.Add(Me.lblSZOLGJELL)
         Me.Controls.Add(Me.lblTitle)
-        Me.Controls.Add(Me.grdMUNKALAP)
+        Me.Controls.Add(Me.grdKARBAN)
         Me.Controls.Add(Me.cmbMUVEL)
         Me.Controls.Add(Me.cmbOBJID)
         Me.Controls.Add(Me.cmbOBJTIP)
@@ -385,20 +385,20 @@ Partial Class Form021
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.SpQ291BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.grdMUNKALAP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grdKARBAN, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ293BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ310ABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpQ298BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ337BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ335BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ334BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpQ298BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents cmdEXIT As System.Windows.Forms.Button
-    Friend WithEvents grdMUNKALAP As System.Windows.Forms.DataGridView
+    Friend WithEvents grdKARBAN As System.Windows.Forms.DataGridView
     Friend WithEvents lblTitle As System.Windows.Forms.Label
     Friend WithEvents cmbMUVEL As System.Windows.Forms.ComboBox
     Friend WithEvents lblMUVEL As System.Windows.Forms.Label

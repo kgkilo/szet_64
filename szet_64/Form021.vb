@@ -10,68 +10,32 @@ Public Class Form021
         Cursor.Current = Cursors.WaitCursor
 
         'Grid feltoltese tarolt eljarasbol
-        Dim dbadp As New SqlDataAdapter("sp_LekerdMlap", GlobalVars.sConnStr)
+        Dim dbadp As New SqlDataAdapter("sp_LekerdKarban", GlobalVars.sConnStr)
         With dbadp.SelectCommand
             .CommandType = CommandType.StoredProcedure
             'Tartolt eljaras parametereinek feltoltese
             If cmbMUVEL.SelectedIndex <> -1 Then
-                .Parameters.Add("@MLAPTIP", SqlDbType.VarChar, 1).Value = cmbMUVEL.SelectedValue
+                .Parameters.Add("@pMUVEL", SqlDbType.VarChar, 3).Value = cmbMUVEL.SelectedValue
             End If
 
             If cmbSZOLGJELL.SelectedIndex <> -1 Then
-                .Parameters.Add("@SZOLGJELL", SqlDbType.VarChar, 2).Value = cmbSZOLGJELL.SelectedValue
-            End If
-
-            If cmbTIPUSH.SelectedIndex <> -1 Then
-                .Parameters.Add("@TIPUSH", SqlDbType.VarChar, 3).Value = cmbTIPUSH.SelectedValue
-            End If
-
-            If cmbFSZAM.SelectedIndex <> -1 Then
-                .Parameters.Add("@FSZAM", SqlDbType.VarChar, 12).Value = cmbFSZAM.SelectedValue
+                .Parameters.Add("@pSZOLGJ", SqlDbType.VarChar, 2).Value = cmbSZOLGJELL.SelectedValue
             End If
 
             If cmbOBJTIP.SelectedIndex <> -1 Then
-                .Parameters.Add("@OBJTIP", SqlDbType.VarChar, 2).Value = cmbOBJTIP.SelectedValue
+                .Parameters.Add("@pOBJTIP", SqlDbType.VarChar, 2).Value = cmbOBJTIP.SelectedValue
             End If
 
             If cmbOBJID.SelectedIndex <> -1 Then
-                .Parameters.Add("@OBJID", SqlDbType.Int).Value = cmbOBJID.SelectedValue
-            End If
-
-            If cmbDOLGID.SelectedIndex <> -1 Then
-                .Parameters.Add("@DOLGID", SqlDbType.Int).Value = cmbDOLGID.SelectedValue
+                .Parameters.Add("@pOBJID", SqlDbType.Int).Value = cmbOBJID.SelectedValue
             End If
 
             If datDATUMTOL.Checked Then
-                .Parameters.Add("@DATUMTOL", SqlDbType.DateTime).Value = datDATUMTOL.Value
+                .Parameters.Add("@pDATUMTOL", SqlDbType.DateTime).Value = datDATUMTOL.Value
             End If
 
             If datDATUMIG.Checked Then
-                .Parameters.Add("@DATUMIG", SqlDbType.DateTime).Value = datDATUMIG.Value
-            End If
-
-            If datMUNDATTOL.Checked Then
-                .Parameters.Add("@MUNDATTOL", SqlDbType.DateTime).Value = datMUNDATTOL.Value
-            End If
-
-            If datMUNDATIG.Checked Then
-                .Parameters.Add("@MUNDATIG", SqlDbType.DateTime).Value = datMUNDATIG.Value
-            End If
-
-            If cmbALLAPOT.SelectedIndex <> -1 Then
-                .Parameters.Add("@ALLAPOT", SqlDbType.Int).Value = cmbALLAPOT.SelectedValue
-            End If
-
-            If txtMUNKALAPID.Text <> "" Then
-                .Parameters.Add("@MUNKALAPID", SqlDbType.Int).Value = CInt(txtMUNKALAPID.Text)
-            End If
-
-            If cmbTELEPHSZ.SelectedIndex <> -1 Then
-                .Parameters.Add("@TELEPHSZ", SqlDbType.VarChar, 20).Value = cmbTELEPHSZ.SelectedValue
-            End If
-
-            If datMUNELV.Checked Then
-                .Parameters.Add("@MUNELV", SqlDbType.DateTime).Value = datMUNELV.Value
+                .Parameters.Add("@pDATUMIG", SqlDbType.DateTime).Value = datDATUMIG.Value
             End If
 
         End With
@@ -79,10 +43,10 @@ Public Class Form021
         Dim dt As New DataTable
         dbadp.Fill(dt)
         dbadp.Dispose()
-        grdMUNKALAP.DataSource = dt
+        grdKARBAN.DataSource = dt
 
         'Grid formazasa
-        With grdMUNKALAP
+        With grdKARBAN
             .AllowUserToAddRows = False 'Nem kell a grid aljan ures sor
             .SelectionMode = DataGridViewSelectionMode.FullRowSelect
             .ReadOnly = True
@@ -90,37 +54,26 @@ Public Class Form021
             With .ColumnHeadersDefaultCellStyle
                 .BackColor = Color.DarkGray
                 .ForeColor = Color.Gray
-                .Font = New Font(grdMUNKALAP.Font, FontStyle.Bold)
+                .Font = New Font(grdKARBAN.Font, FontStyle.Bold)
             End With
 
             .Columns(0).Visible = False
-            .Columns(1).HeaderText = "Sorszám"
-            .Columns(2).HeaderText = "Bejelentő"
-            .Columns(3).HeaderText = "Kiáll. dátum"
-            .Columns(4).HeaderText = "Végezhető"
-            .Columns(5).HeaderText = "Szolg. jellege"
-            .Columns(6).HeaderText = "Helyszín"
-            .Columns(7).HeaderText = "Berendezés"
-            .Columns(8).HeaderText = "Telep. hsz."
-            .Columns(9).HeaderText = "Hiba leírása"
-            .Columns(10).HeaderText = "Elvégzett munka"
-            .Columns(11).HeaderText = "Dolgozó"
-            .Columns(12).HeaderText = "Visszaírás"
-            .Columns(13).HeaderText = "Munkaóra"
+            .Columns(1).HeaderText = "Berendezés típus"
+            .Columns(2).HeaderText = "Berendezés"
+            .Columns(3).HeaderText = "Típus"
+            .Columns(4).HeaderText = "Telep. hsz."
+            .Columns(5).HeaderText = "Gy. szám"
+            .Columns(6).HeaderText = "Szolgáltatás"
+            .Columns(7).HeaderText = "Művelet"
+            .Columns(8).HeaderText = "Dátum"
+            .Columns(9).HeaderText = "Munkalap"
+            .Columns(10).HeaderText = "Művelet leírása"
 
             .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         End With
 
-        'Munkaora osszeszamolasa
-        Dim iOra As Long = 0
-        Dim o As DataGridViewRow
-        For Each o In grdMUNKALAP.Rows
-            iOra += CLng(If(o.Cells(13).Value, 0))
-        Next o
-        txtMUNOSZ.Text = iOra
-
         'Talalatok szama
-        txtTALALAT.Text = grdMUNKALAP.RowCount
+        txtTALALAT.Text = grdKARBAN.RowCount
 
         'Villogas vege
         Cursor.Current = Cursors.Default

@@ -111,7 +111,6 @@ Partial Class FormStart
         '
         'cmdKARBAN
         '
-        Me.cmdKARBAN.Enabled = False
         Me.cmdKARBAN.Location = New System.Drawing.Point(81, 154)
         Me.cmdKARBAN.Name = "cmdKARBAN"
         Me.cmdKARBAN.Size = New System.Drawing.Size(150, 46)
