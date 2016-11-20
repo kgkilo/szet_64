@@ -28,8 +28,10 @@ Partial Class Form011a
         Me.cmdCANCEL = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.chkAKTIV = New System.Windows.Forms.CheckBox()
         Me.dtHITIDO = New System.Windows.Forms.DateTimePicker()
         Me.dtUZEMIDO = New System.Windows.Forms.DateTimePicker()
+        Me.lblAKTIV = New System.Windows.Forms.Label()
         Me.lblMEGJ = New System.Windows.Forms.Label()
         Me.lblHSZ = New System.Windows.Forms.Label()
         Me.lblUTCA = New System.Windows.Forms.Label()
@@ -405,8 +407,8 @@ Partial Class Form011a
         Me.Sp_Q363TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q363TableAdapter()
         Me.Sp_Q324TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q324TableAdapter()
         Me.Sp_Q323TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q323TableAdapter()
-        Me.chkAKTIV = New System.Windows.Forms.CheckBox()
-        Me.lblAKTIV = New System.Windows.Forms.Label()
+        Me.txtFUTOMUNEV = New System.Windows.Forms.TextBox()
+        Me.spcFUTOMUNEV = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.SpQ289BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -473,7 +475,7 @@ Partial Class Form011a
         Me.cmdOK.Location = New System.Drawing.Point(662, 402)
         Me.cmdOK.Name = "cmdOK"
         Me.cmdOK.Size = New System.Drawing.Size(75, 23)
-        Me.cmdOK.TabIndex = 24
+        Me.cmdOK.TabIndex = 23
         Me.cmdOK.Text = "Rendben"
         Me.cmdOK.UseVisualStyleBackColor = True
         '
@@ -483,7 +485,7 @@ Partial Class Form011a
         Me.cmdCANCEL.Location = New System.Drawing.Point(13, 402)
         Me.cmdCANCEL.Name = "cmdCANCEL"
         Me.cmdCANCEL.Size = New System.Drawing.Size(75, 23)
-        Me.cmdCANCEL.TabIndex = 23
+        Me.cmdCANCEL.TabIndex = 22
         Me.cmdCANCEL.Text = "Mégsem"
         Me.cmdCANCEL.UseVisualStyleBackColor = True
         '
@@ -510,6 +512,7 @@ Partial Class Form011a
         Me.TabPage1.Controls.Add(Me.lblAKTIV)
         Me.TabPage1.Controls.Add(Me.lblMEGJ)
         Me.TabPage1.Controls.Add(Me.lblHSZ)
+        Me.TabPage1.Controls.Add(Me.spcFUTOMUNEV)
         Me.TabPage1.Controls.Add(Me.lblUTCA)
         Me.TabPage1.Controls.Add(Me.lblVAROS)
         Me.TabPage1.Controls.Add(Me.lblKATEG)
@@ -540,6 +543,7 @@ Partial Class Form011a
         Me.TabPage1.Controls.Add(Me.txtMEGJ)
         Me.TabPage1.Controls.Add(Me.txtNEVLTELJ)
         Me.TabPage1.Controls.Add(Me.txtHSZ)
+        Me.TabPage1.Controls.Add(Me.txtFUTOMUNEV)
         Me.TabPage1.Controls.Add(Me.txtUTCA)
         Me.TabPage1.Controls.Add(Me.txtTELEPHSZ)
         Me.TabPage1.Controls.Add(Me.txtGYSZAM)
@@ -553,6 +557,15 @@ Partial Class Form011a
         Me.TabPage1.Size = New System.Drawing.Size(721, 322)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Általános"
+        '
+        'chkAKTIV
+        '
+        Me.chkAKTIV.AutoSize = True
+        Me.chkAKTIV.Location = New System.Drawing.Point(123, 293)
+        Me.chkAKTIV.Name = "chkAKTIV"
+        Me.chkAKTIV.Size = New System.Drawing.Size(15, 14)
+        Me.chkAKTIV.TabIndex = 21
+        Me.chkAKTIV.UseVisualStyleBackColor = True
         '
         'dtHITIDO
         '
@@ -577,6 +590,15 @@ Partial Class Form011a
         Me.dtUZEMIDO.Size = New System.Drawing.Size(138, 20)
         Me.dtUZEMIDO.TabIndex = 4
         Me.dtUZEMIDO.Value = New Date(2016, 1, 1, 0, 0, 0, 0)
+        '
+        'lblAKTIV
+        '
+        Me.lblAKTIV.Location = New System.Drawing.Point(12, 293)
+        Me.lblAKTIV.Name = "lblAKTIV"
+        Me.lblAKTIV.Size = New System.Drawing.Size(105, 13)
+        Me.lblAKTIV.TabIndex = 2
+        Me.lblAKTIV.Text = "Aktív?"
+        Me.lblAKTIV.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblMEGJ
         '
@@ -3812,23 +3834,25 @@ Partial Class Form011a
         '
         Me.Sp_Q323TableAdapter.ClearBeforeFill = True
         '
-        'chkAKTIV
+        'txtFUTOMUNEV
         '
-        Me.chkAKTIV.AutoSize = True
-        Me.chkAKTIV.Location = New System.Drawing.Point(123, 291)
-        Me.chkAKTIV.Name = "chkAKTIV"
-        Me.chkAKTIV.Size = New System.Drawing.Size(15, 14)
-        Me.chkAKTIV.TabIndex = 21
-        Me.chkAKTIV.UseVisualStyleBackColor = True
+        Me.txtFUTOMUNEV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtFUTOMUNEV.Enabled = False
+        Me.txtFUTOMUNEV.Location = New System.Drawing.Point(297, 291)
+        Me.txtFUTOMUNEV.Name = "txtFUTOMUNEV"
+        Me.txtFUTOMUNEV.ReadOnly = True
+        Me.txtFUTOMUNEV.Size = New System.Drawing.Size(278, 20)
+        Me.txtFUTOMUNEV.TabIndex = 18
+        Me.txtFUTOMUNEV.TabStop = False
         '
-        'lblAKTIV
+        'spcFUTOMUNEV
         '
-        Me.lblAKTIV.Location = New System.Drawing.Point(12, 291)
-        Me.lblAKTIV.Name = "lblAKTIV"
-        Me.lblAKTIV.Size = New System.Drawing.Size(105, 13)
-        Me.lblAKTIV.TabIndex = 2
-        Me.lblAKTIV.Text = "Aktív?"
-        Me.lblAKTIV.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.spcFUTOMUNEV.Location = New System.Drawing.Point(181, 293)
+        Me.spcFUTOMUNEV.Name = "spcFUTOMUNEV"
+        Me.spcFUTOMUNEV.Size = New System.Drawing.Size(110, 13)
+        Me.spcFUTOMUNEV.TabIndex = 2
+        Me.spcFUTOMUNEV.Text = "Kapcsolódó fűtőmű"
+        Me.spcFUTOMUNEV.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Form011a
         '
@@ -4289,4 +4313,6 @@ Partial Class Form011a
     Friend WithEvents txtUZEMIVIZSZ As System.Windows.Forms.TextBox
     Friend WithEvents chkAKTIV As System.Windows.Forms.CheckBox
     Friend WithEvents lblAKTIV As System.Windows.Forms.Label
+    Friend WithEvents spcFUTOMUNEV As System.Windows.Forms.Label
+    Friend WithEvents txtFUTOMUNEV As System.Windows.Forms.TextBox
 End Class

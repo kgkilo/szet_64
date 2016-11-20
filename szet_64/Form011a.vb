@@ -197,6 +197,19 @@ Public Class Form011a
                 End While
             End If   'HasRows
             sqlReader.Close()
+            sqlConn.Close()
+
+            Dim sqlCommFutomu As New SqlCommand("sp_GetInfoSpec", sqlConn)
+            sqlCommFutomu.CommandType = CommandType.StoredProcedure
+            sqlCommFutomu.Parameters.Add("@pID", SqlDbType.Int).Value = Me.Tag
+
+            sqlConn.Open()
+            Dim sqlReaderFutomu As SqlDataReader = sqlCommFutomu.ExecuteReader()
+            If sqlReaderFutomu.HasRows Then
+                While (sqlReaderFutomu.Read())
+                    txtFUTOMUNEV.Text = sqlReaderFutomu.Item("FUTOMUNEV").ToString
+                End While
+            End If
         Catch ex As Exception
             MsgBox(ex.Message, , ex.ToString)
         End Try
