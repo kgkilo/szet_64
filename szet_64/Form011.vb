@@ -10,6 +10,9 @@ Public Class Form011
             With dbadp.SelectCommand
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@pOBJTIP", SqlDbType.VarChar, 2).Value = cmbOBJTIP.SelectedValue
+                If Not String.IsNullOrEmpty(txtSEARCH.Text) AndAlso txtSEARCH.TextLength > 3 Then
+                    '.Parameters.Add("@pMEGNEV", SqlDbType.VarChar, 50).Value = txtSEARCH.Text
+                End If
 
                 Dim dt As New DataTable
                 dbadp.Fill(dt)
@@ -36,15 +39,9 @@ Public Class Form011
                     .Columns(3).HeaderText = "Telep. helyszám"
                     .Columns(4).HeaderText = "Gyári szám"
                     .Columns(5).HeaderText = "Üzemidő"
-                    .Columns(6).Visible = False
-                    .Columns(7).Visible = False
-                    .Columns(8).Visible = False
-                    .Columns(9).Visible = False
-                    .Columns(10).Visible = False
-                    .Columns(11).Visible = False
-                    .Columns(12).Visible = False
-                    .Columns(13).Visible = False
-                    .Columns(14).Visible = False
+                    For i As Integer = 6 To .ColumnCount - 1
+                        .Columns(i).Visible = False
+                    Next i
                 End With
             Catch ex As Exception
                 MsgBox(ex.Message, , ex.ToString)
@@ -129,4 +126,9 @@ Public Class Form011
         Me.LoadGrid()
     End Sub
 
+    Private Sub txtSEARCH_TextChanged(sender As Object, e As EventArgs) Handles txtSEARCH.TextChanged
+        If Not String.IsNullOrEmpty(txtSEARCH.Text) AndAlso txtSEARCH.TextLength > 3 Then
+            Me.LoadGrid()
+        End If
+    End Sub
 End Class

@@ -36,6 +36,8 @@ Partial Class Form011
         Me.Sp_Q296TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter()
         Me.txtTALALAT = New System.Windows.Forms.TextBox()
         Me.lblTALALAT = New System.Windows.Forms.Label()
+        Me.txtSEARCH = New System.Windows.Forms.TextBox()
+        Me.lblSEARCH = New System.Windows.Forms.Label()
         CType(Me.grd011, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,7 +89,7 @@ Partial Class Form011
         Me.cmdEXIT.Location = New System.Drawing.Point(12, 556)
         Me.cmdEXIT.Name = "cmdEXIT"
         Me.cmdEXIT.Size = New System.Drawing.Size(75, 25)
-        Me.cmdEXIT.TabIndex = 9
+        Me.cmdEXIT.TabIndex = 4
         Me.cmdEXIT.Text = "Kilépés"
         Me.cmdEXIT.UseVisualStyleBackColor = True
         '
@@ -111,7 +113,7 @@ Partial Class Form011
         Me.cmbOBJTIP.Location = New System.Drawing.Point(198, 58)
         Me.cmbOBJTIP.Name = "cmbOBJTIP"
         Me.cmbOBJTIP.Size = New System.Drawing.Size(180, 21)
-        Me.cmbOBJTIP.TabIndex = 11
+        Me.cmbOBJTIP.TabIndex = 5
         Me.cmbOBJTIP.Tag = "296"
         Me.cmbOBJTIP.ValueMember = "KODERT"
         '
@@ -154,11 +156,28 @@ Partial Class Form011
         Me.lblTALALAT.Text = "Találatok"
         Me.lblTALALAT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'txtSEARCH
+        '
+        Me.txtSEARCH.Location = New System.Drawing.Point(487, 58)
+        Me.txtSEARCH.Name = "txtSEARCH"
+        Me.txtSEARCH.Size = New System.Drawing.Size(100, 20)
+        Me.txtSEARCH.TabIndex = 6
+        '
+        'lblSEARCH
+        '
+        Me.lblSEARCH.Location = New System.Drawing.Point(411, 61)
+        Me.lblSEARCH.Name = "lblSEARCH"
+        Me.lblSEARCH.Size = New System.Drawing.Size(70, 13)
+        Me.lblSEARCH.TabIndex = 16
+        Me.lblSEARCH.Text = "Megnevezés"
+        '
         'Form011
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1129, 586)
+        Me.Controls.Add(Me.lblSEARCH)
+        Me.Controls.Add(Me.txtSEARCH)
         Me.Controls.Add(Me.lblTALALAT)
         Me.Controls.Add(Me.txtTALALAT)
         Me.Controls.Add(Me.lblOBJTIP)
@@ -194,4 +213,6 @@ Partial Class Form011
     Friend WithEvents txtTALALAT As System.Windows.Forms.TextBox
     Friend WithEvents lblTALALAT As System.Windows.Forms.Label
     Friend WithEvents IDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents txtSEARCH As System.Windows.Forms.TextBox
+    Friend WithEvents lblSEARCH As System.Windows.Forms.Label
 End Class
