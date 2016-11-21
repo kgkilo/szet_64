@@ -24,7 +24,6 @@ Partial Class Form023
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.cmdEXIT = New System.Windows.Forms.Button()
-        Me.SpQ291BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SZETAVDataSet = New szet_64.SZETAVDataSet()
         Me.grdKARBTERV = New System.Windows.Forms.DataGridView()
         Me.lblTitle = New System.Windows.Forms.Label()
@@ -43,10 +42,8 @@ Partial Class Form023
         Me.cmdFRISSIT = New System.Windows.Forms.Button()
         Me.txtTALALAT = New System.Windows.Forms.TextBox()
         Me.lblTALALAT = New System.Windows.Forms.Label()
-        Me.Sp_Q291TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q291TableAdapter()
         Me.Sp_Q296TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter()
         Me.Sp_Q298TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q298TableAdapter()
-        CType(Me.SpQ291BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grdKARBTERV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ298BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,11 +58,6 @@ Partial Class Form023
         Me.cmdEXIT.TabIndex = 2
         Me.cmdEXIT.Text = "Kilépés"
         Me.cmdEXIT.UseVisualStyleBackColor = True
-        '
-        'SpQ291BindingSource
-        '
-        Me.SpQ291BindingSource.DataMember = "sp_Q291"
-        Me.SpQ291BindingSource.DataSource = Me.SZETAVDataSet
         '
         'SZETAVDataSet
         '
@@ -235,10 +227,6 @@ Partial Class Form023
         Me.lblTALALAT.Text = "Találatok"
         Me.lblTALALAT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Sp_Q291TableAdapter
-        '
-        Me.Sp_Q291TableAdapter.ClearBeforeFill = True
-        '
         'Sp_Q296TableAdapter
         '
         Me.Sp_Q296TableAdapter.ClearBeforeFill = True
@@ -273,7 +261,6 @@ Partial Class Form023
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form023 - Karbantartási tervek"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.SpQ291BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SZETAVDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.grdKARBTERV, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpQ298BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -299,8 +286,6 @@ Partial Class Form023
     Friend WithEvents txtTALALAT As System.Windows.Forms.TextBox
     Friend WithEvents lblTALALAT As System.Windows.Forms.Label
     Friend WithEvents SZETAVDataSet As szet_64.SZETAVDataSet
-    Friend WithEvents SpQ291BindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents Sp_Q291TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q291TableAdapter
     Friend WithEvents SpQ296BindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Sp_Q296TableAdapter As szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter
     Friend WithEvents SpQ298BindingSource As System.Windows.Forms.BindingSource

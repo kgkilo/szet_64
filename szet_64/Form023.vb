@@ -85,7 +85,6 @@ Public Class Form023
         Cursor.Current = Cursors.WaitCursor
         Me.Sp_Q298TableAdapter.Fill(Me.SZETAVDataSet.sp_Q298)
         Me.Sp_Q296TableAdapter.Fill(Me.SZETAVDataSet.sp_Q296)
-        Me.Sp_Q291TableAdapter.Fill(Me.SZETAVDataSet.sp_Q291)
 
         datDATUMTOL.Value = DateAdd("m", -1, Now)
         datDATUMTOL.Checked = True
