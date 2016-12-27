@@ -44,6 +44,8 @@ Partial Class Form012
         Me.lblOBJTIP2 = New System.Windows.Forms.Label()
         Me.Sp_Q296TableAdapter = New szet_64.SZETAVDataSetTableAdapters.sp_Q296TableAdapter()
         Me.cmdCLOSE = New System.Windows.Forms.Button()
+        Me.lblSEARCH = New System.Windows.Forms.Label()
+        Me.txtSEARCH = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.grdMEGNEV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpQ296BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,6 +68,8 @@ Partial Class Form012
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lblSEARCH)
+        Me.GroupBox1.Controls.Add(Me.txtSEARCH)
         Me.GroupBox1.Controls.Add(Me.lblTALALAT)
         Me.GroupBox1.Controls.Add(Me.txtTALALAT)
         Me.GroupBox1.Controls.Add(Me.grdMEGNEV)
@@ -97,6 +101,7 @@ Partial Class Form012
         Me.txtTALALAT.ReadOnly = True
         Me.txtTALALAT.Size = New System.Drawing.Size(75, 20)
         Me.txtTALALAT.TabIndex = 16
+        Me.txtTALALAT.TabStop = False
         Me.txtTALALAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'grdMEGNEV
@@ -108,7 +113,7 @@ Partial Class Form012
         Me.grdMEGNEV.Name = "grdMEGNEV"
         Me.grdMEGNEV.ReadOnly = True
         Me.grdMEGNEV.Size = New System.Drawing.Size(807, 124)
-        Me.grdMEGNEV.TabIndex = 15
+        Me.grdMEGNEV.TabIndex = 2
         '
         'lblOBJTIP
         '
@@ -129,7 +134,7 @@ Partial Class Form012
         Me.cmbOBJTIP.Location = New System.Drawing.Point(111, 19)
         Me.cmbOBJTIP.Name = "cmbOBJTIP"
         Me.cmbOBJTIP.Size = New System.Drawing.Size(180, 21)
-        Me.cmbOBJTIP.TabIndex = 13
+        Me.cmbOBJTIP.TabIndex = 0
         Me.cmbOBJTIP.Tag = "296"
         Me.cmbOBJTIP.ValueMember = "KODERT"
         '
@@ -165,7 +170,7 @@ Partial Class Form012
         Me.cmdODA.Location = New System.Drawing.Point(375, 141)
         Me.cmdODA.Name = "cmdODA"
         Me.cmdODA.Size = New System.Drawing.Size(75, 23)
-        Me.cmdODA.TabIndex = 25
+        Me.cmdODA.TabIndex = 5
         Me.cmdODA.Text = "=====>"
         Me.cmdODA.UseVisualStyleBackColor = True
         '
@@ -174,7 +179,7 @@ Partial Class Form012
         Me.cmdVISSZA.Location = New System.Drawing.Point(375, 213)
         Me.cmdVISSZA.Name = "cmdVISSZA"
         Me.cmdVISSZA.Size = New System.Drawing.Size(75, 23)
-        Me.cmdVISSZA.TabIndex = 25
+        Me.cmdVISSZA.TabIndex = 7
         Me.cmdVISSZA.Text = "<====="
         Me.cmdVISSZA.UseVisualStyleBackColor = True
         '
@@ -205,7 +210,7 @@ Partial Class Form012
         Me.grdKAPCSOLT.Name = "grdKAPCSOLT"
         Me.grdKAPCSOLT.ReadOnly = True
         Me.grdKAPCSOLT.Size = New System.Drawing.Size(360, 240)
-        Me.grdKAPCSOLT.TabIndex = 15
+        Me.grdKAPCSOLT.TabIndex = 6
         '
         'grdNEMKAPCSOLT
         '
@@ -217,7 +222,7 @@ Partial Class Form012
         Me.grdNEMKAPCSOLT.ReadOnly = True
         Me.grdNEMKAPCSOLT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.grdNEMKAPCSOLT.Size = New System.Drawing.Size(360, 240)
-        Me.grdNEMKAPCSOLT.TabIndex = 15
+        Me.grdNEMKAPCSOLT.TabIndex = 4
         '
         'cmbOBJTIP2
         '
@@ -229,7 +234,7 @@ Partial Class Form012
         Me.cmbOBJTIP2.Location = New System.Drawing.Point(148, 19)
         Me.cmbOBJTIP2.Name = "cmbOBJTIP2"
         Me.cmbOBJTIP2.Size = New System.Drawing.Size(180, 21)
-        Me.cmbOBJTIP2.TabIndex = 13
+        Me.cmbOBJTIP2.TabIndex = 3
         Me.cmbOBJTIP2.Tag = "296"
         Me.cmbOBJTIP2.ValueMember = "KODERT"
         '
@@ -256,9 +261,24 @@ Partial Class Form012
         Me.cmdCLOSE.Location = New System.Drawing.Point(760, 551)
         Me.cmdCLOSE.Name = "cmdCLOSE"
         Me.cmdCLOSE.Size = New System.Drawing.Size(75, 23)
-        Me.cmdCLOSE.TabIndex = 25
+        Me.cmdCLOSE.TabIndex = 8
         Me.cmdCLOSE.Text = "Kilépés"
         Me.cmdCLOSE.UseVisualStyleBackColor = True
+        '
+        'lblSEARCH
+        '
+        Me.lblSEARCH.Location = New System.Drawing.Point(411, 22)
+        Me.lblSEARCH.Name = "lblSEARCH"
+        Me.lblSEARCH.Size = New System.Drawing.Size(70, 13)
+        Me.lblSEARCH.TabIndex = 19
+        Me.lblSEARCH.Text = "Megnevezés"
+        '
+        'txtSEARCH
+        '
+        Me.txtSEARCH.Location = New System.Drawing.Point(487, 19)
+        Me.txtSEARCH.Name = "txtSEARCH"
+        Me.txtSEARCH.Size = New System.Drawing.Size(100, 20)
+        Me.txtSEARCH.TabIndex = 1
         '
         'Form012
         '
@@ -306,4 +326,6 @@ Partial Class Form012
     Friend WithEvents cmdVISSZA As System.Windows.Forms.Button
     Friend WithEvents lblKAPCSOLT As System.Windows.Forms.Label
     Friend WithEvents grdKAPCSOLT As System.Windows.Forms.DataGridView
+    Friend WithEvents lblSEARCH As System.Windows.Forms.Label
+    Friend WithEvents txtSEARCH As System.Windows.Forms.TextBox
 End Class

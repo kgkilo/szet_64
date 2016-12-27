@@ -31,21 +31,25 @@ Public Class Form012
         cmdVISSZA.Enabled = False
     End Sub
 
-    Private Sub cmbOBJTIP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbOBJTIP.SelectedIndexChanged
+    Private Sub cmbOBJTIP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbOBJTIP.SelectedIndexChanged, txtSEARCH.TextChanged
         Cursor.Current = Cursors.WaitCursor
 
         If cmbOBJTIP.SelectedIndex <> -1 Then
             'Grid feltoltese tarolt eljarasbol
-            Dim dbadp As New SqlDataAdapter("sp_FillObjMegnev2", GlobalVars.sConnStr)
-            With dbadp.SelectCommand
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.Add("@pOBJTIP", SqlDbType.VarChar, 2).Value = cmbOBJTIP.SelectedValue
-                .Parameters.Add("@pAKTIV", SqlDbType.Int).Value = 1
-                Dim dt As New DataTable
-                dbadp.Fill(dt)
-                dbadp.Dispose()
-                grdMEGNEV.DataSource = dt
-            End With
+            Using dbadp As New SqlDataAdapter("sp_FillObjMegnev2", GlobalVars.sConnStr)
+                With dbadp.SelectCommand
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.Add("@pOBJTIP", SqlDbType.VarChar, 2).Value = cmbOBJTIP.SelectedValue
+                    .Parameters.Add("@pAKTIV", SqlDbType.Int).Value = 1
+                    If Not String.IsNullOrEmpty(txtSEARCH.Text) AndAlso txtSEARCH.TextLength > 3 Then
+                        .Parameters.Add("@pMEGNEV", SqlDbType.VarChar, 50).Value = txtSEARCH.Text + "%"
+                    End If
+                    Dim dt As New DataTable
+                    dbadp.Fill(dt)
+                    dbadp.Dispose()
+                    grdMEGNEV.DataSource = dt
+                End With
+            End Using
 
             'Grid formazasa
             Try
@@ -155,7 +159,11 @@ Public Class Form012
 
     Private Sub grdMEGNEV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdMEGNEV.CellContentClick
         cmbOBJTIP2.Enabled = True
-        iMegnev = grdMEGNEV.SelectedRows(0).Cells(0).Value
+        Try
+            iMegnev = grdMEGNEV.SelectedRows(0).Cells(0).Value
+        Catch
+            iMegnev = grdMEGNEV.Rows(0).Cells(0).Value
+        End Try
     End Sub
 
     Private Sub LoadGrids()
@@ -249,4 +257,9 @@ Public Class Form012
         Cursor.Current = Cursors.Default
     End Sub
 
+    'Private Sub txtSEARCH_TextChanged(sender As Object, e As EventArgs) Handles txtSEARCH.TextChanged
+    '    'If Not String.IsNullOrEmpty(txtSEARCH.Text) AndAlso txtSEARCH.TextLength > 3 Then
+    '    Me.LoadGrid()
+    '    'End If
+    'End Sub
 End Class
