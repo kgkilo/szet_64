@@ -11,7 +11,7 @@ Public Class Form011
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.Add("@pOBJTIP", SqlDbType.VarChar, 2).Value = cmbOBJTIP.SelectedValue
                 If Not String.IsNullOrEmpty(txtSEARCH.Text) AndAlso txtSEARCH.TextLength > 3 Then
-                    '.Parameters.Add("@pMEGNEV", SqlDbType.VarChar, 50).Value = txtSEARCH.Text
+                    .Parameters.Add("@pMEGNEV", SqlDbType.VarChar, 50).Value = txtSEARCH.Text + "%"
                 End If
 
                 Dim dt As New DataTable
@@ -127,8 +127,8 @@ Public Class Form011
     End Sub
 
     Private Sub txtSEARCH_TextChanged(sender As Object, e As EventArgs) Handles txtSEARCH.TextChanged
-        If Not String.IsNullOrEmpty(txtSEARCH.Text) AndAlso txtSEARCH.TextLength > 3 Then
-            Me.LoadGrid()
-        End If
+        'If Not String.IsNullOrEmpty(txtSEARCH.Text) AndAlso txtSEARCH.TextLength > 3 Then
+        Me.LoadGrid()
+        'End If
     End Sub
 End Class
